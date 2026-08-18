@@ -147,13 +147,12 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 
 ## 8. 현재 감사에서 확인된 문제와 불명확 항목
 
-1. 현재 폴더의 `.git`은 비어 있어 정상 Git 저장소가 아니며 branch/remote/history를 확인할 수 없다.
-2. `src/kospi100_features/__init__.py`가 존재하지 않는 `.runner`를 import하여 `import kospi100_features`가 실패한다.
-3. `experiments/registry.csv`의 Phase 4 실행 명령은 존재하지 않는 `kospi100_features.cli`를 가리킨다.
-4. Phase 4 전용 테스트, `artifacts/phase4/`, 결과 보고서가 없다. Phase 4 결과를 추측하거나 완료로 표시하면 안 된다.
-5. 기존 보고서 일부는 영문이다. 과거 기록으로 보존하고 새 보고서부터 한글로 작성한다.
-6. OOS가 같은 작업 트리 아래 있어 shell 수준의 접근을 막지 못한다. 이번 상태 감사에서는 스키마와 행 수 메타데이터만 확인했고 가격·날짜별 값·label·성과는 계산하거나 열람하지 않았다. 통계적 결과 누출은 없지만 운영상 봉인 경계는 강화해야 한다.
-7. 실제 GitHub 원격 주소, 기본 branch, 저장소 공개 범위, LFS/외부 데이터 저장 방식은 확인되지 않았다.
+1. `src/kospi100_features/__init__.py`가 존재하지 않는 `.runner`를 import하여 `import kospi100_features`가 실패한다.
+2. `experiments/registry.csv`의 Phase 4 실행 명령은 존재하지 않는 `kospi100_features.cli`를 가리킨다.
+3. Phase 4 전용 테스트, `artifacts/phase4/`, 결과 보고서가 없다. Phase 4 결과를 추측하거나 완료로 표시하면 안 된다.
+4. 기존 보고서 일부는 영문이다. 과거 기록으로 보존하고 새 보고서부터 한글로 작성한다.
+5. OOS가 같은 작업 트리 아래 있어 shell 수준의 접근을 막지 못한다. 이번 상태 감사에서는 스키마와 행 수 메타데이터만 확인했고 가격·날짜별 값·label·성과는 계산하거나 열람하지 않았다. 통계적 결과 누출은 없지만 운영상 봉인 경계는 강화해야 한다.
+6. 실제 GitHub 원격 주소, 기본 branch, 저장소 공개 범위, LFS/외부 데이터 저장 방식은 확인되지 않았다.
 
 ## 9. 권장 저장소 구조
 

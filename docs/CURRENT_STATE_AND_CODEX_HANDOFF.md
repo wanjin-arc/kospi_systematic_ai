@@ -56,7 +56,7 @@ Phase 0~3은 구현·검증 완료다. Phase 4는 `P4-FEATURES-20260818-001`로 
 - `data/processed/v24/development/index_ohlcv.csv.gz`
 - `data/processed/v24/development/corporate_actions.csv.gz`
 - `configs/phase4_features.json`
-- `work/v24_stage/phase1_final_v24/controls/feature_data_contract_v24.json`
+- `data/contracts/feature_data_contract_v24.json`
 
 ### 구현 대상
 

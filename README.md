@@ -1,6 +1,6 @@
 # KOSPI 100 Technical Systematic Trading AI
 
-Current gate: **Phase 3 complete; Phase 4 has not started and requires explicit user approval.**
+Current gate: **Phase 3 complete; Phase 4 is pre-registered and partially implemented, but not executable or validated.**
 
 Phase 1 v24 provides audited point-in-time daily data through 2025-12-30, with development rows physically separated through 2023-12-31 and final OOS 2024–2025 sealed. Phase 2 adds a deterministic long-only daily execution/accounting engine. Phase 3 freezes and evaluates a transparent dual-momentum rule baseline. The reference is reproducible but failed the trading-candidate excess-return gate. There is no ML ranking model, timing model, or brokerage integration.
 

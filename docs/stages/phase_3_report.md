@@ -1,0 +1,1 @@
+docs/PHASE3_VALIDATION_REPORT.md를 참조
