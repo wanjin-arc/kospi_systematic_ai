@@ -1,106 +1,73 @@
 # 현재 상태 및 Codex 인계
 
-**작성일:** 2026-08-18  
-**목적:** Codex가 저장소를 처음 열었을 때 추측 없이 현재 상태를 이어받기 위한 진입 문서
+**갱신일:** 2026-08-19
+**목적:** 저장소의 검증 완료 범위와 다음 단계 진입 조건을 추측 없이 이어받기 위한 문서
 
 ## 결론
 
-Phase 0~3은 구현·검증 완료다. Phase 4는 `P4-FEATURES-20260818-001`로 사전 등록됐고 일부 소스가 작성됐지만 실행 가능한 상태가 아니며 결과도 없다. Codex는 이를 “부분 구현”으로 취급해야 한다.
+Phase 0~4는 구현·실행·검증 완료다. Phase 3 기준선은 재현 기준선으로 채택됐지만 거래 후보 성과 gate를 통과하지 못했다. Phase 4는 사전 등록한 21개 기술 변수의 Train/Validation 단변량 화면을 완료했고, `reversal_5` 한 개만 Phase 5 입력 후보로 채택했다.
+
+`reversal_5` 판정은 모델 또는 거래 후보 채택이 아니다. Phase 5 Ranking 모델은 아직 구현·등록되지 않았으며 사용자 승인과 새 Experiment ID 사전 등록 전에는 시작하지 않는다.
 
 ## 확인된 기준 상태
 
-- 전체 회귀 테스트: 32/32 PASS
+- 전체 회귀 테스트: 43/43 PASS
 - Phase 1 v24 독립 감사: PASS
-- Phase 2: deterministic engine과 synthetic reference 완료
-- Phase 3: 19개 전략 실행 reconciliation 통과, byte-identical 재실행 통과
+- Phase 2 deterministic engine 및 synthetic reference: 완료
+- Phase 3: 19개 전략 reconciliation과 byte-identical 재실행 PASS
 - Phase 3 선택: `H=20`, `N=10`, target weight 10%
 - Phase 3 결정: 기준선 ACCEPTED, 거래 후보 FAIL
-- Phase 3 final OOS access 기록: false
+- Phase 4 전용 테스트: 11/11 PASS
+- Phase 4 실제 CLI 실행: PASS
+- Phase 4 독립 재실행: 8개 구조화 산출물 byte-identical
+- Phase 4 결정: `reversal_5`만 `채택_Phase5후보`
+- Development Test 계산·평가: 0행
+- Final OOS 접근: false
 
-## Phase 4에 이미 존재하는 것
+## Phase 4 구현 상태
 
-- `configs/phase4_features.json`
-  - Experiment ID `P4-FEATURES-20260818-001`
-  - Train 2011–2018, Validation 2019–2021
-  - Development Test와 Final OOS 사용 금지
-  - 10거래일 open-to-open KOSPI100 초과 log return label
-  - purge 20, embargo 20
-  - 횡단면 변수 21개, regime 변수 5개
-  - 단변량 IC, HAC t, coverage, 연도 안정성, 중복 gate
-  - 모델 학습·Portfolio backtest 금지
-- `src/kospi100_features/config.py`
-- `src/kospi100_features/features.py`
-- `src/kospi100_features/labels.py`
-- `src/kospi100_features/evaluate.py`
-- `experiments/registry.csv`의 pending 사전 등록 행
+- 설정: `configs/phase4_features.json`
+- 실행 API: `kospi100_features.runner.run_phase4`
+- CLI: `python -m kospi100_features.cli run --config configs/phase4_features.json --output artifacts/phase4`
+- 단계 명세: `docs/stages/phase_4_spec.md`
+- 실행 보고서: `docs/stages/phase_4_report.md`
+- 구조화 결과: `artifacts/phase4/`
+- 실험 기록: `experiments/registry.csv`의 `P4-FEATURES-20260818-001`
 
-## 확인된 결함
+Phase 4는 development manifest·partition·파일 hash와 canonical v24 계약을 검증한다. Feature·label·regime 및 평가 계산 입력은 2021-12-31 이하로 제한한다. Train/Validation에 purge 20을 적용하고, 이후 재학습 블록이 없어 실제 embargo 집합이 공집합임을 명시적으로 기록한다. 2022~2023 Development Test와 2024~2025 Final OOS는 선택에 사용하지 않았다.
 
-- `src/kospi100_features/runner.py` 없음
-- `src/kospi100_features/cli.py` 없음
-- `src/kospi100_features/__init__.py`가 없는 runner를 import하므로 package import 실패
-- registry의 재현 명령이 현재 실행 불가
-- Phase 4 단위 테스트와 통합 테스트 없음
-- `artifacts/phase4/` 없음
-- Phase 4 변수 카드/검증 보고서/결정 결과 없음
-- Phase 4의 실제 데이터 계산·평가 결과 없음
+## Phase 4 결과 요약
 
-## Codex가 Phase 4 재개 요청을 받았을 때의 구현 명세
+- 후보 변수: 21개
+- `채택_Phase5후보`: 1개 (`reversal_5`)
+- `보류_학습방향불일치`: 16개
+- `보류_검증방향불일치`: 2개
+- `보류_검증불안정`: 1개
+- `보류_연도불안정`: 1개
+- 시장상태 변수 5개: 모두 `보류_Phase7`
 
-사용자의 명시적 재개 요청 전에는 아래 작업을 시작하지 않는다.
+`reversal_5`의 Validation coverage는 0.9994, 평균 일별 Spearman IC는 0.02439, HAC t값은 1.99이며 2019~2021의 세 연도 평균 IC가 모두 양수였다. 상세 수치는 `docs/stages/phase_4_report.md`와 `artifacts/phase4/feature_metrics.csv`를 따른다.
 
-### 입력
+## 동결 hash
 
-- `data/processed/v24/development/feature_price_panel.csv.gz`
-- `data/processed/v24/development/full_history_ohlcv.csv.gz`
-- `data/processed/v24/development/index_ohlcv.csv.gz`
-- `data/processed/v24/development/corporate_actions.csv.gz`
-- `configs/phase4_features.json`
-- `data/contracts/feature_data_contract_v24.json`
+- Phase 4 source: `f199ed4de175c1643877ed064670c15b6618e0010542230f3b60bff265997deb`
+- Phase 4 config: `2b65169985cf800c05863191e4f19bcb190865a92bd31b325f5be3f299cd7091`
+- Phase 4 data: `b27027d8c4b4271ef9d80058890894791c339891a276d7c0bf747fead697da7f`
+- Feature data contract: `4728adbdd7b48077a6e96714c920d541d19cae0e1f73aaaf9c98ebaee6c0aa2d`
 
-### 구현 대상
+## 다음 단계 제한
 
-1. `runner.py`: development manifest 검증, 데이터 로드, Feature 계산, label 결합, 평가, deterministic write
-2. `cli.py`: `run --config --output` 명령
-3. 데이터 경계: 경로와 max date를 이중 검사하고 2022년 이후 평가 행을 거부
-4. Feature timing/continuity: future bar, CA reset crossing, nonmember ranking 차단
-5. 결과 write: 아래 필수 산출물과 hash manifest
-6. 테스트: config guard, timing, rolling-session continuity, CA adjustment/reset, label, purge, IC/HAC, redundancy, deterministic output, OOS 경로 거부
+1. Phase 5는 사용자 명시적 승인 전 시작하지 않는다.
+2. Phase 5는 새 단계 명세와 새 Experiment ID를 결과 확인 전에 등록한다.
+3. Phase 4 결과를 보고 기존 변수 공식·기간·threshold를 소급 변경하지 않는다.
+4. Development Test는 Phase 5 모델 선택에 사용하지 않으며, Final OOS는 Phase 8 단일 릴리스 전까지 계속 봉인한다.
+5. Phase 5에서도 모델 성능만으로 거래 후보를 주장하지 않고, 동결된 Phase 3 기준선과 동일한 universe·시점·비용·포트폴리오 제약 아래 후속 gate를 적용한다.
 
-### 필수 산출물
+## Codex Handoff
 
-- `artifacts/phase4/feature_metrics.csv`
-- `artifacts/phase4/annual_ic.csv` 또는 동등한 구조화 결과
-- `artifacts/phase4/redundancy_matrix.csv`
-- `artifacts/phase4/feature_decisions.csv`
-- `artifacts/phase4/regime_feature_audit.csv`
-- `artifacts/phase4/data_audit.json`
-- `artifacts/phase4/run.json`
-- `artifacts/phase4/manifest.json`
-- `docs/stages/phase_4_spec.md`
-- `docs/stages/phase_4_report.md`
-- 갱신된 `experiments/registry.csv`
-
-### 완료 조건
-
-- 기존 32개 회귀 테스트 포함 전체 테스트 통과
-- package import 및 registry 재현 명령 성공
-- Train/Validation만 사용, Development Test/OOS 미사용 증거
-- 각 변수의 공식·입력·주기·lookback·계산 가능 시점·예상 방향·논리·실패 조건·중복·leakage 위험·검증·결정 포함
-- 동일 설정 독립 재실행의 결정성 확인
-- 모델 학습과 Portfolio backtest를 하지 않음
-- 보고서는 한글
-
-## Codex 첫 프롬프트
-
-```text
-이 저장소는 ChatGPT Work와 공동으로 사용하는 KOSPI 100 기술적 시스템 트레이딩 프로젝트다.
-먼저 AGENTS.md, docs/PROJECT_SPECIFICATION_KO.md,
-docs/CURRENT_STATE_AND_CODEX_HANDOFF.md, 현재 단계 명세,
-experiments/registry.csv를 읽어라.
-
-연구 규칙과 protected OOS 정책을 변경하지 말고, 현재 단계의 Codex Handoff만 구현하라.
-구현 전 실제 코드와 테스트 상태를 확인하고, 불명확한 부분은 추측하지 말고 보고하라.
-구현 후 관련 테스트와 전체 회귀 테스트를 실행하고, 실행하지 않은 작업을 완료로 표시하지 마라.
-새 보고서는 한글로 작성하라.
-```
+- 다음 구현 대상: 미등록 상태. 사용자 승인 후 `docs/stages/phase_5_spec.md`부터 확정한다.
+- 허용 후보 입력: `reversal_5` 한 개. 추가 변수 또는 threshold 변경은 새 가설·Experiment ID가 필요하다.
+- 아직 하지 않을 일: 모델 학습, 포트폴리오 백테스트, Development Test 조회, Final OOS 접근, paper/live trading.
+- Phase 4 재현 명령: `PYTHONPATH=src python -m kospi100_features.cli run --config configs/phase4_features.json --output artifacts/phase4`
+- 전체 회귀 명령: `PYTHONPATH=src python -m unittest discover -s tests -v`
+- Phase 5 완료 조건: 현재 미정이며 Phase 5 명세와 registry 사전 등록으로 먼저 동결해야 한다.

@@ -53,6 +53,8 @@ def load_config(path: Path) -> FeatureResearchConfig:
     payload = json.loads(path.read_text(encoding="utf-8"))
     if payload.get("version") != "phase4-features-v1":
         raise ValueError("지원하지 않는 Phase 4 설정입니다")
+    if payload.get("experiment_id") != "P4-FEATURES-20260818-001":
+        raise ValueError("Phase 4 Experiment ID가 사전 등록값과 다릅니다")
     if payload.get("required_partition_role") != "development":
         raise ValueError("Phase 4는 development 파티션만 사용할 수 있습니다")
     if payload.get("final_oos_access") != "DENIED_UNTIL_PHASE_8":
@@ -91,12 +93,43 @@ def load_config(path: Path) -> FeatureResearchConfig:
     if len(features) != 21 or len({item.feature_id for item in features}) != len(features):
         raise ValueError("Phase 4 횡단면 변수군은 사전 등록한 21개여야 합니다")
     label = payload["label"]
+    expected_label = {
+        "name": "forward_10_session_excess_open_to_open_log_return",
+        "formula": "log(stock_open_t_plus_11/stock_open_t_plus_1)-log(index_open_t_plus_11/index_open_t_plus_1)",
+        "signal_time": "official_close_t",
+        "entry_time": "next_session_open",
+        "exit_time": "open_after_10_complete_session_intervals",
+        "reset_crossing": "exclude",
+        "purge_sessions": 20,
+        "embargo_sessions": 20,
+    }
+    if any(label.get(key) != value for key, value in expected_label.items()):
+        raise ValueError("Phase 4 label 또는 purge/embargo 설정이 사전 등록값과 다릅니다")
+    if len(payload["regime_features"]) != 5:
+        raise ValueError("Phase 4 시장상태 변수군은 사전 등록한 5개여야 합니다")
+    expected_evaluation = {
+        "selection_partition": "train_and_validation_only",
+        "development_test_access": False,
+        "minimum_cross_section": 30,
+        "minimum_coverage": 0.95,
+        "minimum_validation_hac_t": 1.0,
+        "minimum_positive_validation_years": 2,
+        "redundancy_absolute_spearman": 0.90,
+        "hac_lag_sessions": 10,
+        "portfolio_backtest": False,
+        "model_training": False,
+    }
+    if any(evaluation.get(key) != value for key, value in expected_evaluation.items()):
+        raise ValueError("Phase 4 평가 설정이 사전 등록값과 다릅니다")
+    maximum_permitted_date = date.fromisoformat(payload["maximum_permitted_date"])
+    if maximum_permitted_date != date(2023, 12, 31):
+        raise ValueError("Phase 4 development 파티션 최대 날짜가 동결값과 다릅니다")
     return FeatureResearchConfig(
         path=path,
         payload=payload,
         experiment_id=payload["experiment_id"],
         data_root=root,
-        maximum_permitted_date=date.fromisoformat(payload["maximum_permitted_date"]),
+        maximum_permitted_date=maximum_permitted_date,
         periods=periods,
         features=features,
         regime_features=tuple(payload["regime_features"]),

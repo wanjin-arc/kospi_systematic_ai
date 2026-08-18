@@ -1,0 +1,18 @@
+{
+  "config_hash": "2b65169985cf800c05863191e4f19bcb190865a92bd31b325f5be3f299cd7091",
+  "data_hash": "b27027d8c4b4271ef9d80058890894791c339891a276d7c0bf747fead697da7f",
+  "deterministic_serialization": true,
+  "experiment_id": "P4-FEATURES-20260818-001",
+  "files": {
+    "annual_ic.csv": "58c8258b8aa302d42efef710b6b9b4b85072625e180fc5f5f871a3d4efe6893f",
+    "data_audit.json": "bf0173cb4cb9d19e71cabe2fce2c2a97bfeddf7469daa2fc6fa66220449ce494",
+    "feature_decisions.csv": "ecab987da2fa9b16d18e02a78234ef64a90697efb5d97f83d5591af0eab09766",
+    "feature_metrics.csv": "ba0bb369a34f523abc2f238a5346df9f4a43de275a14da0b0ebeac45a43a4a23",
+    "redundancy_matrix.csv": "da15cb4f2a425a59e28b79f7dd7274b06a061092d14a310a8d095e93f1901e76",
+    "regime_feature_audit.csv": "90a45471a854695a1bb07538a305a627a2971b5bd83ee7086659326576a0d408",
+    "run.json": "7f45c3c309b3493efebd9e164283d7c03e247efb2419fbe9aada074b27e77ade"
+  },
+  "final_oos_accessed": false,
+  "source_hash": "f199ed4de175c1643877ed064670c15b6618e0010542230f3b60bff265997deb",
+  "version": "phase4-artifacts-v1"
+}

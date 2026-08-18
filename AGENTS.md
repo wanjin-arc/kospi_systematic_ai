@@ -38,12 +38,12 @@
 
 ## 현재 단계
 
-- Phase 0~3: 완료.
+- Phase 0~4: 완료.
 - Phase 3 기준선: 재현 기준선으로 채택, 거래 후보로는 탈락.
-- Phase 4: 실험은 사전 등록됐고 일부 코드가 있으나 미완료·미검증이다.
+- Phase 4: 단변량 기술 변수 화면 완료. `reversal_5`만 Phase 5 입력 후보로 채택했으며 모델·거래 후보는 아니다.
 - Phase 5 이후: 미구현.
 
-Phase 4를 완료한 것으로 가정하지 않는다. 현재 `kospi100_features`는 `runner.py`와 `cli.py`가 없어 import 및 등록된 실행 명령이 실패한다. 사용자에게 현재 단계 수행 요청을 받은 뒤에만 `docs/CURRENT_STATE_AND_CODEX_HANDOFF.md`의 완료 조건에 맞춰 구현한다.
+Phase 5를 사용자 승인 없이 시작하지 않는다. Phase 4 결과를 근거로 기존 변수·기간·임계값을 소급 변경하지 않으며, Phase 5는 새 Experiment ID와 단계 명세를 결과 확인 전에 등록해야 한다.
 
 ## 구현 원칙
 
@@ -53,7 +53,7 @@ Phase 4를 완료한 것으로 가정하지 않는다. 현재 `kospi100_features
 - 기존 파일을 불필요하게 덮어쓰지 않고, 규칙·데이터 계약 변경은 버전을 올린다.
 - 대용량 데이터, 원본 ZIP, 봉인 OOS, 임시 작업물은 Git에 커밋하지 않는다.
 - 실험 결과는 코드·설정·데이터·산출물 해시와 재현 명령을 기록한다.
-- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-18 감사에서 32/32 통과했다.
+- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-19 Phase 4 완료 감사에서 43/43 통과했다.
 
 ## 단계 완료 산출물
 
