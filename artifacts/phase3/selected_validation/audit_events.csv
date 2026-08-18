@@ -1,0 +1,16 @@
+session,severity,code,security_id,reference_id,detail
+2019-09-27,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-09-30,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-01,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-02,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-04,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-07,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-08,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-10,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-11,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-14,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-15,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-16,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2019-10-17,WARNING,STALE_MARK,KRX_COMMON:000150,,last valid close carried forward
+2020-12-29,INFO,CORPORATE_ACTION_APPLIED,KRX_COMMON:008930,P3:MECH:00161426_BONUS_ISSUE_20201215000179,old_qty=6;new_qty=6;cash=8028.000
+2021-10-21,INFO,CORPORATE_ACTION_APPLIED,KRX_COMMON:285130,P3:MECH:01267170_BONUS_ISSUE_20211007000350,old_qty=1;new_qty=1;cash=105250.00

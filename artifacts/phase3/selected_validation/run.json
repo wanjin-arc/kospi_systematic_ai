@@ -1,0 +1,31 @@
+{
+  "config_hash": "faa10fbb5e77542f089cc5fa94e5283e0f00ed3c095d0fcf32dffe6e0717f714",
+  "final_cash": "524728.53000",
+  "final_cost_basis": {
+    "KRX_COMMON:005830": "416298.80000",
+    "KRX_COMMON:009150": "356427.00000",
+    "KRX_COMMON:011070": "309370.00000",
+    "KRX_COMMON:011790": "360432.00000",
+    "KRX_COMMON:024110": "428513.00000",
+    "KRX_COMMON:030200": "442229.70000",
+    "KRX_COMMON:033780": "428012.50000",
+    "KRX_COMMON:035420": "394472.00000",
+    "KRX_COMMON:105560": "402281.80000",
+    "KRX_COMMON:316140": "441078.55000"
+  },
+  "final_positions": {
+    "KRX_COMMON:005830": 7,
+    "KRX_COMMON:009150": 2,
+    "KRX_COMMON:011070": 1,
+    "KRX_COMMON:011790": 2,
+    "KRX_COMMON:024110": 40,
+    "KRX_COMMON:030200": 14,
+    "KRX_COMMON:033780": 5,
+    "KRX_COMMON:035420": 1,
+    "KRX_COMMON:105560": 7,
+    "KRX_COMMON:316140": 33
+  },
+  "initial_cash": "5000000",
+  "input_hash": "38a0ebed74c00537d0d0a8af32218e0ca0ebbc8b3fde930c5271bdd350112cb0",
+  "reconciliation": "PASS"
+}

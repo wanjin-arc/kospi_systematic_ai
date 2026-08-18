@@ -1,0 +1,76 @@
+{
+  "version": "phase3-baseline-v1",
+  "experiment_id": "P3-BASELINE-20260818-001",
+  "data_root": "data/processed/v24/development",
+  "required_partition_role": "development",
+  "maximum_permitted_date": "2023-12-31",
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "periods": {
+    "train": ["2011-01-01", "2018-12-31"],
+    "validation": ["2019-01-01", "2021-12-31"],
+    "development_test": ["2022-01-01", "2023-12-31"]
+  },
+  "signal": {
+    "price_field": "close",
+    "moving_average_sessions": 200,
+    "momentum_sessions": 126,
+    "absolute_trend_gate": "close_gt_sma200",
+    "relative_momentum_gate": "stock_return126_gt_kospi100_return126",
+    "rank": "descending_stock_minus_index_return126",
+    "tie_break": "security_id_ascending",
+    "rank_loss_exit": false
+  },
+  "candidates": {
+    "holding_sessions": [5, 10, 20],
+    "maximum_holdings": [5, 10, 15]
+  },
+  "selection": {
+    "partition": "validation_only",
+    "objective": "highest_net_sharpe_zero_rf",
+    "tie_breaks": [
+      "higher_net_excess_return",
+      "shallower_max_drawdown",
+      "lower_turnover",
+      "lower_holding_sessions",
+      "lower_maximum_holdings"
+    ],
+    "development_test_runs": 1
+  },
+  "portfolio": {
+    "initial_cash_krw": "5000000",
+    "long_only": true,
+    "whole_shares_only": true,
+    "allow_pyramiding": false,
+    "leverage": false,
+    "target_weight": "min(1/N,0.10)",
+    "unallocated_cash": "retain",
+    "entry_priority": "rank_then_security_id"
+  },
+  "execution": {
+    "signal_time": "official_close_t",
+    "entry_time": "next_session_open",
+    "entry_limit": "close_t_times_1.05",
+    "ordinary_exit": "open_after_H_complete_session_intervals",
+    "constituent_removal": "official_removal_execution_open",
+    "unfilled_order": "cancel_no_retry"
+  },
+  "costs": {
+    "commission_rate_per_side": "0.0002",
+    "slippage_rate_per_side": "0.0010",
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv",
+    "tax_removed_in_stress": false
+  },
+  "corporate_actions": {
+    "feature_mechanical": "split_factor_continuity_with_asof_invariance_test",
+    "feature_reset": "start_new_feature_segment_at_boundary",
+    "portfolio_mechanical": "apply_share_multiplier_at_boundary_before_orders",
+    "portfolio_reset": "block_entries_from_first_filing_and_safety_exit_at_known_boundary_open",
+    "fractional_share_cash_in_lieu": "boundary_open_proxy",
+    "unresolved_held_action": "fail_closed"
+  },
+  "adoption_gate": {
+    "reference_baseline": "deterministic_cost_aware_no_leakage_and_reconciled",
+    "trading_candidate": "positive_net_excess_return_in_validation_and_development_test"
+  },
+  "random_seed": 20260818
+}

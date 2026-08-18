@@ -1,0 +1,20 @@
+{
+  "version": "phase2-engine-v1",
+  "initial_cash_krw": "5000000",
+  "long_only": true,
+  "whole_shares_only": true,
+  "allow_pyramiding": false,
+  "max_positions": null,
+  "commission_rate_per_side": "0.0002",
+  "buy_slippage_rate": "0.001",
+  "sell_slippage_rate": "0.001",
+  "money_quantum_krw": "1",
+  "money_rounding": "FLOOR",
+  "entry_gap_cap_default": "0.05",
+  "same_bar_stop_target_policy": "STOP_FIRST",
+  "day_order_remainder_policy": "CANCEL",
+  "missing_or_untradable_bar_policy": "NO_FILL",
+  "held_untradable_mark_policy": "LAST_VALID_CLOSE_WITH_STALE_FLAG",
+  "unresolved_corporate_action_policy": "FAIL_CLOSED",
+  "final_oos_access": "DENIED_UNTIL_PHASE_8"
+}

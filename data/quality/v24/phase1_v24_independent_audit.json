@@ -1,0 +1,224 @@
+{
+  "phase": 1,
+  "package_version": "v24",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "manifest_core_files",
+      "passed": true,
+      "severity": "WARNING",
+      "detail": "missing_split_replaced=['intraday/raw_archives/1m.zip', 'intraday/raw_archives/5m.zip'], mismatches=[]"
+    },
+    {
+      "name": "membership_unique_key",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rows=393874"
+    },
+    {
+      "name": "membership_size_documented",
+      "passed": true,
+      "severity": "WARNING",
+      "detail": "dates=3939, size100=3913, size99=26"
+    },
+    {
+      "name": "membership_flags",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "all rows are active/eligible membership rows"
+    },
+    {
+      "name": "security_master_unique",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rows=174"
+    },
+    {
+      "name": "security_ids_resolve",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "membership_ids=174, master_ids=174"
+    },
+    {
+      "name": "full_history_unique_key",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rows=633766"
+    },
+    {
+      "name": "full_history_tradable_ohlc",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "tradable_rows=631644, invalid=0"
+    },
+    {
+      "name": "full_history_invalid_only_nontradable",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "invalid=2122, nontradable=2122"
+    },
+    {
+      "name": "feature_panel_unique_key",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rows=435683"
+    },
+    {
+      "name": "feature_panel_tradable_ohlc",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "tradable_rows=434775"
+    },
+    {
+      "name": "feature_panel_invalid_only_nontradable",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "invalid=908, nontradable=908"
+    },
+    {
+      "name": "rank_eligibility_exact",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rank_eligible=392966"
+    },
+    {
+      "name": "pre_entry_warmup_not_ranked",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "warmup_rows=41809"
+    },
+    {
+      "name": "membership_equals_full_member_rows",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "membership=393874, full_member=393874"
+    },
+    {
+      "name": "membership_equals_panel_member_rows",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "membership=393874, panel_member=393874"
+    },
+    {
+      "name": "index_unique_dates",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rows=3939"
+    },
+    {
+      "name": "index_ohlc",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rows=3939"
+    },
+    {
+      "name": "index_membership_calendar_alignment",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "index_dates=3939, membership_dates=3939"
+    },
+    {
+      "name": "ca_unique_ids",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "events=98"
+    },
+    {
+      "name": "ca_controls_complete",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "events=98, obligations=98"
+    },
+    {
+      "name": "ca_partition_complete",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "adjustments=42, resets=56"
+    },
+    {
+      "name": "ca_adjustments_have_factors",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rows=42"
+    },
+    {
+      "name": "ca_resets_have_boundary",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "rows=56"
+    },
+    {
+      "name": "intraday_file_count",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "1m=159, 5m=159"
+    },
+    {
+      "name": "intraday_file_integrity",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "validated=318/318"
+    },
+    {
+      "name": "intraday_instrument_sets",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "extra_5m=[]"
+    },
+    {
+      "name": "intraday_exact_1m_to_5m",
+      "passed": true,
+      "severity": "BLOCKER",
+      "detail": "exact=159/159"
+    }
+  ],
+  "stats": {
+    "manifest": {
+      "manifest_rows": 34,
+      "missing_expected_monolithic_archives": [
+        "intraday/raw_archives/1m.zip",
+        "intraday/raw_archives/5m.zip"
+      ],
+      "mismatches": []
+    },
+    "core": {
+      "membership": {
+        "rows": 393874,
+        "dates": 3939,
+        "securities": 174,
+        "date_min": "2010-01-04",
+        "date_max": "2025-12-30",
+        "size_99_dates": 26
+      },
+      "full_history": {
+        "rows": 633766,
+        "securities": 174,
+        "date_min": "2008-01-02",
+        "date_max": "2025-12-30",
+        "nontradable_rows": 2122
+      },
+      "feature_panel": {
+        "rows": 435683,
+        "rank_eligible": 392966,
+        "warmup_rows": 41809
+      },
+      "index": {
+        "rows": 3939,
+        "date_min": "2010-01-04",
+        "date_max": "2025-12-30"
+      },
+      "corporate_actions": {
+        "events": 98,
+        "mechanical_adjustments": 42,
+        "feature_resets": 56
+      }
+    },
+    "intraday": {
+      "files_1m": 159,
+      "files_5m": 159,
+      "rows_1m": 29367959,
+      "rows_5m": 15027364,
+      "reconciled_exact": 159
+    }
+  }
+}

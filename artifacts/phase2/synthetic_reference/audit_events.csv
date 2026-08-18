@@ -1,0 +1,2 @@
+session,severity,code,security_id,reference_id,detail
+2023-01-04,INFO,CORPORATE_ACTION_APPLIED,D,SPLIT-D-2X,old_qty=4;new_qty=8;cash=0

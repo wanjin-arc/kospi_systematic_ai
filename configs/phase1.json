@@ -1,0 +1,19 @@
+{
+  "schema_version": "phase1-v1",
+  "research_start": "2011-01-01",
+  "research_end": "2025-12-31",
+  "development_end": "2023-12-31",
+  "final_oos_start": "2024-01-01",
+  "final_oos_end": "2025-12-31",
+  "expected_universe_size": 100,
+  "benchmark_name": "KOSPI 100",
+  "allowed_symbols_regex": "^[0-9]{6}$",
+  "source_priority": [
+    "KRX official historical extract",
+    "KRX Data Marketplace export",
+    "independent cross-check only"
+  ],
+  "build_requires_zero_blockers": true,
+  "build_requires_zero_errors": true
+}
+

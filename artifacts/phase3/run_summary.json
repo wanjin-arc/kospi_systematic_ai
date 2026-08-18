@@ -1,0 +1,59 @@
+{
+  "all_reconciliations_passed": true,
+  "code_hash": "0bdd6ac2fcb9d93de67eedab327c83ab2870709359c427a7fbb07dd1be2878dd",
+  "config_hash": "a3f77e02c103d4ebff357976a8d0f7b9f616d9a8b93066bc0b4bf8a1f8a337f9",
+  "data_checks": {
+    "corporate_action_rows": 88,
+    "data_hash": "b27027d8c4b4271ef9d80058890894791c339891a276d7c0bf747fead697da7f",
+    "feature_rows": 384245,
+    "final_oos_accessed": false,
+    "full_history_rows": 555949,
+    "index_rows": 3453,
+    "manifest_files_verified": 6,
+    "maximum_loaded_date": "2023-12-28",
+    "partition_role": "development",
+    "removal_rows": 69
+  },
+  "data_hash": "b27027d8c4b4271ef9d80058890894791c339891a276d7c0bf747fead697da7f",
+  "development_test_runs": 1,
+  "experiment_id": "P3-BASELINE-20260818-001",
+  "feature_checks": {
+    "candidate_dates": 3327,
+    "candidate_rows": 101734,
+    "corporate_action_blocked_rows": 29343,
+    "feature_reset_actions": 49,
+    "feature_rows": 384245,
+    "late_notice_actions_protected_by_prior_permanent_block": 1,
+    "mechanical_actions": 39,
+    "rank_eligible_only": true,
+    "same_day_execution": false,
+    "scale_invariant_features_only": true
+  },
+  "final_oos_accessed": false,
+  "parameter_combinations": 9,
+  "selected": {
+    "development_test_candidates_run": 1,
+    "development_test_net_excess_return": "-0.0111752946852654424264414387",
+    "experiment_id": "P3-BASELINE-20260818-001",
+    "final_oos_accessed": false,
+    "reference_baseline_status": "ACCEPTED",
+    "selected_holding_sessions": 20,
+    "selected_maximum_holdings": 10,
+    "selected_target_weight": "0.1",
+    "selection_objective": "highest_net_sharpe_zero_rf",
+    "selection_partition": "validation_only",
+    "selection_tie_breaks": [
+      "higher_net_excess_return",
+      "shallower_max_drawdown",
+      "lower_turnover",
+      "lower_holding_sessions",
+      "lower_maximum_holdings"
+    ],
+    "trading_candidate_gate": "validation and development-test net excess returns must both be positive",
+    "trading_candidate_status": "FAIL",
+    "validation_net_excess_return": "-0.618248553988176384095720761"
+  },
+  "status": "COMPLETED",
+  "train_runs": 9,
+  "validation_runs": 9
+}

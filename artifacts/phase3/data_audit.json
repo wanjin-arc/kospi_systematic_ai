@@ -1,0 +1,12 @@
+{
+  "corporate_action_rows": 88,
+  "data_hash": "b27027d8c4b4271ef9d80058890894791c339891a276d7c0bf747fead697da7f",
+  "feature_rows": 384245,
+  "final_oos_accessed": false,
+  "full_history_rows": 555949,
+  "index_rows": 3453,
+  "manifest_files_verified": 6,
+  "maximum_loaded_date": "2023-12-28",
+  "partition_role": "development",
+  "removal_rows": 69
+}

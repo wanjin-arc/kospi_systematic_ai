@@ -1,0 +1,12 @@
+{
+  "candidate_dates": 3327,
+  "candidate_rows": 101734,
+  "corporate_action_blocked_rows": 29343,
+  "feature_reset_actions": 49,
+  "feature_rows": 384245,
+  "late_notice_actions_protected_by_prior_permanent_block": 1,
+  "mechanical_actions": 39,
+  "rank_eligible_only": true,
+  "same_day_execution": false,
+  "scale_invariant_features_only": true
+}

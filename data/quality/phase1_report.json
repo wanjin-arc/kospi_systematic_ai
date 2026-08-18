@@ -1,0 +1,272 @@
+{
+  "artifacts": [],
+  "issues": [
+    {
+      "code": "MISSING_INPUT_FILE",
+      "key": "data/incoming/ohlcv_raw.csv",
+      "message": "Required input file is absent.",
+      "severity": "BLOCKER",
+      "table": "ohlcv_raw"
+    },
+    {
+      "code": "MISSING_INPUT_FILE",
+      "key": "data/incoming/corporate_actions.csv",
+      "message": "Required input file is absent.",
+      "severity": "BLOCKER",
+      "table": "corporate_actions"
+    },
+    {
+      "code": "MISSING_INPUT_FILE",
+      "key": "data/incoming/suspensions.csv",
+      "message": "Required input file is absent.",
+      "severity": "BLOCKER",
+      "table": "suspensions"
+    },
+    {
+      "code": "MISSING_SESSION_TIMES",
+      "key": "aggregate",
+      "message": "3939 trading sessions lack official open/close times.",
+      "severity": "WARNING",
+      "table": "trading_calendar"
+    },
+    {
+      "code": "UNKNOWN_EARLY_CLOSE_FLAGS",
+      "key": "aggregate",
+      "message": "3939 calendar rows lack an early-close flag.",
+      "severity": "WARNING",
+      "table": "trading_calendar"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2011-03-30",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2011-06-07",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2013-06-11",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2013-06-12",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2013-06-13",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2014-11-19",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-11",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-12",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-15",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-16",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-17",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-18",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-19",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-22",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-23",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-24",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-25",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-26",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-29",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-30",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-05-31",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-06-01",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-06-02",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-06-05",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-06-07",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "key": "2017-06-08",
+      "message": "Expected 100 active symbols, found 99.",
+      "severity": "ERROR",
+      "table": "universe_membership"
+    }
+  ],
+  "stats": {
+    "date_ranges": {
+      "corporate_actions": null,
+      "index_ohlcv_raw": [
+        "2010-01-04",
+        "2025-12-30"
+      ],
+      "ohlcv_raw": null,
+      "suspensions": null,
+      "trading_calendar": [
+        "2010-01-04",
+        "2025-12-30"
+      ],
+      "universe_membership": [
+        "2010-01-04",
+        "2025-12-12"
+      ]
+    },
+    "development_end": "2023-12-31",
+    "expected_universe_size": 100,
+    "final_oos_window": [
+      "2024-01-01",
+      "2025-12-31"
+    ],
+    "generated_at_utc": "2026-08-16T06:19:00.516498+00:00",
+    "input_root": "data/incoming",
+    "input_sha256": {
+      "index_ohlcv_raw": "e3eb4329e280e5d5ebe411898fb637d166841b6b609170202347768458c0d117",
+      "symbol_master": "50f0716caeb770a45f0673e6255549ae26e28465c654dadb994be3fda6a62232",
+      "trading_calendar": "c58ba931152cf58bab0e2b038a27aaebe27bbcec55037b6ec7b845e60282e2ba",
+      "universe_membership": "af0969d6077721bdd712936c68dbd4ebd173f370b3da5a2649969f1e05979225"
+    },
+    "issue_counts": {
+      "BLOCKER": 3,
+      "ERROR": 26,
+      "WARNING": 2
+    },
+    "research_window": [
+      "2011-01-01",
+      "2025-12-31"
+    ],
+    "schema_version": "phase1-v1",
+    "table_rows": {
+      "index_ohlcv_raw": 3939,
+      "symbol_master": 232,
+      "trading_calendar": 3939,
+      "universe_membership": 232
+    }
+  },
+  "status": "BLOCKED"
+}

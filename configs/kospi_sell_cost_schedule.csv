@@ -1,0 +1,7 @@
+effective_from,effective_to,transaction_tax_rate,rural_special_tax_rate,source
+2011-01-01,2019-06-02,0.0015,0.0015,National Law Information Center statutory history
+2019-06-03,2020-12-31,0.0010,0.0015,Presidential Decree 29788 plus Rural Special Tax Act Article 5
+2021-01-01,2022-12-31,0.0008,0.0015,Presidential Decree 31290 plus Rural Special Tax Act Article 5
+2023-01-01,2023-12-31,0.0005,0.0015,Presidential Decree 33209 plus Rural Special Tax Act Article 5
+2024-01-01,2024-12-31,0.0003,0.0015,Presidential Decree 33209 plus Rural Special Tax Act Article 5
+2025-01-01,2025-12-31,0,0.0015,Presidential Decree 31290 as amended plus Rural Special Tax Act Article 5

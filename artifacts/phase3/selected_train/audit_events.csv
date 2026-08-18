@@ -1,0 +1,46 @@
+session,severity,code,security_id,reference_id,detail
+2016-01-22,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-01-25,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-01-26,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-01-27,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-01-28,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-01-29,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-01,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-02,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-03,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-04,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-05,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-11,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-12,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-15,WARNING,STALE_MARK,KRX_COMMON:018880,,last valid close carried forward
+2016-02-16,INFO,CORPORATE_ACTION_APPLIED,KRX_COMMON:018880,P3:MECH:00161125_STOCK_SPLIT_DOC_20151105800464,old_qty=5;new_qty=25;cash=0
+2017-12-27,INFO,CORPORATE_ACTION_APPLIED,KRX_COMMON:008930,P3:MECH:00161426_BONUS_ISSUE_20171214000384,old_qty=2;new_qty=2;cash=4360.000
+2018-04-27,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-04-30,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-02,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-03,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-04,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-08,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-09,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-10,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-11,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-14,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-15,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-16,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-17,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-18,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-21,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-23,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-24,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-25,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-28,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-29,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-30,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-05-31,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-06-01,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-06-04,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-06-05,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-06-07,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-06-08,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-06-11,WARNING,STALE_MARK,KRX_COMMON:012630,,last valid close carried forward
+2018-12-27,INFO,CORPORATE_ACTION_APPLIED,KRX_COMMON:008930,P3:MECH:00161426_BONUS_ISSUE_20181213000339,old_qty=2;new_qty=2;cash=3012.000

@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "cash_nonnegative": true,
+    "cash_sum": true,
+    "fill_cash_decomposition": true,
+    "final_equity_identity": true,
+    "initial_capital_recorded_once": true,
+    "positions_from_ledger": true,
+    "positions_long_only": true
+  },
+  "detail": {
+    "cash_sum": "517946.94000",
+    "final_cash": "517946.94000",
+    "final_market_value": "3964550.0",
+    "final_positions": "{\"KRX_COMMON:001570\": 3, \"KRX_COMMON:010140\": 55, \"KRX_COMMON:012450\": 3, \"KRX_COMMON:018260\": 2, \"KRX_COMMON:028260\": 3, \"KRX_COMMON:030200\": 12, \"KRX_COMMON:047050\": 7, \"KRX_COMMON:138040\": 7, \"KRX_COMMON:161390\": 9, \"KRX_COMMON:180640\": 6}",
+    "ledger_positions": "{\"KRX_COMMON:001570\": 3, \"KRX_COMMON:010140\": 55, \"KRX_COMMON:012450\": 3, \"KRX_COMMON:018260\": 2, \"KRX_COMMON:028260\": 3, \"KRX_COMMON:030200\": 12, \"KRX_COMMON:047050\": 7, \"KRX_COMMON:138040\": 7, \"KRX_COMMON:161390\": 9, \"KRX_COMMON:180640\": 6}"
+  },
+  "passed": true
+}

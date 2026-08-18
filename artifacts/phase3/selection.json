@@ -1,0 +1,22 @@
+{
+  "development_test_candidates_run": 1,
+  "development_test_net_excess_return": "-0.0111752946852654424264414387",
+  "experiment_id": "P3-BASELINE-20260818-001",
+  "final_oos_accessed": false,
+  "reference_baseline_status": "ACCEPTED",
+  "selected_holding_sessions": 20,
+  "selected_maximum_holdings": 10,
+  "selected_target_weight": "0.1",
+  "selection_objective": "highest_net_sharpe_zero_rf",
+  "selection_partition": "validation_only",
+  "selection_tie_breaks": [
+    "higher_net_excess_return",
+    "shallower_max_drawdown",
+    "lower_turnover",
+    "lower_holding_sessions",
+    "lower_maximum_holdings"
+  ],
+  "trading_candidate_gate": "validation and development-test net excess returns must both be positive",
+  "trading_candidate_status": "FAIL",
+  "validation_net_excess_return": "-0.618248553988176384095720761"
+}

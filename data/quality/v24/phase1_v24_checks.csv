@@ -1,0 +1,29 @@
+﻿name,passed,severity,detail
+manifest_core_files,True,WARNING,"missing_split_replaced=['intraday/raw_archives/1m.zip', 'intraday/raw_archives/5m.zip'], mismatches=[]"
+membership_unique_key,True,BLOCKER,rows=393874
+membership_size_documented,True,WARNING,"dates=3939, size100=3913, size99=26"
+membership_flags,True,BLOCKER,all rows are active/eligible membership rows
+security_master_unique,True,BLOCKER,rows=174
+security_ids_resolve,True,BLOCKER,"membership_ids=174, master_ids=174"
+full_history_unique_key,True,BLOCKER,rows=633766
+full_history_tradable_ohlc,True,BLOCKER,"tradable_rows=631644, invalid=0"
+full_history_invalid_only_nontradable,True,BLOCKER,"invalid=2122, nontradable=2122"
+feature_panel_unique_key,True,BLOCKER,rows=435683
+feature_panel_tradable_ohlc,True,BLOCKER,tradable_rows=434775
+feature_panel_invalid_only_nontradable,True,BLOCKER,"invalid=908, nontradable=908"
+rank_eligibility_exact,True,BLOCKER,rank_eligible=392966
+pre_entry_warmup_not_ranked,True,BLOCKER,warmup_rows=41809
+membership_equals_full_member_rows,True,BLOCKER,"membership=393874, full_member=393874"
+membership_equals_panel_member_rows,True,BLOCKER,"membership=393874, panel_member=393874"
+index_unique_dates,True,BLOCKER,rows=3939
+index_ohlc,True,BLOCKER,rows=3939
+index_membership_calendar_alignment,True,BLOCKER,"index_dates=3939, membership_dates=3939"
+ca_unique_ids,True,BLOCKER,events=98
+ca_controls_complete,True,BLOCKER,"events=98, obligations=98"
+ca_partition_complete,True,BLOCKER,"adjustments=42, resets=56"
+ca_adjustments_have_factors,True,BLOCKER,rows=42
+ca_resets_have_boundary,True,BLOCKER,rows=56
+intraday_file_count,True,BLOCKER,"1m=159, 5m=159"
+intraday_file_integrity,True,BLOCKER,validated=318/318
+intraday_instrument_sets,True,BLOCKER,extra_5m=[]
+intraday_exact_1m_to_5m,True,BLOCKER,exact=159/159

@@ -1,0 +1,9 @@
+order_id,session,security_id,side,status,requested_quantity,filled_quantity,reason
+BUY-A,2023-01-02,A,BUY,FILLED,,99,executed at opening reference plus adverse slippage
+BUY-B-GAP,2023-01-02,B,BUY,UNFILLED_GAP_LIMIT,100,0,opening price above precommitted cap
+BUY-C-HALT,2023-01-02,C,BUY,UNFILLED_NOT_TRADABLE,10,0,security not tradable
+BUY-D,2023-01-03,D,BUY,FILLED,4,4,executed at opening reference plus adverse slippage
+BUY-E-PARTIAL,2023-01-03,E,BUY,PARTIALLY_FILLED_REMAINDER_CANCELLED,5,3,executed at opening reference plus adverse slippage
+RISK:2023-01-03:A:STOP_FIRST_SAME_BAR,2023-01-03,A,SELL,FILLED,,99,executed with sell costs and adverse slippage
+SELL-D,2023-01-05,D,SELL,FILLED,,8,executed with sell costs and adverse slippage
+SELL-E,2023-01-05,E,SELL,FILLED,,3,executed with sell costs and adverse slippage

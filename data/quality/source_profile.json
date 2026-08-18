@@ -1,0 +1,225 @@
+{
+  "audit_findings": [
+    {
+      "code": "UPSTREAM_LINEAGE_UNVERIFIED",
+      "message": "The supplied CSVs do not embed upstream source URL, query parameters, retrieval time, or licence reference.",
+      "severity": "BLOCKER"
+    },
+    {
+      "code": "PROVISIONAL_SYMBOL_IDENTITY",
+      "message": "symbol_id is provisionally derived from the six-digit display code; ISIN, code-change, listing, and delisting evidence is absent.",
+      "severity": "BLOCKER"
+    },
+    {
+      "code": "UNIVERSE_SIZE_MISMATCH",
+      "message": "26 exchange sessions contain 99 rather than 100 members; no constituent was invented.",
+      "severity": "ERROR"
+    },
+    {
+      "code": "CALENDAR_SESSION_METADATA_MISSING",
+      "message": "Trading dates are derived from the index export; official open/close times and early-close flags are unavailable.",
+      "severity": "WARNING"
+    },
+    {
+      "code": "INDEX_IDENTITY_METADATA_MISSING",
+      "message": "The index export does not contain an index code/name field; KOSPI 100 identity comes from the user's project context and remains to be tied to upstream metadata.",
+      "severity": "WARNING"
+    }
+  ],
+  "index": {
+    "concatenated_header_markers_removed_from_unused_market_cap_field": 6,
+    "date_end": "2025-12-30",
+    "date_start": "2010-01-04",
+    "duplicate_dates": 0,
+    "market_cap_missing_rows": 0,
+    "negative_activity_rows": 0,
+    "ohlc_errors": 0,
+    "reported_change_max_abs_error": "0",
+    "reported_change_mismatch_rows_tolerance_0_011": 0,
+    "reported_change_pct_max_abs_error": "0.005",
+    "reported_change_pct_mismatch_rows_tolerance_0_011": 0,
+    "source_order_block_boundaries": 7,
+    "source_order_not_globally_monotonic": true,
+    "source_rows": 3939,
+    "unique_dates": 3939,
+    "unit_conversions": {
+      "traded_value": "거래대금(백만원) × 1,000,000 KRW",
+      "volume": "거래량(천주) × 1,000"
+    }
+  },
+  "membership": {
+    "complete_weekday_grid": true,
+    "consecutive_snapshot_name_change_events": 48,
+    "constituent_set_change_days": 44,
+    "daily_member_count_distribution": {
+      "100": 4146,
+      "99": 27
+    },
+    "date_end": "2025-12-31",
+    "date_start": "2010-01-04",
+    "dates_not_in_index_calendar": 234,
+    "index_dates_without_membership_snapshot": 0,
+    "interval_reconstruction_mismatched_dates": 0,
+    "non_100_dates": [
+      {
+        "date": "2011-03-30",
+        "member_count": 99
+      },
+      {
+        "date": "2011-06-07",
+        "member_count": 99
+      },
+      {
+        "date": "2013-06-11",
+        "member_count": 99
+      },
+      {
+        "date": "2013-06-12",
+        "member_count": 99
+      },
+      {
+        "date": "2013-06-13",
+        "member_count": 99
+      },
+      {
+        "date": "2014-11-19",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-11",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-12",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-15",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-16",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-17",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-18",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-19",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-22",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-23",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-24",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-25",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-26",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-29",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-30",
+        "member_count": 99
+      },
+      {
+        "date": "2017-05-31",
+        "member_count": 99
+      },
+      {
+        "date": "2017-06-01",
+        "member_count": 99
+      },
+      {
+        "date": "2017-06-02",
+        "member_count": 99
+      },
+      {
+        "date": "2017-06-05",
+        "member_count": 99
+      },
+      {
+        "date": "2017-06-06",
+        "member_count": 99
+      },
+      {
+        "date": "2017-06-07",
+        "member_count": 99
+      },
+      {
+        "date": "2017-06-08",
+        "member_count": 99
+      }
+    ],
+    "non_100_trading_sessions": [
+      "2011-03-30",
+      "2011-06-07",
+      "2013-06-11",
+      "2013-06-12",
+      "2013-06-13",
+      "2014-11-19",
+      "2017-05-11",
+      "2017-05-12",
+      "2017-05-15",
+      "2017-05-16",
+      "2017-05-17",
+      "2017-05-18",
+      "2017-05-19",
+      "2017-05-22",
+      "2017-05-23",
+      "2017-05-24",
+      "2017-05-25",
+      "2017-05-26",
+      "2017-05-29",
+      "2017-05-30",
+      "2017-05-31",
+      "2017-06-01",
+      "2017-06-02",
+      "2017-06-05",
+      "2017-06-07",
+      "2017-06-08"
+    ],
+    "source_rows": 417273,
+    "tickers_with_multiple_names": 42,
+    "unique_dates": 4173,
+    "unique_names": 214,
+    "unique_tickers": 174
+  },
+  "normalized_rows": {
+    "index_ohlcv_raw": 3939,
+    "symbol_master": 232,
+    "trading_calendar": 3939,
+    "universe_membership": 232
+  },
+  "profile_version": "phase1-source-profile-v1",
+  "received_at_kst": "2026-08-16T15:10:00+09:00",
+  "sources": {
+    "index": {
+      "file": "개별지수시세추이 (20100104~20251230)(2).csv",
+      "sha256": "369cb7bfb07839432dba33f3935f437d2c2bda8eafd1a098a3bca71100e3e9be"
+    },
+    "membership": {
+      "file": "kospi100_membership_daily(2).csv",
+      "sha256": "4a9adec2dc0c208a8329d73c015bf234cb5c939dac1f1a65490ec3da1c22da48"
+    }
+  }
+}

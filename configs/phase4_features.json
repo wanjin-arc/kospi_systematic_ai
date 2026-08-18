@@ -1,0 +1,72 @@
+{
+  "version": "phase4-features-v1",
+  "experiment_id": "P4-FEATURES-20260818-001",
+  "data_root": "data/processed/v24/development",
+  "required_partition_role": "development",
+  "maximum_permitted_date": "2023-12-31",
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "periods": {
+    "train": ["2011-01-01", "2018-12-31"],
+    "validation": ["2019-01-01", "2021-12-31"]
+  },
+  "label": {
+    "name": "forward_10_session_excess_open_to_open_log_return",
+    "formula": "log(stock_open_t_plus_11/stock_open_t_plus_1)-log(index_open_t_plus_11/index_open_t_plus_1)",
+    "signal_time": "official_close_t",
+    "entry_time": "next_session_open",
+    "exit_time": "open_after_10_complete_session_intervals",
+    "reset_crossing": "exclude",
+    "purge_sessions": 20,
+    "embargo_sessions": 20
+  },
+  "evaluation": {
+    "selection_partition": "train_and_validation_only",
+    "development_test_access": false,
+    "minimum_cross_section": 30,
+    "minimum_coverage": 0.95,
+    "minimum_validation_hac_t": 1.0,
+    "minimum_positive_validation_years": 2,
+    "redundancy_absolute_spearman": 0.90,
+    "hac_lag_sessions": 10,
+    "portfolio_backtest": false,
+    "model_training": false
+  },
+  "cross_sectional_features": [
+    {"id": "reversal_5", "family": "reversal", "formula": "-(close/close_lag5-1)", "lookback": 5, "expected_direction": "positive"},
+    {"id": "momentum_20", "family": "momentum", "formula": "close/close_lag20-1", "lookback": 20, "expected_direction": "positive"},
+    {"id": "momentum_63", "family": "momentum", "formula": "close/close_lag63-1", "lookback": 63, "expected_direction": "positive"},
+    {"id": "momentum_126", "family": "momentum", "formula": "close/close_lag126-1", "lookback": 126, "expected_direction": "positive"},
+    {"id": "momentum_252", "family": "momentum", "formula": "close/close_lag252-1", "lookback": 252, "expected_direction": "positive"},
+    {"id": "excess_momentum_20", "family": "relative_momentum", "formula": "stock_return20-index_return20", "lookback": 20, "expected_direction": "positive"},
+    {"id": "excess_momentum_63", "family": "relative_momentum", "formula": "stock_return63-index_return63", "lookback": 63, "expected_direction": "positive"},
+    {"id": "excess_momentum_126", "family": "relative_momentum", "formula": "stock_return126-index_return126", "lookback": 126, "expected_direction": "positive"},
+    {"id": "trend_close_sma20", "family": "trend", "formula": "close/sma20-1", "lookback": 20, "expected_direction": "positive"},
+    {"id": "trend_close_sma60", "family": "trend", "formula": "close/sma60-1", "lookback": 60, "expected_direction": "positive"},
+    {"id": "trend_close_sma200", "family": "trend", "formula": "close/sma200-1", "lookback": 200, "expected_direction": "positive"},
+    {"id": "trend_sma20_sma60", "family": "trend", "formula": "sma20/sma60-1", "lookback": 60, "expected_direction": "positive"},
+    {"id": "high_proximity_252", "family": "breakout", "formula": "close/rolling_max_close252-1", "lookback": 252, "expected_direction": "positive"},
+    {"id": "low_volatility_20", "family": "risk", "formula": "-std(log_return1,20)*sqrt(252)", "lookback": 20, "expected_direction": "positive"},
+    {"id": "low_downside_volatility_20", "family": "risk", "formula": "-sqrt(mean(min(log_return1,0)^2,20))*sqrt(252)", "lookback": 20, "expected_direction": "positive"},
+    {"id": "low_atr_20", "family": "risk", "formula": "-mean(true_range,20)/close", "lookback": 20, "expected_direction": "positive"},
+    {"id": "risk_adjusted_momentum_63", "family": "risk_adjusted_momentum", "formula": "momentum63/annualized_volatility20", "lookback": 63, "expected_direction": "positive"},
+    {"id": "volume_confirmation_5_20", "family": "activity", "formula": "mean(feature_volume,5)/mean(feature_volume,20)-1", "lookback": 20, "expected_direction": "positive"},
+    {"id": "trading_value_confirmation_5_20", "family": "activity", "formula": "mean(feature_trading_value,5)/mean(feature_trading_value,20)-1", "lookback": 20, "expected_direction": "positive"},
+    {"id": "liquidity_20", "family": "liquidity", "formula": "log1p(mean(feature_trading_value,20))", "lookback": 20, "expected_direction": "positive"},
+    {"id": "low_illiquidity_20", "family": "liquidity", "formula": "-mean(abs(log_return1)/(feature_trading_value/1e9),20)", "lookback": 20, "expected_direction": "positive"}
+  ],
+  "regime_features": [
+    {"id": "index_trend_200", "formula": "index_close/index_sma200-1", "available": "close_t"},
+    {"id": "index_momentum_63", "formula": "index_close/index_close_lag63-1", "available": "close_t"},
+    {"id": "index_low_volatility_20", "formula": "-std(index_log_return1,20)*sqrt(252)", "available": "close_t"},
+    {"id": "breadth_above_sma200", "formula": "mean(member_close>member_sma200)", "available": "close_t"},
+    {"id": "breadth_positive_momentum20", "formula": "mean(member_return20>0)", "available": "close_t"}
+  ],
+  "decision_rules": {
+    "accept": "coverage>=0.95 and train_mean_ic>0 and validation_mean_ic>0 and validation_hac_t>=1.0 and at_least_2_positive_validation_years and not_redundant",
+    "hold_unstable": "direction_or_validation_stability_gate_failed",
+    "hold_redundant": "absolute_train_rank_correlation>=0.90_with_stronger_accepted_feature",
+    "reject_missing": "coverage<0.95",
+    "regime": "compute_and_audit_only_then_hold_for_phase7"
+  },
+  "random_seed": 20260818
+}

@@ -1,0 +1,118 @@
+{
+  "version": "v24",
+  "phase1_status": "READY_FOR_PHASE2_DAILY_FEATURE_PIPELINE_AND_INTRADAY_ENTRY_RESEARCH_WITH_EXPLICIT_COVERAGE_CONTROLS",
+  "lineage": {
+    "daily_base": "phase1 production v23",
+    "v24_changes": [
+      "added validated CYBOS 1m/5m raw archives and QA",
+      "deduplicated provider audit for production use",
+      "added intraday coverage/selection-bias controls",
+      "corrected Samsung Epis Holdings canonical KRX short code from project 000126 to official alphanumeric 0126Z0"
+    ],
+    "superseded_inputs": [
+      "kospi100_174_full_history_ohlcv_v21.csv is not a production input because v24 contains the later corrected v23-derived full-history panel"
+    ]
+  },
+  "identity_rules": {
+    "ticker_type": "string; may be alphanumeric; never coerce to integer and never strip letters",
+    "canonical_security_id": "KRX_COMMON:<canonical_ticker> for the listed common-share line unless an explicit lifecycle mapping says otherwise",
+    "samsung_epis_holdings": "canonical short code 0126Z0 / provider code A0126Z0; uploaded minute archives are missing this security because the collection list used invalid A000126",
+    "display_name": "names can change; security identity must not be inferred from display name alone"
+  },
+  "point_in_time_rules": {
+    "ranking_universe": "only rows with is_member=true and eligible_new_entry=true on the as-of date",
+    "pre_entry_prices": "feature history only; never ranking/buy eligibility before membership",
+    "mechanical_ca_adjustment": "apply only when asof_date >= feature_boundary_date; adjust historical feature window to post-event basis using listed price_multiplier/share_multiplier; never overwrite raw OHLCV",
+    "ca_reset": "for reset events, no rolling return/price feature may bridge feature_boundary_date; start a new feature segment at boundary",
+    "rights_issues": "technical feature continuity resets at rights-off; economic right entitlement is handled later in Portfolio/Backtest",
+    "reorganizations": "feature continuity resets; position transforms via successor/distributed-security rules later",
+    "post_removal": "prices are execution-only; no ranking after membership ends"
+  },
+  "daily_market_data_rules": {
+    "daily_trading_value_div_volume": "NOT regular-session VWAP",
+    "volume_and_trading_value": "daily liquidity/activity inputs only",
+    "daily_price_validity": "for model/execution price use require finite positive OHLC plus applicable tradable/eligibility flags; retain raw invalid rows for audit",
+    "suspension_proxy": "tradable=false rows are excluded from executable prices; retain raw values unchanged",
+    "after_hours_example_047810_2017_10_11": "retain raw volume/value, feature_volume=0 and feature_trading_value=0; do not move volume to prior day"
+  },
+  "intraday_raw_data": {
+    "source": "CYBOS Plus StockChart, KRX scope as collected",
+    "archives": {
+      "1m": "intraday/raw_archives/1m.zip",
+      "5m": "intraday/raw_archives/5m.zip"
+    },
+    "schema": [
+      "date",
+      "time",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "trading_value"
+    ],
+    "raw_immutability": "do not overwrite source csv.gz files; cleaned/resampled/model datasets must be separate derived outputs",
+    "validated_files": {
+      "1m": {
+        "stocks": 158,
+        "index": 1,
+        "stock_rows": 29173079,
+        "index_rows": 194880
+      },
+      "5m": {
+        "stocks": 158,
+        "index": 1,
+        "stock_rows": 14929924,
+        "index_rows": 97440
+      }
+    },
+    "file_quality": "all 318 files readable; zero duplicate timestamps, required-field missing values, OHLC logic errors, nonpositive price rows, negative-volume rows, and negative-trading-value rows",
+    "cross_frequency_check": "for all 159 instruments, every 5m bar in the 1m-overlap range exactly equals deterministic aggregation of 1m OHLC, volume and trading_value; zero key/value mismatches",
+    "provider_windows": "actual range is instrument-dependent; KOSPI100 index is 1m 2024-07-24 09:01 through 2026-08-14 15:30 and 5m 2021-07-07 09:05 through 2026-08-14 15:30",
+    "session_rule": "do not hard-code every date to identical session hours; preserve actual observed bars and use an exchange calendar/special-session table downstream",
+    "resampling": "within 1m coverage, derive 5m/10m/15m from 1m when a single canonical derived source is desired; do not double-count native 5m and resampled 5m observations"
+  },
+  "intraday_information_timing": {
+    "candidate_selection": "t-day daily data may define t+1 candidates only after t close",
+    "minute_availability": "a minute bar may be used only after that bar has completed; no future high/low/close/volume from an unfinished bar",
+    "order_sequence": "t+1 intraday information may trigger buy/wait/cancel only as each required bar becomes observable",
+    "same_bar_barriers": "when stop and target are both crossed inside a bar and order is unknowable, apply a predeclared conservative rule",
+    "daily_intraday_alignment": "retain all minute data, but combined Ranker+Entry training may use only observations for which all required daily features, t+1 minute inputs, labels, and holding-period outcomes exist. Current daily production ends 2025-12-30, so later minute bars cannot silently extend the combined training sample."
+  },
+  "intraday_coverage_and_bias": {
+    "historical_union_securities": 174,
+    "minute_file_available_securities": 158,
+    "provider_failed_securities": 16,
+    "one_minute_tradable_member_day_coverage_through_daily_cutoff": {
+      "covered": 34738,
+      "total": 34750,
+      "pct": 0.9996546762589928,
+      "missing": "0126Z0 Samsung Epis Holdings, 12 days; collection identifier bug, not delisting survivorship"
+    },
+    "five_minute_tradable_member_day_coverage_through_daily_cutoff": {
+      "covered": 108957,
+      "total": 109691,
+      "pct": 0.9933084756269885,
+      "missing": "003410 Ssangyong C&E 722 days plus 0126Z0 Samsung Epis Holdings 12 days"
+    },
+    "selection_bias_assessment": "small by member-day share but non-random. 5m missingness is concentrated in a later-delisted security, so 5m results must be described as minute-data-covered subset results. 1m missingness is negligible in share but includes a newly listed alphanumeric-code security until backfilled.",
+    "other_failed_securities": "the other 14 failed provider codes have zero KOSPI100 member-day overlap with the applicable uploaded minute windows through 2025-12-30; they do not directly remove intraday training member-days",
+    "training_rule": "never treat missing minute data as zero/no-signal. Exclude unavailable security-date observations from the intraday model only, while keeping the security in the historical daily PIT universe/backtest.",
+    "reporting_rule": "every intraday train/validation/test result must report security/date coverage and missing-reason counts"
+  },
+  "model_validation_rules": {
+    "split": "time-ordered validation / walk-forward only; no random train-test split",
+    "fit_scope": "scaling, feature selection, thresholds and model fitting occur inside each train window only",
+    "overlapping_labels": "use purge/embargo when label/holding windows overlap split boundaries as needed",
+    "baseline": "compare minute Entry Timing with next-day open or other predeclared simple opening baseline on the identical covered security-date sample",
+    "costs": "final acceptance uses portfolio results after fees, tax where applicable, slippage, gaps, nonfills and partial fills",
+    "adoption": "minute model is optional and adopted only when OOS/walk-forward portfolio performance or risk control materially and stably improves versus the simple entry baseline"
+  },
+  "file_roles": {
+    "core": "daily PIT universe, daily stock/index prices, Corporate Action/lifecycle controls",
+    "controls": "machine-readable rules, identifier correction and intraday availability status",
+    "intraday/raw_archives": "immutable CYBOS source archives",
+    "audit": "QA only; not model inputs",
+    "intraday/reference_raw": "provider collection provenance only; raw 700-row audit is intentionally superseded by audit/collection_audit_final_v24.csv"
+  }
+}

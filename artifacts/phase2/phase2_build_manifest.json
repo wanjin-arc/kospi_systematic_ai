@@ -1,0 +1,30 @@
+{
+  "phase": 2,
+  "status": "PASS",
+  "completed_at_kst": "2026-08-18T11:15:08+09:00",
+  "scope": "deterministic daily backtest execution and accounting; no strategy or model",
+  "phase1_audit_sha256": "04ab28355a14dbbc51fa6dc72376e6dd506ac206b389069f0d21e8540e4844c0",
+  "phase2_source_tree_sha256": "1100ef2dc6533125da3524265c1f526d2944fe29d295f02cdc655db107a81907",
+  "phase2_config_bundle_sha256": "eb48990baa95ab74a5b47f36a4cdfc5361c9707a75b5be07ea07306f1ffb43a1",
+  "synthetic_input_hash": "a359b08f96cf03b40ccc556481c1217d490cbdb98665b74703987ca0fe4b5917",
+  "synthetic_engine_config_hash": "d8f38ac89b57fb79ad8e24a8123464bad4b9b3c6b20812e1a47cbc028b921344",
+  "synthetic_artifact_manifest_sha256": "a90818c525bcf1b1ae76a952864b2442895e3a9e93e932a8417991eccdf73948",
+  "project_tests": {
+    "passed": 26,
+    "failed": 0
+  },
+  "phase2_tests": {
+    "passed": 17,
+    "failed": 0
+  },
+  "seeded_accounting_stress": {
+    "passed": 250,
+    "failed": 0,
+    "seed": 20260818
+  },
+  "reconciliation_checks": {
+    "passed": 7,
+    "failed": 0
+  },
+  "final_oos_accessed": false
+}

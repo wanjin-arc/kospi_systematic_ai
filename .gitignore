@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+.env.*
+
+# 로컬 원본·대용량 데이터
+work/
+upload/
+data/processed/
+data/sealed/
+data/incoming/
+
+# 대용량 데이터베이스·원본 묶음
+*.parquet
+*.duckdb
+*.db
+*.zip
+
+# 로컬 임시 산출물
+tmp/
+temp/
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
