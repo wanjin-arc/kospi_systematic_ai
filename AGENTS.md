@@ -1,0 +1,69 @@
+# KOSPI 100 Technical Systematic AI — Codex 작업 규칙
+
+이 저장소는 ChatGPT Work가 연구·분석·의사결정 명세를 만들고, Codex가 코드 구현·테스트·리팩터링·자동화를 수행하는 공동 저장소다. 모든 보고서와 새 문서는 한글로 작성한다. 상세한 연구·운영 원칙의 원문은 `docs/PROJECT_MASTER_PROMPT_KO.md`를 따른다.
+
+## 작업 시작 순서
+
+1. `AGENTS.md`
+2. `docs/PROJECT_MASTER_PROMPT_KO.md`
+3. `docs/PROJECT_SPECIFICATION_KO.md`
+4. `docs/CURRENT_STATE_AND_CODEX_HANDOFF.md`
+5. `docs/RESEARCH_PROTOCOL.md`와 `docs/BIAS_PREVENTION_CHECKLIST.md`
+6. 현재 단계 명세와 `experiments/registry.csv`
+7. 관련 코드·설정·테스트
+
+문서와 코드가 충돌하면 실제 구현을 추측하지 말고 충돌을 보고한다. 연구 규칙 변경은 `docs/DECISION_LOG.md` 기록과 사용자 승인이 모두 있어야 한다.
+
+## 절대 제약
+
+- Universe는 과거 시점별 실제 KOSPI 100 구성종목이다.
+- Long-only 현금 주식만 사용하며 공매도·레버리지·파생상품은 금지한다.
+- 투자 Factor는 OHLCV, 거래대금, KOSPI 100 지수, 동시점 Universe Breadth 및 그 기술적 파생변수로 제한한다.
+- 재무·DART 공시내용·뉴스·밸류에이션·업종 전망·기업별 텍스트는 Factor로 사용하지 않는다.
+- Corporate Action, 거래정지, 코드 변경, 거래일·거래시간은 정합성과 체결 검증에만 쓴다.
+- 일봉 신호는 `t`일 장 종료 뒤 계산하고 주문은 `t+1` 이후에만 가능하다.
+- 분봉은 봉이 완전히 끝난 뒤에만 사용한다. 같은 봉의 손절·익절 순서를 알 수 없으면 사전 정의한 보수적 규칙을 적용한다.
+- 모든 종목에 같은 계산 체계를 적용한다.
+- Random split은 금지하고 시간 순서 Validation/Walk-Forward를 사용한다.
+- scaler, winsorization, imputer, feature selection, threshold, hyperparameter는 각 Train 내부에서만 적합한다.
+- 결과를 본 뒤 가설·변수·임계값을 소급 변경하지 않는다. 변경은 새 Experiment ID로 등록한다.
+
+## Protected OOS
+
+- `data/sealed/final_oos_v24/`의 2024–2025 자료는 Phase 8의 동결된 단일 릴리스 평가 전까지 열기·스캔·요약·집계·테스트 입력 사용을 모두 금지한다.
+- 경로 존재와 봉인 manifest 확인 외에 `head`, `wc`, `find` 후 내용 읽기, glob 처리, 데이터프레임 로드도 금지한다.
+- 일반 개발 경로는 `data/processed/v24/development/`뿐이다.
+- OOS를 이용해 변수·모델·비용·포트폴리오 규칙을 바꾸면 해당 OOS는 영구적으로 무효다.
+- 코드나 명령이 OOS 경로를 참조하면 즉시 중단하고 보고한다.
+
+## 현재 단계
+
+- Phase 0~3: 완료.
+- Phase 3 기준선: 재현 기준선으로 채택, 거래 후보로는 탈락.
+- Phase 4: 실험은 사전 등록됐고 일부 코드가 있으나 미완료·미검증이다.
+- Phase 5 이후: 미구현.
+
+Phase 4를 완료한 것으로 가정하지 않는다. 현재 `kospi100_features`는 `runner.py`와 `cli.py`가 없어 import 및 등록된 실행 명령이 실패한다. 사용자에게 현재 단계 수행 요청을 받은 뒤에만 `docs/CURRENT_STATE_AND_CODEX_HANDOFF.md`의 완료 조건에 맞춰 구현한다.
+
+## 구현 원칙
+
+- Raw 데이터는 수정하지 않는다. 파생 데이터는 별도 processed 계층에 쓴다.
+- 코드 작성 후 관련 단위 테스트와 전체 회귀 테스트를 실행한다.
+- 실행하지 않은 코드는 완료로 표시하지 않는다.
+- 기존 파일을 불필요하게 덮어쓰지 않고, 규칙·데이터 계약 변경은 버전을 올린다.
+- 대용량 데이터, 원본 ZIP, 봉인 OOS, 임시 작업물은 Git에 커밋하지 않는다.
+- 실험 결과는 코드·설정·데이터·산출물 해시와 재현 명령을 기록한다.
+- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-18 감사에서 32/32 통과했다.
+
+## 단계 완료 산출물
+
+각 단계는 다음을 남겨야 한다.
+
+- `docs/stages/phase_N_spec.md`: 입력·출력·가정·비목표·테스트·완료 조건
+- `docs/stages/phase_N_report.md`: 실제 실행 결과·문제·미결정 사항
+- `configs/`: 실행에 사용한 동결 설정
+- `experiments/registry.csv`: 결과 확인 전 등록 및 종료 후 결과 갱신
+- `artifacts/phaseN/`: 재현 가능한 요약·manifest·감사 결과
+- `tests/`: 핵심 불변조건과 회귀 테스트
+
+단계 보고서의 마지막에는 `Codex Handoff`를 두고 구현 대상, 파일, API, 테스트, 실행 명령, 완료 조건을 명확히 적는다.
