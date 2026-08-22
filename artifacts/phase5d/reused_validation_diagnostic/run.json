@@ -1,0 +1,19 @@
+{
+  "config_hash": "8d9123e2c7fe059476516d9af77c77fdd22f3af47c91f56e12905020e077f9b7",
+  "data_hash": "d4b817519bc7b9956b26bbc8e099356a0b1b3cb4e402674b59e93a1525162417",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.0"
+  },
+  "development_test_accessed": false,
+  "experiment_id": "EXP-20260823-004",
+  "final_oos_accessed": false,
+  "policy_hash": "dca60aebe149f4ab53b7bd0bf74f6174c8b3a96c609ea25969e99f9de20cae94",
+  "promotion_allowed": false,
+  "reused_validation_not_oos": true,
+  "run_command": "PYTHONPATH=src python -m kospi100_selective_ranking.cli run --config configs/phase5d_selective_ranking.json --output artifacts/phase5d/reused_validation_diagnostic",
+  "source_hash": "b579b7387efcd45091a1fc2bdcdbb306721b982f4465aa16bba52ea745fe8fa1",
+  "status": "REUSED_VALIDATION_DIAGNOSTIC_COMPLETED"
+}

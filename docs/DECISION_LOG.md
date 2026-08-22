@@ -84,6 +84,13 @@
 | DEC-2026-046 | 적응적 점수 지속성 진단 | Phase 5B 결과를 본 상태를 명시하고 `elastic_a005_l02`를 고정한 채 2015~2018에서 causal EMA5, 상위 10 목표·20위 fallback/이탈, 20세션 안전 상한을 한 번 진단한다. 결과가 좋아도 거래·Development Test 후보로 자동 승격하지 않는다. | Completed; user authorized Phase 5C 2026-08-23; diagnostic failed | — |
 | DEC-2026-047 | 소표본 연도 gate 해석 | 4개 fold의 80% 조건이 사실상 4/4가 되는 과도한 기각 위험을 인정한다. 향후 확인에서는 연결 기본비용·2배 비용 초과수익과 위험 한도를 hard gate로, 연도 양수 비율을 regime 진단으로 둘 것을 권고한다. 기존 D20은 사용자 별도 승인 전 변경하지 않는다. | Proposed; explicit approval required | None; D20 remains active |
 
+## Phase-5D Decisions
+
+| ID | Decision | Approved value / recommendation | Status | Supersedes |
+|---|---|---|---|---|
+| DEC-2026-048 | 현금·보유 수의 선택 결과화 | 평균 현금 10% 이하를 hard gate에서 제거하고 최소 보유 종목을 0개로 둔다. 현금과 보유 수는 점수·시장상태의 결과로 보고하며 최대 보유만 10개로 제한한다. | Confirmed; user approved 2026-08-23 | Phase 5C adaptive cash diagnostic only |
+| DEC-2026-049 | 2019~2021 재사용 진단 | 이미 Phase 5에서 소비한 2019~2021을 Test/OOS가 아닌 재사용 진단으로 한 번 사용한다. 이 결과로 승격하지 않으며 Development Test와 Final OOS는 계속 봉인한다. | Confirmed; user approved 2026-08-23 | — |
+
 ## Decision Entry Template
 
 ```markdown

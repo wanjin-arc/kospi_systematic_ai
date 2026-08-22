@@ -1,0 +1,12 @@
+{
+  "data_audit.json": "c787ad76b8d22f4acbeafa1e8ff747b6e685b91bf221d63e35ca928ee27a5cbc",
+  "diagnostic_decision.json": "edeff671e623fd14ee5dc0021a506e171cb448b32a357ffb0376074146b949e3",
+  "fold_audit.csv": "d5dee522580b349ad5eecb73e5c84bed80932bffb5908bcf97e679ca963fc992",
+  "fold_rank_metrics.csv": "deb4ffade885f2a0c1d727c85e8297f7e7bc4ee0ed547207ff01bf1b68931f54",
+  "policy_audit.json": "0b99bf71c9e31c16265a79016ce45245ac059bbac41223bca487d5c50765e31c",
+  "portfolio_metrics.csv": "3bf5c356a859b9915960902a59fe3e75d1cea97f5a662842fb7cfd54ffd4c5f3",
+  "regime_exposure_audit.csv": "60bb367e655ab50c4952cd708d2607ef8f80e518ed6fc8a9aa00a6e6e541a9c9",
+  "regime_signal_audit.csv": "4640e11b96e0dbda02a24bd1207fe7d3f29778de2ee1dfe0e76d8ab47de773af",
+  "run.json": "84559f7d5d5787a741a492339fc9eb2a0df23548191a42e3a08b58af2e93e1b8",
+  "score_contract.json": "bc53cc81730b3ba3073ef4d60f00553221c19210b123bb25787a957567f57c46"
+}

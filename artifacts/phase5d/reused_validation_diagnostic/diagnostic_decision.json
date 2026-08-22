@@ -1,0 +1,15 @@
+{
+  "annual_folds": 3,
+  "average_cash_is_hard_gate": false,
+  "connected_net_excess_return": "-0.880486056988176384095720761",
+  "connected_outperformed_index": false,
+  "development_test_candidate": false,
+  "development_test_runs": 0,
+  "experiment_id": "EXP-20260823-004",
+  "minimum_holdings_is_hard_gate": false,
+  "nonnegative_annual_excess_folds": 0,
+  "promotion_allowed": false,
+  "reason": "2019~2021은 이미 소비된 재사용 진단 구간이므로 성과와 무관하게 승격하지 않습니다.",
+  "status": "REUSED_VALIDATION_DIAGNOSTIC_COMPLETED",
+  "trading_candidate": false
+}
