@@ -1,0 +1,20 @@
+{
+  "adaptive_diagnostic_not_oos": true,
+  "config_hash": "0babda20316d73d565c86ad8580127884af01d455b6be42be2672110e50c08fc",
+  "data_hash": "d4b817519bc7b9956b26bbc8e099356a0b1b3cb4e402674b59e93a1525162417",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.0"
+  },
+  "development_test_accessed": false,
+  "experiment_id": "EXP-20260823-005",
+  "final_oos_accessed": false,
+  "model_contract": "ridge_a100_plus_logistic_c1_absolute_net_alpha",
+  "model_contract_hash": "5cf386b575f4fd110c991b1af8a97449d372e1a68f347162228a4e29a32cb289",
+  "promotion_allowed": false,
+  "run_command": "PYTHONPATH=src python -m kospi100_absolute_alpha.cli run --config configs/phase5e_absolute_alpha.json --output artifacts/phase5e/adaptive_diagnostic",
+  "source_hash": "1e82c851c0d8d1da81e332793785a8d57b4ad31991a38bce1b238692d52d5a0b",
+  "status": "ADAPTIVE_DIAGNOSTIC_COMPLETED"
+}

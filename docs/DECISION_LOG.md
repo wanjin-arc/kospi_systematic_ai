@@ -91,6 +91,14 @@
 | DEC-2026-048 | 현금·보유 수의 선택 결과화 | 평균 현금 10% 이하를 hard gate에서 제거하고 최소 보유 종목을 0개로 둔다. 현금과 보유 수는 점수·시장상태의 결과로 보고하며 최대 보유만 10개로 제한한다. | Confirmed; user approved 2026-08-23 | Phase 5C adaptive cash diagnostic only |
 | DEC-2026-049 | 2019~2021 재사용 진단 | 이미 Phase 5에서 소비한 2019~2021을 Test/OOS가 아닌 재사용 진단으로 한 번 사용한다. 이 결과로 승격하지 않으며 Development Test와 Final OOS는 계속 봉인한다. | Confirmed; user approved 2026-08-23 | — |
 
+## Phase-5E Decisions
+
+| ID | Decision | Approved value / recommendation | Status | Supersedes |
+|---|---|---|---|---|
+| DEC-2026-050 | 절대 순초과수익 target | Phase 5E에 한해 D09 횡단면 순위 대신 `t+1` 시가부터 `t+11` 시가까지의 비용 차감 KOSPI 100 초과 로그수익률과 그 값의 양수 여부를 각각 회귀·분류 target으로 사용한다. 기존 D09와 과거 Phase 결과는 변경하지 않는다. | Confirmed; user approved 2026-08-23 | Phase 5E에 한해 DEC-2026-009 대체 |
+| DEC-2026-051 | 이중 no-trade gate | 고정 Ridge 회귀와 Logistic 분류를 Train 내부에서만 적합하고, 예상 순초과수익 `>=0.5%` 및 양수 확률 `>=60%`를 모두 통과한 종목만 예상 순초과수익 순으로 최대 10개 매수한다. 최소 보유·현금 gate와 시장상태별 강제 capacity는 두지 않는다. | Confirmed; user approved 2026-08-23 | DEC-2026-048 확장, Phase 5D 시장 capacity 미사용 |
+| DEC-2026-052 | Phase 5E 증거 지위 | 2019~2021은 이미 소비된 adaptive diagnostic으로만 사용한다. 경제성 gate를 계산하되 성과와 무관하게 승격하지 않고 Development Test와 Final OOS를 열지 않는다. | Confirmed; user approved 2026-08-23 | DEC-2026-049 확장 |
+
 ## Decision Entry Template
 
 ```markdown

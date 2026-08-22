@@ -2,7 +2,7 @@
 
 **기준일:** 2026-08-22
 **근거:** 저장소 파일, 실행 가능한 테스트, Phase 1 v24 감사, Phase 2·3 산출물, Phase 4 물리 입력 재검증
-**상태:** Phase 0~4 완료, Phase 5·5B·5C·5D 연구 후보 모두 성과 실패, 거래 후보 없음
+**상태:** Phase 0~4 완료, Phase 5·5B·5C·5D·5E 연구 후보 모두 성과 실패, 거래 후보 없음
 
 ## 1. 목적과 역할 분담
 
@@ -106,7 +106,7 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 | 2 Backtest engine | 완료 | Long-only/정수주/현금, 비용·세금·슬리피지, gap, halt, partial fill, stop/target, CA, 원장·metrics·reconciliation, deterministic output | 호가 깊이·실제 auction·broker semantics는 Phase 9 전 검증 |
 | 3 Rule baseline | 완료 | SMA200 + 126일 초과모멘텀, 9개 조합, Validation-only 선택, Development Test 1회 | 거래 후보 탈락. 기준선으로만 유지 |
 | 4 Feature research | 완료 | 21개 횡단면·5개 regime 변수, PIT/CA-aware feature·label, 단변량 IC/HAC/coverage/중복 평가, 2021년 이하 물리 입력 경계, 접근 감사, deterministic CLI·산출물 | `reversal_5`만 Phase 5 입력 후보. 모델·포트폴리오·거래 판정은 미수행 |
-| 5 Ranking model | Selection/적응적·재사용 진단 완료·후보 기각 | reversal_5 단일 모델, Phase 4B/5B 다변수 모델, Phase 5C 점수 지속성, Phase 5D 시장상태별 0·5·10 가변 보유 | 모두 비용 차감 지수 초과 성과 실패. Development Test 미사용 |
+| 5 Ranking model | Selection/적응적·재사용 진단 완료·후보 기각 | reversal_5 단일 모델, Phase 4B/5B 다변수 모델, Phase 5C 점수 지속성, Phase 5D 시장상태별 가변 보유, Phase 5E 절대 알파·양수확률 no-trade | 모두 비용 차감 지수 초과 성과 실패. Development Test 미사용 |
 | 6 Entry Timing | 미구현 | 분봉 Raw와 coverage audit만 있음 | 동일 표본 시가/5분/15분 baseline 및 timing model |
 | 7 Portfolio/Risk | 미구현 | Phase 2의 실행 원장 기반만 있음 | Regime, exposure, sizing, risk rule, kill switch |
 | 8 통합 검증 | 미구현 | 없음 | Walk-Forward, stress, sensitivity, 최종 OOS 1회 |
@@ -125,6 +125,7 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 | `src/kospi100_multifactor/` | Phase 4B 다변수 Feature 감사와 Phase 5B 일별 횡단면 모델 |
 | `src/kospi100_rank_persistence/` | Phase 5C causal EMA·상위 10/20 순위 지속성 정책과 적응적 진단 |
 | `src/kospi100_selective_ranking/` | Phase 5D 절대 점수·시장상태 기반 가변 보유와 2019~2021 재사용 진단 |
+| `src/kospi100_absolute_alpha/` | Phase 5E 비용 차감 절대 초과수익 Ridge·양수확률 Logistic·no-trade adaptive 진단 |
 | `configs/phase1.json` | 초기 Phase 1 논리 build 설정 |
 | `configs/phase2_engine.json` | 동결된 Phase 2 실행·원장 설정 |
 | `configs/phase3_baseline.json` | Phase 3 후보군·구간·비용·선택 규칙 |
@@ -140,6 +141,7 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 | `artifacts/phase4b_multifactor/`, `artifacts/phase5b/selection/` | 2018년 이하 다변수 Feature·모델 진단. 전 후보 기각 |
 | `artifacts/phase5c/adaptive_diagnostic/` | causal 점수 지속성·저회전율 정책 진단. 정책 기각 |
 | `artifacts/phase5d/reused_validation_diagnostic/` | 시장상태별 0·5·10 가변 보유의 2019~2021 재사용 진단. 정책 기각 |
+| `artifacts/phase5e/adaptive_diagnostic/` | 절대 순초과수익·양수확률 이중 gate의 2019~2021 adaptive 진단. 모델 기각 |
 | `experiments/registry.csv` | 실험 사전 등록 및 결과·해시·결정 기록 |
 | `work/v24_stage/phase1_final_v24/` | 1.3GB급 Phase 1 원본/production bundle. Git 추적 대상이 아님 |
 | `data/processed/v24/development/` | 2023년까지의 개발 입력. Git 추적 대상이 아님 |
