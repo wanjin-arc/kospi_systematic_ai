@@ -1,0 +1,107 @@
+{
+  "audit": {
+    "daily_cross_sectional_target_rank_used": false,
+    "feature_audit": {
+      "ca_blocked_rows": 25393,
+      "eligible_dates": 2962,
+      "eligible_rows": 270559,
+      "future_bar_used": false,
+      "late_notice_actions_protected": 1,
+      "maximum_date": "2021-12-30",
+      "mechanical_actions": 34,
+      "raw_ohlcv_overwritten": false,
+      "regime_rows": 2962,
+      "reset_actions": 44,
+      "rows": 333301
+    },
+    "future_bar_used_for_feature": false,
+    "label_audit": {
+      "complete_label_rows": 269213,
+      "eligible_signal_rows": 270559,
+      "entry_is_after_signal": true,
+      "exit_is_after_entry": true,
+      "label_name": "forward_excess_log_return_10",
+      "reset_crossing_rows_excluded": 994,
+      "same_day_execution": false
+    },
+    "label_entry_after_signal": true,
+    "label_exit_after_entry": true,
+    "market_temporal_audit": {
+      "complete_temporal_dates": 2744,
+      "delta_sessions": 5,
+      "exchange_session_gap_reset": true,
+      "future_rows_used": false,
+      "input_dates": 2962,
+      "regime_base_features": 5,
+      "regime_segments": 1,
+      "regime_temporal_features": 15,
+      "rolling_sessions": 20,
+      "warmup_or_gap_dates_removed": 218
+    },
+    "maximum_signal_date": "2021-12-15",
+    "minimum_signal_date": "2011-01-28",
+    "minute_data_used": false,
+    "model_feature_count": 55,
+    "research_dates": 2681,
+    "research_rows": 235841,
+    "stock_temporal_audit": {
+      "complete_temporal_rows": 235841,
+      "delta_sessions": 5,
+      "exchange_session_gap_reset": true,
+      "future_rows_used": false,
+      "input_rows": 244194,
+      "membership_spell_reset": true,
+      "rolling_sessions": 20,
+      "stock_base_features": 8,
+      "stock_temporal_features": 40,
+      "temporal_segments": 206,
+      "warmup_or_gap_rows_removed": 8353
+    },
+    "target_audit": {
+      "binary_threshold": 0.0,
+      "classification_target": "forward_positive_cost_adjusted_excess_10",
+      "commission_rate_per_side": 0.0002,
+      "cross_sectional_target_transform": "none",
+      "entry_offset_sessions": 1,
+      "exit_date_sell_tax_used": true,
+      "exit_offset_sessions": 11,
+      "gross_target": "forward_excess_log_return_10",
+      "outside_research_period_rows_excluded": 25019,
+      "positive_target_rows": 104316,
+      "regression_target": "forward_cost_adjusted_excess_log_return_10",
+      "slippage_rate_per_side": 0.001,
+      "target_rows": 244194
+    }
+  },
+  "development_test_accessed": false,
+  "final_oos_accessed": false,
+  "regime_features": [
+    "index_trend_200",
+    "index_momentum_63",
+    "index_low_volatility_20",
+    "breadth_above_sma200",
+    "breadth_positive_momentum20"
+  ],
+  "regime_transforms": [
+    "level",
+    "delta_5",
+    "std_20"
+  ],
+  "stock_features": [
+    "reversal_5",
+    "excess_momentum_20",
+    "excess_momentum_63",
+    "trend_close_sma20",
+    "trend_close_sma60",
+    "trend_close_sma200",
+    "low_volatility_20",
+    "volume_confirmation_5_20"
+  ],
+  "stock_transforms": [
+    "level",
+    "delta_5",
+    "mean_20",
+    "std_20",
+    "persistence_20"
+  ]
+}

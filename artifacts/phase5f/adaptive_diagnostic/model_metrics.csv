@@ -1,0 +1,4 @@
+model,fold,validation_year,rows,dates,mean_mae,mean_rmse,mean_r2,mean_spearman,median_mae,median_spearman,market_anomaly_dates,entry_gate_rows,entry_gate_rate,entry_gate_realized_mean_net_excess,entry_gate_realized_positive_rate
+histgb_mean_median_temporal_path_plus_train_isolation_forest,F2019,2019,18088,206,0.0368578860479,0.0496313804663,-0.00681791965979,0.00598716229101,0.0368193856322,0.00826124986027,2,581,0.0321207430341,0.0047127730465,0.490533562823
+histgb_mean_median_temporal_path_plus_train_isolation_forest,F2020,2020,18271,208,0.0564660903382,0.0778108103093,-0.0192586816253,-0.0476809698559,0.0561653162428,-0.00999569123973,98,512,0.0280225493952,-0.0646406507745,0.26171875
+histgb_mean_median_temporal_path_plus_train_isolation_forest,F2021,2021,17022,208,0.0439118887261,0.0604493450459,-0.0538345773087,-0.0780840239068,0.0450583040729,-0.101187995281,16,0,0,,

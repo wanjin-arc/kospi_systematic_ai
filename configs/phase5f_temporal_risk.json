@@ -1,0 +1,117 @@
+{
+  "version": "phase5f-temporal-risk-v1",
+  "experiment_id": "EXP-20260823-006",
+  "supersedes_experiment_id": "EXP-20260823-005",
+  "data_root": "data/processed/v24/phase5_train_validation_2021",
+  "required_partition_role": "phase5_train_validation",
+  "maximum_permitted_date": "2021-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "evaluation_status": "ADAPTIVE_DIAGNOSTIC_NOT_TEST_OR_OOS",
+  "periods": {
+    "train": ["2011-01-01", "2018-12-31"],
+    "adaptive_diagnostic": ["2019-01-01", "2021-12-31"]
+  },
+  "folds": [
+    {"fold": "F2019", "train": ["2011-01-01", "2018-12-31"], "validation": ["2019-01-01", "2019-12-31"]},
+    {"fold": "F2020", "train": ["2011-01-01", "2019-12-31"], "validation": ["2020-01-01", "2020-12-31"]},
+    {"fold": "F2021", "train": ["2011-01-01", "2020-12-31"], "validation": ["2021-01-01", "2021-12-31"]}
+  ],
+  "feature_contract": {
+    "phase4b_config": "configs/phase4b_multifactor.json",
+    "base_stock_features": [
+      "reversal_5",
+      "excess_momentum_20",
+      "excess_momentum_63",
+      "trend_close_sma20",
+      "trend_close_sma60",
+      "trend_close_sma200",
+      "low_volatility_20",
+      "volume_confirmation_5_20"
+    ],
+    "stock_temporal_transforms": ["level", "delta_5", "mean_20", "std_20", "persistence_20"],
+    "base_regime_features": [
+      "index_trend_200",
+      "index_momentum_63",
+      "index_low_volatility_20",
+      "breadth_above_sma200",
+      "breadth_positive_momentum20"
+    ],
+    "regime_temporal_transforms": ["level", "delta_5", "std_20"],
+    "minimum_temporal_sessions": 20,
+    "membership_and_session_gap_reset": true,
+    "minute_data_used": false
+  },
+  "target": {
+    "mean_regression_id": "forward_10_session_cost_adjusted_excess_open_to_open_log_return",
+    "robust_regression_id": "forward_10_session_cost_adjusted_excess_conditional_median",
+    "entry_offset_sessions": 1,
+    "exit_offset_sessions": 11,
+    "cost_adjustment": "base_commission_slippage_and_exit_date_sell_tax",
+    "cross_sectional_transform": "none"
+  },
+  "models": {
+    "mean_regressor": "hist_gradient_boosting_squared_error",
+    "median_regressor": "hist_gradient_boosting_quantile_0.50",
+    "learning_rate": 0.03,
+    "max_iter": 120,
+    "max_depth": 2,
+    "min_samples_leaf": 500,
+    "l2_regularization": 10.0,
+    "early_stopping": false,
+    "model_selection": "none_fixed_dual_regression"
+  },
+  "anomaly_veto": {
+    "model": "isolation_forest",
+    "n_estimators": 200,
+    "max_samples": 256,
+    "contamination": "auto",
+    "threshold_source": "train_score_samples_quantile",
+    "threshold_quantile": 0.05,
+    "fit_scope": "fold_train_unique_dates_only",
+    "validation_or_event_labels_used": false
+  },
+  "no_trade_policy": {
+    "entry_minimum_predicted_mean_net_excess": 0.003,
+    "entry_minimum_predicted_median_net_excess": 0.0,
+    "entry_requires_non_anomalous_market": true,
+    "exit_at_or_below_predicted_mean_net_excess": 0.0,
+    "exit_at_or_below_predicted_median_net_excess": 0.0,
+    "exit_on_market_anomaly": true,
+    "rank_eligible_candidates_by": "predicted_mean_net_excess_descending",
+    "zero_eligible_action": "hold_cash",
+    "maximum_entry_candidates_per_day": 10
+  },
+  "portfolio": {
+    "initial_cash_krw": "5000000",
+    "maximum_holdings": 10,
+    "required_minimum_holdings": 0,
+    "target_weight": "0.10",
+    "maximum_holding_sessions": 10,
+    "allow_pyramiding": false,
+    "entry_gap_cap": "0.05",
+    "unallocated_cash": "retain_without_penalty"
+  },
+  "costs": {
+    "commission_rate_per_side": "0.0002",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [1, 2, 3],
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv",
+    "tax_removed_in_stress": false
+  },
+  "diagnostic_gate": {
+    "required_connected_net_excess_return": 0.0,
+    "required_cost_2x_net_excess_return": 0.0,
+    "minimum_entry_orders": 100,
+    "maximum_mdd_worsening_percentage_points": 5.0,
+    "annual_positive_ratio_is_hard_gate": false,
+    "average_cash_is_hard_gate": false,
+    "promotion_allowed_from_this_run": false,
+    "development_test_runs": 0
+  },
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "random_seed": 20260823,
+  "run_command": "PYTHONPATH=src python -m kospi100_temporal_risk.cli run --config configs/phase5f_temporal_risk.json --output artifacts/phase5f/adaptive_diagnostic"
+}
