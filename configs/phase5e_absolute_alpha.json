@@ -1,0 +1,87 @@
+{
+  "version": "phase5e-absolute-alpha-v1",
+  "experiment_id": "EXP-20260823-005",
+  "supersedes_experiment_id": "EXP-20260823-004",
+  "data_root": "data/processed/v24/phase5_train_validation_2021",
+  "required_partition_role": "phase5_train_validation",
+  "maximum_permitted_date": "2021-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "evaluation_status": "ADAPTIVE_DIAGNOSTIC_NOT_TEST_OR_OOS",
+  "periods": {
+    "train": ["2011-01-01", "2018-12-31"],
+    "adaptive_diagnostic": ["2019-01-01", "2021-12-31"]
+  },
+  "folds": [
+    {"fold": "F2019", "train": ["2011-01-01", "2018-12-31"], "validation": ["2019-01-01", "2019-12-31"]},
+    {"fold": "F2020", "train": ["2011-01-01", "2019-12-31"], "validation": ["2020-01-01", "2020-12-31"]},
+    {"fold": "F2021", "train": ["2011-01-01", "2020-12-31"], "validation": ["2021-01-01", "2021-12-31"]}
+  ],
+  "feature_contract": {
+    "phase4b_config": "configs/phase4b_multifactor.json",
+    "feature_set": "phase4b_multifactor_interaction_v1",
+    "stock_features": 21,
+    "regime_features": 5,
+    "interactions": 6,
+    "market_state_is_model_input_not_hard_capacity": true
+  },
+  "target": {
+    "regression_id": "forward_10_session_cost_adjusted_excess_open_to_open_log_return",
+    "classification_id": "forward_10_session_positive_cost_adjusted_excess",
+    "entry_offset_sessions": 1,
+    "exit_offset_sessions": 11,
+    "binary_threshold": 0.0,
+    "cost_adjustment": "base_commission_slippage_and_exit_date_sell_tax",
+    "cross_sectional_transform": "none"
+  },
+  "models": {
+    "regressor": "ridge",
+    "ridge_alpha": 100.0,
+    "classifier": "logistic_regression",
+    "logistic_c": 1.0,
+    "logistic_max_iter": 5000,
+    "class_weight": null,
+    "model_selection": "none_fixed_dual_model"
+  },
+  "no_trade_policy": {
+    "entry_minimum_predicted_net_excess": 0.005,
+    "entry_minimum_positive_probability": 0.60,
+    "exit_at_or_below_predicted_net_excess": 0.0,
+    "exit_below_positive_probability": 0.50,
+    "rank_eligible_candidates_by": "predicted_net_excess_descending",
+    "zero_eligible_action": "hold_cash",
+    "maximum_entry_candidates_per_day": 10
+  },
+  "portfolio": {
+    "initial_cash_krw": "5000000",
+    "maximum_holdings": 10,
+    "required_minimum_holdings": 0,
+    "target_weight": "0.10",
+    "maximum_holding_sessions": 10,
+    "allow_pyramiding": false,
+    "entry_gap_cap": "0.05",
+    "unallocated_cash": "retain_without_penalty"
+  },
+  "costs": {
+    "commission_rate_per_side": "0.0002",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [1, 2, 3],
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv",
+    "tax_removed_in_stress": false
+  },
+  "diagnostic_gate": {
+    "required_connected_net_excess_return": 0.0,
+    "required_cost_2x_net_excess_return": 0.0,
+    "minimum_entry_orders": 100,
+    "maximum_mdd_worsening_percentage_points": 5.0,
+    "annual_positive_ratio_is_hard_gate": false,
+    "average_cash_is_hard_gate": false,
+    "promotion_allowed_from_this_run": false,
+    "development_test_runs": 0
+  },
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "random_seed": 20260823,
+  "run_command": "PYTHONPATH=src python -m kospi100_absolute_alpha.cli run --config configs/phase5e_absolute_alpha.json --output artifacts/phase5e/adaptive_diagnostic"
+}

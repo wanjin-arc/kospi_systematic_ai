@@ -1,0 +1,4 @@
+model,fold,train_min_date,train_max_date,train_rows,validation_min_date,validation_max_date,validation_rows,input_columns,purge_sessions,embargo_sessions,preprocessing_fit_used_validation,regression_fit_used_validation,classification_fit_used_validation,target_cross_sectional_rank_used,adaptive_diagnostic_not_oos
+ridge_a100_plus_logistic_c1_absolute_net_alpha,F2019,2011-01-03,2018-11-29,176946,2019-01-30,2019-11-29,18553,32,20,20,False,False,False,False,True
+ridge_a100_plus_logistic_c1_absolute_net_alpha,F2020,2011-01-03,2019-11-29,199106,2020-02-03,2020-12-01,18647,32,20,20,False,False,False,False,True
+ridge_a100_plus_logistic_c1_absolute_net_alpha,F2021,2011-01-03,2020-12-01,221327,2021-02-01,2021-12-02,18551,32,20,20,False,False,False,False,True

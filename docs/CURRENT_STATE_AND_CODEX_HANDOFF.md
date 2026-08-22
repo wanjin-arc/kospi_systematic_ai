@@ -15,9 +15,12 @@ Phase 5C `EXP-20260823-003`은 이 신호를 고정하고 causal EMA5·상위 10
 
 Phase 5D `EXP-20260823-004`는 사용자 승인에 따라 평균 현금·최소 보유 gate를 제거하고 시장상태별 최대 보유를 risk-on 10, neutral 5, risk-off 0으로 바꿨다. 이미 소비된 2019~2021 재사용 진단에서 평균 보유 4.159개·평균 현금 63.34%로 가변 운용은 작동했지만 전략 -37.65%, 지수 +50.40%, 순초과 -88.05%p로 실패했다. 거래·Development Test 후보는 없다.
 
+Phase 5E `EXP-20260823-005`는 비용 차감 절대 초과수익 Ridge와 그 값이 양수일 확률 Logistic을 고정하고 예상 순초과수익 0.5%·확률 60%를 모두 통과한 종목만 거래했다. 2019~2021 adaptive diagnostic에서 전략 +29.31%, 지수 +50.40%, 순초과 -21.09%p였다. 평균 현금 96.00%, 평균 보유 0.423개로 no-trade는 작동했지만 절대 알파 예측과 지수 초과 gate를 실패했다. 거래·Development Test 후보는 없다.
+
 ## 검증 상태
 
-- 전체 회귀 테스트: 86/86 PASS
+- 전체 회귀 테스트: 95/95 PASS
+- Phase 5E 전용 테스트: 9/9 PASS
 - Phase 5C 전용 테스트: 7/7 PASS
 - Phase 5D 전용 테스트: 7/7 PASS
 - Phase 4B/5B 신규 테스트: 10/10 PASS
@@ -32,6 +35,7 @@ Phase 5D `EXP-20260823-004`는 사용자 승인에 따라 평균 현금·최소 
 - 로드 후 날짜 필터: 없음
 - Development Test 입력·계산·평가·선택: 모두 0행
 - Final OOS 접근: 없음
+- Phase 5E 독립 재실행 구조화 산출물 10개: byte-identical
 
 ## Phase 5 Selection 결과
 
@@ -76,6 +80,14 @@ Selection 우선순위상 tree 후보가 Raw Rank·OLS보다 높았지만, 사�
 - 구조화 결과: `artifacts/phase4b_multifactor/`, `artifacts/phase5b/selection/`
 - 명세·보고서: `docs/stages/phase_4b_spec.md`, `phase_4b_report.md`, `phase_5b_spec.md`, `phase_5b_report.md`
 
+## Phase 5E 구현 및 산출물
+
+- 설정: `configs/phase5e_absolute_alpha.json`
+- CLI: `python -m kospi100_absolute_alpha.cli freeze|run`
+- 코드: `src/kospi100_absolute_alpha/`
+- 구조화 결과: `artifacts/phase5e/adaptive_diagnostic/`
+- 명세·보고서: `docs/stages/phase_5e_spec.md`, `docs/stages/phase_5e_report.md`
+
 ## 다음 승인 경계
 
 1. Development Test는 사용자 별도 승인 전 실행하지 않는다.
@@ -89,9 +101,10 @@ Selection 우선순위상 tree 후보가 Raw Rank·OLS보다 높았지만, 사�
 9. D20의 연도 80% 조건 변경은 `DEC-2026-047` 제안 상태이며 사용자 명시적 승인 전 적용하지 않는다.
 10. 2019~2021은 Phase 5D에서 재사용 진단으로 명시적으로 소비됐다. 이후 Test/OOS 또는 새 선택 구간으로 부르지 않는다.
 11. 평균 현금과 최소 보유 수는 hard gate가 아니지만, 이 변경만으로 종목 점수의 예측력 부족은 해결되지 않았다.
+12. Phase 5E는 절대 순초과수익·양수 확률 no-trade 구조를 구현했지만 2019~2021 지수 초과에 실패했다. 같은 구간에서 target threshold나 모델 parameter를 다시 조정하지 않는다.
 
 ## Codex Handoff
 
-- 현재 허용 작업: Phase 4B/5B 산출물·manifest·테스트 감사와 문서 검토.
-- 사용자 결정을 기다릴 작업: 새로운 저회전율 ranking/portfolio 가설을 별도 Experiment로 설계할지 여부.
-- 금지 작업: Development Test 선행 접근, 이번 결과를 보고 동일 Experiment 후보 재선택, Phase 6 시작, Final OOS 접근, 실거래·배포.
+- 현재 허용 작업: Phase 5E 산출물·manifest·테스트 감사와 문서 검토.
+- 사용자 결정을 기다릴 작업: 비중복 데이터 또는 앞으로 축적되는 shadow data를 이용한 새 가설을 설계할지 여부.
+- 금지 작업: 2019~2021 threshold·모델 재튜닝, Development Test 선행 접근, 이번 결과를 보고 동일 Experiment 후보 재선택, Phase 6 시작, Final OOS 접근, 실거래·배포.

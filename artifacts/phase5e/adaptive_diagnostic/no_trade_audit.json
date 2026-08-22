@@ -1,0 +1,26 @@
+{
+  "adaptive_diagnostic_not_oos": true,
+  "average_cash_is_hard_gate": false,
+  "connected_order_audit": {
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 0.20257234726688103,
+    "entry_orders": 126,
+    "market_regime_hard_capacity_used": false,
+    "maximum_eligible_candidates": 8,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 11,
+    "no_trade_signal_day_ratio": 0.9115755627009646,
+    "no_trade_signal_days": 567,
+    "orders": 137,
+    "signal_days": 622
+  },
+  "development_test_accessed": false,
+  "entry_minimum_positive_probability": 0.6,
+  "entry_minimum_predicted_net_excess": 0.005,
+  "exit_at_or_below_predicted_net_excess": 0.0,
+  "exit_below_positive_probability": 0.5,
+  "final_oos_accessed": false,
+  "market_regime_hard_capacity_used": false,
+  "maximum_entry_candidates_per_day": 10,
+  "minimum_required_holdings": 0
+}
