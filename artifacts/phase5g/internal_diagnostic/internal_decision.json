@@ -1,0 +1,22 @@
+{
+  "all_internal_gates_passed": false,
+  "annual_folds": 4,
+  "connected_net_excess_return": "-0.036597521296740622575271705",
+  "cost_2x_net_excess_return": "-0.069592985296740622575271705",
+  "development_test_candidate": false,
+  "development_test_runs": 0,
+  "entry_orders": 1324,
+  "experiment_id": "EXP-20260823-007",
+  "internal_gates": {
+    "all_four_annual_folds_nonnegative": false,
+    "base_cost_positive_net_excess": false,
+    "cost_2x_nonnegative_net_excess": false,
+    "mdd_not_worse_than_benchmark_by_over_5pp": true,
+    "minimum_100_entry_orders": true
+  },
+  "nonnegative_annual_excess_folds": 2,
+  "promotion_allowed": false,
+  "reason": "2018년 이하 Train 내부 진단이므로 결과와 무관하게 독립 데이터 없이 승격하지 않습니다.",
+  "status": "TRAIN_INTERNAL_DIAGNOSTIC_COMPLETED",
+  "trading_candidate": false
+}

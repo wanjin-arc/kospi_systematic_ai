@@ -1,0 +1,20 @@
+{
+  "config_hash": "af1fa30ab2f1b1186530c71d0d9d74e2764aab1150bbf773bd70436bad871ff1",
+  "data_hash": "5191493236aa5613f72700f7ac3a24403989ce80d8b2cc4ecd0b3ab913742f35",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.0"
+  },
+  "development_test_accessed": false,
+  "experiment_id": "EXP-20260823-007",
+  "final_oos_accessed": false,
+  "internal_train_diagnostic_only": true,
+  "model_contract": "extra_trees_multioutput_5_10_20_consensus",
+  "model_contract_hash": "64e9eec7d94e044ac25b8f80c9f638f168cb8558b6cdd802d67d48bbd8c50436",
+  "promotion_allowed": false,
+  "run_command": "PYTHONPATH=src python -m kospi100_multihorizon.cli run --config configs/phase5g_multihorizon_consensus.json --output artifacts/phase5g/internal_diagnostic",
+  "source_hash": "a6825fd4e230546faf9697c2120a821dbb7bde0f31c622bcbf215a0b5393bb65",
+  "status": "TRAIN_INTERNAL_DIAGNOSTIC_COMPLETED"
+}

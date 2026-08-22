@@ -1,0 +1,136 @@
+{
+  "config_hash": "af1fa30ab2f1b1186530c71d0d9d74e2764aab1150bbf773bd70436bad871ff1",
+  "data_hash": "5191493236aa5613f72700f7ac3a24403989ce80d8b2cc4ecd0b3ab913742f35",
+  "development_test_input_loaded": false,
+  "development_test_rows_calculated": 0,
+  "development_test_rows_evaluated": 0,
+  "development_test_rows_loaded": 0,
+  "development_test_rows_selected": 0,
+  "experiment_id": "EXP-20260823-007",
+  "filter_applied_after_load": false,
+  "final_oos_accessed": false,
+  "inputs": [
+    {
+      "bytes": 4051,
+      "date_column": "feature_boundary_date",
+      "file": "corporate_actions.csv.gz",
+      "loaded_max_date": "2018-12-27",
+      "loaded_min_date": "2010-05-10",
+      "loaded_rows": 53,
+      "manifest_max_date": "2018-12-27",
+      "manifest_min_date": "2010-05-10",
+      "manifest_rows": 53,
+      "rows_filtered_after_load": 0,
+      "sha256": "d55e85036de58cbae3cb9fb91daac77599e5d5f6aeac5590c9f9fd94aa69037d"
+    },
+    {
+      "bytes": 7640412,
+      "date_column": "date",
+      "file": "feature_price_panel.csv.gz",
+      "loaded_max_date": "2018-12-28",
+      "loaded_min_date": "2008-12-02",
+      "loaded_rows": 255692,
+      "manifest_max_date": "2018-12-28",
+      "manifest_min_date": "2008-12-02",
+      "manifest_rows": 255692,
+      "rows_filtered_after_load": 0,
+      "sha256": "b28e11e47fb7e226f1401c3c651ccbb41d3ab5f1b31c2f414684fffaffa28fa0"
+    },
+    {
+      "bytes": 10711643,
+      "date_column": "date",
+      "file": "full_history_ohlcv.csv.gz",
+      "loaded_max_date": "2018-12-28",
+      "loaded_min_date": "2008-01-02",
+      "loaded_rows": 368549,
+      "manifest_max_date": "2018-12-28",
+      "manifest_min_date": "2008-01-02",
+      "manifest_rows": 368549,
+      "rows_filtered_after_load": 0,
+      "sha256": "18fbd0512d7b1b7ae74ef5d83a8815201e8325814f275aded8e290711b442606"
+    },
+    {
+      "bytes": 55492,
+      "date_column": "date",
+      "file": "index_ohlcv.csv.gz",
+      "loaded_max_date": "2018-12-28",
+      "loaded_min_date": "2010-01-04",
+      "loaded_rows": 2220,
+      "manifest_max_date": "2018-12-28",
+      "manifest_min_date": "2010-01-04",
+      "manifest_rows": 2220,
+      "rows_filtered_after_load": 0,
+      "sha256": "d9bc2e58649b16bc18964c4f4b591ff3cadc8f92b95642a781ab9858e4cc8579"
+    },
+    {
+      "bytes": 742,
+      "date_column": "execution_date",
+      "file": "removal_orders.csv.gz",
+      "loaded_max_date": "2018-06-15",
+      "loaded_min_date": "2011-03-30",
+      "loaded_rows": 34,
+      "manifest_max_date": "2018-06-15",
+      "manifest_min_date": "2011-03-30",
+      "manifest_rows": 34,
+      "rows_filtered_after_load": 0,
+      "sha256": "702f64d88aac012eadf42a8e3fc938a3acd338c8e0f97fba22e78eccdb58f01f"
+    }
+  ],
+  "maximum_loaded_date": "2018-12-28",
+  "maximum_research_date": "2018-11-28",
+  "model_contract_hash": "64e9eec7d94e044ac25b8f80c9f638f168cb8558b6cdd802d67d48bbd8c50436",
+  "partition_role": "phase4b_train_internal",
+  "partition_root": "C:/Users/seoji/OneDrive/바탕 화면/kospi_systematic_ai/data/processed/v24/phase4b_train_internal_2018",
+  "post_2018_input_rows_loaded": 0,
+  "post_2018_rows_calculated": 0,
+  "post_2018_rows_evaluated": 0,
+  "post_2018_rows_selected": 0,
+  "research_audit": {
+    "feature_audit": {
+      "ca_blocked_rows": 17496,
+      "eligible_dates": 2220,
+      "eligible_rows": 204037,
+      "future_bar_used": false,
+      "late_notice_actions_protected": 1,
+      "maximum_date": "2018-12-28",
+      "mechanical_actions": 20,
+      "raw_ohlcv_overwritten": false,
+      "regime_rows": 2220,
+      "reset_actions": 33,
+      "rows": 255692
+    },
+    "future_bar_used_for_feature": false,
+    "interaction_count": 6,
+    "maximum_signal_date": "2018-11-28",
+    "minimum_signal_date": "2011-01-03",
+    "minute_data_used": false,
+    "regime_feature_count": 5,
+    "research_dates": 1948,
+    "research_rows": 176545,
+    "stock_feature_count": 21,
+    "target_audit": {
+      "complete_all_horizons_rows": 176545,
+      "corporate_action_reset_enforced": true,
+      "cost_adjusted": true,
+      "entry_offset_sessions": 1,
+      "exit_offsets_sessions": [
+        6,
+        11,
+        21
+      ],
+      "horizons": [
+        5,
+        10,
+        20
+      ],
+      "same_day_execution": false,
+      "target_rows": {
+        "forward_cost_adjusted_excess_log_return_10": 177758,
+        "forward_cost_adjusted_excess_log_return_20": 176641,
+        "forward_cost_adjusted_excess_log_return_5": 178318
+      }
+    }
+  },
+  "source_hash": "a6825fd4e230546faf9697c2120a821dbb7bde0f31c622bcbf215a0b5393bb65",
+  "train_validation_input_loaded": true
+}

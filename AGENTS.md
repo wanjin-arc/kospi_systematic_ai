@@ -48,6 +48,7 @@
 - Phase 5D: 평균 현금·최소 보유 gate를 제거하고 시장상태별 최대 10·5·0종목을 허용했다. 이미 소비된 2019~2021 재사용 진단에서 순초과수익률 -88.05%p로 실패했다. 운용은 가변 보유를 구현했지만 종목 점수 예측력이 부족했으며 거래·Development Test 후보는 없다.
 - Phase 5E: 비용 차감 절대 초과수익 Ridge와 양수 여부 Logistic을 결합한 no-trade 모델을 2019~2021 adaptive diagnostic으로 실행했다. 전략 +29.31%, 지수 +50.40%, 순초과 -21.09%p로 실패했으며 거래·Development Test 후보는 없다.
 - Phase 5F: 종목 기술신호의 5·20세션 경로, 평균·중앙값 HistGradientBoosting, Train-only IsolationForest 시장 이상상태 veto를 결합했다. 2019~2021 adaptive diagnostic에서 전략 -7.83%, 지수 +50.40%, 순초과 -58.23%p로 실패했으며 거래·Development Test 후보는 없다.
+- Phase 5G: 2018년 이하 Train 내부에서 5·10·20거래일 비용 차감 초과수익을 동시에 예측하는 Extra Trees 합의 모델을 평가했다. 연결 순초과수익률 -3.66%p와 연도별 2/4로 기각됐으며 승격 후보가 아니다.
 - Phase 6 이후: 미구현.
 
 Phase 5 Development Test를 사용자 승인 없이 실행하지 않는다. Phase 4·5 결과를 근거로 기존 변수·기간·임계값을 소급 변경하지 않는다.
@@ -60,7 +61,7 @@ Phase 5 Development Test를 사용자 승인 없이 실행하지 않는다. Phas
 - 기존 파일을 불필요하게 덮어쓰지 않고, 규칙·데이터 계약 변경은 버전을 올린다.
 - 대용량 데이터, 원본 ZIP, 봉인 OOS, 임시 작업물은 Git에 커밋하지 않는다.
 - 실험 결과는 코드·설정·데이터·산출물 해시와 재현 명령을 기록한다.
-- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-23 Phase 5F 감사에서 108/108 통과했다.
+- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-24 Phase 5G 감사에서 118/118 통과했다.
 
 ## 단계 완료 산출물
 

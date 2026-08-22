@@ -1,0 +1,5 @@
+fold,train_min_date,train_max_date,train_rows,validation_min_date,validation_max_date,validation_rows,input_columns,purge_sessions,embargo_sessions,preprocessing_fit_used_validation,model_fit_used_validation,post_2018_rows_used
+I2015,2011-01-03,2014-12-01,88785,2015-01-30,2015-12-01,18693,32,20,20,False,False,0
+I2016,2011-01-03,2015-12-01,111060,2016-02-01,2016-12-01,18460,32,20,20,False,False,0
+I2017,2011-01-03,2016-12-01,133130,2017-02-01,2017-11-29,18030,32,20,20,False,False,0
+I2018,2011-01-03,2017-11-29,154725,2018-01-30,2018-11-28,18230,32,20,20,False,False,0
