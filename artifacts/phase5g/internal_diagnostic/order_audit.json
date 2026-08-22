@@ -1,0 +1,86 @@
+{
+  "I2015_cost_1x": {
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 0.5673076923076923,
+    "entry_orders": 118,
+    "maximum_eligible_candidates": 4,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 215,
+    "no_trade_signal_day_ratio": 0.7067307692307693,
+    "no_trade_signal_days": 147,
+    "orders": 333,
+    "signal_days": 208
+  },
+  "I2016_cost_1x": {
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 0.9271844660194175,
+    "entry_orders": 191,
+    "maximum_eligible_candidates": 8,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 324,
+    "no_trade_signal_day_ratio": 0.42718446601941745,
+    "no_trade_signal_days": 88,
+    "orders": 515,
+    "signal_days": 206
+  },
+  "I2017_cost_1x": {
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 0.17733990147783252,
+    "entry_orders": 36,
+    "maximum_eligible_candidates": 3,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 65,
+    "no_trade_signal_day_ratio": 0.896551724137931,
+    "no_trade_signal_days": 182,
+    "orders": 101,
+    "signal_days": 203
+  },
+  "I2018_cost_1x": {
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 4.822660098522167,
+    "entry_orders": 979,
+    "maximum_eligible_candidates": 10,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 721,
+    "no_trade_signal_day_ratio": 0.3054187192118227,
+    "no_trade_signal_days": 62,
+    "orders": 1700,
+    "signal_days": 203
+  },
+  "connected_cost_1x": {
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 1.6146341463414635,
+    "entry_orders": 1324,
+    "maximum_eligible_candidates": 10,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 1325,
+    "no_trade_signal_day_ratio": 0.5841463414634146,
+    "no_trade_signal_days": 479,
+    "orders": 2649,
+    "signal_days": 820
+  },
+  "connected_cost_2x": {
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 1.6146341463414635,
+    "entry_orders": 1324,
+    "maximum_eligible_candidates": 10,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 1325,
+    "no_trade_signal_day_ratio": 0.5841463414634146,
+    "no_trade_signal_days": 479,
+    "orders": 2649,
+    "signal_days": 820
+  },
+  "connected_cost_3x": {
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 1.6146341463414635,
+    "entry_orders": 1324,
+    "maximum_eligible_candidates": 10,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 1325,
+    "no_trade_signal_day_ratio": 0.5841463414634146,
+    "no_trade_signal_days": 479,
+    "orders": 2649,
+    "signal_days": 820
+  }
+}

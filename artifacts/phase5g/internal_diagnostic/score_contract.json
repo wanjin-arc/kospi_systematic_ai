@@ -1,0 +1,12 @@
+{
+  "daily_scoring": true,
+  "entry_median_net_excess": 0.002,
+  "maximum_holding_sessions": 20,
+  "maximum_holdings": 10,
+  "minimum_holdings": 0,
+  "model": "extra_trees_multioutput_5_10_20_consensus",
+  "order_time": "next_session_open_or_later",
+  "positive_horizon_requirement": 2,
+  "promotion_allowed": false,
+  "ranking": "predicted_median_net_excess_desc_security_id_asc"
+}

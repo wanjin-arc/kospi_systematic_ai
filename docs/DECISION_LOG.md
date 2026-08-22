@@ -108,6 +108,13 @@
 | DEC-2026-055 | Phase 5F 증거 지위 | 2019~2021은 이미 소비된 adaptive diagnostic으로만 사용한다. 논문은 아이디어 출처일 뿐 그 성과를 본 프로젝트의 증거로 간주하지 않으며, 결과와 무관하게 Development Test 후보로 승격하지 않는다. | Confirmed; user approved 2026-08-23 | DEC-2026-052 확장 |
 | DEC-2026-056 | Phase 5F 결과 | 시계열 경로·평균/중앙값 회귀·시장 이상상태 veto는 기본비용 순초과수익 -58.23%p, 연도 gate 0/3으로 실패했다. 모델과 전체 Feature 묶음을 기각하고 같은 2019~2021에서 재조정하지 않는다. | Completed; rejected | DEC-2026-053, DEC-2026-054 적용 결과 |
 
+## Phase-5G Decisions
+
+| ID | Decision | Approved value / recommendation | Status | Supersedes |
+|---|---|---|---|---|
+| DEC-2026-057 | 2018년 이하 다중 기간 내부 진단 | 현재 데이터로 연구를 계속하되 이미 소비한 2019~2021을 재사용하지 않는다. Phase 4B의 21개 종목 변수·5개 시장상태·6개 상호작용으로 5·10·20거래일 비용 차감 초과수익을 동시에 예측하고, 2개 이상 양수이며 중앙값 0.2% 이상인 종목만 매일 순위화한다. 최소 보유 0개와 현금을 허용하며 결과와 무관하게 자동 승격하지 않는다. | Confirmed; user approved 2026-08-23 | Phase 5F 이후 신규 내부 진단 |
+| DEC-2026-058 | Phase 5G 결과 | 2015~2018 연결 내부 진단에서 전략 +3.72%, 지수 +7.38%, 순초과 -3.66%p, 2배 비용 -6.96%p, 연도별 gate 2/4였다. MDD·활동성 gate만 통과했으므로 모델은 기각하고 같은 내부 기간에서 재조정하지 않는다. | Completed; rejected | DEC-2026-057 적용 결과 |
+
 ## Decision Entry Template
 
 ```markdown

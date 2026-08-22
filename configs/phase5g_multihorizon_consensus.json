@@ -1,0 +1,83 @@
+{
+  "version": "phase5g-multihorizon-consensus-v1",
+  "experiment_id": "EXP-20260823-007",
+  "supersedes_experiment_id": "EXP-20260823-006",
+  "data_root": "data/processed/v24/phase4b_train_internal_2018",
+  "required_partition_role": "phase4b_train_internal",
+  "maximum_permitted_date": "2018-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "evaluation_status": "TRAIN_INTERNAL_DIAGNOSTIC_ONLY",
+  "period": ["2011-01-01", "2018-12-31"],
+  "folds": [
+    {"fold": "I2015", "train": ["2011-01-01", "2014-12-31"], "validation": ["2015-01-01", "2015-12-31"]},
+    {"fold": "I2016", "train": ["2011-01-01", "2015-12-31"], "validation": ["2016-01-01", "2016-12-31"]},
+    {"fold": "I2017", "train": ["2011-01-01", "2016-12-31"], "validation": ["2017-01-01", "2017-12-31"]},
+    {"fold": "I2018", "train": ["2011-01-01", "2017-12-31"], "validation": ["2018-01-01", "2018-12-31"]}
+  ],
+  "feature_contract": {
+    "phase4b_config": "configs/phase4b_multifactor.json",
+    "use_all_21_stock_features": true,
+    "use_all_5_regime_features": true,
+    "use_all_6_interactions": true,
+    "stock_transform": "daily_cross_sectional_average_percentile_rank",
+    "minute_data_used": false
+  },
+  "target": {
+    "id": "multihorizon_cost_adjusted_excess_open_to_open_log_return",
+    "horizons": [5, 10, 20],
+    "entry_offset_sessions": 1,
+    "exit_offsets_sessions": [6, 11, 21],
+    "cost_adjustment": "base_commission_slippage_and_exit_date_sell_tax",
+    "cross_sectional_transform": "none"
+  },
+  "model": {
+    "family": "extra_trees_multioutput_regressor",
+    "n_estimators": 300,
+    "max_depth": 6,
+    "min_samples_leaf": 500,
+    "max_features": 0.5,
+    "bootstrap": false,
+    "n_jobs": 1,
+    "model_selection": "none_single_fixed_model"
+  },
+  "consensus_policy": {
+    "minimum_positive_horizons": 2,
+    "entry_minimum_median_net_excess": 0.002,
+    "exit_at_or_below_positive_horizons": 1,
+    "exit_at_or_below_median_net_excess": 0.0,
+    "rank_by": "predicted_median_net_excess_descending",
+    "maximum_entry_candidates_per_day": 10,
+    "zero_eligible_action": "hold_cash"
+  },
+  "portfolio": {
+    "initial_cash_krw": "5000000",
+    "maximum_holdings": 10,
+    "required_minimum_holdings": 0,
+    "target_weight": "0.10",
+    "maximum_holding_sessions": 20,
+    "allow_pyramiding": false,
+    "entry_gap_cap": "0.05",
+    "unallocated_cash": "retain_without_penalty"
+  },
+  "costs": {
+    "commission_rate_per_side": "0.0002",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [1, 2, 3],
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv"
+  },
+  "internal_gate": {
+    "required_connected_net_excess_return": 0.0,
+    "required_cost_2x_net_excess_return": 0.0,
+    "required_nonnegative_annual_folds": 4,
+    "minimum_entry_orders": 100,
+    "maximum_mdd_worsening_percentage_points": 5.0,
+    "promotion_allowed_from_this_run": false,
+    "development_test_runs": 0
+  },
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "random_seed": 20260823,
+  "run_command": "PYTHONPATH=src python -m kospi100_multihorizon.cli run --config configs/phase5g_multihorizon_consensus.json --output artifacts/phase5g/internal_diagnostic"
+}
