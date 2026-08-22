@@ -1,8 +1,8 @@
 # KOSPI 100 Technical Systematic AI 프로젝트 명세
 
-**기준일:** 2026-08-18  
-**근거:** 저장소 파일, 실행 가능한 테스트, Phase 1 v24 감사, Phase 2·3 산출물  
-**상태:** Phase 0~3 완료, Phase 4 사전 등록 및 부분 구현 상태
+**기준일:** 2026-08-22
+**근거:** 저장소 파일, 실행 가능한 테스트, Phase 1 v24 감사, Phase 2·3 산출물, Phase 4 물리 입력 재검증
+**상태:** Phase 0~4 완료, Phase 5 이후 미구현
 
 ## 1. 목적과 역할 분담
 
@@ -105,7 +105,7 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 | 1 Data & Audit | 완료(v24 PASS) | PIT membership, 일봉/지수, CA, 편출, 분봉 QA, 물리 파티션, guarded access | 실운영용 DB/Parquet 전환은 미확인; OOS 물리 권한 강화 필요 |
 | 2 Backtest engine | 완료 | Long-only/정수주/현금, 비용·세금·슬리피지, gap, halt, partial fill, stop/target, CA, 원장·metrics·reconciliation, deterministic output | 호가 깊이·실제 auction·broker semantics는 Phase 9 전 검증 |
 | 3 Rule baseline | 완료 | SMA200 + 126일 초과모멘텀, 9개 조합, Validation-only 선택, Development Test 1회 | 거래 후보 탈락. 기준선으로만 유지 |
-| 4 Feature research | 부분 구현·미완료 | 실험 등록, config, 21 횡단면·5 regime 변수 초안, label/evaluate 코드 | package import 실패, runner/CLI/test/artifact/report 없음, 결과 미산출 |
+| 4 Feature research | 완료 | 21개 횡단면·5개 regime 변수, PIT/CA-aware feature·label, 단변량 IC/HAC/coverage/중복 평가, 2021년 이하 물리 입력 경계, 접근 감사, deterministic CLI·산출물 | `reversal_5`만 Phase 5 입력 후보. 모델·포트폴리오·거래 판정은 미수행 |
 | 5 Ranking model | 미구현 | 없음 | 선형 모델부터 비교 |
 | 6 Entry Timing | 미구현 | 분봉 Raw와 coverage audit만 있음 | 동일 표본 시가/5분/15분 baseline 및 timing model |
 | 7 Portfolio/Risk | 미구현 | Phase 2의 실행 원장 기반만 있음 | Regime, exposure, sizing, risk rule, kill switch |
@@ -117,18 +117,21 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 
 | 경로 | 역할/상태 |
 |---|---|
-| `src/kospi100_data/` | 수집 파일 normalization, schema, Phase 1 pipeline/validation, v24 partition/audit, OOS guarded reader |
+| `src/kospi100_data/` | 수집 파일 normalization, schema, Phase 1 pipeline/validation, v24 partition/audit, OOS guarded reader, Phase 4 Train/Validation 물리 파티션 빌더 |
 | `src/kospi100_backtest/` | Phase 2 설정, 비용, 주문/체결/원장 엔진, metrics, deterministic I/O, synthetic demo |
 | `src/kospi100_baseline/` | Phase 3 데이터 guard, CA-aware Feature, 주문 생성, 9조합 실행·선택, CLI |
-| `src/kospi100_features/` | Phase 4 초안. config/features/labels/evaluate는 있으나 runner/CLI 부재 |
+| `src/kospi100_features/` | Phase 4 config/features/labels/evaluate/runner/CLI와 물리 입력 fail-closed 감사 |
 | `configs/phase1.json` | 초기 Phase 1 논리 build 설정 |
 | `configs/phase2_engine.json` | 동결된 Phase 2 실행·원장 설정 |
 | `configs/phase3_baseline.json` | Phase 3 후보군·구간·비용·선택 규칙 |
-| `configs/phase4_features.json` | Phase 4 사전 등록 후보와 gate. 아직 실행 완료 설정이 아님 |
+| `configs/phase4_features.json` | Phase 4 원 연구 후보·기간·label·gate 동결 설정 |
+| `configs/phase4_revalidation_20260819.json` | 원 연구 설정 hash를 유지한 물리 입력 경계 재검증 wrapper |
 | `configs/kospi_sell_cost_schedule.csv` | 날짜별 KOSPI 매도세율 |
-| `tests/` | Phase 1~3 단위·회귀 테스트. 현재 32개 통과, Phase 4 테스트 없음 |
+| `tests/` | Phase 1~4 단위·통합·회귀 테스트. 현재 50개 통과 |
 | `artifacts/phase2/` | synthetic 원장·metrics·reconciliation. 전략 수익 근거가 아님 |
 | `artifacts/phase3/` | 민감도, 선택 결과, 실제 개발 백테스트 원장·metrics·manifest |
+| `artifacts/phase4/` | 원 Phase 4 변수 지표·결정·감사·manifest |
+| `artifacts/phase4_revalidation_20260819/` | 2021년 이하 물리 입력 경계 재검증 지표·결정·접근 감사·manifest |
 | `experiments/registry.csv` | 실험 사전 등록 및 결과·해시·결정 기록 |
 | `work/v24_stage/phase1_final_v24/` | 1.3GB급 Phase 1 원본/production bundle. Git 추적 대상이 아님 |
 | `data/processed/v24/development/` | 2023년까지의 개발 입력. Git 추적 대상이 아님 |
@@ -144,15 +147,17 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 - Phase 3의 `H=20, N=10`은 Validation net Sharpe가 9개 중 가장 높아 선택됐을 뿐, 수익성 증거가 아니다.
 - Phase 3 결과: Validation 전략 -11.43%, KOSPI100 +50.40%, 초과 -61.82%p; Development Test 전략 -10.35%, KOSPI100 -9.23%, 초과 -1.12%p. 기준선은 재현용으로 채택, 거래 후보는 탈락했다.
 - Phase 4는 모델을 학습하지 않고 단변량 방향·coverage·HAC 안정성·연도 안정성·중복만 평가하도록 사전 등록됐다.
+- Phase 4 결과는 `reversal_5` 한 개만 사전 등록 gate를 통과했다. 이는 Phase 5 입력 후보일 뿐 모델·거래 후보가 아니다.
+- Phase 4 연구 입력은 물리적으로 2021년 이하인 전용 파티션으로 고정했고 Development Test loaded/calculated/evaluated/selected가 모두 0임을 감사했다.
 
-## 8. 현재 감사에서 확인된 문제와 불명확 항목
+## 8. 현재 감사에서 확인된 제한과 다음 조건
 
-1. `src/kospi100_features/__init__.py`가 존재하지 않는 `.runner`를 import하여 `import kospi100_features`가 실패한다.
-2. `experiments/registry.csv`의 Phase 4 실행 명령은 존재하지 않는 `kospi100_features.cli`를 가리킨다.
-3. Phase 4 전용 테스트, `artifacts/phase4/`, 결과 보고서가 없다. Phase 4 결과를 추측하거나 완료로 표시하면 안 된다.
-4. 기존 보고서 일부는 영문이다. 과거 기록으로 보존하고 새 보고서부터 한글로 작성한다.
-5. OOS가 같은 작업 트리 아래 있어 shell 수준의 접근을 막지 못한다. 이번 상태 감사에서는 스키마와 행 수 메타데이터만 확인했고 가격·날짜별 값·label·성과는 계산하거나 열람하지 않았다. 통계적 결과 누출은 없지만 운영상 봉인 경계는 강화해야 한다.
-6. 실제 GitHub 원격 주소, 기본 branch, 저장소 공개 범위, LFS/외부 데이터 저장 방식은 확인되지 않았다.
+1. Phase 4 구현·물리 입력 재검증·독립 재실행은 완료됐고 전체 회귀 50/50이 통과했다.
+2. Phase 5는 미등록·미구현이며 사용자 승인, 단계 명세, 새 Experiment ID 사전 등록 전에는 시작하지 않는다.
+3. 2021년 이하 물리 파티션은 대용량 파생 데이터라 Git에서 제외한다. 재현에는 허용된 development 원본, 동결된 source manifest와 `kospi100_data.phase4_partition`가 필요하다.
+4. 기존 영문 보고서는 과거 기록으로 보존하고 새 보고서와 갱신 문서는 한글로 작성한다.
+5. Final OOS는 Phase 8 단일 릴리스 전까지 계속 봉인하며 Phase 4 재검증에서는 접근하지 않았다.
+6. 실운영용 데이터 저장·권한 분리, broker semantics와 외부 서비스 연동은 후속 단계에서 별도 승인·검증이 필요하다.
 
 ## 9. 권장 저장소 구조
 

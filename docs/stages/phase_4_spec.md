@@ -4,7 +4,7 @@
 
 - 단계/이름: Phase 4 / Technical Feature Research
 - Experiment ID: `P4-FEATURES-20260818-001`
-- 상태: preregistered / 부분 구현 / 미실행
+- 상태: validated / 완료
 - 작성일: 2026-08-19
 - 이전 단계 기준 버전: Phase 1 v24 데이터 감사 PASS, Phase 2 엔진 완료, Phase 3 기준선 완료·거래 후보 탈락
 - 동결 설정: `configs/phase4_features.json` (`phase4-features-v1`)
@@ -13,7 +13,7 @@
 
 Phase 4는 사전 등록된 21개 횡단면 기술 변수와 5개 시장상태 변수를 계산하고, **Train/Validation 단변량 검증만** 수행한다. 이 단계는 Ranking 모델 학습, 포트폴리오 구성, 백테스트 또는 거래 규칙 선택을 수행하지 않는다.
 
-현재는 설정과 일부 계산 모듈만 존재한다. `runner.py`, `cli.py`, Phase 4 테스트, 실행 산출물 및 결과 보고서가 없으므로, Phase 4는 완료 또는 검증 상태가 아니다.
+Phase 4 구현·실행과 물리 입력 경계 재검증이 완료됐다. 기존 21개 변수의 연구 결과와 `reversal_5` 단독 Phase 5 후보 판정은 물리 입력 재검증에서도 동일하게 재현됐다.
 
 ## 3. 목적과 비목표
 
@@ -156,7 +156,7 @@ log(stock_open[t+11] / stock_open[t+1])
 ## 8. 연구 제약
 
 - 허용 선택 구간: Train 2011–2018, Validation 2019–2021만.
-- Development Test: 2022–2023은 Phase 4에서 로드 후 평가·선택·집계해서는 안 된다. 입력 bundle의 물리적 최대 날짜가 2023이어도 2022년 이후 평가 행은 fail-closed로 거부한다.
+- Development Test: 2022–2023을 포함한 입력 파일은 Phase 4 연구 로더가 읽기 전에 거부한다. 연구 실행은 물리적으로 2021-12-31 이하인 전용 파티션만 사용하며, loaded/calculated/evaluated/selected 행 수를 각각 0으로 감사한다.
 - Purge: 최대 선언 horizon 20세션을 사용한다. Train 끝의 마지막 20개 label 세션을 Validation 경계 전에 제거한다. Validation 끝의 마지막 20개 label 세션도 제거하여 Development Test 가격이 label에 들어오지 않게 한다.
 - Embargo: 평가 블록 뒤 첫 20세션은 이후 학습에 재진입할 수 없다. 이 단일 순방향 Phase 4 화면에는 이후 학습 블록이 없으므로 실질적 적용 집합은 공집합일 수 있으나, 설정·감사·단위 테스트에는 반드시 표현한다.
 - 금지 데이터: 재무제표, DART, 뉴스, 밸류에이션, 업종·기업 텍스트, 미래 OHLCV, 미래 Universe, 미래 Corporate Action 지식.
@@ -186,25 +186,25 @@ log(stock_open[t+11] / stock_open[t+1])
 
 ## 10. 완료 조건
 
-- [ ] `runner.py`와 `cli.py`가 존재하고 package import가 성공한다.
-- [ ] development manifest, partition role, 최대 날짜 및 파일 hash를 검증한다.
-- [ ] Train/Validation만 사용했고 Development Test·Final OOS가 미사용임을 감사 산출물로 증명한다.
-- [ ] 21개 횡단면 변수와 5개 regime 변수의 공식·입력·lookback·시점·결정이 기록된다.
-- [ ] 필수 구조화 산출물과 SHA-256 manifest가 생성된다.
-- [ ] 단위·통합·전체 회귀 테스트가 통과한다.
-- [ ] 동일 설정의 독립 재실행이 결정적이다.
-- [ ] registry가 실행 전 코드·설정·데이터 hash와 실행 후 결과·결정으로 갱신된다.
-- [ ] `docs/stages/phase_4_report.md`가 한글로 작성되고 마지막에 Codex Handoff를 포함한다.
-- [ ] 모델 학습·포트폴리오 백테스트·Development Test·Final OOS 접근을 하지 않았다.
+- [x] `runner.py`와 `cli.py`가 존재하고 package import가 성공한다.
+- [x] 물리 파티션 manifest, 역할, 최대 날짜, 행 수 및 파일 hash를 검증한다.
+- [x] Train/Validation만 사용했고 Development Test·Final OOS가 연구 입력에 미사용임을 감사 산출물로 증명한다.
+- [x] 21개 횡단면 변수와 5개 regime 변수의 공식·입력·lookback·시점·결정이 기록된다.
+- [x] 필수 구조화 산출물과 SHA-256 manifest가 생성된다.
+- [x] 단위·통합·전체 회귀 테스트 50/50이 통과한다.
+- [x] 물리 파티션 독립 재생성과 동일 설정의 독립 재실행이 결정적이다.
+- [x] registry가 실행 전 코드·설정·데이터 hash와 실행 후 결과·결정으로 갱신된다.
+- [x] `docs/stages/phase_4_report.md`가 한글로 작성되고 마지막에 Codex Handoff를 포함한다.
+- [x] 모델 학습·포트폴리오 백테스트·Development Test 연구 사용·Final OOS 접근을 하지 않았다.
 
-## 11. 발견된 문제와 미결정 사항
+## 11. 발견된 문제와 해소 결과
 
-1. `src/kospi100_features/runner.py`와 `cli.py`가 없어 package import 및 registry 재현 명령이 실패한다.
-2. Phase 4 전용 테스트, `artifacts/phase4/`, 변수 결정 결과 및 Phase 4 보고서가 없다.
-3. 기존 평가 초안은 purge 값을 사용하지만 embargo의 실제 적용을 보장하는 runner·테스트가 없다. 단일 순방향 화면에서 embargo가 공집합임을 명시적으로 검증해야 한다.
-4. 인계 문서의 Feature data contract 경로는 현재 `data/contracts/feature_data_contract_v24.json`이다. 구현은 이 canonical 경로를 사용하고, 문서가 다른 경로를 참조하면 정합화가 필요하다.
-5. 현재 작업공간에는 `data/sealed/final_oos_v24/`와 봉인 manifest가 없다. Phase 4는 이를 복구하거나 읽지 않으며, Phase 8 이전에는 OOS 해시 manifest·스키마 계약의 별도 관리 방식만 결정할 수 있다.
-6. P4 registry 행의 코드·설정 hash가 비어 있다. 결과를 보기 전에 현재 설정 hash와 구현 코드 hash를 기록해야 한다. 설정 내용을 변경해야 한다면 새 Experiment ID가 필요하다.
+1. 구현·테스트·산출물·보고서 누락은 원 실행에서 해소됐다.
+2. 통합 development 선로드 문제는 `phase4_train_validation` 전용 물리 파티션과 데이터 파일 read 전 경계 검증으로 해소됐다.
+3. purge 20세션과 단일 순방향 화면에서 공집합인 embargo 20세션은 설정·감사·테스트에 고정됐다.
+4. Feature data contract는 `data/contracts/feature_data_contract_v24.json`을 canonical 경로로 사용한다.
+5. Final OOS는 Phase 4에서 복구·열람·사용하지 않았고 Phase 8 전까지 봉인 규칙을 유지한다.
+6. 재검증의 source/config/data hash는 실행 전에 registry에 고정했고, 완료 뒤 결과·감사를 갱신했다.
 
 ## 12. Codex Handoff
 
@@ -236,3 +236,31 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
 - 완료 판정: 제10절의 모든 항목을 만족하고, 결과 보고서가 실제 실행 증거와 남은 위험을 기록할 때만 Phase 4를 validated 또는 rejected로 갱신한다. 결과가 없으면 상태는 preregistered / 부분 구현 / 미실행으로 유지한다.
+
+## 13. 입력 경계 재검증 부속 계약 — 2026-08-19
+
+이 부속 계약은 기존 21개 변수, 5개 regime 변수, 기간, label, purge/embargo 및 결정 gate를 변경하지 않는다. 제5절의 통합 development 입력 허용과 제8절의 “로드 후 평가 제외” 표현만 다음 접근 계약으로 교정한다.
+
+- 재검증 ID: `P4-REVALIDATION-20260819-001`
+- 재검증 설정: `configs/phase4_revalidation_20260819.json`
+- 입력 root: `data/processed/v24/phase4_train_validation_2021/`
+- 필수 역할: `phase4_train_validation`
+- 물리 최대일: `2021-12-31`
+- 허용 데이터 파일: `feature_price_panel.csv.gz`, `full_history_ohlcv.csv.gz`, `index_ohlcv.csv.gz`, `corporate_actions.csv.gz`만
+- manifest 필수 열: `file, bytes, sha256, date_column, min_date, max_date, rows`
+- 접근 순서: partition와 manifest 날짜 경계를 먼저 검증하고, 통과한 파일만 hash 검증·로드한다.
+- 금지: 2022년 이후 행을 포함한 통합 CSV를 먼저 로드한 뒤 필터링하는 방식
+- 감사: 파일별 실제 최소·최대 날짜, loaded/pre-filter/post-filter 행 수, Development Test loaded/calculated/evaluated/selected 행 수, 최대 로드일, source/config/data hash를 기록한다.
+- 출력: 기존 `artifacts/phase4/`를 덮어쓰지 않고 `artifacts/phase4_revalidation_20260819/`에 쓴다.
+
+사용자 승인에 따라 상류 빌더 `kospi100_data.phase4_partition`가 통합 development의 등록 hash를 확인하고 날짜 열 기준 스트리밍 cutoff로 전용 파티션을 생성했다. 제외 행은 출력·집계·연구 계산에 보존하지 않는다. 전용 파티션 data hash는 `69590204b3c35e686267dac81fe1347c0e3639005586da2d2db32e35c76b840f`다.
+
+## 14. Codex Handoff
+
+- 완료 상태: `P4-REVALIDATION-20260819-001` completed, Phase 4 validated
+- 파티션 생성 명령: `PYTHONPATH=src python -m kospi100_data.phase4_partition --source-root data/processed/v24/development --output-root data/processed/v24/phase4_train_validation_2021`
+- 실행 명령: `PYTHONPATH=src python -m kospi100_features.cli run --config configs/phase4_revalidation_20260819.json --output artifacts/phase4_revalidation_20260819`
+- 검증 명령: `PYTHONPATH=src python -m unittest discover -s tests -v`
+- 검증 결과: 50/50 PASS, 파티션 6개 구성 파일과 산출물 8개 모두 독립 재실행 byte-identical
+- 다음 허용 단계: 사용자 승인 후 `reversal_5`만 입력 후보로 쓰는 Phase 5 명세와 새 Experiment ID 사전 등록
+- 금지: Phase 4 수치·기간·gate 소급 변경, 승인 전 Phase 5 실행, Development Test 연구 사용, Final OOS 접근

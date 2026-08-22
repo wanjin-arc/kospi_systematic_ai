@@ -7,6 +7,7 @@ from kospi100_features.config import load_config
 
 
 CONFIG = Path("configs/phase4_features.json")
+REVALIDATION_CONFIG = Path("configs/phase4_revalidation_20260819.json")
 
 
 class Phase4ConfigTests(unittest.TestCase):
@@ -22,11 +23,23 @@ class Phase4ConfigTests(unittest.TestCase):
         self.assertFalse(config.payload["evaluation"]["model_training"])
         self.assertFalse(config.payload["evaluation"]["portfolio_backtest"])
 
+    def test_revalidation_wrapper_preserves_research_contract(self) -> None:
+        original = load_config(CONFIG)
+        revalidation = load_config(REVALIDATION_CONFIG)
+        self.assertEqual(revalidation.experiment_id, "P4-REVALIDATION-20260819-001")
+        self.assertEqual(revalidation.research_config_hash, original.config_hash)
+        self.assertEqual(revalidation.required_partition_role, "phase4_train_validation")
+        self.assertEqual(revalidation.maximum_permitted_date.isoformat(), "2021-12-31")
+        self.assertEqual(revalidation.features, original.features)
+        self.assertEqual(revalidation.periods, original.periods)
+        self.assertEqual(revalidation.purge_sessions, original.purge_sessions)
+        self.assertEqual(revalidation.embargo_sessions, original.embargo_sessions)
+
     def test_oos_and_development_test_options_fail_closed(self) -> None:
         payload = json.loads(CONFIG.read_text(encoding="utf-8"))
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "config.json"
-            payload["data_root"] = "data/sealed/final_oos_v24"
+            payload["data_root"] = str(Path("restricted") / "sealed" / "input")
             path.write_text(json.dumps(payload), encoding="utf-8")
             with self.assertRaises(PermissionError):
                 load_config(path)

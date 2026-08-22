@@ -30,7 +30,10 @@ class FeatureResearchConfig:
     payload: Mapping[str, Any]
     experiment_id: str
     data_root: Path
+    required_partition_role: str
     maximum_permitted_date: date
+    research_config_hash: str
+    run_command: str
     periods: Mapping[str, Period]
     features: tuple[FeatureDefinition, ...]
     regime_features: tuple[Mapping[str, Any], ...]
@@ -49,14 +52,67 @@ class FeatureResearchConfig:
         return hashlib.sha256(self.path.read_bytes()).hexdigest()
 
 
-def load_config(path: Path) -> FeatureResearchConfig:
-    payload = json.loads(path.read_text(encoding="utf-8"))
-    if payload.get("version") != "phase4-features-v1":
+ORIGINAL_EXPERIMENT_ID = "P4-FEATURES-20260818-001"
+REVALIDATION_EXPERIMENT_ID = "P4-REVALIDATION-20260819-001"
+ORIGINAL_CONFIG_PATH = Path("configs/phase4_features.json")
+ORIGINAL_CONFIG_HASH = "2b65169985cf800c05863191e4f19bcb190865a92bd31b325f5be3f299cd7091"
+
+
+def _sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _load_payload(path: Path) -> tuple[dict[str, Any], str, str]:
+    document = json.loads(path.read_text(encoding="utf-8"))
+    version = document.get("version")
+    if version == "phase4-features-v1":
+        if document.get("experiment_id") != ORIGINAL_EXPERIMENT_ID:
+            raise ValueError("Phase 4 Experiment ID가 사전 등록값과 다릅니다")
+        command = (
+            "PYTHONPATH=src python -m kospi100_features.cli run "
+            "--config configs/phase4_features.json --output artifacts/phase4"
+        )
+        return document, _sha256(path), command
+    if version != "phase4-revalidation-v1":
         raise ValueError("지원하지 않는 Phase 4 설정입니다")
-    if payload.get("experiment_id") != "P4-FEATURES-20260818-001":
-        raise ValueError("Phase 4 Experiment ID가 사전 등록값과 다릅니다")
-    if payload.get("required_partition_role") != "development":
-        raise ValueError("Phase 4는 development 파티션만 사용할 수 있습니다")
+    expected_wrapper = {
+        "experiment_id": REVALIDATION_EXPERIMENT_ID,
+        "revalidates_experiment_id": ORIGINAL_EXPERIMENT_ID,
+        "base_config": ORIGINAL_CONFIG_PATH.as_posix(),
+        "base_config_sha256": ORIGINAL_CONFIG_HASH,
+        "required_partition_role": "phase4_train_validation",
+        "maximum_permitted_date": "2021-12-31",
+    }
+    if any(document.get(key) != value for key, value in expected_wrapper.items()):
+        raise ValueError("Phase 4 재검증 wrapper가 사전 등록값과 다릅니다")
+    base_path = Path(str(document["base_config"]))
+    if _sha256(base_path) != ORIGINAL_CONFIG_HASH:
+        raise ValueError("원 Phase 4 동결 설정 hash가 다릅니다")
+    base = json.loads(base_path.read_text(encoding="utf-8"))
+    if base.get("experiment_id") != ORIGINAL_EXPERIMENT_ID:
+        raise ValueError("원 Phase 4 동결 설정의 Experiment ID가 다릅니다")
+    payload = dict(base)
+    payload.update(
+        {
+            "version": version,
+            "experiment_id": document["experiment_id"],
+            "data_root": document["data_root"],
+            "required_partition_role": document["required_partition_role"],
+            "maximum_permitted_date": document["maximum_permitted_date"],
+        }
+    )
+    command = (
+        "PYTHONPATH=src python -m kospi100_features.cli run "
+        "--config configs/phase4_revalidation_20260819.json "
+        "--output artifacts/phase4_revalidation_20260819"
+    )
+    return payload, ORIGINAL_CONFIG_HASH, command
+
+
+def load_config(path: Path) -> FeatureResearchConfig:
+    payload, research_config_hash, run_command = _load_payload(path)
+    if payload.get("required_partition_role") not in {"development", "phase4_train_validation"}:
+        raise ValueError("지원하지 않는 Phase 4 파티션 역할입니다")
     if payload.get("final_oos_access") != "DENIED_UNTIL_PHASE_8":
         raise PermissionError("최종 OOS는 Phase 8까지 봉인되어야 합니다")
     evaluation = payload["evaluation"]
@@ -122,14 +178,22 @@ def load_config(path: Path) -> FeatureResearchConfig:
     if any(evaluation.get(key) != value for key, value in expected_evaluation.items()):
         raise ValueError("Phase 4 평가 설정이 사전 등록값과 다릅니다")
     maximum_permitted_date = date.fromisoformat(payload["maximum_permitted_date"])
-    if maximum_permitted_date != date(2023, 12, 31):
-        raise ValueError("Phase 4 development 파티션 최대 날짜가 동결값과 다릅니다")
+    expected_maximum = (
+        date(2021, 12, 31)
+        if payload["experiment_id"] == REVALIDATION_EXPERIMENT_ID
+        else date(2023, 12, 31)
+    )
+    if maximum_permitted_date != expected_maximum:
+        raise ValueError("Phase 4 입력 파티션 최대 날짜가 등록값과 다릅니다")
     return FeatureResearchConfig(
         path=path,
         payload=payload,
         experiment_id=payload["experiment_id"],
         data_root=root,
+        required_partition_role=str(payload["required_partition_role"]),
         maximum_permitted_date=maximum_permitted_date,
+        research_config_hash=research_config_hash,
+        run_command=run_command,
         periods=periods,
         features=features,
         regime_features=tuple(payload["regime_features"]),

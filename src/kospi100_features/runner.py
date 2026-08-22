@@ -4,6 +4,7 @@ import hashlib
 import json
 import tempfile
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import Mapping
 
@@ -21,6 +22,12 @@ REQUIRED_DATA_FILES = (
     "full_history_ohlcv.csv.gz",
     "index_ohlcv.csv.gz",
 )
+INPUT_DATE_COLUMNS = {
+    "corporate_actions.csv.gz": "feature_boundary_date",
+    "feature_price_panel.csv.gz": "date",
+    "full_history_ohlcv.csv.gz": "date",
+    "index_ohlcv.csv.gz": "date",
+}
 CONTRACT_PATH = Path("data/contracts/feature_data_contract_v24.json")
 OUTPUT_FILES = (
     "annual_ic.csv",
@@ -80,6 +87,26 @@ def _source_hash() -> str:
     return digest.hexdigest()
 
 
+def _read_input_frame(path: Path) -> pd.DataFrame:
+    return pd.read_csv(path, low_memory=False)
+
+
+def _manifest_date(value: object) -> str | None:
+    if pd.isna(value) or str(value).strip() == "":
+        return None
+    return pd.Timestamp(str(value)).date().isoformat()
+
+
+def _date_bounds(frame: pd.DataFrame, column: str) -> tuple[str | None, str | None]:
+    if frame.empty:
+        return None, None
+    parsed = pd.to_datetime(frame[column], errors="coerce")
+    valid = parsed.dropna()
+    if valid.empty:
+        return None, None
+    return valid.min().date().isoformat(), valid.max().date().isoformat()
+
+
 def load_phase4_bundle(config: FeatureResearchConfig) -> Phase4Bundle:
     root = config.data_root.resolve()
     if _forbidden_path(root):
@@ -97,20 +124,33 @@ def load_phase4_bundle(config: FeatureResearchConfig) -> Phase4Bundle:
     partition_path = root / "partition.json"
     manifest_path = root / "manifest.csv"
     partition = json.loads(partition_path.read_text(encoding="utf-8"))
-    if partition.get("role") != "development":
-        raise PermissionError("Phase 4는 development 역할 파티션만 허용합니다")
+    if partition.get("role") != config.required_partition_role:
+        raise PermissionError("Phase 4 입력 파티션 역할이 등록 설정과 다릅니다")
     if partition.get("max_date") != config.maximum_permitted_date.isoformat():
-        raise ValueError("development 파티션 최대 날짜가 Phase 4 설정과 다릅니다")
+        raise ValueError("입력 파티션 최대 날짜가 Phase 4 설정과 다릅니다")
+    analysis_end = config.periods["validation"].end
+    if config.maximum_permitted_date > analysis_end:
+        raise PermissionError("Phase 4 입력 파티션은 Validation 종료일 이하여야 합니다")
 
     manifest = pd.read_csv(manifest_path, dtype={"file": "string", "sha256": "string"})
-    required_columns = {"file", "bytes", "sha256"}
+    required_columns = {"file", "bytes", "sha256", "date_column", "min_date", "max_date", "rows"}
     if not required_columns.issubset(manifest.columns):
-        raise ValueError("development manifest 필수 열이 없습니다")
+        raise ValueError("Phase 4 물리 파티션 manifest 필수 열이 없습니다")
     if manifest["file"].duplicated().any():
-        raise ValueError("development manifest에 중복 파일이 있습니다")
-    missing = set(REQUIRED_DATA_FILES) - set(manifest["file"].astype(str))
-    if missing:
-        raise ValueError(f"development manifest 필수 파일 누락: {sorted(missing)}")
+        raise ValueError("Phase 4 물리 파티션 manifest에 중복 파일이 있습니다")
+    declared_files = set(manifest["file"].astype(str))
+    if declared_files != set(REQUIRED_DATA_FILES):
+        raise ValueError("Phase 4 물리 파티션 manifest 파일 집합이 허용 목록과 다릅니다")
+
+    manifest_rows: dict[str, object] = {}
+    for row in manifest.itertuples(index=False):
+        name = str(row.file)
+        if str(row.date_column) != INPUT_DATE_COLUMNS[name]:
+            raise ValueError(f"Phase 4 manifest 날짜 열 불일치: {name}")
+        declared_max = _manifest_date(row.max_date)
+        if declared_max is not None and date.fromisoformat(declared_max) > analysis_end:
+            raise PermissionError("Development Test 날짜가 선언된 입력 파일은 읽을 수 없습니다")
+        manifest_rows[name] = row
 
     verified: dict[str, str] = {}
     for row in manifest.sort_values("file", kind="mergesort").itertuples(index=False):
@@ -124,10 +164,11 @@ def load_phase4_bundle(config: FeatureResearchConfig) -> Phase4Bundle:
             raise ValueError(f"development 파일 hash 불일치: {row.file}")
         verified[str(row.file)] = actual
 
-    feature = pd.read_csv(root / "feature_price_panel.csv.gz", low_memory=False)
-    full = pd.read_csv(root / "full_history_ohlcv.csv.gz", low_memory=False)
-    index = pd.read_csv(root / "index_ohlcv.csv.gz", low_memory=False)
-    actions = pd.read_csv(root / "corporate_actions.csv.gz", low_memory=False)
+    frames = {name: _read_input_frame(root / name) for name in REQUIRED_DATA_FILES}
+    feature = frames["feature_price_panel.csv.gz"]
+    full = frames["full_history_ohlcv.csv.gz"]
+    index = frames["index_ohlcv.csv.gz"]
+    actions = frames["corporate_actions.csv.gz"]
 
     for frame in (feature, full, index):
         frame["date"] = pd.to_datetime(frame["date"], errors="raise")
@@ -141,25 +182,56 @@ def load_phase4_bundle(config: FeatureResearchConfig) -> Phase4Bundle:
         if column in actions:
             actions[column] = pd.to_datetime(actions[column], errors="coerce")
 
-    maximums = {
-        "feature_price_panel": feature["date"].max(),
-        "full_history_ohlcv": full["date"].max(),
-        "index_ohlcv": index["date"].max(),
-    }
-    if any(value.date() > config.maximum_permitted_date for value in maximums.values()):
-        raise PermissionError("development 입력이 Phase 4 최대 허용 날짜를 초과했습니다")
     if any(frame.empty for frame in (feature, full, index)):
         raise ValueError("Phase 4 필수 입력이 비어 있습니다")
 
+    input_audit: list[dict[str, object]] = []
+    maximum_loaded_dates: list[date] = []
+    for name in REQUIRED_DATA_FILES:
+        frame = frames[name]
+        date_column = INPUT_DATE_COLUMNS[name]
+        actual_min, actual_max = _date_bounds(frame, date_column)
+        row = manifest_rows[name]
+        declared_min = _manifest_date(row.min_date)
+        declared_max = _manifest_date(row.max_date)
+        if actual_min != declared_min or actual_max != declared_max or len(frame) != int(row.rows):
+            raise ValueError(f"Phase 4 입력 날짜/행 수가 manifest와 다릅니다: {name}")
+        if actual_max is not None:
+            maximum_loaded_dates.append(date.fromisoformat(actual_max))
+            if date.fromisoformat(actual_max) > analysis_end:
+                raise PermissionError("Development Test 행이 입력 단계에서 로드됐습니다")
+        input_audit.append(
+            {
+                "file": name,
+                "date_column": date_column,
+                "minimum_loaded_date": actual_min,
+                "maximum_loaded_date": actual_max,
+                "loaded_rows": int(len(frame)),
+                "rows_before_filtering": int(len(frame)),
+                "rows_after_filtering": int(len(frame)),
+                "filter_applied_after_load": False,
+                "sha256": verified[name],
+            }
+        )
+
     hash_material = "\n".join(f"{name}:{verified[name]}" for name in sorted(verified))
     data_hash = hashlib.sha256(hash_material.encode("utf-8")).hexdigest()
+    source_hash = _source_hash()
     audit = {
+        "experiment_id": config.experiment_id,
+        "input_root": config.data_root.as_posix(),
         "partition_role": partition["role"],
         "partition_max_date": partition["max_date"],
-        "maximum_loaded_date": max(maximums.values()).date().isoformat(),
+        "input_files": input_audit,
+        "maximum_loaded_date": max(maximum_loaded_dates).isoformat(),
         "evaluation_maximum_permitted_date": config.periods["validation"].end.isoformat(),
+        "development_test_input_loaded": False,
+        "development_test_rows_loaded": 0,
+        "development_test_rows_calculated": 0,
         "development_test_rows_evaluated": 0,
+        "development_test_rows_selected": 0,
         "development_test_accessed_for_selection": False,
+        "filter_applied_after_load": False,
         "final_oos_accessed": False,
         "manifest_files_verified": len(verified),
         "manifest_hash": _sha256(manifest_path),
@@ -171,6 +243,9 @@ def load_phase4_bundle(config: FeatureResearchConfig) -> Phase4Bundle:
         "index_rows": int(len(index)),
         "corporate_action_rows": int(len(actions)),
         "data_hash": data_hash,
+        "source_hash": source_hash,
+        "config_hash": config.config_hash,
+        "research_config_hash": config.research_config_hash,
     }
     return Phase4Bundle(feature, full, index, actions, partition, verified, data_hash, _sha256(contract), audit)
 
@@ -243,13 +318,15 @@ def _publish_outputs(
         "evaluation_audit": evaluation.audit,
         "maximum_evaluated_signal_date": evaluation.audit["maximum_evaluated_signal_date"],
         "development_test_rows_evaluated": 0,
+        "development_test_rows_selected": 0,
         "final_oos_accessed": False,
     }
     run = {
         "experiment_id": config.experiment_id,
-        "command": "PYTHONPATH=src python -m kospi100_features.cli run --config configs/phase4_features.json --output artifacts/phase4",
+        "command": config.run_command,
         "source_hash": _source_hash(),
         "config_hash": config.config_hash,
+        "research_config_hash": config.research_config_hash,
         "data_hash": bundle.data_hash,
         "contract_hash": bundle.contract_hash,
         "random_seed": config.random_seed,
@@ -267,10 +344,11 @@ def _publish_outputs(
 
     files = {name: _sha256(output_dir / name) for name in OUTPUT_FILES}
     manifest = {
-        "version": "phase4-artifacts-v1",
+        "version": "phase4-artifacts-v2",
         "experiment_id": config.experiment_id,
         "source_hash": run["source_hash"],
         "config_hash": config.config_hash,
+        "research_config_hash": config.research_config_hash,
         "data_hash": bundle.data_hash,
         "files": files,
         "deterministic_serialization": True,
@@ -286,13 +364,10 @@ def run_phase4(config_path: Path, output_dir: Path) -> dict[str, object]:
         raise PermissionError("Phase 4 산출물을 봉인 OOS 경로에 쓸 수 없습니다")
     bundle = load_phase4_bundle(config)
     analysis_end = pd.Timestamp(config.periods["validation"].end)
-    feature_input = bundle.feature_panel.loc[bundle.feature_panel["date"].le(analysis_end)].copy()
-    full_history_input = bundle.full_history.loc[bundle.full_history["date"].le(analysis_end)].copy()
-    index_input = bundle.index.loc[bundle.index["date"].le(analysis_end)].copy()
-    actions_input = bundle.corporate_actions.loc[
-        bundle.corporate_actions["feature_boundary_date"].notna()
-        & bundle.corporate_actions["feature_boundary_date"].le(analysis_end)
-    ].copy()
+    feature_input = bundle.feature_panel.copy()
+    full_history_input = bundle.full_history.copy()
+    index_input = bundle.index.copy()
+    actions_input = bundle.corporate_actions.copy()
     if any(frame["date"].max() > analysis_end for frame in (feature_input, full_history_input, index_input)):
         raise PermissionError("Development Test 행이 Phase 4 계산 입력에 포함됐습니다")
     feature_result = build_feature_matrix(
@@ -311,7 +386,7 @@ def run_phase4(config_path: Path, output_dir: Path) -> dict[str, object]:
     with tempfile.TemporaryDirectory(prefix=".phase4-", dir=output_dir.parent) as temporary:
         staging = Path(temporary)
         result = _publish_outputs(staging, config, bundle, feature_result, label_audit, evaluation)
-        result["data_audit"]["maximum_calculation_input_date"] = analysis_end.date().isoformat()
+        result["data_audit"]["maximum_calculation_input_date"] = bundle.audit["maximum_loaded_date"]
         result["data_audit"]["development_test_rows_calculated"] = 0
         _write_json(staging / "data_audit.json", result["data_audit"])
         result["manifest"]["files"]["data_audit.json"] = _sha256(staging / "data_audit.json")
