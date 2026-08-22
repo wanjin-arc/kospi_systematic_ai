@@ -1,0 +1,13 @@
+period,market_regime,days,average_positions,average_cash_weight
+reused_validation_2019_2021,neutral,157,4.75796178344,0.5760175915091194
+reused_validation_2019_2021,risk_off,246,0,1.0
+reused_validation_2019_2021,risk_on,219,9.99086757991,0.12056811290047259
+F2019_validation,neutral,64,4.859375,0.5679833595556196
+F2019_validation,risk_off,124,0,1.0
+F2019_validation,risk_on,18,10,0.10371123816935734
+F2020_validation,neutral,88,4.86363636364,0.5499596530317028
+F2020_validation,risk_off,61,0,1.0
+F2020_validation,risk_on,59,10,0.12565661327834934
+F2021_validation,neutral,5,2.8,0.7443734393532442
+F2021_validation,risk_off,61,0,1.0
+F2021_validation,risk_on,142,9.98591549296,0.12229426245566372

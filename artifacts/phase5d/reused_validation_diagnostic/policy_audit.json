@@ -1,0 +1,131 @@
+{
+  "average_cash_is_hard_gate": false,
+  "development_test_accessed": false,
+  "entry_zscore": 1.0,
+  "exit_zscore": 0.0,
+  "final_oos_accessed": false,
+  "maximum_holdings_by_regime": {
+    "neutral": 5,
+    "risk_off": 0,
+    "risk_on": 10
+  },
+  "minimum_required_holdings": 0,
+  "order_audit": {
+    "F2019_cost_1x": {
+      "average_cash_is_hard_gate": false,
+      "entry_orders_by_regime": {
+        "neutral": 320,
+        "risk_off": 0,
+        "risk_on": 280
+      },
+      "exit_orders_by_reason": {
+        "risk_off": 892,
+        "score_or_rank": 435
+      },
+      "minimum_required_holdings": 0,
+      "orders": 1927,
+      "regime_signal_days": {
+        "neutral": 64,
+        "risk_off": 124,
+        "risk_on": 18
+      }
+    },
+    "F2020_cost_1x": {
+      "average_cash_is_hard_gate": false,
+      "entry_orders_by_regime": {
+        "neutral": 440,
+        "risk_off": 0,
+        "risk_on": 1082
+      },
+      "exit_orders_by_reason": {
+        "risk_off": 172,
+        "score_or_rank": 1283
+      },
+      "minimum_required_holdings": 0,
+      "orders": 2977,
+      "regime_signal_days": {
+        "neutral": 88,
+        "risk_off": 61,
+        "risk_on": 59
+      }
+    },
+    "F2021_cost_1x": {
+      "average_cash_is_hard_gate": false,
+      "entry_orders_by_regime": {
+        "neutral": 25,
+        "risk_off": 0,
+        "risk_on": 2579
+      },
+      "exit_orders_by_reason": {
+        "risk_off": 559,
+        "score_or_rank": 1070
+      },
+      "minimum_required_holdings": 0,
+      "orders": 4233,
+      "regime_signal_days": {
+        "neutral": 5,
+        "risk_off": 61,
+        "risk_on": 142
+      }
+    },
+    "connected_cost_1x": {
+      "average_cash_is_hard_gate": false,
+      "entry_orders_by_regime": {
+        "neutral": 785,
+        "risk_off": 0,
+        "risk_on": 3941
+      },
+      "exit_orders_by_reason": {
+        "risk_off": 1623,
+        "score_or_rank": 2788
+      },
+      "minimum_required_holdings": 0,
+      "orders": 9137,
+      "regime_signal_days": {
+        "neutral": 157,
+        "risk_off": 246,
+        "risk_on": 219
+      }
+    },
+    "connected_cost_2x": {
+      "average_cash_is_hard_gate": false,
+      "entry_orders_by_regime": {
+        "neutral": 785,
+        "risk_off": 0,
+        "risk_on": 3941
+      },
+      "exit_orders_by_reason": {
+        "risk_off": 1623,
+        "score_or_rank": 2788
+      },
+      "minimum_required_holdings": 0,
+      "orders": 9137,
+      "regime_signal_days": {
+        "neutral": 157,
+        "risk_off": 246,
+        "risk_on": 219
+      }
+    },
+    "connected_cost_3x": {
+      "average_cash_is_hard_gate": false,
+      "entry_orders_by_regime": {
+        "neutral": 785,
+        "risk_off": 0,
+        "risk_on": 3941
+      },
+      "exit_orders_by_reason": {
+        "risk_off": 1623,
+        "score_or_rank": 2788
+      },
+      "minimum_required_holdings": 0,
+      "orders": 9137,
+      "regime_signal_days": {
+        "neutral": 157,
+        "risk_off": 246,
+        "risk_on": 219
+      }
+    }
+  },
+  "reused_validation_not_oos": true,
+  "score": "fold_train_only_elastic_raw_prediction_causal_ema5_daily_zscore"
+}

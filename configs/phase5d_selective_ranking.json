@@ -1,0 +1,74 @@
+{
+  "version": "phase5d-selective-ranking-v1",
+  "experiment_id": "EXP-20260823-004",
+  "supersedes_experiment_id": "EXP-20260823-003",
+  "data_root": "data/processed/v24/phase5_train_validation_2021",
+  "required_partition_role": "phase5_train_validation",
+  "maximum_permitted_date": "2021-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "evaluation_status": "REUSED_VALIDATION_DIAGNOSTIC_NOT_OOS",
+  "periods": {
+    "train": ["2011-01-01", "2018-12-31"],
+    "reused_validation": ["2019-01-01", "2021-12-31"]
+  },
+  "folds": [
+    {"fold": "F2019", "train": ["2011-01-01", "2018-12-31"], "validation": ["2019-01-01", "2019-12-31"]},
+    {"fold": "F2020", "train": ["2011-01-01", "2019-12-31"], "validation": ["2020-01-01", "2020-12-31"]},
+    {"fold": "F2021", "train": ["2011-01-01", "2020-12-31"], "validation": ["2021-01-01", "2021-12-31"]}
+  ],
+  "inherited_signal": {
+    "phase4b_config": "configs/phase4b_multifactor.json",
+    "feature_set": "phase4b_multifactor_interaction_v1",
+    "candidate": "elastic_a005_l02",
+    "target": "forward_10_session_excess_open_to_open_rank"
+  },
+  "score_policy": {
+    "smoothing": "causal_ema_raw_prediction",
+    "ema_span_sessions": 5,
+    "entry_minimum_daily_zscore": 1.0,
+    "exit_below_daily_zscore": 0.0,
+    "risk_on_entry_fallback_rank": 20,
+    "risk_on_hold_rank": 20,
+    "neutral_entry_rank": 5,
+    "neutral_hold_rank": 5,
+    "reset_on_fold_or_membership_spell_or_session_gap": true
+  },
+  "market_policy": {
+    "risk_on": "index_trend_200_positive_and_breadth_above_sma200_at_least_0_5",
+    "neutral": "exactly_one_risk_on_condition_true",
+    "risk_off": "neither_risk_on_condition_true",
+    "maximum_holdings_by_regime": {"risk_on": 10, "neutral": 5, "risk_off": 0},
+    "risk_off_action": "no_new_buys_and_exit_recent_signal_positions_next_open"
+  },
+  "portfolio": {
+    "initial_cash_krw": "5000000",
+    "maximum_holdings": 10,
+    "target_weight": "0.10",
+    "maximum_holding_sessions": 20,
+    "allow_pyramiding": false,
+    "entry_gap_cap": "0.05",
+    "unallocated_cash": "retain_without_penalty",
+    "required_minimum_holdings": 0
+  },
+  "costs": {
+    "commission_rate_per_side": "0.0002",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [1, 2, 3],
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv",
+    "tax_removed_in_stress": false
+  },
+  "diagnostic_reporting": {
+    "average_cash_is_hard_gate": false,
+    "minimum_holdings_is_hard_gate": false,
+    "report_connected_and_annual_net_excess": true,
+    "report_regime_exposure_turnover_cost_and_drawdown": true,
+    "promotion_allowed_from_this_run": false,
+    "development_test_runs": 0
+  },
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "random_seed": 20260823,
+  "run_command": "PYTHONPATH=src python -m kospi100_selective_ranking.cli run --config configs/phase5d_selective_ranking.json --output artifacts/phase5d/reused_validation_diagnostic"
+}

@@ -45,6 +45,7 @@
 - Phase 4B: 2011~2018 Train 내부 다변수 Feature 감사를 완료했다. 21개 종목변수·5개 시장상태·6개 상호작용을 별도 Experiment로 검증했으며 기존 Phase 4 판정은 변경하지 않았다.
 - Phase 5B: 일별 종목 점수·횡단면 순위 모델 7개를 2015~2018 내부 Validation에서 평가했다. `elastic_a005_l02`가 진단상 최선이었지만 연결 순초과수익률 -11.50%p, 연도 gate 2/4로 전 후보를 기각했다. 거래 후보와 Development Test 후보는 없다.
 - Phase 5C: `elastic_a005_l02`를 고정하고 causal EMA5·상위 10/20 순위 지속성 정책을 2015~2018에서 적응적으로 진단했다. 순초과수익률은 -1.03%p로 개선됐지만 사전등록 turnover·현금 gate를 실패해 정책을 기각했다. 거래 후보와 Development Test 후보는 없다.
+- Phase 5D: 평균 현금·최소 보유 gate를 제거하고 시장상태별 최대 10·5·0종목을 허용했다. 이미 소비된 2019~2021 재사용 진단에서 순초과수익률 -88.05%p로 실패했다. 운용은 가변 보유를 구현했지만 종목 점수 예측력이 부족했으며 거래·Development Test 후보는 없다.
 - Phase 6 이후: 미구현.
 
 Phase 5 Development Test를 사용자 승인 없이 실행하지 않는다. Phase 4·5 결과를 근거로 기존 변수·기간·임계값을 소급 변경하지 않는다.
@@ -57,7 +58,7 @@ Phase 5 Development Test를 사용자 승인 없이 실행하지 않는다. Phas
 - 기존 파일을 불필요하게 덮어쓰지 않고, 규칙·데이터 계약 변경은 버전을 올린다.
 - 대용량 데이터, 원본 ZIP, 봉인 OOS, 임시 작업물은 Git에 커밋하지 않는다.
 - 실험 결과는 코드·설정·데이터·산출물 해시와 재현 명령을 기록한다.
-- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-23 Phase 5C 감사에서 79/79 통과했다.
+- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-23 Phase 5D 감사에서 86/86 통과했다.
 
 ## 단계 완료 산출물
 

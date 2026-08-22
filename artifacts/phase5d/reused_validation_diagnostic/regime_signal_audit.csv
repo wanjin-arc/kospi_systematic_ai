@@ -1,0 +1,4 @@
+market_regime,regime_capacity,signal_days,average_eligible_entry_candidates,zero_candidate_days
+neutral,5,157,5,0
+risk_off,0,246,0,246
+risk_on,10,219,17.99543379,0
