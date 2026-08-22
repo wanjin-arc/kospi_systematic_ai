@@ -70,6 +70,13 @@
 | DEC-2026-042 | Phase-3 status | Accept the deterministic/cost-aware reference; reject it as a trading candidate because Validation (−61.82 pp) and Development Test (−1.12 pp) net excess returns are negative | Completed | DEC-2026-019 application |
 | DEC-2026-043 | Phase-4 boundary | Keep final OOS sealed and stop after Phase 3; do not begin feature research without explicit user approval | Confirmed | — |
 
+## Phase-4B/5B Decisions
+
+| ID | Decision | Approved value / recommendation | Status | Supersedes |
+|---|---|---|---|---|
+| DEC-2026-044 | Train 내부 다변수 재연구 | 기존 Phase 4·5 결과를 보존하고 2011~2018 내부 anchored fold에서 21개 종목변수·5개 시장상태·6개 상호작용을 별도 Experiment로 평가한다. 2019~2021, Development Test, Final OOS는 새 후보 선택에 사용하지 않는다. | Completed; user approved 2026-08-23 | — |
+| DEC-2026-045 | 일별 점수·순위 및 10세션 보유 | 모든 적격 종목을 매일 동일하게 점수화·순위화하고 `t+1` 주문 우선순위로 사용한다. D09 target과 맞춰 10세션 보유, 최대 10종목·10%·no pyramiding을 적용하며 연결 및 모든 내부 연도의 순초과수익률 양수를 hard gate로 둔다. | Completed; all candidates rejected | DEC-2026-041의 보유기간을 Phase 5B 실험에서만 대체 |
+
 ## Decision Entry Template
 
 ```markdown

@@ -1,0 +1,12 @@
+{
+  "calculation_time": "official_close_t",
+  "development_test_accessed": false,
+  "eligible_universe": "is_member and eligible_new_entry and rank_eligible and tradable and not_ca_blocked",
+  "final_score_transform": "daily_cross_sectional_average_percentile_rank",
+  "holding_sessions": 10,
+  "maximum_holdings": 10,
+  "model_output": "predicted_forward_10_session_excess_return_rank",
+  "order_priority": "score_desc_security_id_asc",
+  "order_time": "next_session_open_or_later",
+  "stock_transform": "daily_cross_sectional_average_percentile_rank"
+}

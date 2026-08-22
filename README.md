@@ -1,8 +1,8 @@
 # KOSPI 100 Technical Systematic Trading AI
 
-Current gate: **Phase 4 complete; Phase 5 has not started and requires explicit user approval and a new pre-registered experiment.**
+Current gate: **Phase 4B feature audit is complete; Phase 5B daily multifactor ranking was executed and all candidates were rejected. No trading candidate is approved.**
 
-Phase 1 v24 provides audited point-in-time daily data through 2025-12-30, with development rows physically separated through 2023-12-31 and final OOS 2024–2025 sealed. Phase 2 adds a deterministic long-only daily execution/accounting engine. Phase 3 freezes and evaluates a transparent dual-momentum rule baseline. The reference is reproducible but failed the trading-candidate excess-return gate. Phase 4 screens 21 pre-registered technical features on Train/Validation only; `reversal_5` is the sole Phase-5 input candidate. There is no ML ranking model, timing model, or brokerage integration.
+Phase 1 v24 provides audited point-in-time daily data. Phase 2 adds a deterministic long-only daily execution/accounting engine. Phase 3 freezes and evaluates a transparent dual-momentum rule baseline. Phase 4 accepts `reversal_5` as the original Phase-5 input candidate. The original Phase 5 and the later Phase 5B both failed their cost-aware benchmark gates. Development Test remains unaccessed for these model experiments, and there is no approved timing model or brokerage integration.
 
 ## Implemented
 
@@ -15,6 +15,9 @@ Phase 1 v24 provides audited point-in-time daily data through 2025-12-30, with d
 - Validation-only selection of `H=20, N=10`; reference accepted, trading candidate rejected.
 - Phase-4 point-in-time features, executable 10-session open-to-open excess-return labels, univariate IC/HAC/coverage/stability/redundancy gates, and deterministic audit outputs.
 - Phase-4 result: `reversal_5` accepted only as a Phase-5 input candidate; 20 other features held under the frozen gates.
+- Original Phase-5 one-feature ranking selection: `tree_d3_l002` was diagnostic-best but failed the annual Validation excess-return gate.
+- Phase-4B 2011–2018 internal audit of 21 stock features, five contemporaneous regime variables, and six fixed interactions.
+- Phase-5B daily stock score and cross-sectional rank pipeline with seven preregistered candidates; all candidates rejected, diagnostic-best `elastic_a005_l02`.
 
 Specifications and gate evidence:
 
@@ -25,6 +28,12 @@ Specifications and gate evidence:
 - `docs/PHASE3_VALIDATION_REPORT.md`
 - `docs/stages/phase_4_spec.md`
 - `docs/stages/phase_4_report.md`
+- `docs/stages/phase_4b_spec.md`
+- `docs/stages/phase_4b_report.md`
+- `docs/stages/phase_5_spec.md`
+- `docs/stages/phase_5_report.md`
+- `docs/stages/phase_5b_spec.md`
+- `docs/stages/phase_5b_report.md`
 - `data/quality/v24/phase1_v24_independent_audit.json`
 
 ## Verify
@@ -39,6 +48,12 @@ PYTHONPATH=src python -m kospi100_baseline.cli run \
 PYTHONPATH=src python -m kospi100_features.cli run \
   --config configs/phase4_features.json \
   --output artifacts/phase4
+PYTHONPATH=src python -m kospi100_multifactor.cli analyze \
+  --config configs/phase4b_multifactor.json \
+  --output artifacts/phase4b_multifactor
+PYTHONPATH=src python -m kospi100_multifactor.cli select \
+  --config configs/phase5b_multifactor_ranking.json \
+  --output artifacts/phase5b/selection
 ```
 
 The test suite uses synthetic execution data. Synthetic performance is a calculation check, not a strategy result. The Phase-2 demo does not open the sealed final OOS.
@@ -49,9 +64,13 @@ The test suite uses synthetic execution data. Synthetic performance is a calcula
 - `src/kospi100_backtest/`: Phase-2 engine, costs, metrics, and deterministic writers.
 - `src/kospi100_baseline/`: Phase-3 data guard, features, rule orders, selection, and reporting.
 - `src/kospi100_features/`: Phase-4 feature, label, univariate evaluation, guarded runner, and CLI.
+- `src/kospi100_ranking/`: original Phase-5 one-feature rank-model selection.
+- `src/kospi100_multifactor/`: Phase-4B/5B feature audit, daily multifactor scores, ranking models, and guarded runners.
 - `configs/`: frozen engine and KOSPI sell-cost schedules.
 - `artifacts/phase2/synthetic_reference/`: reference ledgers and performance output.
 - `artifacts/phase3/`: Phase-3 sensitivity, selected-period ledgers, metrics, and manifests.
 - `artifacts/phase4/`: Phase-4 metrics, decisions, data audit, and deterministic manifest.
+- `artifacts/phase4b_multifactor/`: Train-internal multifactor diagnostics and audit.
+- `artifacts/phase5b/selection/`: rejected-candidate metrics, diagnostic model, score contract, and manifest.
 - `data/processed/v24/development/`: development-only daily data through 2023.
 - `data/sealed/final_oos_v24/`: Phase-8-only final OOS; do not use for development.
