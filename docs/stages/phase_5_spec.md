@@ -2,10 +2,13 @@
 
 ## 1. 문서 상태
 
-- 상태: 사용자 승인 전 연구 명세 초안
+- 상태: 사용자 승인 완료 — 사전등록·구현·Train/Validation Selection 허용, Development Test 실행 미승인
 - Phase: Phase 5
 - 기준 Phase 4 커밋: `94c8f5c360557587d5de44b1f77165824e2162c5`
 - Phase 5 결과 확인 전에 본 명세와 Experiment registry를 동결한다.
+- 승인일: 2026-08-22
+- 승인 범위: `select` 실행과 Selection 산출물 동결까지. `confirm-development-test`는 별도 사용자 승인 전 금지한다.
+- 실행 상태: Selection 및 독립 byte 재현 완료. `tree_d3_l002` 동결. Development Test 미실행.
 - Phase 4 결과와 산출물은 수정하지 않는다.
 
 ## 2. 목적
@@ -427,18 +430,13 @@ Phase 5는 다음이 모두 충족될 때 완료한다.
 - `src/kospi100_ranking/__init__.py`
 - `src/kospi100_ranking/config.py`
 - `src/kospi100_ranking/data.py`
-- `src/kospi100_ranking/targets.py`
-- `src/kospi100_ranking/models.py`
-- `src/kospi100_ranking/walk_forward.py`
+- `src/kospi100_ranking/modeling.py`
 - `src/kospi100_ranking/portfolio.py`
 - `src/kospi100_ranking/runner.py`
 - `src/kospi100_ranking/cli.py`
 - `tests/test_phase5_config.py`
 - `tests/test_phase5_data.py`
-- `tests/test_phase5_targets.py`
-- `tests/test_phase5_models.py`
-- `tests/test_phase5_walk_forward.py`
-- `tests/test_phase5_runner.py`
+- `tests/test_phase5_modeling.py`
 
 권고 실행 명령:
 
@@ -453,7 +451,7 @@ Development Test는 Selection 완료·동결 및 별도 사용자 승인 후에�
 ```text
 PYTHONPATH=src python -m kospi100_ranking.cli confirm-development-test \
   --config configs/phase5_ranking.json \
-  --selection-manifest artifacts/phase5/selection/manifest.json \
+  --selection artifacts/phase5/selection/manifest.json \
   --output artifacts/phase5/development_test
 ```
 

@@ -1,0 +1,63 @@
+{
+  "candidate_count": 8,
+  "candidate_order": [
+    "raw_rank",
+    "ols",
+    "tree_d1_l002",
+    "tree_d1_l005",
+    "tree_d2_l002",
+    "tree_d2_l005",
+    "tree_d3_l002",
+    "tree_d3_l005"
+  ],
+  "connected_validation_ranking": [
+    "tree_d3_l002",
+    "tree_d2_l002",
+    "tree_d2_l005",
+    "tree_d3_l005",
+    "tree_d1_l002",
+    "tree_d1_l005",
+    "raw_rank",
+    "ols"
+  ],
+  "dependency_hash": "2e343fa4ec97652567f2231f4878c130d33f357ca2509f257ac4c87e6cde9b83",
+  "development_test_accessed": false,
+  "experiment_id": "EXP-20260822-001",
+  "phase3_validation_baseline": {
+    "experiment_id": "P3-BASELINE-20260818-001",
+    "max_drawdown": "-0.405481375",
+    "net_excess_return": "-0.618248554",
+    "sharpe_zero_rf": "-0.100521105"
+  },
+  "phase5_adoption_decision": "PENDING_SINGLE_DEVELOPMENT_TEST_AFTER_SEPARATE_USER_APPROVAL",
+  "selected_candidate": "tree_d3_l002",
+  "selected_connected_validation": {
+    "max_drawdown": "-0.4136582149206189872481793015",
+    "net_excess_return": "-0.424564902988176384095720761",
+    "sharpe_zero_rf": "0.2275429441164163",
+    "turnover_on_average_equity": "59.52516503069655222532218151"
+  },
+  "selected_feature_set": [
+    "reversal_5"
+  ],
+  "selected_model_hash": "822ebea85b8c9745e3bfa5718d48ba0a383b5017298542a91184cc2e0bf54923",
+  "selected_rank_diagnostics": {
+    "all_fold_coverage": 1.0,
+    "mean_daily_spearman_ic": 0.021977931122151555,
+    "mean_ndcg_at_10": 0.5345266211340474
+  },
+  "selection_priority": {
+    "development_test_runs": 1,
+    "objective": "highest_connected_validation_base_cost_net_sharpe",
+    "partition": "validation_only",
+    "tie_breaks": [
+      "higher_net_excess_return",
+      "shallower_max_drawdown",
+      "lower_turnover",
+      "lower_model_complexity",
+      "fixed_candidate_order"
+    ]
+  },
+  "status": "SELECTION_FROZEN_DEVELOPMENT_TEST_NOT_AUTHORIZED",
+  "validation_sharpe_improvement_vs_phase3": 0.3280640491164163
+}

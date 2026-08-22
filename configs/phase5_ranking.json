@@ -1,0 +1,96 @@
+{
+  "version": "phase5-ranking-v1",
+  "experiment_id": "EXP-20260822-001",
+  "data_root": "data/processed/v24/phase5_train_validation_2021",
+  "required_partition_role": "phase5_train_validation",
+  "maximum_permitted_date": "2021-12-31",
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "development_test_access": false,
+  "periods": {
+    "train": ["2011-01-01", "2018-12-31"],
+    "validation": ["2019-01-01", "2021-12-31"],
+    "development_test": ["2022-01-01", "2023-12-31"]
+  },
+  "feature_set": {
+    "id": "phase5_reversal5_only_v1",
+    "features": ["reversal_5"],
+    "cross_sectional_transform": "percentile_rank_average",
+    "higher_rank_is_better": true
+  },
+  "target": {
+    "id": "forward_10_session_excess_open_to_open_rank",
+    "entry_offset_sessions": 1,
+    "exit_offset_sessions": 11,
+    "cross_sectional_transform": "percentile_rank_average",
+    "higher_rank_is_better": true
+  },
+  "folds": [
+    {"fold": "F2019", "train": ["2011-01-01", "2018-12-31"], "validation": ["2019-01-01", "2019-12-31"]},
+    {"fold": "F2020", "train": ["2011-01-01", "2019-12-31"], "validation": ["2020-01-01", "2020-12-31"]},
+    {"fold": "F2021", "train": ["2011-01-01", "2020-12-31"], "validation": ["2021-01-01", "2021-12-31"]}
+  ],
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "models": {
+    "candidate_order": [
+      "raw_rank",
+      "ols",
+      "tree_d1_l002",
+      "tree_d1_l005",
+      "tree_d2_l002",
+      "tree_d2_l005",
+      "tree_d3_l002",
+      "tree_d3_l005"
+    ],
+    "trees": {
+      "max_depth": [1, 2, 3],
+      "min_samples_leaf": [0.02, 0.05],
+      "criterion": "squared_error",
+      "splitter": "best",
+      "min_samples_split": 2,
+      "max_features": null,
+      "max_leaf_nodes": null,
+      "min_impurity_decrease": 0.0,
+      "ccp_alpha": 0.0
+    }
+  },
+  "portfolio": {
+    "initial_cash_krw": "5000000",
+    "holding_sessions": 20,
+    "maximum_holdings": 10,
+    "target_weight": "0.10",
+    "allow_pyramiding": false,
+    "entry_gap_cap": "0.05",
+    "whole_shares_only": true,
+    "unallocated_cash": "retain",
+    "entry_priority": "score_desc_security_id_asc"
+  },
+  "costs": {
+    "commission_rate_per_side": "0.0002",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [1, 2, 3],
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv",
+    "tax_removed_in_stress": false
+  },
+  "selection": {
+    "partition": "validation_only",
+    "objective": "highest_connected_validation_base_cost_net_sharpe",
+    "tie_breaks": [
+      "higher_net_excess_return",
+      "shallower_max_drawdown",
+      "lower_turnover",
+      "lower_model_complexity",
+      "fixed_candidate_order"
+    ],
+    "development_test_runs": 1
+  },
+  "phase3_validation_baseline": {
+    "experiment_id": "P3-BASELINE-20260818-001",
+    "net_excess_return": "-0.618248554",
+    "sharpe_zero_rf": "-0.100521105",
+    "max_drawdown": "-0.405481375"
+  },
+  "random_seed": 20260822,
+  "run_command": "PYTHONPATH=src python -m kospi100_ranking.cli select --config configs/phase5_ranking.json --output artifacts/phase5/selection"
+}
