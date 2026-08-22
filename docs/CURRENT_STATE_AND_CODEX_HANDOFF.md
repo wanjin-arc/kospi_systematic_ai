@@ -11,9 +11,12 @@ Selection 후보는 `tree_d3_l002`다. 입력은 `reversal_5` 하나이며, 깊�
 
 새 Phase 5B는 21개 종목변수·5개 시장상태·6개 상호작용을 사용해 매일 종목별 점수와 횡단면 순위를 만들었다. `elastic_a005_l02`가 진단상 최선이었으나 연결 순초과수익률 -11.5013%p, 연도 gate 2/4로 전 후보가 기각됐다. 이 모델은 거래 후보나 Development Test 후보가 아니다.
 
+Phase 5C `EXP-20260823-003`은 이 신호를 고정하고 causal EMA5·상위 10 목표/20위 fallback·20위 이탈·20세션 안전 상한을 적응적으로 진단했다. 연결 순초과수익률은 -1.0274%p로 개선됐지만 turnover 감소 33.87%와 평균 현금 17.61%가 사전등록 gate를 실패했다. Phase 5C 정책도 거래 후보나 Development Test 후보가 아니다.
+
 ## 검증 상태
 
-- 전체 회귀 테스트: 72/72 PASS
+- 전체 회귀 테스트: 79/79 PASS
+- Phase 5C 전용 테스트: 7/7 PASS
 - Phase 4B/5B 신규 테스트: 10/10 PASS
 - Phase 5 전용 테스트: 12/12 PASS
 - 기존 Phase 5 Selection과 독립 재실행의 구조화 산출물 8개: byte-identical
@@ -22,6 +25,7 @@ Selection 후보는 `tree_d3_l002`다. 입력은 `reversal_5` 하나이며, 깊�
 - Phase 4B/5B 최대 로드일: 2018-12-28
 - Phase 4B/5B 최대 연구 신호일: 2018-12-12
 - Phase 4B/5B의 2019~2021 로드·계산·평가·선택: 모두 0행
+- Phase 5C의 2018년 이후 로드·계산·평가·선택: 모두 0행
 - 로드 후 날짜 필터: 없음
 - Development Test 입력·계산·평가·선택: 모두 0행
 - Final OOS 접근: 없음
@@ -78,6 +82,8 @@ Selection 우선순위상 tree 후보가 Raw Rank·OLS보다 높았지만, 사�
 5. 결과를 본 뒤 동일 Experiment의 Feature, 모델, fold, 비용, 포트폴리오, gate를 변경하지 않는다.
 6. Final OOS는 계속 봉인한다.
 7. Phase 6 명세·실행을 시작하지 않는다.
+8. Phase 5C 결과를 보고 같은 2015~2018에서 EMA·순위 band·현금 규칙을 다시 조정하지 않는다.
+9. D20의 연도 80% 조건 변경은 `DEC-2026-047` 제안 상태이며 사용자 명시적 승인 전 적용하지 않는다.
 
 ## Codex Handoff
 

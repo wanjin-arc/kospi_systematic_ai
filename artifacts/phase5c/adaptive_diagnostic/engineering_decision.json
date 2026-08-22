@@ -1,0 +1,22 @@
+{
+  "annual_folds": 4,
+  "checks": {
+    "average_cash_weight": false,
+    "explicit_cost_reduction": true,
+    "mdd_deterioration": true,
+    "net_excess_improvement": true,
+    "turnover_reduction": false
+  },
+  "d20_superseded": false,
+  "development_test_candidate": false,
+  "development_test_runs": 0,
+  "experiment_id": "EXP-20260823-003",
+  "explicit_cost_reduction_ratio": 0.3105304818948409,
+  "mdd_deterioration_percentage_points": 0.0,
+  "net_excess_improvement": 0.104738778,
+  "nonnegative_annual_excess_folds": 2,
+  "result_is_confirmatory": false,
+  "status": "ADAPTIVE_DIAGNOSTIC_FAIL",
+  "trading_candidate": false,
+  "turnover_reduction_ratio": 0.33866307710386623
+}

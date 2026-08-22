@@ -77,6 +77,13 @@
 | DEC-2026-044 | Train 내부 다변수 재연구 | 기존 Phase 4·5 결과를 보존하고 2011~2018 내부 anchored fold에서 21개 종목변수·5개 시장상태·6개 상호작용을 별도 Experiment로 평가한다. 2019~2021, Development Test, Final OOS는 새 후보 선택에 사용하지 않는다. | Completed; user approved 2026-08-23 | — |
 | DEC-2026-045 | 일별 점수·순위 및 10세션 보유 | 모든 적격 종목을 매일 동일하게 점수화·순위화하고 `t+1` 주문 우선순위로 사용한다. D09 target과 맞춰 10세션 보유, 최대 10종목·10%·no pyramiding을 적용하며 연결 및 모든 내부 연도의 순초과수익률 양수를 hard gate로 둔다. | Completed; all candidates rejected | DEC-2026-041의 보유기간을 Phase 5B 실험에서만 대체 |
 
+## Phase-5C Decisions
+
+| ID | Decision | Approved value / recommendation | Status | Supersedes |
+|---|---|---|---|---|
+| DEC-2026-046 | 적응적 점수 지속성 진단 | Phase 5B 결과를 본 상태를 명시하고 `elastic_a005_l02`를 고정한 채 2015~2018에서 causal EMA5, 상위 10 목표·20위 fallback/이탈, 20세션 안전 상한을 한 번 진단한다. 결과가 좋아도 거래·Development Test 후보로 자동 승격하지 않는다. | Completed; user authorized Phase 5C 2026-08-23; diagnostic failed | — |
+| DEC-2026-047 | 소표본 연도 gate 해석 | 4개 fold의 80% 조건이 사실상 4/4가 되는 과도한 기각 위험을 인정한다. 향후 확인에서는 연결 기본비용·2배 비용 초과수익과 위험 한도를 hard gate로, 연도 양수 비율을 regime 진단으로 둘 것을 권고한다. 기존 D20은 사용자 별도 승인 전 변경하지 않는다. | Proposed; explicit approval required | None; D20 remains active |
+
 ## Decision Entry Template
 
 ```markdown

@@ -1,0 +1,64 @@
+{
+  "version": "phase5c-persistent-ranking-v1",
+  "experiment_id": "EXP-20260823-003",
+  "phase5b_experiment_id": "EXP-20260823-002",
+  "phase5b_config": "configs/phase5b_multifactor_ranking.json",
+  "data_root": "data/processed/v24/phase4b_train_internal_2018",
+  "required_partition_role": "phase4b_train_internal",
+  "maximum_permitted_date": "2018-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "inherited_signal": {
+    "candidate": "elastic_a005_l02",
+    "features": "phase4b_multifactor_interaction_v1",
+    "target": "forward_10_session_excess_open_to_open_rank",
+    "fit_policy": "anchored_fold_train_only_with_purge20_embargo20"
+  },
+  "ranking_policy": {
+    "score_smoothing": "causal_ema",
+    "ema_span_sessions": 5,
+    "reset_on_fold_or_membership_spell_or_session_gap": true,
+    "desired_entry_rank": 10,
+    "fallback_max_rank": 20,
+    "rank_loss_exit_below_rank": 20,
+    "maximum_holding_sessions": 20,
+    "maximum_holdings": 10,
+    "target_weight": "0.10",
+    "allow_pyramiding": false,
+    "entry_gap_cap": "0.05",
+    "order_time": "next_session_open_or_later"
+  },
+  "costs": {
+    "initial_cash_krw": "5000000",
+    "commission_rate_per_side": "0.0002",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [1, 2, 3],
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv",
+    "tax_removed_in_stress": false
+  },
+  "adaptive_diagnostic": {
+    "period": "2015_2018_internal_validation_only",
+    "reference_policy": "phase5b_top10_hold10",
+    "minimum_turnover_reduction_ratio": 0.40,
+    "minimum_explicit_cost_reduction_ratio": 0.30,
+    "maximum_average_cash_weight": 0.10,
+    "minimum_net_excess_improvement": 0.0,
+    "maximum_mdd_deterioration_percentage_points": 0.05,
+    "result_is_confirmatory": false,
+    "development_test_runs": 0
+  },
+  "future_confirmatory_gate": {
+    "requires_separate_user_approval": true,
+    "connected_base_cost_net_excess_return_strictly_positive": true,
+    "connected_2x_cost_net_excess_return_nonnegative": true,
+    "connected_net_sharpe_strictly_positive": true,
+    "worst_annual_net_excess_floor": -0.15,
+    "annual_positive_ratio_is_diagnostic_not_hard_gate": true,
+    "does_not_supersede_research_protocol_d20_without_separate_approval": true
+  },
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "random_seed": 20260823,
+  "run_command": "PYTHONPATH=src python -m kospi100_rank_persistence.cli run --config configs/phase5c_persistent_ranking.json --output artifacts/phase5c/adaptive_diagnostic"
+}

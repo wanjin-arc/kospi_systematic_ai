@@ -1,0 +1,18 @@
+{
+  "adaptive_diagnostic_only": true,
+  "config_hash": "855b480e07f7e90edbafb1a4534d49412f4a9aa4c65f797e8b6f92e01b2dce93",
+  "data_hash": "5191493236aa5613f72700f7ac3a24403989ce80d8b2cc4ecd0b3ab913742f35",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.0"
+  },
+  "development_test_accessed": false,
+  "experiment_id": "EXP-20260823-003",
+  "final_oos_accessed": false,
+  "policy_hash": "ce8079a2de50ae07b6e10676719e6d8dfa60fb3e48ff8d71d103a5fcab5f6e66",
+  "run_command": "PYTHONPATH=src python -m kospi100_rank_persistence.cli run --config configs/phase5c_persistent_ranking.json --output artifacts/phase5c/adaptive_diagnostic",
+  "source_hash": "618a2ba8af7a6022d50a0ada85ae1bf6b1bcc6231128052ec7599471229e77b7",
+  "status": "ADAPTIVE_DIAGNOSTIC_FAIL"
+}
