@@ -1,87 +1,69 @@
 # 현재 상태 및 Codex 인계
 
-**갱신일:** 2026-08-22
-**목적:** 저장소의 검증 완료 범위와 다음 단계 진입 조건을 추측 없이 이어받기 위한 문서
+**갱신일:** 2026-08-23
+**목적:** 검증 완료 범위와 다음 승인 경계를 추측 없이 이어받기 위한 문서
 
 ## 결론
 
-Phase 0~4는 완료다. Phase 4는 2021년 이하 전용 물리 파티션, 실행 전 data hash 고정, 접근 감사, 기존 결과 불변 및 독립 byte determinism을 모두 통과했다. `reversal_5` 한 개만 Phase 5 입력 후보로 유지하며, 이는 모델 또는 거래 후보 채택이 아니다.
+Phase 0~4는 완료다. Phase 5는 `EXP-20260822-001`의 Train/Validation Selection과 독립 재실행까지 완료했으며, Development Test는 로드·계산·평가·선택 모두 0행이다. 따라서 Phase 5 전체 완료나 모델 채택으로 표시하지 않는다.
 
-`reversal_5` 판정은 모델 또는 거래 후보 채택이 아니다. Phase 5 Ranking 모델은 아직 구현·등록되지 않았으며 사용자 승인과 새 Experiment ID 사전 등록 전에는 시작하지 않는다.
+Selection 후보는 `tree_d3_l002`다. 입력은 `reversal_5` 하나이며, 깊이 3·최소 leaf 2%인 얕은 의사결정나무다. 이는 별도 승인 후 단 한 번 공개할 Development Test 후보일 뿐 거래 후보가 아니다.
 
-## 확인된 기준 상태
+## 검증 상태
 
-- 전체 회귀 테스트: 50/50 PASS
-- Phase 1 v24 독립 감사: PASS
-- Phase 2 deterministic engine 및 synthetic reference: 완료
-- Phase 3: 19개 전략 reconciliation과 byte-identical 재실행 PASS
-- Phase 3 선택: `H=20`, `N=10`, target weight 10%
-- Phase 3 결정: 기준선 ACCEPTED, 거래 후보 FAIL
-- Phase 4 전용 테스트: 18/18 PASS
-- Phase 4 기존 실제 CLI 실행: 결과 보존
-- Phase 4 물리 경계 재검증 CLI: PASS
-- Phase 4 물리 파티션 독립 재생성: 6개 구성 파일 byte-identical
-- Phase 4 재검증 독립 재실행: 8개 구조화 산출물 byte-identical
-- Phase 4 결정: `reversal_5`만 `채택_Phase5후보`
-- Phase 4 연구의 Development Test loaded/calculated/evaluated/selected: 모두 0행
-- 로드 후 날짜 필터링: false
-- Final OOS 접근: false
+- 전체 회귀 테스트: 62/62 PASS
+- Phase 5 전용 테스트: 12/12 PASS
+- Selection과 독립 재실행의 구조화 산출물 8개: byte-identical
+- 입력 역할: `phase5_train_validation`
+- 최대 로드일: 2021-12-30
+- 로드 후 날짜 필터: 없음
+- Development Test 입력·계산·평가·선택: 모두 0행
+- Final OOS 접근: 없음
 
-## Phase 4 구현 상태
+## Phase 5 Selection 결과
 
-- 설정: `configs/phase4_features.json`
-- 재검증 설정: `configs/phase4_revalidation_20260819.json`
-- 실행 API: `kospi100_features.runner.run_phase4`
-- 재검증 CLI: `python -m kospi100_features.cli run --config configs/phase4_revalidation_20260819.json --output artifacts/phase4_revalidation_20260819`
-- 단계 명세: `docs/stages/phase_4_spec.md`
-- 실행 보고서: `docs/stages/phase_4_report.md`
-- 구조화 결과: `artifacts/phase4/`
-- 물리 경계 재검증 결과: `artifacts/phase4_revalidation_20260819/`
-- 물리 파티션 빌더: `kospi100_data.phase4_partition`
-- 실험 기록: `experiments/registry.csv`의 `P4-FEATURES-20260818-001`
-- 재검증 실험 기록: `P4-REVALIDATION-20260819-001` (`completed`)
+- Experiment ID: `EXP-20260822-001`
+- 후보: Raw Rank 1개, OLS 1개, shallow tree 6개
+- 선택 후보: `tree_d3_l002`
+- 선택 모델 hash: `822ebea85b8c9745e3bfa5718d48ba0a383b5017298542a91184cc2e0bf54923`
+- 2019~2021 연결 Validation 기본비용 수익률: 7.9429%
+- 같은 기간 지수 수익률: 50.3994%
+- 순초과수익률: -42.4565%p
+- Sharpe: 0.2275
+- 최대낙폭: -41.3658%
+- Phase 3 대비 Sharpe 개선: +0.3281
+- 연도별 순초과수익률 0 이상 fold: 0/3
 
-교정된 Phase 4 로더는 `phase4_train_validation` 역할, `max_date=2021-12-31`, 파일별 `min_date`·`max_date`·`rows`를 가진 manifest를 데이터 파일 read 전에 검증한다. 허용 파일 네 개만 hash 검증 후 읽고, 실제 날짜와 행 수를 manifest와 다시 대조한다. 로드 뒤 날짜 필터링은 허용하지 않는다. 기존 통합 development 파티션은 데이터 파일 read 전에 거부한다.
-
-실제 입력은 `data/processed/v24/phase4_train_validation_2021/`에 생성돼 있다. 상류 빌더는 허용된 통합 development 파일의 source hash를 검증한 뒤 날짜 열만으로 스트리밍 cutoff를 적용했다. 2022~2023 행은 출력·집계·연구 계산에 보존하지 않았다. 이 준비 행위와 Phase 4 연구 실행을 분리해 기록하며, Phase 4 연구 실행 자체는 물리적으로 2021년 이하인 네 파일만 읽었다.
-
-## Phase 4 결과 요약
-
-- 후보 변수: 21개
-- `채택_Phase5후보`: 1개 (`reversal_5`)
-- `보류_학습방향불일치`: 16개
-- `보류_검증방향불일치`: 2개
-- `보류_검증불안정`: 1개
-- `보류_연도불안정`: 1개
-- 시장상태 변수 5개: 모두 `보류_Phase7`
-
-`reversal_5`의 Validation coverage는 0.9994, 평균 일별 Spearman IC는 0.02439, HAC t값은 1.99이며 2019~2021의 세 연도 평균 IC가 모두 양수였다. 상세 수치는 `docs/stages/phase_4_report.md`와 `artifacts/phase4/feature_metrics.csv`를 따른다.
+Selection 우선순위상 tree 후보가 Raw Rank·OLS보다 높았지만, 사전등록 D20의 연도별 Validation 순초과수익률 조건은 이미 실패했다. Development Test 결과를 보더라도 모든 gate를 동시에 통과할 수 없으므로 모델 채택 가능성은 없다. 다만 명세상 단일 Development Test 공개를 수행할지는 사용자 별도 결정으로 남긴다.
 
 ## 동결 hash
 
-- Phase 4 source: `f199ed4de175c1643877ed064670c15b6618e0010542230f3b60bff265997deb`
-- Phase 4 config: `2b65169985cf800c05863191e4f19bcb190865a92bd31b325f5be3f299cd7091`
-- Phase 4 data: `b27027d8c4b4271ef9d80058890894791c339891a276d7c0bf747fead697da7f`
-- Feature data contract: `4728adbdd7b48077a6e96714c920d541d19cae0e1f73aaaf9c98ebaee6c0aa2d`
-- 재검증 source: `868457ef97de3c180bbd5d4edfd5ebe581569241fd4e16df21945577dc003844`
-- 재검증 config: `71199d3c36e6d63775cfe5aaad4c8a59c3030f56f6a772130b3be12da0c75317`
-- 재검증 data: `69590204b3c35e686267dac81fe1347c0e3639005586da2d2db32e35c76b840f`
-- 재검증 artifact manifest: `77992184d3c413a3066be363e442ed1e6de4210ef72b1b1b2cccfbceb9fc2bb6`
+- source: `1600bcd361ce90e0a7f56500fd1d74393e8123ca851f002f438f7a60e158c240`
+- config: `e3ea32fa995e3302539b8a28ed7193c7e7ccb1cc2af7dea76d6dc3ba6ef1fb21`
+- Selection data: `d4b817519bc7b9956b26bbc8e099356a0b1b3cb4e402674b59e93a1525162417`
+- 후보 모델군: `e45ee94e6f798c9e5be4fda944c779a5889ef0ce28d03213b2a6fa05fc01bd87`
+- dependency: `2e343fa4ec97652567f2231f4878c130d33f357ca2509f257ac4c87e6cde9b83`
+- Selection manifest 파일 hash: `67adeabdd7178126e28b8d17972ea254e72598660853a05889eb8b37539ac5e3`
 
-## 다음 단계 제한
+## 구현 및 산출물
 
-1. Phase 5는 사용자 명시적 승인 전 시작하지 않는다.
-2. Phase 5는 새 단계 명세와 새 Experiment ID를 결과 확인 전에 등록한다.
-3. Phase 4 결과를 보고 기존 변수 공식·기간·threshold를 소급 변경하지 않는다.
-4. Development Test는 Phase 5의 동결 명세가 허용하는 시점과 용도 외에는 사용하지 않으며, Final OOS는 Phase 8 단일 릴리스 전까지 계속 봉인한다.
-5. Phase 5에서도 모델 성능만으로 거래 후보를 주장하지 않고, 동결된 Phase 3 기준선과 동일한 universe·시점·비용·포트폴리오 제약 아래 후속 gate를 적용한다.
+- 설정: `configs/phase5_ranking.json`
+- 물리 파티션 빌더: `kospi100_data.phase5_partition`
+- Selection CLI: `python -m kospi100_ranking.cli select --config configs/phase5_ranking.json --output artifacts/phase5/selection`
+- 코드: `src/kospi100_ranking/`
+- 구조화 결과: `artifacts/phase5/selection/`
+- 명세·보고서: `docs/stages/phase_5_spec.md`, `docs/stages/phase_5_report.md`
+
+## 다음 승인 경계
+
+1. Development Test는 사용자 별도 승인 전 실행하지 않는다.
+2. 승인하더라도 동결된 `tree_d3_l002` 한 개만 한 번 평가한다.
+3. 결과를 본 뒤 Feature, 모델, fold, 비용, 포트폴리오, gate를 변경하지 않는다.
+4. Final OOS는 계속 봉인한다.
+5. Phase 6 명세·실행을 시작하지 않는다.
 
 ## Codex Handoff
 
-- 다음 허용 작업: 사용자 승인 후 Phase 5 명세와 새 Experiment ID를 결과 확인 전에 등록한다.
-- 허용 후보 입력: `reversal_5` 한 개. 추가 변수 또는 threshold 변경은 새 가설·Experiment ID가 필요하다.
-- 아직 하지 않을 일: 승인 전 Phase 5 모델 학습, 포트폴리오 백테스트, Development Test 조회, Final OOS 접근, paper/live trading.
-- 물리 파티션 재생성 명령: `PYTHONPATH=src python -m kospi100_data.phase4_partition --source-root data/processed/v24/development --output-root data/processed/v24/phase4_train_validation_2021`
-- Phase 4 재검증 명령: `PYTHONPATH=src python -m kospi100_features.cli run --config configs/phase4_revalidation_20260819.json --output artifacts/phase4_revalidation_20260819`
-- 전체 회귀 명령: `PYTHONPATH=src python -m unittest discover -s tests -v`
-- 완료 상태: Phase 4 완료. 물리 입력은 `.gitignore` 대상이며 코드·hash·감사 산출물로 재현한다.
+- 현재 허용 작업: Selection 산출물·manifest·테스트 감사와 문서 검토.
+- 사용자 결정을 기다릴 작업: 단일 Development Test 공개를 수행할지, Validation gate 실패만으로 `rejected`를 확정할지.
+- 금지 작업: Development Test 선행 접근, 다른 후보 재선택, 신규 Feature 추가, Phase 6 시작, Final OOS 접근, 실거래·배포.
