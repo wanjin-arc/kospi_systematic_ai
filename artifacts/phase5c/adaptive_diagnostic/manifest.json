@@ -1,0 +1,10 @@
+{
+  "data_audit.json": "ee3eb7315baaa219e296d9fc5be830ebe0547db077b82ddc5103d0288cd82d20",
+  "engineering_decision.json": "45cc22f79ad4ba29cfee253b4e4ffcc0308cbf278fbc6dde2bc681a3c739e4a0",
+  "fold_audit.csv": "674174b1bf7cf6101b1eb16e416bfc21b39a87f6dd8cc51b32f37e6ea4f2791f",
+  "fold_rank_metrics.csv": "2756e8e1967d449a31b37ea36001cc0ff1d276697839d2fd754e5157e290ad9e",
+  "policy_audit.json": "0f6ba9fa319cfee07f217f04e848ace59e28b6574d5be0168bbda4486b323654",
+  "portfolio_metrics.csv": "2d52c0877b860834bef045cb747b9f1127063aca54e602373038983d62771da6",
+  "run.json": "ce1c7d2ef9e0d796d431675e057e4bffabd0cdd07b5847e7013f2e12b03a3be5",
+  "score_contract.json": "7397a51bab0b5f7e03f0aead910da3af5c03a9faedc67cd8cc0d177264ac2142"
+}

@@ -2,7 +2,7 @@
 
 **기준일:** 2026-08-22
 **근거:** 저장소 파일, 실행 가능한 테스트, Phase 1 v24 감사, Phase 2·3 산출물, Phase 4 물리 입력 재검증
-**상태:** Phase 0~4 완료, Phase 5 이후 미구현
+**상태:** Phase 0~4 완료, Phase 5·5B·5C 연구 후보 모두 성과 gate 실패, 거래 후보 없음
 
 ## 1. 목적과 역할 분담
 
@@ -106,7 +106,7 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 | 2 Backtest engine | 완료 | Long-only/정수주/현금, 비용·세금·슬리피지, gap, halt, partial fill, stop/target, CA, 원장·metrics·reconciliation, deterministic output | 호가 깊이·실제 auction·broker semantics는 Phase 9 전 검증 |
 | 3 Rule baseline | 완료 | SMA200 + 126일 초과모멘텀, 9개 조합, Validation-only 선택, Development Test 1회 | 거래 후보 탈락. 기준선으로만 유지 |
 | 4 Feature research | 완료 | 21개 횡단면·5개 regime 변수, PIT/CA-aware feature·label, 단변량 IC/HAC/coverage/중복 평가, 2021년 이하 물리 입력 경계, 접근 감사, deterministic CLI·산출물 | `reversal_5`만 Phase 5 입력 후보. 모델·포트폴리오·거래 판정은 미수행 |
-| 5 Ranking model | 미구현 | 없음 | 선형 모델부터 비교 |
+| 5 Ranking model | Selection/적응적 진단 완료·후보 기각 | reversal_5 단일 모델, Phase 4B/5B 다변수 모델, Phase 5C causal 점수 지속성·rank hysteresis | 모두 비용 차감 지수 초과 성과 또는 사전등록 진단 gate 실패. Development Test 미사용 |
 | 6 Entry Timing | 미구현 | 분봉 Raw와 coverage audit만 있음 | 동일 표본 시가/5분/15분 baseline 및 timing model |
 | 7 Portfolio/Risk | 미구현 | Phase 2의 실행 원장 기반만 있음 | Regime, exposure, sizing, risk rule, kill switch |
 | 8 통합 검증 | 미구현 | 없음 | Walk-Forward, stress, sensitivity, 최종 OOS 1회 |
@@ -121,17 +121,23 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 | `src/kospi100_backtest/` | Phase 2 설정, 비용, 주문/체결/원장 엔진, metrics, deterministic I/O, synthetic demo |
 | `src/kospi100_baseline/` | Phase 3 데이터 guard, CA-aware Feature, 주문 생성, 9조합 실행·선택, CLI |
 | `src/kospi100_features/` | Phase 4 config/features/labels/evaluate/runner/CLI와 물리 입력 fail-closed 감사 |
+| `src/kospi100_ranking/` | Phase 5 단일 Feature ranking 모델·포트폴리오 Selection |
+| `src/kospi100_multifactor/` | Phase 4B 다변수 Feature 감사와 Phase 5B 일별 횡단면 모델 |
+| `src/kospi100_rank_persistence/` | Phase 5C causal EMA·상위 10/20 순위 지속성 정책과 적응적 진단 |
 | `configs/phase1.json` | 초기 Phase 1 논리 build 설정 |
 | `configs/phase2_engine.json` | 동결된 Phase 2 실행·원장 설정 |
 | `configs/phase3_baseline.json` | Phase 3 후보군·구간·비용·선택 규칙 |
 | `configs/phase4_features.json` | Phase 4 원 연구 후보·기간·label·gate 동결 설정 |
 | `configs/phase4_revalidation_20260819.json` | 원 연구 설정 hash를 유지한 물리 입력 경계 재검증 wrapper |
 | `configs/kospi_sell_cost_schedule.csv` | 날짜별 KOSPI 매도세율 |
-| `tests/` | Phase 1~4 단위·통합·회귀 테스트. 현재 50개 통과 |
+| `tests/` | Phase 1~5C 단위·통합·회귀 테스트. 현재 79개 통과 |
 | `artifacts/phase2/` | synthetic 원장·metrics·reconciliation. 전략 수익 근거가 아님 |
 | `artifacts/phase3/` | 민감도, 선택 결과, 실제 개발 백테스트 원장·metrics·manifest |
 | `artifacts/phase4/` | 원 Phase 4 변수 지표·결정·감사·manifest |
 | `artifacts/phase4_revalidation_20260819/` | 2021년 이하 물리 입력 경계 재검증 지표·결정·접근 감사·manifest |
+| `artifacts/phase5/selection/` | reversal_5 단일 입력 Selection 결과. 거래 후보 gate 실패 |
+| `artifacts/phase4b_multifactor/`, `artifacts/phase5b/selection/` | 2018년 이하 다변수 Feature·모델 진단. 전 후보 기각 |
+| `artifacts/phase5c/adaptive_diagnostic/` | causal 점수 지속성·저회전율 정책 진단. 정책 기각 |
 | `experiments/registry.csv` | 실험 사전 등록 및 결과·해시·결정 기록 |
 | `work/v24_stage/phase1_final_v24/` | 1.3GB급 Phase 1 원본/production bundle. Git 추적 대상이 아님 |
 | `data/processed/v24/development/` | 2023년까지의 개발 입력. Git 추적 대상이 아님 |
@@ -152,11 +158,11 @@ AI는 차트를 주관적으로 보고 주문하지 않는다. 모든 조건은 
 
 ## 8. 현재 감사에서 확인된 제한과 다음 조건
 
-1. Phase 4 구현·물리 입력 재검증·독립 재실행은 완료됐고 전체 회귀 50/50이 통과했다.
-2. Phase 5는 미등록·미구현이며 사용자 승인, 단계 명세, 새 Experiment ID 사전 등록 전에는 시작하지 않는다.
+1. Phase 4 구현·물리 입력 재검증은 완료됐다. Phase 5·5B·5C는 각 사전등록 범위에서 실행됐으나 거래 후보를 만들지 못했고 전체 회귀 79/79가 통과했다.
+2. Phase 5C는 이미 소비된 2015~2018의 적응적 진단이므로 독립 채택 증거가 아니다. Development Test는 모델 연구에 사용하지 않았다.
 3. 2021년 이하 물리 파티션은 대용량 파생 데이터라 Git에서 제외한다. 재현에는 허용된 development 원본, 동결된 source manifest와 `kospi100_data.phase4_partition`가 필요하다.
 4. 기존 영문 보고서는 과거 기록으로 보존하고 새 보고서와 갱신 문서는 한글로 작성한다.
-5. Final OOS는 Phase 8 단일 릴리스 전까지 계속 봉인하며 Phase 4 재검증에서는 접근하지 않았다.
+5. Final OOS는 Phase 8 단일 릴리스 전까지 계속 봉인하며 Phase 4~5C 연구에서 접근하지 않았다.
 6. 실운영용 데이터 저장·권한 분리, broker semantics와 외부 서비스 연동은 후속 단계에서 별도 승인·검증이 필요하다.
 
 ## 9. 권장 저장소 구조
