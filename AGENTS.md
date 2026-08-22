@@ -42,6 +42,8 @@
 - Phase 3 기준선: 재현 기준선으로 채택, 거래 후보로는 탈락.
 - Phase 4: 2021년 이하 물리 입력 경계 재검증과 독립 재실행을 완료했다. 기존 단변량 결과와 `reversal_5` 후보 판정은 불변이며, 이는 Phase 5 입력 후보일 뿐 모델·거래 후보가 아니다.
 - Phase 5: Train/Validation Selection 완료. `tree_d3_l002`를 Development Test 단일 공개 후보로 동결했으나, Development Test는 미승인이며 Phase 5 최종 채택·완료 상태가 아니다. Validation 연도별 순초과수익률 gate는 0/3 통과다.
+- Phase 4B: 2011~2018 Train 내부 다변수 Feature 감사를 완료했다. 21개 종목변수·5개 시장상태·6개 상호작용을 별도 Experiment로 검증했으며 기존 Phase 4 판정은 변경하지 않았다.
+- Phase 5B: 일별 종목 점수·횡단면 순위 모델 7개를 2015~2018 내부 Validation에서 평가했다. `elastic_a005_l02`가 진단상 최선이었지만 연결 순초과수익률 -11.50%p, 연도 gate 2/4로 전 후보를 기각했다. 거래 후보와 Development Test 후보는 없다.
 - Phase 6 이후: 미구현.
 
 Phase 5 Development Test를 사용자 승인 없이 실행하지 않는다. Phase 4·5 결과를 근거로 기존 변수·기간·임계값을 소급 변경하지 않는다.
@@ -54,7 +56,7 @@ Phase 5 Development Test를 사용자 승인 없이 실행하지 않는다. Phas
 - 기존 파일을 불필요하게 덮어쓰지 않고, 규칙·데이터 계약 변경은 버전을 올린다.
 - 대용량 데이터, 원본 ZIP, 봉인 OOS, 임시 작업물은 Git에 커밋하지 않는다.
 - 실험 결과는 코드·설정·데이터·산출물 해시와 재현 명령을 기록한다.
-- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-23 Phase 5 Selection 감사에서 62/62 통과했다.
+- 현재 기준 회귀 명령은 `PYTHONPATH=src python -m unittest discover -s tests -v`이며 2026-08-23 Phase 4B/5B 감사에서 72/72 통과했다.
 
 ## 단계 완료 산출물
 

@@ -1,0 +1,69 @@
+{
+  "accepted_candidate": null,
+  "candidate_family_hash": "84f378db791c716bc73caa187906fafa1f8ed0bf9cde4961119518efdfce889b",
+  "config_hash": "287604793ce2f8f306466a5b6c9ea8b8d69ad2e6230c42567a584da775070d5a",
+  "data_hash": "5191493236aa5613f72700f7ac3a24403989ce80d8b2cc4ecd0b3ab913742f35",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.0"
+  },
+  "dependency_hash": "2e343fa4ec97652567f2231f4878c130d33f357ca2509f257ac4c87e6cde9b83",
+  "development_test_accessed": false,
+  "diagnostic_best_candidate": "elastic_a005_l02",
+  "embargo_sessions": 20,
+  "experiment_id": "EXP-20260823-002",
+  "final_oos_accessed": false,
+  "folds": [
+    {
+      "fold": "I2015",
+      "train": [
+        "2011-01-01",
+        "2014-12-31"
+      ],
+      "validation": [
+        "2015-01-01",
+        "2015-12-31"
+      ]
+    },
+    {
+      "fold": "I2016",
+      "train": [
+        "2011-01-01",
+        "2015-12-31"
+      ],
+      "validation": [
+        "2016-01-01",
+        "2016-12-31"
+      ]
+    },
+    {
+      "fold": "I2017",
+      "train": [
+        "2011-01-01",
+        "2016-12-31"
+      ],
+      "validation": [
+        "2017-01-01",
+        "2017-12-31"
+      ]
+    },
+    {
+      "fold": "I2018",
+      "train": [
+        "2011-01-01",
+        "2017-12-31"
+      ],
+      "validation": [
+        "2018-01-01",
+        "2018-12-31"
+      ]
+    }
+  ],
+  "model_hash": "d87ee1bee97986b3d0789d72a6e4992645a51a53d9bff4e80f9f6c66bda9c012",
+  "purge_sessions": 20,
+  "run_command": "PYTHONPATH=src python -m kospi100_multifactor.cli select --config configs/phase5b_multifactor_ranking.json --output artifacts/phase5b/selection",
+  "source_hash": "71708ec32b6b801043d3d34dd00a61ddfd8c88669f769d18bc8a5d70076e3969",
+  "status": "REJECTED_NO_CANDIDATE_BEAT_BENCHMARK_GATE"
+}

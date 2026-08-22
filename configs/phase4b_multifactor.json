@@ -1,0 +1,68 @@
+{
+  "version": "phase4b-multifactor-v1",
+  "experiment_id": "EXP-20260823-001",
+  "data_root": "data/processed/v24/phase4b_train_internal_2018",
+  "source_partition_root": "data/processed/v24/phase5_train_validation_2021",
+  "required_partition_role": "phase4b_train_internal",
+  "maximum_permitted_date": "2018-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "research_period": ["2011-01-01", "2018-12-31"],
+  "internal_folds": [
+    {"fold": "I2015", "train": ["2011-01-01", "2014-12-31"], "validation": ["2015-01-01", "2015-12-31"]},
+    {"fold": "I2016", "train": ["2011-01-01", "2015-12-31"], "validation": ["2016-01-01", "2016-12-31"]},
+    {"fold": "I2017", "train": ["2011-01-01", "2016-12-31"], "validation": ["2017-01-01", "2017-12-31"]},
+    {"fold": "I2018", "train": ["2011-01-01", "2017-12-31"], "validation": ["2018-01-01", "2018-12-31"]}
+  ],
+  "target": {
+    "id": "forward_10_session_excess_open_to_open_rank",
+    "entry_offset_sessions": 1,
+    "exit_offset_sessions": 11,
+    "cross_sectional_transform": "percentile_rank_average"
+  },
+  "stock_features": [
+    "reversal_5",
+    "momentum_20",
+    "momentum_63",
+    "momentum_126",
+    "momentum_252",
+    "excess_momentum_20",
+    "excess_momentum_63",
+    "excess_momentum_126",
+    "trend_close_sma20",
+    "trend_close_sma60",
+    "trend_close_sma200",
+    "trend_sma20_sma60",
+    "high_proximity_252",
+    "low_volatility_20",
+    "low_downside_volatility_20",
+    "low_atr_20",
+    "risk_adjusted_momentum_63",
+    "volume_confirmation_5_20",
+    "trading_value_confirmation_5_20",
+    "liquidity_20",
+    "low_illiquidity_20"
+  ],
+  "regime_features": [
+    "index_trend_200",
+    "index_momentum_63",
+    "index_low_volatility_20",
+    "breadth_above_sma200",
+    "breadth_positive_momentum20"
+  ],
+  "interactions": [
+    ["reversal_5", "index_trend_200"],
+    ["reversal_5", "breadth_above_sma200"],
+    ["excess_momentum_63", "index_trend_200"],
+    ["trend_close_sma200", "breadth_above_sma200"],
+    ["low_volatility_20", "index_low_volatility_20"],
+    ["volume_confirmation_5_20", "breadth_positive_momentum20"]
+  ],
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "minimum_feature_coverage": 0.95,
+  "hac_lag_sessions": 10,
+  "random_seed": 20260823,
+  "run_command": "PYTHONPATH=src python -m kospi100_multifactor.cli analyze --config configs/phase4b_multifactor.json --output artifacts/phase4b_multifactor"
+}

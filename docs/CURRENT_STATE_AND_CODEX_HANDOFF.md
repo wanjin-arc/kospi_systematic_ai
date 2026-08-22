@@ -5,17 +5,23 @@
 
 ## 결론
 
-Phase 0~4는 완료다. Phase 5는 `EXP-20260822-001`의 Train/Validation Selection과 독립 재실행까지 완료했으며, Development Test는 로드·계산·평가·선택 모두 0행이다. 따라서 Phase 5 전체 완료나 모델 채택으로 표시하지 않는다.
+Phase 0~4는 완료다. 기존 Phase 5 `EXP-20260822-001`의 결과는 그대로 보존되어 있다. 사용자 승인에 따라 별도 Phase 4B `EXP-20260823-001`과 Phase 5B `EXP-20260823-002`를 실행했으며, Development Test는 로드·계산·평가·선택 모두 0행이다.
 
 Selection 후보는 `tree_d3_l002`다. 입력은 `reversal_5` 하나이며, 깊이 3·최소 leaf 2%인 얕은 의사결정나무다. 이는 별도 승인 후 단 한 번 공개할 Development Test 후보일 뿐 거래 후보가 아니다.
 
+새 Phase 5B는 21개 종목변수·5개 시장상태·6개 상호작용을 사용해 매일 종목별 점수와 횡단면 순위를 만들었다. `elastic_a005_l02`가 진단상 최선이었으나 연결 순초과수익률 -11.5013%p, 연도 gate 2/4로 전 후보가 기각됐다. 이 모델은 거래 후보나 Development Test 후보가 아니다.
+
 ## 검증 상태
 
-- 전체 회귀 테스트: 62/62 PASS
+- 전체 회귀 테스트: 72/72 PASS
+- Phase 4B/5B 신규 테스트: 10/10 PASS
 - Phase 5 전용 테스트: 12/12 PASS
-- Selection과 독립 재실행의 구조화 산출물 8개: byte-identical
-- 입력 역할: `phase5_train_validation`
-- 최대 로드일: 2021-12-30
+- 기존 Phase 5 Selection과 독립 재실행의 구조화 산출물 8개: byte-identical
+- Phase 4B 구조화 산출물 6개와 Phase 5B 구조화 산출물 11개: 각각 byte-identical
+- Phase 4B/5B 입력 역할: `phase4b_train_internal`
+- Phase 4B/5B 최대 로드일: 2018-12-28
+- Phase 4B/5B 최대 연구 신호일: 2018-12-12
+- Phase 4B/5B의 2019~2021 로드·계산·평가·선택: 모두 0행
 - 로드 후 날짜 필터: 없음
 - Development Test 입력·계산·평가·선택: 모두 0행
 - Final OOS 접근: 없음
@@ -54,16 +60,27 @@ Selection 우선순위상 tree 후보가 Raw Rank·OLS보다 높았지만, 사�
 - 구조화 결과: `artifacts/phase5/selection/`
 - 명세·보고서: `docs/stages/phase_5_spec.md`, `docs/stages/phase_5_report.md`
 
+## Phase 4B/5B 구현 및 산출물
+
+- 설정: `configs/phase4b_multifactor.json`, `configs/phase5b_multifactor_ranking.json`
+- 물리 파티션 빌더: `kospi100_data.phase4b_partition`
+- CLI: `python -m kospi100_multifactor.cli analyze|select`
+- 코드: `src/kospi100_multifactor/`
+- 구조화 결과: `artifacts/phase4b_multifactor/`, `artifacts/phase5b/selection/`
+- 명세·보고서: `docs/stages/phase_4b_spec.md`, `phase_4b_report.md`, `phase_5b_spec.md`, `phase_5b_report.md`
+
 ## 다음 승인 경계
 
 1. Development Test는 사용자 별도 승인 전 실행하지 않는다.
-2. 승인하더라도 동결된 `tree_d3_l002` 한 개만 한 번 평가한다.
-3. 결과를 본 뒤 Feature, 모델, fold, 비용, 포트폴리오, gate를 변경하지 않는다.
-4. Final OOS는 계속 봉인한다.
-5. Phase 6 명세·실행을 시작하지 않는다.
+2. Phase 5B는 Validation gate 실패로 종료됐으므로 진단 모델을 Development Test에 공개하지 않는다.
+3. turnover·현금·순위 지속성 규칙을 연구하려면 별도 Experiment와 새 검증 설계를 결과 확인 전에 등록한다.
+4. 기존 Phase 5 Development Test를 승인하더라도 동결된 `tree_d3_l002` 한 개만 한 번 평가한다.
+5. 결과를 본 뒤 동일 Experiment의 Feature, 모델, fold, 비용, 포트폴리오, gate를 변경하지 않는다.
+6. Final OOS는 계속 봉인한다.
+7. Phase 6 명세·실행을 시작하지 않는다.
 
 ## Codex Handoff
 
-- 현재 허용 작업: Selection 산출물·manifest·테스트 감사와 문서 검토.
-- 사용자 결정을 기다릴 작업: 단일 Development Test 공개를 수행할지, Validation gate 실패만으로 `rejected`를 확정할지.
-- 금지 작업: Development Test 선행 접근, 다른 후보 재선택, 신규 Feature 추가, Phase 6 시작, Final OOS 접근, 실거래·배포.
+- 현재 허용 작업: Phase 4B/5B 산출물·manifest·테스트 감사와 문서 검토.
+- 사용자 결정을 기다릴 작업: 새로운 저회전율 ranking/portfolio 가설을 별도 Experiment로 설계할지 여부.
+- 금지 작업: Development Test 선행 접근, 이번 결과를 보고 동일 Experiment 후보 재선택, Phase 6 시작, Final OOS 접근, 실거래·배포.

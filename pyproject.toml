@@ -13,6 +13,7 @@ dependencies = ["pandas>=2.0,<3", "scikit-learn==1.9.0"]
 kospi100-phase2-demo = "kospi100_backtest.demo:main"
 kospi100-phase3 = "kospi100_baseline.cli:main"
 kospi100-phase5 = "kospi100_ranking.cli:main"
+kospi100-multifactor = "kospi100_multifactor.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
