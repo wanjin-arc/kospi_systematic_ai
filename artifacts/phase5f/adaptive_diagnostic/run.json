@@ -1,0 +1,20 @@
+{
+  "adaptive_diagnostic_not_oos": true,
+  "config_hash": "c338653b6290eb3d0d8835a72ee20370aabc4e513dd7fc2432b6fd6f16113c48",
+  "data_hash": "d4b817519bc7b9956b26bbc8e099356a0b1b3cb4e402674b59e93a1525162417",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.0"
+  },
+  "development_test_accessed": false,
+  "experiment_id": "EXP-20260823-006",
+  "final_oos_accessed": false,
+  "model_contract": "histgb_mean_median_temporal_path_plus_train_isolation_forest",
+  "model_contract_hash": "2cf252c0d153e094e1913610ab550d6ad7f4e688baa8b43c0860ff78812874cc",
+  "promotion_allowed": false,
+  "run_command": "PYTHONPATH=src python -m kospi100_temporal_risk.cli run --config configs/phase5f_temporal_risk.json --output artifacts/phase5f/adaptive_diagnostic",
+  "source_hash": "94105ce27756f28456bc2f71623693d51751f270cf5f72c88a015b029267fb1e",
+  "status": "ADAPTIVE_DIAGNOSTIC_COMPLETED"
+}

@@ -17,9 +17,12 @@ Phase 5D `EXP-20260823-004`는 사용자 승인에 따라 평균 현금·최소 
 
 Phase 5E `EXP-20260823-005`는 비용 차감 절대 초과수익 Ridge와 그 값이 양수일 확률 Logistic을 고정하고 예상 순초과수익 0.5%·확률 60%를 모두 통과한 종목만 거래했다. 2019~2021 adaptive diagnostic에서 전략 +29.31%, 지수 +50.40%, 순초과 -21.09%p였다. 평균 현금 96.00%, 평균 보유 0.423개로 no-trade는 작동했지만 절대 알파 예측과 지수 초과 gate를 실패했다. 거래·Development Test 후보는 없다.
 
+Phase 5F `EXP-20260823-006`은 논문의 시계열·병렬 입력·이상탐지 아이디어를 저장소 규칙 안에서 재구성했다. 8개 종목 기술변수의 5·20세션 경로와 5개 시장변수 경로를 평균·중앙값 HistGradientBoosting에 입력하고 Train-only IsolationForest 이상상태에서 신규매수를 보류했다. 전략 -7.83%, 지수 +50.40%, 순초과 -58.23%p, 연도 gate 0/3으로 실패했다. 거래·Development Test 후보는 없다.
+
 ## 검증 상태
 
-- 전체 회귀 테스트: 95/95 PASS
+- 전체 회귀 테스트: 108/108 PASS
+- Phase 5F 전용 테스트: 13/13 PASS
 - Phase 5E 전용 테스트: 9/9 PASS
 - Phase 5C 전용 테스트: 7/7 PASS
 - Phase 5D 전용 테스트: 7/7 PASS
@@ -36,6 +39,7 @@ Phase 5E `EXP-20260823-005`는 비용 차감 절대 초과수익 Ridge와 그 �
 - Development Test 입력·계산·평가·선택: 모두 0행
 - Final OOS 접근: 없음
 - Phase 5E 독립 재실행 구조화 산출물 10개: byte-identical
+- Phase 5F 독립 재실행 구조화 산출물 11개: byte-identical
 
 ## Phase 5 Selection 결과
 

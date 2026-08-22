@@ -1,0 +1,64 @@
+{
+  "connected_order_audit": {
+    "anomaly_veto_signal_day_ratio": 0.1864951768488746,
+    "anomaly_veto_signal_days": 116,
+    "average_cash_is_hard_gate": false,
+    "average_eligible_candidates": 0.5401929260450161,
+    "entry_orders": 336,
+    "market_anomaly_hard_entry_veto_used": true,
+    "maximum_eligible_candidates": 10,
+    "minimum_required_holdings": 0,
+    "model_exit_orders": 597,
+    "no_trade_signal_day_ratio": 0.9421221864951769,
+    "no_trade_signal_days": 586,
+    "orders": 933,
+    "signal_days": 622
+  },
+  "contract": {
+    "contamination": "auto",
+    "fit_scope": "fold_train_unique_dates_only",
+    "max_samples": 256,
+    "model": "isolation_forest",
+    "n_estimators": 200,
+    "threshold_quantile": 0.05,
+    "threshold_source": "train_score_samples_quantile",
+    "validation_or_event_labels_used": false
+  },
+  "development_test_accessed": false,
+  "final_oos_accessed": false,
+  "folds": [
+    {
+      "anomaly_model_fit_used_validation": false,
+      "anomaly_threshold": -0.5419735475165786,
+      "anomaly_threshold_quantile": 0.05,
+      "anomaly_train_dates": 1930,
+      "anomaly_train_dates_below_threshold": 97,
+      "anomaly_validation_dates": 206,
+      "anomaly_validation_dates_below_threshold": 2,
+      "event_labels_used_for_anomaly": false,
+      "fold": "F2019"
+    },
+    {
+      "anomaly_model_fit_used_validation": false,
+      "anomaly_threshold": -0.5371978205881957,
+      "anomaly_threshold_quantile": 0.05,
+      "anomaly_train_dates": 2176,
+      "anomaly_train_dates_below_threshold": 109,
+      "anomaly_validation_dates": 208,
+      "anomaly_validation_dates_below_threshold": 98,
+      "event_labels_used_for_anomaly": false,
+      "fold": "F2020"
+    },
+    {
+      "anomaly_model_fit_used_validation": false,
+      "anomaly_threshold": -0.5353503613107238,
+      "anomaly_threshold_quantile": 0.05,
+      "anomaly_train_dates": 2424,
+      "anomaly_train_dates_below_threshold": 122,
+      "anomaly_validation_dates": 208,
+      "anomaly_validation_dates_below_threshold": 16,
+      "event_labels_used_for_anomaly": false,
+      "fold": "F2021"
+    }
+  ]
+}

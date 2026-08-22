@@ -99,6 +99,15 @@
 | DEC-2026-051 | 이중 no-trade gate | 고정 Ridge 회귀와 Logistic 분류를 Train 내부에서만 적합하고, 예상 순초과수익 `>=0.5%` 및 양수 확률 `>=60%`를 모두 통과한 종목만 예상 순초과수익 순으로 최대 10개 매수한다. 최소 보유·현금 gate와 시장상태별 강제 capacity는 두지 않는다. | Confirmed; user approved 2026-08-23 | DEC-2026-048 확장, Phase 5D 시장 capacity 미사용 |
 | DEC-2026-052 | Phase 5E 증거 지위 | 2019~2021은 이미 소비된 adaptive diagnostic으로만 사용한다. 경제성 gate를 계산하되 성과와 무관하게 승격하지 않고 Development Test와 Final OOS를 열지 않는다. | Confirmed; user approved 2026-08-23 | DEC-2026-049 확장 |
 
+## Phase-5F Decisions
+
+| ID | Decision | Approved value / recommendation | Status | Supersedes |
+|---|---|---|---|---|
+| DEC-2026-053 | 시계열 경로·강건 이중 회귀 | 8개 기술변수 rank의 현재값·5세션 변화·20세션 평균·표준편차·방향 지속성과 5개 시장변수의 현재값·5세션 변화·20세션 변동을 입력으로 고정하고, 얕은 HistGradientBoosting 평균·중앙값 회귀를 함께 사용한다. | Confirmed; user approved 2026-08-23 | Phase 5E Ridge·Logistic 구조 대체 |
+| DEC-2026-054 | Train-only 시장 이상상태 veto | 외부 사건 라벨 없이 각 fold Train의 시장 기술변수만으로 IsolationForest를 적합하고 Train 점수 하위 5%를 이상 임계값으로 고정한다. 이상상태에서는 신규매수를 보류하고 기존 보유는 청산 신호를 낸다. | Confirmed; user approved 2026-08-23 | Phase 5D 강제 capacity와 다름 |
+| DEC-2026-055 | Phase 5F 증거 지위 | 2019~2021은 이미 소비된 adaptive diagnostic으로만 사용한다. 논문은 아이디어 출처일 뿐 그 성과를 본 프로젝트의 증거로 간주하지 않으며, 결과와 무관하게 Development Test 후보로 승격하지 않는다. | Confirmed; user approved 2026-08-23 | DEC-2026-052 확장 |
+| DEC-2026-056 | Phase 5F 결과 | 시계열 경로·평균/중앙값 회귀·시장 이상상태 veto는 기본비용 순초과수익 -58.23%p, 연도 gate 0/3으로 실패했다. 모델과 전체 Feature 묶음을 기각하고 같은 2019~2021에서 재조정하지 않는다. | Completed; rejected | DEC-2026-053, DEC-2026-054 적용 결과 |
+
 ## Decision Entry Template
 
 ```markdown
