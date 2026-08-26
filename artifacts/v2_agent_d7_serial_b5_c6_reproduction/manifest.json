@@ -1,0 +1,37 @@
+{
+  "experiment_id": "EXP-20260827-003",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "agent_b5_manifest": "8598b5c9c8ff62f7aab28686108882a4f0123f52ccd504e02037025e90500ad9",
+    "agent_b5_scores": "be30f4987e460569a6837a8ae228b399fad5a0d6b9168a6e072bd322d1653b94",
+    "agent_c6_manifest": "af77cdee47aa6bb99821329b04819e3d3e1d87471f0adbac39ae5efbc61ab474",
+    "agent_c6_scores": "7fca5778269d16be4c88ee8195610358738f1d16b9c209f6c5f5397d5ca852ff",
+    "config": "ec70a2d79095c0e506d0694bdce6a9137df27d159cf8f97680378a5da98361b3",
+    "market_tree": "b3e0730ff40e6bd407b3c8aeef15bc7ed94cb0748b87c0838183955e60012039",
+    "membership_tree": "325cdc2aa9ba602f65146855d41f9b2f70d5d8ef2706cfdf03093fca8ea39928",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "output_sha256": {
+    "daily_agent_d7_scores.csv.gz": "a93e704846a71eca0b87f8f3a16352ae710cb7bf0b8f28339f21150974159584",
+    "data_audit.json": "1dd29b0c9b8fa4b30913180bfc75279af11a90ea708c6439b59c61fec7abd1d9",
+    "diagnostic.json": "a5890ba64b1838503253498764571d1ffacafe6d2eda76116803c2675bb713d7",
+    "selected_policy.json": "f6efd02c22119b3552d02c470cbe521fb7db2cbbf6fc92c499b4284a51a28306",
+    "selection_grid_metrics.csv": "26fcc2cfcc8dfb97109b5d5cf40763092aec3a9855ca8decf7aca9129bd0a428"
+  },
+  "schema_version": "kospi200-agent-d7-serial-b5-c6-v1",
+  "selected_policy": "B050_C050",
+  "selected_run_hashes": {
+    "audit_events.csv": "0e8ff4aa65f48a28965e40bb3497880dd04b7cc4c4e4cda7e913be983aca09ed",
+    "cash_ledger.csv": "0272496e55ad1a4fc9cbf5631c33a811ecb4f7874652a805c687ab478a322c1c",
+    "closed_trades.csv": "1d4dc9efbb35b27a5e93816c38787534f9dc73fd2eb1ada58ec235f0939bf171",
+    "equity_curve.csv": "f2bf14b7e08801c9cebf8221ca18ab1dec667325a3115b1f483b64773ebb4de2",
+    "fills.csv": "bfc63c6f9190cac2c360fa3c13850f9fd7702a72aa7b759e3047629b92b43396",
+    "metrics.json": "5256580c69af53c1383e3013c7bd1d3374e6705b178b2ef33488131614b7a468",
+    "order_events.csv": "3d084d8ea08da12091a5ad1b802a0537265ceca61af747a33f1f2303e779327e",
+    "position_ledger.csv": "5348f026c2b21c8e418713748059a91b7b31349f9db3ca4790c33c11aa019938",
+    "position_snapshots.csv": "e5a98ec57ad087b125f84cff4a13e061dae4ef18a1cac3b614c5dabcebe7a14f",
+    "reconciliation.json": "6cde9c26c12fba8ee314e1c2e1dcee86034bd264010f08ef4b66372ad29078cd",
+    "run.json": "5b9f9e5f9f6ecd45d533fef070557d878f25c161d9c74e92ca5b99748d79826c"
+  },
+  "status": "RETAIN_D7_FOR_FORWARD_SHADOW_ONLY"
+}

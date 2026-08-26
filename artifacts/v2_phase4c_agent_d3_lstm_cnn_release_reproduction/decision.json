@@ -1,0 +1,12 @@
+{
+  "consumed_development_diagnostic_only": true,
+  "decision": "REJECT_AGENT_D3",
+  "gates": {
+    "mdd_above_floor": false,
+    "positive_annual_excess_at_least_3_of_5": false,
+    "positive_sharpe": false,
+    "positive_total_net_excess": false,
+    "reconciliation": true
+  },
+  "selected_candidate": "C3_B2_RISK_CALIBRATION"
+}

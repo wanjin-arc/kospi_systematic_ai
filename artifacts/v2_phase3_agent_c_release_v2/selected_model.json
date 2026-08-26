@@ -1,0 +1,24 @@
+{
+  "deterministic_refit_from_config_required": true,
+  "features": [
+    "return_1",
+    "return_5",
+    "return_20",
+    "return_60",
+    "volatility_5",
+    "volatility_20",
+    "downside_volatility_20",
+    "close_to_ma20",
+    "close_to_ma60",
+    "drawdown_20",
+    "drawdown_60",
+    "intraday_range",
+    "volume_ratio_20",
+    "gap_1"
+  ],
+  "fit_max_signal_date": "2023-12-06",
+  "fit_rows": 8782,
+  "maximum_daily_candidates": 10,
+  "model": "hist_dual",
+  "positive_probability_threshold": 0.55
+}

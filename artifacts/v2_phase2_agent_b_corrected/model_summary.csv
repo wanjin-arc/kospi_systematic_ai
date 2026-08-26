@@ -1,0 +1,4 @@
+model,mean_rank_ic,mean_ndcg_at_30,folds,simplicity
+ridge_a10,0.0360269430929,0.561636896419,6,1
+hist_gbdt_d3,0.027585122526,0.548549506089,6,2
+equal_composite,-0.0119405518374,0.53663157806,6,0

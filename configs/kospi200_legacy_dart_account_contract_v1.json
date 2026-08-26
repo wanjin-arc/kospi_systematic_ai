@@ -1,0 +1,27 @@
+{
+  "schema_version": "kospi200-legacy-dart-account-contract-v1",
+  "status": "USER_APPROVED_2026-08-26",
+  "source_period": {"min_report_period_end": "2011-03-31", "max_report_period_end": "2014-12-31"},
+  "availability_rule": "DART_RECEIPT_DATE_NEXT_KRX_SESSION",
+  "required_identity": "CONFIRMED_EXACT_NAME_AND_UNIQUE_CORP",
+  "required_statement_scope": "CFS_EVIDENCED",
+  "required_currency": "KRW",
+  "required_selection_status": "UNAMBIGUOUS_CURRENT_FILING_CANDIDATE",
+  "canonical_source": "legacy_dart_exact_top_level_account_labels_v1",
+  "prohibited": [
+    "partial_account_mapping",
+    "unknown_unit",
+    "unknown_statement_scope",
+    "unresolved_identity",
+    "correction_superseded_filing",
+    "future_fill",
+    "protected_oos_access"
+  ],
+  "accounts": [
+    "assets", "liabilities", "equity", "current_assets", "current_liabilities",
+    "cash_and_equivalents", "revenue", "operating_income", "net_income",
+    "operating_cash_flow", "capital_expenditure"
+  ],
+  "raw_mutation_allowed": false,
+  "model_training_allowed": false
+}

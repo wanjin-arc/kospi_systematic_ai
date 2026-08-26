@@ -1,0 +1,34 @@
+{
+  "schema_version": "kospi200-fundamental-technical-data-v2",
+  "universe": {
+    "name": "KOSPI 200",
+    "krx_index_code": "1028",
+    "membership": "point_in_time_daily",
+    "impute_missing_constituent": false
+  },
+  "price_data": {
+    "source": "existing_kospi_all_ohlcv",
+    "redownload": false,
+    "membership_collection_only": true,
+    "kospi200_index_collection": "optional_if_benchmark_missing"
+  },
+  "development_boundaries": {
+    "krx_start": "2004-01-02",
+    "krx_end": "2023-12-31",
+    "dart_standard_start": "2015-01-01",
+    "dart_end": "2023-12-31",
+    "evidence_status": "consumed_development"
+  },
+  "fundamental_availability": {
+    "source": "OpenDART",
+    "endpoint": "fnlttSinglAcntAll.json",
+    "receipt_date_required": true,
+    "eligible_from": "next_krx_session_after_receipt",
+    "future_revision_backfill": false,
+    "statement_preference": ["CFS", "OFS"]
+  },
+  "protected": {
+    "v1_final_oos_2024_2025_access": false,
+    "post_2023_collection_in_development_tools": false
+  }
+}

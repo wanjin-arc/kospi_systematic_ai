@@ -1,0 +1,14 @@
+{
+  "control": "C3_TOP3_CONTROL",
+  "decision": "REJECT_D6_FOR_TRADING",
+  "evidence_status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "gates": {
+    "improves_c3_control_net_excess": false,
+    "mdd_above_minus_30pct": true,
+    "positive_annual_excess_at_least_3_of_4": false,
+    "positive_net_excess": false,
+    "positive_sharpe": false,
+    "reconciliation": true
+  },
+  "selected_for_audit": "B2_TOP30_META_RANK"
+}

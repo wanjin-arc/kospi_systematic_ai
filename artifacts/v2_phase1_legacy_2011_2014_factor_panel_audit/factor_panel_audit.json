@@ -1,0 +1,53 @@
+{
+  "daily_rank_eligible_count": {
+    "max": 167,
+    "median": 128.0,
+    "min": 2
+  },
+  "daily_ticker_count": {
+    "max": 167,
+    "median": 128.0,
+    "min": 2
+  },
+  "dates_total": 3112,
+  "dates_with_at_least_30_tickers": 2416,
+  "factor_coverage": {
+    "assets_growth_yoy": 0.7523891652995847,
+    "book_to_market": 0.8919022707597158,
+    "cash_to_assets": 0.8835246125290961,
+    "cfo_to_assets": 0.6508433239799097,
+    "cfo_yield": 0.6633778098167156,
+    "current_ratio": 0.9133163332333988,
+    "debt_to_equity": 0.8907569535910747,
+    "earnings_yield": 0.6684205739386447,
+    "equity_growth_yoy": 0.7449749209225867,
+    "equity_ratio": 0.8900866061894287,
+    "free_cash_flow_yield": 0.5050949771104996,
+    "liabilities_to_assets": 0.8990874517029855,
+    "net_income_growth_yoy": 0.526559568282799,
+    "net_margin": 0.6499607560440746,
+    "operating_income_growth_yoy": 0.5474717123502245,
+    "operating_margin": 0.667150619313416,
+    "revenue_growth_yoy": 0.5452012894923887,
+    "roa": 0.6616733083833848,
+    "roe": 0.6531979613354398,
+    "sales_to_market_cap": 0.679348247159445
+  },
+  "failures": {
+    "duplicate_date_ticker_rows": 0,
+    "identity_violations": 0,
+    "manifest_row_mismatch": 0,
+    "missing_columns": [],
+    "post_2023_rows": 0
+  },
+  "identity_sha256": "d9abe7647f7eb36670cc93c4ebae3490979f3fb022fabe3fba11b100886b25eb",
+  "max_date": "2023-12-28",
+  "min_date": "2011-05-17",
+  "model_started": false,
+  "panel_sha256": "b19056a0e31c6284fee055a416b167b8e817e1c5bf39f69c0d6b59249a3d4e9a",
+  "protected_oos_accessed": false,
+  "rows": 296861,
+  "schema_version": "kospi200-fundamental-factor-panel-audit-v1",
+  "status": "PASS_FACTOR_PANEL_MODEL_NOT_STARTED",
+  "tickers": 258
+}

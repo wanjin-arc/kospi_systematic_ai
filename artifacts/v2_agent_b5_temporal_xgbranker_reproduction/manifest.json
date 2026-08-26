@@ -1,0 +1,19 @@
+{
+  "experiment_id": "EXP-20260827-001",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "config": "86c1de1220d9477dfd650c1b4196a5ad0c7c03bd206e5520bffb1e2065f1ce2b",
+    "factor_panel": "0ba2cb148b7e076d221a62b8b323ff18063518700b1dd597c5005ac46a0ab857",
+    "market_tree": "f1569410c224887bff8a67b25af959d0fca05419ac1e7c47005a391688b372e6",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "output_sha256": {
+    "daily_agent_b5_scores.csv.gz": "be30f4987e460569a6837a8ae228b399fad5a0d6b9168a6e072bd322d1653b94",
+    "data_audit.json": "2f16af635aa8e999a277ef74b56f0f9132596a81807555565c0d8c73c61f8f36",
+    "fold_metrics.csv": "9b4786f28b37db2fd530def00de417fb7b3ae0295a9b87f6fac8dd809b69d69f",
+    "selected_model.json": "988ebcd3d5db225561693f8acc1b55c68aaf81c048ccc73f7d28e290297f48a0"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-b5-temporal-xgbranker-v1",
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY"
+}

@@ -1,0 +1,4 @@
+model,mean_excess_rank_ic,mean_positive_excess_auc,folds,simplicity
+hist_event_dual_v1,0.0418438426884,0.516511928041,5,1
+hist_excess_dual,0.0178130369097,0.517474331873,5,2
+linear_excess_dual,-0.00660118126066,0.514319283815,5,0

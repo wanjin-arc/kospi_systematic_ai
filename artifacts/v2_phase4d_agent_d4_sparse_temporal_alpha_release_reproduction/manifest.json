@@ -1,0 +1,37 @@
+{
+  "experiment_id": "EXP-20260826-011",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "agent_b2_manifest": "5a442297103146924746d9486b6ccc6c8af18c7880b96aeb75516a07bb597d8b",
+    "agent_b2_scores": "4005a90525b6a8ac32f8203926a0c452e036658f52ac17bda486f7ac29e192d3",
+    "agent_c4_manifest": "c712c70eb60469bde7edd5859b79ac2b729b70a59e3c67d1f44875402106ad77",
+    "agent_c4_scores": "1aefd1683e71efa43a33ad557150342539ace2c2e673b26c7dceb9b8e88f19fe",
+    "config": "eeab63caaa1e989c24c6052bba842686aacbdaf98e1846fa4038eb89d21d3cca",
+    "cost_schedule": "15934ea896bd41c2b16172e11423d57949612c17f49919c35ad5e484a1ac6f93",
+    "engine_config": "52777da0e8f14a28fe8f117501ec4332798b1f5d7c02bfd0d41a867d5cfcb5c1",
+    "market_tree": "b3e0730ff40e6bd407b3c8aeef15bc7ed94cb0748b87c0838183955e60012039",
+    "membership_tree": "325cdc2aa9ba602f65146855d41f9b2f70d5d8ef2706cfdf03093fca8ea39928",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "output_sha256": {
+    "candidate_metrics.csv": "520588c98f129fa35be6786e35d2a3aa0db8095543ffe9e900470ef647a4e93f",
+    "data_audit.json": "d8dd5aa98288d4c60d5d05b7d17f2fb81b05ed9230895151e1a318cf6ac55425",
+    "decision.json": "b9a2661141890a04a59b51e899f39a6a5a69a9bf8ba0848a11e635a6ed17326a"
+  },
+  "schema_version": "kospi200-agent-d4-sparse-temporal-alpha-v1",
+  "selected_candidate": "C4_B2_RISK_CALIBRATION_SPARSE",
+  "selected_run_hashes": {
+    "audit_events.csv": "654c3e3b68f1cb16bca8ffc70b8ce4b73e8a8a4fef6699ed93085c36683a7647",
+    "cash_ledger.csv": "2701a28fc787039d12aa7b11f4e3f8b7d1f5eacf4b1ba8ac033ccba79e04861a",
+    "closed_trades.csv": "7dde08debe8c5f7aa2ab6d9a4047f4bfe764309ea7e03f54be62a9f7cfd18f9a",
+    "equity_curve.csv": "b0bc57288d70a1d5e40b62cf805a3d7f8bf2ee707fd6f9a9cc700fb34e44c754",
+    "fills.csv": "92647ab04bf5167b1b7749f826d9d4491264e688eb171fe569b43241f53fb69c",
+    "metrics.json": "043c44ad56451b96bfad9abaea7398887196703162fb5190d1749e6a79d5018f",
+    "order_events.csv": "e673bf6d26ac046e639bbaf493c789556c73d69ee5101ee5f5b7904943229d55",
+    "position_ledger.csv": "017cb5727790bbff322a78de482b10d454e690b1ba52567a08365b2ef2fb55d9",
+    "position_snapshots.csv": "0f26782afd29d39e58d9c225c6b809a8cf84e4395e307c9369fa0d19dd6cc027",
+    "reconciliation.json": "494abc95689ce6381a256a7fafbda32b160aca721d2ea0018bd01bd177574417",
+    "run.json": "412cd28cdd19fc33e4876b8120e58ad9f8ced094a9ff85a9c356a92bb3d8618d"
+  },
+  "status": "REJECT_AGENT_D4"
+}

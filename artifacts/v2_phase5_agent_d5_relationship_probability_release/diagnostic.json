@@ -1,0 +1,28 @@
+{
+  "decision": "REJECT_FOR_TRADING_ARCHIVE_STRUCTURE",
+  "evidence_status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "gates": {
+    "mdd_above_minus_30pct": true,
+    "positive_excess_years_at_least_2_of_3": true,
+    "positive_net_excess": true,
+    "positive_sharpe": false,
+    "reconciliation": true
+  },
+  "meta_auc": 0.6213504843568461,
+  "metrics": {
+    "annual_excess_json": "{\"2021\":0.03973203410475035,\"2022\":0.2615236307364468,\"2023\":-0.22978357952593598}",
+    "average_cash_weight": 1.0,
+    "benchmark_return": -0.1279171741778319,
+    "closed_trades": 0,
+    "gap_vetoes": 0,
+    "mdd": 0.0,
+    "net_excess_return": 0.1279171741778319,
+    "orders_created": 0,
+    "positive_annual_excess_years": 2,
+    "profit_factor": NaN,
+    "reconciliation": "PASS",
+    "sharpe": NaN,
+    "total_return": 0.0,
+    "turnover": 0.0
+  }
+}

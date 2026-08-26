@@ -1,0 +1,3 @@
+model,mean_quality_rank_ic,mean_ndcg_at_80,positive_ic_years,folds,simplicity
+ridge_sector_temporal,0.0318593913867,0.65604054273,3,5,0
+hist_sector_temporal,0.0102848129812,0.647611367728,3,5,1

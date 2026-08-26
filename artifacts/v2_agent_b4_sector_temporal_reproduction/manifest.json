@@ -1,0 +1,21 @@
+{
+  "experiment_id": "EXP-20260826-015",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "config": "3e1b96719dece6f43d60adbb03110807d93482e07b434c0fd384441fd06cfd71",
+    "factor_panel": "135872a293d394b142506d7b60b4022e4f48ba8b160973c10ff8cedbb0e16320",
+    "market_tree": "f1569410c224887bff8a67b25af959d0fca05419ac1e7c47005a391688b372e6",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "output_sha256": {
+    "daily_agent_b4_scores.csv.gz": "a5a7383b7674c87307bce7fc0c81bcfcb27d541480e361428f39abe00fc09714",
+    "data_audit.json": "8b796cd4c8af74c46e94f601b2fcbbc005916fc92779bf6e00e94c26c21d472e",
+    "fold_metrics.csv": "7a5c346163686a0d7057085f6f30d08d8a45e8266a0e328df2ec349430b8a4ce",
+    "model_summary.csv": "dba7e520a61b27bc04f8d86dce3fbe25a70c01f63bdc1c733822acdef0a3313c",
+    "selected_model.json": "21e007dff49fd34badd0597fc04f7779a9307c21ee0f35bd8691abb24e21e396"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-b4-sector-temporal-v1",
+  "selected_model": "ridge_sector_temporal",
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY"
+}

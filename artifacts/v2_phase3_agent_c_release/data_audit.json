@@ -1,0 +1,17 @@
+{
+  "agent_b_rows_loaded": 44310,
+  "agent_b_sha256": "e9e96532fcb9dbb5926cd9f3164d8ddcf5f5eeb240efcf7e043c159bd3caa23a",
+  "final_oos_accessed": false,
+  "legacy_v1_development_test_partition_accessed": false,
+  "market_files_loaded": 1966,
+  "market_max_date": "2023-12-28",
+  "market_min_date": "2016-01-04",
+  "maximum_candidates_observed": 10,
+  "mechanical_resets": 18,
+  "portfolio_backtest_run": false,
+  "sample_rows": 8782,
+  "scored_dates": 1233,
+  "technical_feature_count": 14,
+  "v2_consumed_development_2022_2023_loaded": true,
+  "zero_candidate_dates": 513
+}

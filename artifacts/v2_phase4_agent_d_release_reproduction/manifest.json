@@ -1,0 +1,33 @@
+{
+  "experiment_id": "EXP-20260826-004",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "agent_b": "e9e96532fcb9dbb5926cd9f3164d8ddcf5f5eeb240efcf7e043c159bd3caa23a",
+    "agent_c": "4a691558545bac52c645e08499cafb1081117a00f1c9d865536d5667d074195e",
+    "config": "795e882a714d10a4f3c9a450f6bdfacbf09bef8a1eb9694de6b1c5dd7f49bf41",
+    "market_tree": "b3e0730ff40e6bd407b3c8aeef15bc7ed94cb0748b87c0838183955e60012039",
+    "membership_tree": "325cdc2aa9ba602f65146855d41f9b2f70d5d8ef2706cfdf03093fca8ea39928"
+  },
+  "legacy_v1_development_test_partition_accessed": false,
+  "output_sha256": {
+    "candidate_metrics.csv": "af5f7d6c3d338232c7ee9316ead65af7a649ffac153583ec01ec782e43761a58",
+    "data_audit.json": "d8823a59c9e3623f962e13d08ebb621a7da5f24452799c38b158a601d7f68568",
+    "decision.json": "8197f8614da69b866b6e6e77aef3222928a353d7345a4285e655e90a169bcc1f"
+  },
+  "schema_version": "kospi200-agent-d-phase4-v1",
+  "selected_candidate": "C100",
+  "selected_run_hashes": {
+    "audit_events.csv": "0e8ff4aa65f48a28965e40bb3497880dd04b7cc4c4e4cda7e913be983aca09ed",
+    "cash_ledger.csv": "704bb074371fa71085856ac90197ab424190821cb41484f173f8ee706d47cafd",
+    "closed_trades.csv": "b0627138a7ef3568f2838ff0c76535b553fb57c8fd13ce0f00a29e3a0b128dff",
+    "equity_curve.csv": "35fed875d141bc3a704d1771e67113d128b192e0e85b83881551755355e0f730",
+    "fills.csv": "9b3e1442f8eda2d446a7d3f0d292df4e9b20f00eec9cdef6cb2a5cc897706c4e",
+    "metrics.json": "4d79ccea29ef60f816b07f94fca80eb15227e91129147d4983dad8fe494315a3",
+    "order_events.csv": "a806df2baa8827e6c90befd552402139bc6ceeaac7e07f20897738ae68d810ef",
+    "position_ledger.csv": "b9c15fb6fd2b0d0e90a31253655240edfb67613c3f44e9ad921d3887b18832bb",
+    "position_snapshots.csv": "13ffb97f7f4bcf6ec41d6b9d15762cce2de5bef15d5fcfc0de4d76b5a812bf94",
+    "reconciliation.json": "dbfa8afee3055121179cf79c06fd64c0fb75616204947981bbc0204ca571c491",
+    "run.json": "15930277bcc0f7f6ae7f758deeffca07e40b5df218643af328aa3291d0f893a2"
+  },
+  "status": "REJECT_AGENT_D"
+}

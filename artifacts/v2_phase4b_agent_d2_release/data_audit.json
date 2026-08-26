@@ -1,0 +1,38 @@
+{
+  "agent_b2_experiment_id": "EXP-20260826-005",
+  "agent_b2_rows_loaded": 177882,
+  "agent_b2_top80_rows_available": 98401,
+  "agent_c2_experiment_id": "EXP-20260826-006",
+  "agent_c2_rows_loaded": 245692,
+  "agent_c2_rows_without_agent_b2": 68286,
+  "benchmark": "OFFICIAL_KRX_KOSPI200_CLOSE",
+  "benchmark_is_official_index": true,
+  "final_oos_accessed": false,
+  "index_code": "1028",
+  "index_rows_loaded": 4945,
+  "legacy_v1_development_test_partition_accessed": false,
+  "market_files_loaded": 1233,
+  "mechanical_actions": 15,
+  "membership_rows_loaded": 246780,
+  "method_audit": {
+    "B2_RISK_CALIBRATION": {
+      "gap_vetoes": 20,
+      "orders_created": 3293,
+      "scored_rows": 245692,
+      "unique_scored_tickers": 263
+    },
+    "B2_TOP80_SERIAL": {
+      "gap_vetoes": 19,
+      "orders_created": 4268,
+      "scored_rows": 98401,
+      "unique_scored_tickers": 199
+    },
+    "C2_ONLY_CONTROL": {
+      "gap_vetoes": 27,
+      "orders_created": 5776,
+      "scored_rows": 245692,
+      "unique_scored_tickers": 263
+    }
+  },
+  "v2_consumed_development_2022_2023_loaded": true
+}

@@ -1,0 +1,33 @@
+{
+  "completed_checkpoint_mismatch": [],
+  "coverage": {
+    "end": "2023-12-31",
+    "start": "2004-01-02"
+  },
+  "duplicate_ticker_dates": [],
+  "extra_normalized_dates": [],
+  "fundamental_data_status": "NOT_COLLECTED",
+  "generated_at_utc": "2026-08-25T14:27:41.720918+00:00",
+  "input_manifest_sha256": "8b5e61f5c0c5e66ec60a83e6a6000f673bf042a180ad00a4081b03e24143a49e",
+  "input_root": "data\\incoming\\v2_kospi200_membership_raw",
+  "invalid_member_count_dates": [],
+  "missing_normalized_dates": [],
+  "model_use_allowed": false,
+  "normalized_snapshot_files": 4945,
+  "official_member_count_distribution": {
+    "199": 8,
+    "200": 4475,
+    "201": 348,
+    "202": 114
+  },
+  "protected_oos_accessed": false,
+  "raw_manifest_hash_mismatches": [],
+  "raw_manifest_missing_files": [],
+  "raw_snapshot_files": 4946,
+  "schema_version": "kospi200-membership-audit-v1",
+  "session_source_sessions": 4946,
+  "skipped_empty_sessions": [
+    "20101231"
+  ],
+  "status": "PASS_MEMBERSHIP_ONLY_DART_REQUIRED"
+}

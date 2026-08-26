@@ -1,0 +1,1036 @@
+order_id,session,security_id,side,status,requested_quantity,filled_quantity,reason
+D6:B2_TOP30_META_RANK:2020-01-02:011210,2020-01-03,011210,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-01-02:012450,2020-01-03,012450,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-01-02:000150,2020-01-03,000150,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+RISK:2020-01-07:011210:STOP_GAP,2020-01-07,011210,SELL,FILLED,,10,executed with sell costs and adverse slippage
+RISK:2020-01-08:000150:STOP,2020-01-08,000150,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-01-09:011210,2020-01-10,011210,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-01-09:012450,2020-01-10,012450,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-01-09:000150,2020-01-10,000150,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+TIME:2020-01-17:012450,2020-01-17,012450,SELL,FILLED,,14,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-01-16:011210,2020-01-17,011210,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-01-16:012450,2020-01-17,012450,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-01-16:004990,2020-01-17,004990,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+RISK:2020-01-20:004990:TARGET,2020-01-20,004990,SELL,FILLED,,13,executed with sell costs and adverse slippage
+RISK:2020-01-22:011210:TARGET,2020-01-22,011210,SELL,FILLED,,10,executed with sell costs and adverse slippage
+TIME:2020-01-28:000150,2020-01-28,000150,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-01-23:011210,2020-01-28,011210,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-01-23:012450,2020-01-28,012450,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-01-23:004990,2020-01-28,004990,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+RISK:2020-01-28:012450:STOP,2020-01-28,012450,SELL,FILLED,,14,executed with sell costs and adverse slippage
+RISK:2020-01-29:011210:STOP,2020-01-29,011210,SELL,FILLED,,9,executed with sell costs and adverse slippage
+RISK:2020-01-30:004990:STOP,2020-01-30,004990,SELL,FILLED,,13,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-03:000150,2020-02-04,000150,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-03:012450,2020-02-04,012450,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-03:170900,2020-02-04,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-10:170900,2020-02-11,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-02-10:012450,2020-02-11,012450,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-02-10:000150,2020-02-11,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2020-02-18:000150,2020-02-18,000150,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2020-02-18:012450,2020-02-18,012450,SELL,FILLED,,15,executed with sell costs and adverse slippage
+TIME:2020-02-18:170900,2020-02-18,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-17:012450,2020-02-18,012450,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-17:000150,2020-02-18,000150,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-17:170900,2020-02-18,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+RISK:2020-02-21:000150:STOP_GAP,2020-02-21,000150,SELL,FILLED,,7,executed with sell costs and adverse slippage
+RISK:2020-02-21:012450:STOP,2020-02-21,012450,SELL,FILLED,,15,executed with sell costs and adverse slippage
+RISK:2020-02-21:170900:STOP,2020-02-21,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-24:000150,2020-02-25,000150,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-24:170900,2020-02-25,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-02-24:012450,2020-02-25,012450,BUY,FILLED,,17,executed at opening reference plus adverse slippage
+RISK:2020-02-28:012450:STOP,2020-02-28,012450,SELL,FILLED,,17,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-02:000150,2020-03-03,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-03-02:170900,2020-03-03,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-03-02:012450,2020-03-03,012450,BUY,FILLED,,17,executed at opening reference plus adverse slippage
+RISK:2020-03-09:012450:STOP,2020-03-09,012450,SELL,FILLED,,17,executed with sell costs and adverse slippage
+TIME:2020-03-10:000150,2020-03-10,000150,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2020-03-10:170900,2020-03-10,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-09:000150,2020-03-10,000150,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-09:170900,2020-03-10,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-09:000990,2020-03-10,000990,BUY,FILLED,,20,executed at opening reference plus adverse slippage
+RISK:2020-03-11:000150:STOP,2020-03-11,000150,SELL,FILLED,,8,executed with sell costs and adverse slippage
+RISK:2020-03-11:170900:STOP,2020-03-11,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2020-03-12:000990:STOP,2020-03-12,000990,SELL,FILLED,,20,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-23:009830,2020-03-24,009830,BUY,FILLED,,49,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-23:001800,2020-03-24,001800,BUY,FILLED,,45,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-23:002240,2020-03-24,002240,BUY,FILLED,,42,executed at opening reference plus adverse slippage
+RISK:2020-03-24:002240:TARGET,2020-03-24,002240,SELL,FILLED,,42,executed with sell costs and adverse slippage
+RISK:2020-03-25:001800:TARGET,2020-03-25,001800,SELL,FILLED,,45,executed with sell costs and adverse slippage
+RISK:2020-03-25:009830:TARGET,2020-03-25,009830,SELL,FILLED,,49,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-30:001800,2020-03-31,001800,BUY,FILLED,,41,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-30:002240,2020-03-31,002240,BUY,FILLED,,35,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-03-30:073240,2020-03-31,073240,BUY,FILLED,,163,executed at opening reference plus adverse slippage
+RISK:2020-04-06:001800:TARGET,2020-04-06,001800,SELL,FILLED,,41,executed with sell costs and adverse slippage
+RISK:2020-04-06:002240:TARGET,2020-04-06,002240,SELL,FILLED,,35,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-06:170900,2020-04-07,170900,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-06:017670,2020-04-07,017670,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-06:001520,2020-04-07,001520,BUY,FILLED,,372,executed at opening reference plus adverse slippage
+RISK:2020-04-07:001520:STOP,2020-04-07,001520,SELL,FILLED,,372,executed with sell costs and adverse slippage
+TIME:2020-04-14:073240,2020-04-14,073240,SELL,FILLED,,163,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-13:000070,2020-04-14,000070,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-13:170900,2020-04-14,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-04-13:017670,2020-04-14,017670,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2020-04-20:000070:TARGET,2020-04-20,000070,SELL,FILLED,,10,executed with sell costs and adverse slippage
+TIME:2020-04-22:017670,2020-04-22,017670,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2020-04-22:170900,2020-04-22,170900,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-21:069620,2020-04-22,069620,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-21:170900,2020-04-22,170900,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-21:017670,2020-04-22,017670,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2020-04-22:069620:TARGET,2020-04-22,069620,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-04-28:170900,2020-04-29,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-04-28:017670,2020-04-29,017670,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-04-28:026960,2020-04-29,026960,BUY,FILLED,,29,executed at opening reference plus adverse slippage
+TIME:2020-05-11:017670,2020-05-11,017670,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2020-05-11:170900,2020-05-11,170900,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-08:170900,2020-05-11,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-08:069620,2020-05-11,069620,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-08:026960,2020-05-11,026960,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2020-05-18:026960,2020-05-18,026960,SELL,FILLED,,29,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-15:010140,2020-05-18,010140,BUY,FILLED,,125,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-15:051910,2020-05-18,051910,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-15:170900,2020-05-18,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2020-05-21:051910:TARGET,2020-05-21,051910,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2020-05-25:069620,2020-05-25,069620,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2020-05-25:170900,2020-05-25,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-22:114090,2020-05-25,114090,BUY,FILLED,,34,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-22:000070,2020-05-25,000070,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-22:010140,2020-05-25,010140,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2020-05-27:010140:TARGET,2020-05-27,010140,SELL,FILLED,,125,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-29:000070,2020-06-01,000070,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-05-29:019680,2020-06-01,019680,BUY,FILLED,,114,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-05-29:051910,2020-06-01,051910,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+RISK:2020-06-04:114090:TARGET,2020-06-04,114090,SELL,FILLED,,34,executed with sell costs and adverse slippage
+RISK:2020-06-05:051910:TARGET,2020-06-05,051910,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2020-06-08:000070,2020-06-08,000070,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-05:006840,2020-06-08,006840,BUY,FILLED,,23,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-05:010140,2020-06-08,010140,BUY,FILLED,,77,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-05:004800,2020-06-08,004800,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+RISK:2020-06-10:006840:STOP,2020-06-10,006840,SELL,FILLED,,23,executed with sell costs and adverse slippage
+RISK:2020-06-12:004800:STOP_GAP,2020-06-12,004800,SELL,FILLED,,7,executed with sell costs and adverse slippage
+RISK:2020-06-12:010140:STOP_GAP,2020-06-12,010140,SELL,FILLED,,77,executed with sell costs and adverse slippage
+TIME:2020-06-15:019680,2020-06-15,019680,SELL,FILLED,,114,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-12:034220,2020-06-15,034220,BUY,FILLED,,45,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-12:057050,2020-06-15,057050,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-12:010780,2020-06-15,010780,BUY,FILLED,,17,executed at opening reference plus adverse slippage
+RISK:2020-06-15:010780:STOP,2020-06-15,010780,SELL,FILLED,,17,executed with sell costs and adverse slippage
+RISK:2020-06-15:057050:STOP,2020-06-15,057050,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-19:023530,2020-06-22,023530,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-19:034220,2020-06-22,034220,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-06-19:057050,2020-06-22,057050,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+RISK:2020-06-26:057050:STOP,2020-06-26,057050,SELL,FILLED,,7,executed with sell costs and adverse slippage
+TIME:2020-06-29:034220,2020-06-29,034220,SELL,FILLED,,45,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-26:012630,2020-06-29,012630,BUY,FILLED,,59,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-26:114090,2020-06-29,114090,BUY,FILLED,,41,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-06-26:023530,2020-06-29,023530,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2020-06-29:023530:STOP,2020-06-29,023530,SELL,FILLED,,6,executed with sell costs and adverse slippage
+RISK:2020-06-30:114090:TARGET,2020-06-30,114090,SELL,FILLED,,41,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-03:114090,2020-07-06,114090,BUY,FILLED,,40,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-03:001740,2020-07-06,001740,BUY,FILLED,,103,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-03:004990,2020-07-06,004990,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+RISK:2020-07-10:004990:STOP,2020-07-10,004990,SELL,FILLED,,16,executed with sell costs and adverse slippage
+TIME:2020-07-13:012630,2020-07-13,012630,SELL,FILLED,,59,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-10:115390,2020-07-13,115390,BUY,FILLED,,49,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-10:001740,2020-07-13,001740,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-07-10:004800,2020-07-13,004800,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+TIME:2020-07-20:001740,2020-07-20,001740,SELL,FILLED,,103,executed with sell costs and adverse slippage
+TIME:2020-07-20:114090,2020-07-20,114090,SELL,FILLED,,40,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-17:012630,2020-07-20,012630,BUY,FILLED,,59,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-17:001740,2020-07-20,001740,BUY,FILLED,,101,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-17:003490,2020-07-20,003490,BUY,FILLED,,28,executed at opening reference plus adverse slippage
+RISK:2020-07-22:004800:TARGET,2020-07-22,004800,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2020-07-27:115390,2020-07-27,115390,SELL,FILLED,,49,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-24:006390,2020-07-27,006390,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-24:114090,2020-07-27,114090,BUY,FILLED,,40,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-24:023530,2020-07-27,023530,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+RISK:2020-07-27:003490:STOP_GAP,2020-07-27,003490,SELL,FILLED,,28,executed with sell costs and adverse slippage
+RISK:2020-07-28:012630:TARGET,2020-07-28,012630,SELL,FILLED,,59,executed with sell costs and adverse slippage
+TIME:2020-08-03:001740,2020-08-03,001740,SELL,FILLED,,101,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-31:012330,2020-08-03,012330,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-31:001740,2020-08-03,001740,BUY,FILLED,,102,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-07-31:004990,2020-08-03,004990,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+RISK:2020-08-04:006390:TARGET,2020-08-04,006390,SELL,FILLED,,19,executed with sell costs and adverse slippage
+TIME:2020-08-10:023530,2020-08-10,023530,SELL,FILLED,,6,executed with sell costs and adverse slippage
+TIME:2020-08-10:114090,2020-08-10,114090,SELL,FILLED,,40,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-08-07:001740,2020-08-10,001740,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-08-07:004990,2020-08-10,004990,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-08-07:023530,2020-08-10,023530,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+RISK:2020-08-10:012330:TARGET,2020-08-10,012330,SELL,FILLED,,2,executed with sell costs and adverse slippage
+RISK:2020-08-14:004990:TARGET,2020-08-14,004990,SELL,FILLED,,16,executed with sell costs and adverse slippage
+RISK:2020-08-14:023530:TARGET,2020-08-14,023530,SELL,FILLED,,6,executed with sell costs and adverse slippage
+TIME:2020-08-18:001740,2020-08-18,001740,SELL,FILLED,,102,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-08-14:001740,2020-08-18,001740,BUY,FILLED,,101,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-08-14:002240,2020-08-18,002240,BUY,FILLED,,34,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-08-14:004990,2020-08-18,004990,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+RISK:2020-08-18:004990:STOP,2020-08-18,004990,SELL,FILLED,,16,executed with sell costs and adverse slippage
+RISK:2020-08-19:002240:STOP,2020-08-19,002240,SELL,FILLED,,34,executed with sell costs and adverse slippage
+RISK:2020-08-20:001740:STOP,2020-08-20,001740,SELL,FILLED,,101,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-08-24:001740,2020-08-25,001740,BUY,FILLED,,104,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-08-24:002240,2020-08-25,002240,BUY,FILLED,,37,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-08-24:023530,2020-08-25,023530,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-08-31:001740,2020-09-01,001740,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-08-31:002240,2020-09-01,002240,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-08-31:073240,2020-09-01,073240,BUY,FILLED,,149,executed at opening reference plus adverse slippage
+RISK:2020-09-01:073240:TARGET,2020-09-01,073240,SELL,FILLED,,149,executed with sell costs and adverse slippage
+TIME:2020-09-08:001740,2020-09-08,001740,SELL,FILLED,,104,executed with sell costs and adverse slippage
+TIME:2020-09-08:002240,2020-09-08,002240,SELL,FILLED,,37,executed with sell costs and adverse slippage
+TIME:2020-09-08:023530,2020-09-08,023530,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-07:047810,2020-09-08,047810,BUY,FILLED,,23,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-07:010140,2020-09-08,010140,BUY,FILLED,,95,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-07:002240,2020-09-08,002240,BUY,FILLED,,38,executed at opening reference plus adverse slippage
+RISK:2020-09-09:010140:STOP_GAP,2020-09-09,010140,SELL,FILLED,,95,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-14:170900,2020-09-15,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-14:004990,2020-09-15,004990,BUY,FILLED,,17,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-14:047810,2020-09-15,047810,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2020-09-22:002240,2020-09-22,002240,SELL,FILLED,,38,executed with sell costs and adverse slippage
+TIME:2020-09-22:047810,2020-09-22,047810,SELL,FILLED,,23,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-21:170900,2020-09-22,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-09-21:285130,2020-09-22,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-21:010140,2020-09-22,010140,BUY,FILLED,,99,executed at opening reference plus adverse slippage
+RISK:2020-09-22:004990:STOP,2020-09-22,004990,SELL,FILLED,,17,executed with sell costs and adverse slippage
+RISK:2020-09-22:285130:STOP,2020-09-22,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2020-09-23:010140:STOP,2020-09-23,010140,SELL,FILLED,,99,executed with sell costs and adverse slippage
+RISK:2020-09-24:170900:STOP,2020-09-24,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-28:170900,2020-09-29,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-28:285130,2020-09-29,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-09-28:069620,2020-09-29,069620,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+RISK:2020-10-06:285130:TARGET,2020-10-06,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-08:170900,2020-10-12,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-10-08:285130,2020-10-12,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-08:010140,2020-10-12,010140,BUY,FILLED,,98,executed at opening reference plus adverse slippage
+RISK:2020-10-14:170900:STOP,2020-10-14,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2020-10-19:069620,2020-10-19,069620,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-16:170900,2020-10-19,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-16:214320,2020-10-19,214320,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-16:006120,2020-10-19,006120,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+RISK:2020-10-19:214320:STOP,2020-10-19,214320,SELL,FILLED,,8,executed with sell costs and adverse slippage
+RISK:2020-10-19:285130:STOP,2020-10-19,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2020-10-20:006120:STOP,2020-10-20,006120,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2020-10-26:010140,2020-10-26,010140,SELL,FILLED,,98,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-23:170900,2020-10-26,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-10-23:005250,2020-10-26,005250,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-23:285130,2020-10-26,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+RISK:2020-10-27:005250:STOP,2020-10-27,005250,SELL,FILLED,,21,executed with sell costs and adverse slippage
+RISK:2020-10-28:285130:TARGET,2020-10-28,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2020-11-02:170900,2020-11-02,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-30:170900,2020-11-02,170900,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-30:005250,2020-11-02,005250,BUY,FILLED,,22,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-10-30:214320,2020-11-02,214320,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+RISK:2020-11-03:005250:TARGET,2020-11-03,005250,SELL,FILLED,,22,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-06:012450,2020-11-09,012450,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-06:170900,2020-11-09,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-11-06:006120,2020-11-09,006120,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+RISK:2020-11-13:006120:STOP,2020-11-13,006120,SELL,FILLED,,7,executed with sell costs and adverse slippage
+TIME:2020-11-16:170900,2020-11-16,170900,SELL,FILLED,,6,executed with sell costs and adverse slippage
+TIME:2020-11-16:214320,2020-11-16,214320,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-13:170900,2020-11-16,170900,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-13:057050,2020-11-16,057050,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-13:214320,2020-11-16,214320,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+TIME:2020-11-23:012450,2020-11-23,012450,SELL,FILLED,,19,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-20:170900,2020-11-23,170900,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-11-20:012450,2020-11-23,012450,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-20:009410,2020-11-23,009410,BUY,FILLED,,51,executed at opening reference plus adverse slippage
+RISK:2020-11-27:214320:STOP,2020-11-27,214320,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2020-11-30:057050,2020-11-30,057050,SELL,FILLED,,7,executed with sell costs and adverse slippage
+TIME:2020-11-30:170900,2020-11-30,170900,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-27:170900,2020-11-30,170900,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-11-27:012450,2020-11-30,012450,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-11-27:057050,2020-11-30,057050,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+TIME:2020-12-07:009410,2020-12-07,009410,SELL,FILLED,,51,executed with sell costs and adverse slippage
+TIME:2020-12-07:012450,2020-12-07,012450,SELL,FILLED,,19,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-04:012450,2020-12-07,012450,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-04:012630,2020-12-07,012630,BUY,FILLED,,47,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-04:161390,2020-12-07,161390,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+RISK:2020-12-09:161390:TARGET,2020-12-09,161390,SELL,FILLED,,14,executed with sell costs and adverse slippage
+RISK:2020-12-11:057050:TARGET,2020-12-11,057050,SELL,FILLED,,7,executed with sell costs and adverse slippage
+TIME:2020-12-14:170900,2020-12-14,170900,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-11:012450,2020-12-14,012450,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2020-12-11:000150,2020-12-14,000150,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-11:012630,2020-12-14,012630,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2020-12-15:000150:STOP,2020-12-15,000150,SELL,FILLED,,9,executed with sell costs and adverse slippage
+TIME:2020-12-21:012450,2020-12-21,012450,SELL,FILLED,,19,executed with sell costs and adverse slippage
+TIME:2020-12-21:012630,2020-12-21,012630,SELL,FILLED,,47,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-18:012630,2020-12-21,012630,BUY,FILLED,,47,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-18:012450,2020-12-21,012450,BUY,FILLED,,18,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-18:006650,2020-12-21,006650,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2020-12-22:012450:STOP,2020-12-22,012450,SELL,FILLED,,18,executed with sell costs and adverse slippage
+RISK:2020-12-23:012630:STOP,2020-12-23,012630,SELL,FILLED,,47,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-28:012630,2020-12-29,012630,BUY,FILLED,,49,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-28:009410,2020-12-29,009410,BUY,FILLED,,45,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2020-12-28:006650,2020-12-29,006650,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-01-05:009410:TARGET,2021-01-05,009410,SELL,FILLED,,45,executed with sell costs and adverse slippage
+RISK:2021-01-06:006650:TARGET,2021-01-06,006650,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-06:003000,2021-01-07,003000,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-06:003520,2021-01-07,003520,BUY,FILLED,,65,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-06:007570,2021-01-07,007570,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+RISK:2021-01-11:003000:STOP,2021-01-11,003000,SELL,FILLED,,19,executed with sell costs and adverse slippage
+RISK:2021-01-11:003520:STOP,2021-01-11,003520,SELL,FILLED,,65,executed with sell costs and adverse slippage
+RISK:2021-01-11:007570:STOP,2021-01-11,007570,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2021-01-14:012630,2021-01-14,012630,SELL,FILLED,,49,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-13:034730,2021-01-14,034730,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-13:093370,2021-01-14,093370,BUY,FILLED,,43,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-13:004990,2021-01-14,004990,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+RISK:2021-01-18:004990:STOP,2021-01-18,004990,SELL,FILLED,,14,executed with sell costs and adverse slippage
+RISK:2021-01-19:093370:TARGET,2021-01-19,093370,SELL,FILLED,,43,executed with sell costs and adverse slippage
+RISK:2021-01-20:034730:TARGET,2021-01-20,034730,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-20:034730,2021-01-21,034730,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-20:093370,2021-01-21,093370,BUY,FILLED,,38,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-20:003000,2021-01-21,003000,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+RISK:2021-01-22:003000:STOP,2021-01-22,003000,SELL,FILLED,,21,executed with sell costs and adverse slippage
+RISK:2021-01-22:093370:STOP,2021-01-22,093370,SELL,FILLED,,38,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-27:034730,2021-01-28,034730,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-01-27:007570,2021-01-28,007570,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-01-27:093370,2021-01-28,093370,BUY,FILLED,,42,executed at opening reference plus adverse slippage
+RISK:2021-01-29:007570:STOP,2021-01-29,007570,SELL,FILLED,,10,executed with sell costs and adverse slippage
+RISK:2021-01-29:034730:STOP,2021-01-29,034730,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-01-29:093370:STOP,2021-01-29,093370,SELL,FILLED,,42,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-03:034730,2021-02-04,034730,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-03:093370,2021-02-04,093370,BUY,FILLED,,42,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-03:011070,2021-02-04,011070,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2021-02-08:011070:STOP,2021-02-08,011070,SELL,FILLED,,2,executed with sell costs and adverse slippage
+RISK:2021-02-08:034730:STOP,2021-02-08,034730,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-10:034730,2021-02-15,034730,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-10:093370,2021-02-15,093370,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-02-10:011070,2021-02-15,011070,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2021-02-17:011070:STOP,2021-02-17,011070,SELL,FILLED,,2,executed with sell costs and adverse slippage
+RISK:2021-02-19:034730:STOP,2021-02-19,034730,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-02-19:093370:STOP_GAP,2021-02-19,093370,SELL,FILLED,,42,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-19:034730,2021-02-22,034730,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-19:047040,2021-02-22,047040,BUY,FILLED,,84,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-19:003000,2021-02-22,003000,BUY,FILLED,,22,executed at opening reference plus adverse slippage
+RISK:2021-02-23:034730:STOP,2021-02-23,034730,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-02-24:003000:STOP,2021-02-24,003000,SELL,FILLED,,22,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-26:034730,2021-03-02,034730,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-02-26:047040,2021-03-02,047040,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-02-26:011070,2021-03-02,011070,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2021-03-04:047040:STOP,2021-03-04,047040,SELL,FILLED,,84,executed with sell costs and adverse slippage
+RISK:2021-03-08:034730:STOP,2021-03-08,034730,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-08:012450,2021-03-09,012450,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-08:011210,2021-03-09,011210,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-08:034730,2021-03-09,034730,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+RISK:2021-03-11:012450:TARGET,2021-03-11,012450,SELL,FILLED,,13,executed with sell costs and adverse slippage
+TIME:2021-03-16:011070,2021-03-16,011070,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-15:011210,2021-03-16,011210,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-03-15:012450,2021-03-16,012450,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-15:251270,2021-03-16,251270,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+RISK:2021-03-17:034730:STOP,2021-03-17,034730,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2021-03-23:011210,2021-03-23,011210,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-22:105630,2021-03-23,105630,BUY,FILLED,,22,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-22:011210,2021-03-23,011210,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-22:069620,2021-03-23,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+RISK:2021-03-23:012450:STOP,2021-03-23,012450,SELL,FILLED,,12,executed with sell costs and adverse slippage
+RISK:2021-03-24:011210:STOP_GAP,2021-03-24,011210,SELL,FILLED,,6,executed with sell costs and adverse slippage
+RISK:2021-03-26:105630:STOP,2021-03-26,105630,SELL,FILLED,,22,executed with sell costs and adverse slippage
+TIME:2021-03-30:251270,2021-03-30,251270,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-29:005250,2021-03-30,005250,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-29:105630,2021-03-30,105630,BUY,FILLED,,23,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-03-29:251270,2021-03-30,251270,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+RISK:2021-03-31:105630:STOP,2021-03-31,105630,SELL,FILLED,,23,executed with sell costs and adverse slippage
+RISK:2021-04-05:005250:STOP,2021-04-05,005250,SELL,FILLED,,14,executed with sell costs and adverse slippage
+TIME:2021-04-06:069620,2021-04-06,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-05:005250,2021-04-06,005250,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-05:003000,2021-04-06,003000,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-05:105630,2021-04-06,105630,BUY,FILLED,,24,executed at opening reference plus adverse slippage
+RISK:2021-04-09:005250:TARGET,2021-04-09,005250,SELL,FILLED,,15,executed with sell costs and adverse slippage
+RISK:2021-04-12:251270:TARGET,2021-04-12,251270,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-12:003000,2021-04-13,003000,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-04-12:005250,2021-04-13,005250,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-12:105630,2021-04-13,105630,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-04-14:105630:TARGET,2021-04-14,105630,SELL,FILLED,,24,executed with sell costs and adverse slippage
+RISK:2021-04-19:005250:TARGET,2021-04-19,005250,SELL,FILLED,,13,executed with sell costs and adverse slippage
+TIME:2021-04-20:003000,2021-04-20,003000,SELL,FILLED,,21,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-19:003000,2021-04-20,003000,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-19:009240,2021-04-20,009240,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-19:005250,2021-04-20,005250,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-04-26:005250,2021-04-27,005250,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-04-26:003000,2021-04-27,003000,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-04-26:009240,2021-04-27,009240,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-04-27:009240:STOP,2021-04-27,009240,SELL,FILLED,,4,executed with sell costs and adverse slippage
+RISK:2021-04-28:005250:STOP,2021-04-28,005250,SELL,FILLED,,12,executed with sell costs and adverse slippage
+RISK:2021-04-29:003000:STOP,2021-04-29,003000,SELL,FILLED,,21,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-03:114090,2021-05-04,114090,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-03:128940,2021-05-04,128940,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-03:003000,2021-05-04,003000,BUY,FILLED,,24,executed at opening reference plus adverse slippage
+RISK:2021-05-10:003000:TARGET,2021-05-10,003000,SELL,FILLED,,24,executed with sell costs and adverse slippage
+RISK:2021-05-11:128940:TARGET,2021-05-11,128940,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-11:114090,2021-05-12,114090,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-05-11:006280,2021-05-12,006280,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+RISK:2021-05-14:006280:STOP,2021-05-14,006280,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-05-18:114090:TARGET,2021-05-18,114090,SELL,FILLED,,31,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-18:128940,2021-05-20,128940,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-18:006280,2021-05-20,006280,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-18:114090,2021-05-20,114090,BUY,FILLED,,29,executed at opening reference plus adverse slippage
+RISK:2021-05-24:006280:STOP,2021-05-24,006280,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-05-24:114090:STOP,2021-05-24,114090,SELL,FILLED,,29,executed with sell costs and adverse slippage
+RISK:2021-05-24:128940:STOP,2021-05-24,128940,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-26:128940,2021-05-27,128940,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-26:000150,2021-05-27,000150,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-05-26:005250,2021-05-27,005250,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-02:000150,2021-06-03,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-06-02:114090,2021-06-03,114090,BUY,FILLED,,26,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-02:006280,2021-06-03,006280,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+RISK:2021-06-07:000150:TARGET,2021-06-07,000150,SELL,FILLED,,6,executed with sell costs and adverse slippage
+TIME:2021-06-10:005250,2021-06-10,005250,SELL,FILLED,,14,executed with sell costs and adverse slippage
+TIME:2021-06-10:128940,2021-06-10,128940,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-09:000150,2021-06-10,000150,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-09:114090,2021-06-10,114090,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-06-09:000210,2021-06-10,000210,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+RISK:2021-06-11:000150:STOP,2021-06-11,000150,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2021-06-11:114090:STOP,2021-06-11,114090,SELL,FILLED,,26,executed with sell costs and adverse slippage
+TIME:2021-06-17:006280,2021-06-17,006280,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-16:079160,2021-06-17,079160,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-16:000150,2021-06-17,000150,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-16:114090,2021-06-17,114090,BUY,FILLED,,28,executed at opening reference plus adverse slippage
+RISK:2021-06-18:000150:STOP,2021-06-18,000150,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2021-06-23:000210:STOP,2021-06-23,000210,SELL,FILLED,,6,executed with sell costs and adverse slippage
+RISK:2021-06-23:079160:STOP,2021-06-23,079160,SELL,FILLED,,15,executed with sell costs and adverse slippage
+RISK:2021-06-23:114090:STOP,2021-06-23,114090,SELL,FILLED,,28,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-23:079160,2021-06-24,079160,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-23:000150,2021-06-24,000150,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-23:000880,2021-06-24,000880,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-06-30:079160,2021-07-01,079160,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-06-30:000150,2021-07-01,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-06-30:000880,2021-07-01,000880,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-07-02:000150:TARGET,2021-07-02,000150,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2021-07-08:000880,2021-07-08,000880,SELL,FILLED,,15,executed with sell costs and adverse slippage
+TIME:2021-07-08:079160,2021-07-08,079160,SELL,FILLED,,16,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-07:000150,2021-07-08,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-07:069620,2021-07-08,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-07:035250,2021-07-08,035250,BUY,FILLED,,18,executed at opening reference plus adverse slippage
+RISK:2021-07-09:000150:STOP,2021-07-09,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-14:000150,2021-07-15,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-14:069620,2021-07-15,069620,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-07-14:000880,2021-07-15,000880,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+RISK:2021-07-16:069620:STOP,2021-07-16,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2021-07-19:000150:STOP,2021-07-19,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2021-07-22:035250,2021-07-22,035250,SELL,FILLED,,18,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-21:000150,2021-07-22,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-21:251270,2021-07-22,251270,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-21:069620,2021-07-22,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+RISK:2021-07-28:000150:STOP,2021-07-28,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+RISK:2021-07-28:069620:TARGET,2021-07-28,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+TIME:2021-07-29:000880,2021-07-29,000880,SELL,FILLED,,16,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-28:000150,2021-07-29,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-28:069620,2021-07-29,069620,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-07-28:093370,2021-07-29,093370,BUY,FILLED,,38,executed at opening reference plus adverse slippage
+RISK:2021-08-02:000150:STOP,2021-08-02,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+RISK:2021-08-03:251270:STOP,2021-08-03,251270,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-08-04:000150,2021-08-05,000150,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-08-04:069620,2021-08-05,069620,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-08-04:093370,2021-08-05,093370,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-08-05:069620:TARGET,2021-08-05,069620,SELL,FILLED,,2,executed with sell costs and adverse slippage
+RISK:2021-08-09:093370:TARGET,2021-08-09,093370,SELL,FILLED,,38,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-08-11:000150,2021-08-12,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-08-11:009240,2021-08-12,009240,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-08-11:093370,2021-08-12,093370,BUY,FILLED,,35,executed at opening reference plus adverse slippage
+RISK:2021-08-17:000150:STOP,2021-08-17,000150,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2021-08-17:009240:STOP,2021-08-17,009240,SELL,FILLED,,4,executed with sell costs and adverse slippage
+RISK:2021-08-17:093370:STOP,2021-08-17,093370,SELL,FILLED,,35,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-08-19:009240,2021-08-20,009240,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-08-19:000150,2021-08-20,000150,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-08-19:001440,2021-08-20,001440,BUY,FILLED,,203,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-08-26:009240,2021-08-27,009240,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-08-26:000150,2021-08-27,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-08-26:001440,2021-08-27,001440,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-09-01:000150:TARGET,2021-09-01,000150,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2021-09-01:009240:TARGET,2021-09-01,009240,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2021-09-03:001440,2021-09-03,001440,SELL,FILLED,,203,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-02:069620,2021-09-03,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-02:285130,2021-09-03,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-02:093370,2021-09-03,093370,BUY,FILLED,,35,executed at opening reference plus adverse slippage
+RISK:2021-09-06:093370:TARGET,2021-09-06,093370,SELL,FILLED,,35,executed with sell costs and adverse slippage
+RISK:2021-09-09:069620:STOP,2021-09-09,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2021-09-09:285130:TARGET,2021-09-09,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-09:069620,2021-09-10,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-09:285130,2021-09-10,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-09:006280,2021-09-10,006280,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+RISK:2021-09-10:006280:STOP,2021-09-10,006280,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-16:003000,2021-09-17,003000,BUY,FILLED,,23,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-16:006280,2021-09-17,006280,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-16:069620,2021-09-17,069620,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-09-17:285130:STOP,2021-09-17,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-09-27:069620:STOP_GAP,2021-09-27,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2021-09-28:006280:STOP,2021-09-28,006280,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-28:069620,2021-09-29,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-28:285130,2021-09-29,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-09-28:000880,2021-09-29,000880,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+RISK:2021-09-30:003000:STOP,2021-09-30,003000,SELL,FILLED,,23,executed with sell costs and adverse slippage
+RISK:2021-10-01:285130:TARGET,2021-10-01,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-10-05:069620:STOP,2021-10-05,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-06:003000,2021-10-07,003000,BUY,FILLED,,38,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-06:285130,2021-10-07,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-06:069620,2021-10-07,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+RISK:2021-10-08:069620:TARGET,2021-10-08,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2021-10-08:285130:TARGET,2021-10-08,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-10-13:000880:STOP,2021-10-13,000880,SELL,FILLED,,14,executed with sell costs and adverse slippage
+RISK:2021-10-14:003000:TARGET,2021-10-14,003000,SELL,FILLED,,38,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-14:069620,2021-10-15,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-14:003000,2021-10-15,003000,BUY,FILLED,,36,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-14:285130,2021-10-15,285130,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+RISK:2021-10-21:285130:STOP_GAP,2021-10-21,285130,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-21:069620,2021-10-22,069620,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-10-21:003000,2021-10-22,003000,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-10-21:006280,2021-10-22,006280,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+RISK:2021-10-25:006280:STOP,2021-10-25,006280,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2021-10-29:003000,2021-10-29,003000,SELL,FILLED,,36,executed with sell costs and adverse slippage
+TIME:2021-10-29:069620,2021-10-29,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-28:006280,2021-10-29,006280,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-28:003000,2021-10-29,003000,BUY,FILLED,,36,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-10-28:285130,2021-10-29,285130,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2021-11-01:285130:STOP,2021-11-01,285130,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-11-04:003000,2021-11-05,003000,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-11-04:093370,2021-11-05,093370,BUY,FILLED,,23,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-11-04:000720,2021-11-05,000720,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+RISK:2021-11-05:006280:STOP,2021-11-05,006280,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2021-11-11:003000:STOP_GAP,2021-11-11,003000,SELL,FILLED,,36,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-11-11:006280,2021-11-12,006280,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-11-11:093370,2021-11-12,093370,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-11-11:003000,2021-11-12,003000,BUY,FILLED,,38,executed at opening reference plus adverse slippage
+RISK:2021-11-12:093370:TARGET,2021-11-12,093370,SELL,FILLED,,23,executed with sell costs and adverse slippage
+TIME:2021-11-19:000720,2021-11-19,000720,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-11-18:006280,2021-11-19,006280,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-11-18:003000,2021-11-19,003000,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-11-18:285130,2021-11-19,285130,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+RISK:2021-11-19:006280:STOP,2021-11-19,006280,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2021-11-26:003000,2021-11-26,003000,SELL,FILLED,,38,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-11-25:000150,2021-11-26,000150,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-11-25:003000,2021-11-26,003000,BUY,FILLED,,36,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-11-25:026960,2021-11-26,026960,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+RISK:2021-11-29:000150:STOP_GAP,2021-11-29,000150,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2021-11-29:003000:STOP,2021-11-29,003000,SELL,FILLED,,36,executed with sell costs and adverse slippage
+RISK:2021-12-01:026960:STOP,2021-12-01,026960,SELL,FILLED,,14,executed with sell costs and adverse slippage
+RISK:2021-12-01:285130:STOP,2021-12-01,285130,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-02:093370,2021-12-03,093370,BUY,FILLED,,20,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-02:003000,2021-12-03,003000,BUY,FILLED,,38,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-02:006280,2021-12-03,006280,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2021-12-07:093370:STOP,2021-12-07,093370,SELL,FILLED,,20,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-09:093370,2021-12-10,093370,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-09:003000,2021-12-10,003000,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-12-09:003520,2021-12-10,003520,BUY,FILLED,,93,executed at opening reference plus adverse slippage
+RISK:2021-12-14:003520:TARGET,2021-12-14,003520,SELL,FILLED,,93,executed with sell costs and adverse slippage
+RISK:2021-12-14:093370:STOP,2021-12-14,093370,SELL,FILLED,,21,executed with sell costs and adverse slippage
+TIME:2021-12-17:003000,2021-12-17,003000,SELL,FILLED,,38,executed with sell costs and adverse slippage
+TIME:2021-12-17:006280,2021-12-17,006280,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-16:052690,2021-12-17,052690,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-16:093370,2021-12-17,093370,BUY,FILLED,,23,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-16:180640,2021-12-17,180640,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+RISK:2021-12-20:052690:TARGET,2021-12-20,052690,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2021-12-23:180640:STOP,2021-12-23,180640,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-23:000150,2021-12-24,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-23:093370,2021-12-24,093370,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2021-12-23:018880,2021-12-24,018880,BUY,FILLED,,36,executed at opening reference plus adverse slippage
+RISK:2021-12-28:093370:TARGET,2021-12-28,093370,SELL,FILLED,,23,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-30:093370,2022-01-03,093370,BUY,FILLED,,20,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2021-12-30:000150,2022-01-03,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2022-01-06:093370:STOP_GAP,2022-01-06,093370,SELL,FILLED,,20,executed with sell costs and adverse slippage
+TIME:2022-01-10:000150,2022-01-10,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2022-01-10:018880,2022-01-10,018880,SELL,FILLED,,36,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-07:079160,2022-01-10,079160,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-07:023530,2022-01-10,023530,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-07:114090,2022-01-10,114090,BUY,FILLED,,36,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-14:079160,2022-01-17,079160,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-01-14:004170,2022-01-17,004170,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-14:023530,2022-01-17,023530,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2022-01-18:023530:STOP,2022-01-18,023530,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2022-01-19:079160:STOP_GAP,2022-01-19,079160,SELL,FILLED,,19,executed with sell costs and adverse slippage
+TIME:2022-01-24:114090,2022-01-24,114090,SELL,FILLED,,36,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-21:114090,2022-01-24,114090,BUY,FILLED,,34,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-21:034220,2022-01-24,034220,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-21:251270,2022-01-24,251270,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+RISK:2022-01-24:004170:STOP,2022-01-24,004170,SELL,FILLED,,1,executed with sell costs and adverse slippage
+RISK:2022-01-25:114090:STOP,2022-01-25,114090,SELL,FILLED,,34,executed with sell costs and adverse slippage
+RISK:2022-01-27:034220:STOP,2022-01-27,034220,SELL,FILLED,,21,executed with sell costs and adverse slippage
+RISK:2022-01-27:251270:STOP,2022-01-27,251270,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-28:018880,2022-02-03,018880,BUY,FILLED,,42,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-01-28:034730,2022-02-03,034730,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-02-09:002350,2022-02-10,002350,BUY,FILLED,,69,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-02-09:004170,2022-02-10,004170,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-02-09:035250,2022-02-10,035250,BUY,FILLED,,17,executed at opening reference plus adverse slippage
+RISK:2022-02-14:002350:STOP,2022-02-14,002350,SELL,FILLED,,69,executed with sell costs and adverse slippage
+TIME:2022-02-17:018880,2022-02-17,018880,SELL,FILLED,,42,executed with sell costs and adverse slippage
+TIME:2022-02-17:034730,2022-02-17,034730,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-02-16:002350,2022-02-17,002350,BUY,FILLED,,70,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-02-16:004170,2022-02-17,004170,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-02-16:035250,2022-02-17,035250,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2022-02-24:004170,2022-02-24,004170,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2022-02-24:035250,2022-02-24,035250,SELL,FILLED,,17,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-02-23:002350,2022-02-24,002350,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-02-23:012450,2022-02-24,012450,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-02-23:114090,2022-02-24,114090,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+RISK:2022-02-24:002350:STOP,2022-02-24,002350,SELL,FILLED,,70,executed with sell costs and adverse slippage
+RISK:2022-02-28:012450:TARGET,2022-02-28,012450,SELL,FILLED,,10,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-03:002350,2022-03-04,002350,BUY,FILLED,,72,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-03:114090,2022-03-04,114090,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-03-03:036460,2022-03-04,036460,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+RISK:2022-03-07:002350:STOP,2022-03-07,002350,SELL,FILLED,,72,executed with sell costs and adverse slippage
+RISK:2022-03-07:036460:TARGET,2022-03-07,036460,SELL,FILLED,,10,executed with sell costs and adverse slippage
+RISK:2022-03-07:114090:STOP,2022-03-07,114090,SELL,FILLED,,31,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-11:002350,2022-03-14,002350,BUY,FILLED,,76,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-11:000080,2022-03-14,000080,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-11:105630,2022-03-14,105630,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+RISK:2022-03-15:105630:TARGET,2022-03-15,105630,SELL,FILLED,,21,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-18:000080,2022-03-21,000080,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-03-18:020560,2022-03-21,020560,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-18:000720,2022-03-21,000720,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+RISK:2022-03-22:020560:STOP,2022-03-22,020560,SELL,FILLED,,21,executed with sell costs and adverse slippage
+TIME:2022-03-28:000080,2022-03-28,000080,SELL,FILLED,,12,executed with sell costs and adverse slippage
+TIME:2022-03-28:002350,2022-03-28,002350,SELL,FILLED,,76,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-25:000080,2022-03-28,000080,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-25:006360,2022-03-28,006360,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-03-25:114090,2022-03-28,114090,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+TIME:2022-04-04:000720,2022-04-04,000720,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-01:005250,2022-04-04,005250,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-01:114090,2022-04-04,114090,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-04-01:006280,2022-04-04,006280,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2022-04-04:006360:STOP,2022-04-04,006360,SELL,FILLED,,9,executed with sell costs and adverse slippage
+RISK:2022-04-05:114090:TARGET,2022-04-05,114090,SELL,FILLED,,31,executed with sell costs and adverse slippage
+RISK:2022-04-06:006280:STOP,2022-04-06,006280,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2022-04-11:000080,2022-04-11,000080,SELL,FILLED,,12,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-08:114090,2022-04-11,114090,BUY,FILLED,,30,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-08:000080,2022-04-11,000080,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-08:180640,2022-04-11,180640,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+RISK:2022-04-12:005250:STOP,2022-04-12,005250,SELL,FILLED,,19,executed with sell costs and adverse slippage
+RISK:2022-04-14:180640:STOP,2022-04-14,180640,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-15:000210,2022-04-18,000210,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-15:114090,2022-04-18,114090,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-04-15:361610,2022-04-18,361610,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+TIME:2022-04-25:000080,2022-04-25,000080,SELL,FILLED,,12,executed with sell costs and adverse slippage
+TIME:2022-04-25:114090,2022-04-25,114090,SELL,FILLED,,30,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-22:114090,2022-04-25,114090,BUY,FILLED,,30,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-22:012450,2022-04-25,012450,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-22:023530,2022-04-25,023530,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+RISK:2022-04-27:023530:STOP,2022-04-27,023530,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2022-05-02:000210,2022-05-02,000210,SELL,FILLED,,7,executed with sell costs and adverse slippage
+TIME:2022-05-02:361610,2022-05-02,361610,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-29:012450,2022-05-02,012450,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-04-29:000080,2022-05-02,000080,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-04-29:006280,2022-05-02,006280,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2022-05-03:012450:TARGET,2022-05-03,012450,SELL,FILLED,,9,executed with sell costs and adverse slippage
+RISK:2022-05-09:006280:STOP,2022-05-09,006280,SELL,FILLED,,2,executed with sell costs and adverse slippage
+RISK:2022-05-09:114090:STOP,2022-05-09,114090,SELL,FILLED,,30,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-09:003000,2022-05-10,003000,BUY,FILLED,,43,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-09:012450,2022-05-10,012450,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-09:114090,2022-05-10,114090,BUY,FILLED,,32,executed at opening reference plus adverse slippage
+RISK:2022-05-10:000080:STOP,2022-05-10,000080,SELL,FILLED,,12,executed with sell costs and adverse slippage
+RISK:2022-05-12:012450:STOP,2022-05-12,012450,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-16:003000,2022-05-17,003000,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-05-16:012450,2022-05-17,012450,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-16:023530,2022-05-17,023530,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+RISK:2022-05-20:023530:STOP,2022-05-20,023530,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2022-05-24:003000,2022-05-24,003000,SELL,FILLED,,43,executed with sell costs and adverse slippage
+TIME:2022-05-24:114090,2022-05-24,114090,SELL,FILLED,,32,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-23:003000,2022-05-24,003000,BUY,FILLED,,42,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-23:000210,2022-05-24,000210,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-23:114090,2022-05-24,114090,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+RISK:2022-05-30:000210:TARGET,2022-05-30,000210,SELL,FILLED,,7,executed with sell costs and adverse slippage
+TIME:2022-05-31:012450,2022-05-31,012450,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-30:012450,2022-05-31,012450,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-30:011210,2022-05-31,011210,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-05-30:047810,2022-05-31,047810,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+RISK:2022-06-07:047810:TARGET,2022-06-07,047810,SELL,FILLED,,8,executed with sell costs and adverse slippage
+RISK:2022-06-08:003000:STOP,2022-06-08,003000,SELL,FILLED,,42,executed with sell costs and adverse slippage
+TIME:2022-06-09:114090,2022-06-09,114090,SELL,FILLED,,31,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-08:001680,2022-06-09,001680,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-08:012450,2022-06-09,012450,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-06-08:011210,2022-06-09,011210,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2022-06-09:012450:TARGET,2022-06-09,012450,SELL,FILLED,,8,executed with sell costs and adverse slippage
+RISK:2022-06-13:011210:STOP,2022-06-13,011210,SELL,FILLED,,7,executed with sell costs and adverse slippage
+RISK:2022-06-14:001680:STOP,2022-06-14,001680,SELL,FILLED,,21,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-15:114090,2022-06-16,114090,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-15:001680,2022-06-16,001680,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-15:180640,2022-06-16,180640,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+RISK:2022-06-17:001680:STOP_GAP,2022-06-17,001680,SELL,FILLED,,21,executed with sell costs and adverse slippage
+RISK:2022-06-17:114090:STOP_GAP,2022-06-17,114090,SELL,FILLED,,31,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-22:011210,2022-06-23,011210,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-22:001680,2022-06-23,001680,BUY,FILLED,,22,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-22:064350,2022-06-23,064350,BUY,FILLED,,23,executed at opening reference plus adverse slippage
+RISK:2022-06-28:011210:TARGET,2022-06-28,011210,SELL,FILLED,,8,executed with sell costs and adverse slippage
+RISK:2022-06-28:064350:TARGET,2022-06-28,064350,SELL,FILLED,,23,executed with sell costs and adverse slippage
+TIME:2022-06-30:180640,2022-06-30,180640,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-29:001680,2022-06-30,001680,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-06-29:161390,2022-06-30,161390,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-06-29:011210,2022-06-30,011210,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+RISK:2022-07-04:001680:TARGET,2022-07-04,001680,SELL,FILLED,,22,executed with sell costs and adverse slippage
+RISK:2022-07-05:011210:STOP,2022-07-05,011210,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-06:064350,2022-07-07,064350,BUY,FILLED,,24,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-06:011210,2022-07-07,011210,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-06:000210,2022-07-07,000210,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+RISK:2022-07-11:161390:STOP,2022-07-11,161390,SELL,FILLED,,13,executed with sell costs and adverse slippage
+RISK:2022-07-13:064350:STOP,2022-07-13,064350,SELL,FILLED,,24,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-13:023530,2022-07-14,023530,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-13:064350,2022-07-14,064350,BUY,FILLED,,25,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-13:000210,2022-07-14,000210,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2022-07-15:023530:STOP,2022-07-15,023530,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2022-07-18:064350:TARGET,2022-07-18,064350,SELL,FILLED,,25,executed with sell costs and adverse slippage
+RISK:2022-07-20:011210:TARGET,2022-07-20,011210,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2022-07-21:000210,2022-07-21,000210,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-20:064350,2022-07-21,064350,BUY,FILLED,,23,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-20:000880,2022-07-21,000880,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-20:001800,2022-07-21,001800,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+RISK:2022-07-22:064350:TARGET,2022-07-22,064350,SELL,FILLED,,23,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-27:034020,2022-07-28,034020,BUY,FILLED,,26,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-27:064350,2022-07-28,064350,BUY,FILLED,,18,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-07-27:034730,2022-07-28,034730,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2022-07-29:000880:TARGET,2022-07-29,000880,SELL,FILLED,,19,executed with sell costs and adverse slippage
+TIME:2022-08-04:001800,2022-08-04,001800,SELL,FILLED,,31,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-03:064350,2022-08-04,064350,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-08-03:034020,2022-08-04,034020,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-08-03:000080,2022-08-04,000080,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+RISK:2022-08-05:064350:STOP,2022-08-05,064350,SELL,FILLED,,18,executed with sell costs and adverse slippage
+RISK:2022-08-10:034020:TARGET,2022-08-10,034020,SELL,FILLED,,26,executed with sell costs and adverse slippage
+TIME:2022-08-11:034730,2022-08-11,034730,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-10:180640,2022-08-11,180640,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-10:011210,2022-08-11,011210,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-10:001800,2022-08-11,001800,BUY,FILLED,,32,executed at opening reference plus adverse slippage
+TIME:2022-08-19:000080,2022-08-19,000080,SELL,FILLED,,15,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-18:300720,2022-08-19,300720,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-18:064350,2022-08-19,064350,BUY,FILLED,,18,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-18:375500,2022-08-19,375500,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+RISK:2022-08-23:375500:STOP_GAP,2022-08-23,375500,SELL,FILLED,,11,executed with sell costs and adverse slippage
+RISK:2022-08-24:064350:TARGET,2022-08-24,064350,SELL,FILLED,,18,executed with sell costs and adverse slippage
+TIME:2022-08-26:001800,2022-08-26,001800,SELL,FILLED,,32,executed with sell costs and adverse slippage
+TIME:2022-08-26:011210,2022-08-26,011210,SELL,FILLED,,6,executed with sell costs and adverse slippage
+TIME:2022-08-26:180640,2022-08-26,180640,SELL,FILLED,,7,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-25:064350,2022-08-26,064350,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-08-25:300720,2022-08-26,300720,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-08-25:005250,2022-08-26,005250,BUY,FILLED,,25,executed at opening reference plus adverse slippage
+RISK:2022-08-26:064350:STOP,2022-08-26,064350,SELL,FILLED,,14,executed with sell costs and adverse slippage
+TIME:2022-09-02:300720,2022-09-02,300720,SELL,FILLED,,31,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-01:005250,2022-09-02,005250,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-09-01:004990,2022-09-02,004990,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-01:006280,2022-09-02,006280,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2022-09-05:005250:STOP,2022-09-05,005250,SELL,FILLED,,25,executed with sell costs and adverse slippage
+RISK:2022-09-05:006280:STOP,2022-09-05,006280,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-08:064350,2022-09-13,064350,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-08:039130,2022-09-13,039130,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-08:005250,2022-09-13,005250,BUY,FILLED,,26,executed at opening reference plus adverse slippage
+RISK:2022-09-13:064350:STOP,2022-09-13,064350,SELL,FILLED,,15,executed with sell costs and adverse slippage
+RISK:2022-09-14:004990:STOP,2022-09-14,004990,SELL,FILLED,,11,executed with sell costs and adverse slippage
+RISK:2022-09-19:005250:STOP,2022-09-19,005250,SELL,FILLED,,26,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-19:064350,2022-09-20,064350,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-19:000670,2022-09-20,000670,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D6:B2_TOP30_META_RANK:2022-09-19:300720,2022-09-20,300720,BUY,FILLED,,33,executed at opening reference plus adverse slippage
+RISK:2022-09-21:039130:TARGET,2022-09-21,039130,SELL,FILLED,,8,executed with sell costs and adverse slippage
+RISK:2022-09-22:300720:STOP,2022-09-22,300720,SELL,FILLED,,33,executed with sell costs and adverse slippage
+RISK:2022-09-26:064350:STOP,2022-09-26,064350,SELL,FILLED,,16,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-26:023530,2022-09-27,023530,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-26:001740,2022-09-27,001740,BUY,FILLED,,116,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-09-26:039130,2022-09-27,039130,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+RISK:2022-09-30:039130:STOP_GAP,2022-09-30,039130,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-04:064350,2022-10-05,064350,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-04:047040,2022-10-05,047040,BUY,FILLED,,107,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-04:001740,2022-10-05,001740,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2022-10-07:064350:STOP,2022-10-07,064350,SELL,FILLED,,16,executed with sell costs and adverse slippage
+RISK:2022-10-11:047040:STOP,2022-10-11,047040,SELL,FILLED,,107,executed with sell costs and adverse slippage
+TIME:2022-10-13:001740,2022-10-13,001740,SELL,FILLED,,116,executed with sell costs and adverse slippage
+TIME:2022-10-13:023530,2022-10-13,023530,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-12:001740,2022-10-13,001740,BUY,FILLED,,118,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-12:047040,2022-10-13,047040,BUY,FILLED,,110,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-12:039130,2022-10-13,039130,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-19:023530,2022-10-20,023530,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-19:180640,2022-10-20,180640,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-19:034220,2022-10-20,034220,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+RISK:2022-10-25:034220:STOP,2022-10-25,034220,SELL,FILLED,,31,executed with sell costs and adverse slippage
+RISK:2022-10-25:039130:STOP,2022-10-25,039130,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2022-10-27:001740,2022-10-27,001740,SELL,FILLED,,118,executed with sell costs and adverse slippage
+TIME:2022-10-27:047040,2022-10-27,047040,SELL,FILLED,,110,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-26:064350,2022-10-27,064350,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-10-26:180640,2022-10-27,180640,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-10-26:006280,2022-10-27,006280,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+RISK:2022-10-27:180640:TARGET,2022-10-27,180640,SELL,FILLED,,12,executed with sell costs and adverse slippage
+RISK:2022-11-01:064350:TARGET,2022-11-01,064350,SELL,FILLED,,19,executed with sell costs and adverse slippage
+TIME:2022-11-03:023530,2022-11-03,023530,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-02:180640,2022-11-03,180640,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-02:010140,2022-11-03,010140,BUY,FILLED,,89,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-02:039130,2022-11-03,039130,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+TIME:2022-11-10:006280,2022-11-10,006280,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-09:180640,2022-11-10,180640,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-11-09:005250,2022-11-10,005250,BUY,FILLED,,26,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-09:047040,2022-11-10,047040,BUY,FILLED,,98,executed at opening reference plus adverse slippage
+RISK:2022-11-11:039130:TARGET,2022-11-11,039130,SELL,FILLED,,9,executed with sell costs and adverse slippage
+TIME:2022-11-17:010140,2022-11-17,010140,SELL,FILLED,,89,executed with sell costs and adverse slippage
+TIME:2022-11-17:180640,2022-11-17,180640,SELL,FILLED,,11,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-16:004370,2022-11-17,004370,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-16:047040,2022-11-17,047040,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-11-16:180640,2022-11-17,180640,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+RISK:2022-11-22:180640:STOP,2022-11-22,180640,SELL,FILLED,,11,executed with sell costs and adverse slippage
+TIME:2022-11-24:005250,2022-11-24,005250,SELL,FILLED,,26,executed with sell costs and adverse slippage
+TIME:2022-11-24:047040,2022-11-24,047040,SELL,FILLED,,98,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-23:047040,2022-11-24,047040,BUY,FILLED,,94,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-23:272210,2022-11-24,272210,BUY,FILLED,,39,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-23:000880,2022-11-24,000880,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+RISK:2022-11-28:000880:STOP,2022-11-28,000880,SELL,FILLED,,15,executed with sell costs and adverse slippage
+TIME:2022-12-01:004370,2022-12-01,004370,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-30:272210,2022-12-01,272210,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-11-30:004370,2022-12-01,004370,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-11-30:012450,2022-12-01,012450,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+RISK:2022-12-05:012450:STOP,2022-12-05,012450,SELL,FILLED,,6,executed with sell costs and adverse slippage
+RISK:2022-12-05:272210:STOP,2022-12-05,272210,SELL,FILLED,,39,executed with sell costs and adverse slippage
+RISK:2022-12-07:047040:STOP,2022-12-07,047040,SELL,FILLED,,94,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-07:272210,2022-12-08,272210,BUY,FILLED,,42,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-07:271940,2022-12-08,271940,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-07:000670,2022-12-08,000670,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+RISK:2022-12-12:271940:STOP,2022-12-12,271940,SELL,FILLED,,13,executed with sell costs and adverse slippage
+TIME:2022-12-15:004370,2022-12-15,004370,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-14:026960,2022-12-15,026960,BUY,FILLED,,21,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-14:096770,2022-12-15,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-14:271940,2022-12-15,271940,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+RISK:2022-12-20:026960:STOP,2022-12-20,026960,SELL,FILLED,,21,executed with sell costs and adverse slippage
+RISK:2022-12-20:271940:STOP,2022-12-20,271940,SELL,FILLED,,14,executed with sell costs and adverse slippage
+TIME:2022-12-22:272210,2022-12-22,272210,SELL,FILLED,,42,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-21:271940,2022-12-22,271940,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-21:096770,2022-12-22,096770,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2022-12-21:000670,2022-12-22,000670,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+RISK:2022-12-23:096770:STOP,2022-12-23,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-28:000670,2022-12-29,000670,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D6:B2_TOP30_META_RANK:2022-12-28:096770,2022-12-29,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2022-12-28:361610,2022-12-29,361610,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+RISK:2023-01-02:271940:STOP,2023-01-02,271940,SELL,FILLED,,14,executed with sell costs and adverse slippage
+RISK:2023-01-04:096770:STOP,2023-01-04,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-01-05:006650,2023-01-06,006650,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-01-05:096770,2023-01-06,096770,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-01-05:361610,2023-01-06,361610,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2023-01-10:006650:TARGET,2023-01-10,006650,SELL,FILLED,,2,executed with sell costs and adverse slippage
+RISK:2023-01-10:361610:TARGET,2023-01-10,361610,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-01-12:000670,2023-01-13,000670,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D6:B2_TOP30_META_RANK:2023-01-12:096770,2023-01-13,096770,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-01-12:180640,2023-01-13,180640,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+RISK:2023-01-13:096770:TARGET,2023-01-13,096770,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-01-19:180640,2023-01-20,180640,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-01-19:000670,2023-01-20,000670,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D6:B2_TOP30_META_RANK:2023-01-19:000880,2023-01-20,000880,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+TIME:2023-01-31:180640,2023-01-31,180640,SELL,FILLED,,11,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-01-30:180640,2023-01-31,180640,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-01-30:000670,2023-01-31,000670,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D6:B2_TOP30_META_RANK:2023-01-30:000880,2023-01-31,000880,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2023-02-07:000880,2023-02-07,000880,SELL,FILLED,,16,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-06:180640,2023-02-07,180640,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-02-06:039130,2023-02-07,039130,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-06:096770,2023-02-07,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2023-02-07:096770:STOP,2023-02-07,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+RISK:2023-02-08:039130:STOP,2023-02-08,039130,SELL,FILLED,,7,executed with sell costs and adverse slippage
+RISK:2023-02-13:180640:STOP,2023-02-13,180640,SELL,FILLED,,11,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-13:000660,2023-02-14,000660,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-13:039130,2023-02-14,039130,BUY,FILLED,,7,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-13:000240,2023-02-14,000240,BUY,FILLED,,33,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-20:000240,2023-02-21,000240,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-02-20:000660,2023-02-21,000660,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-02-20:010140,2023-02-21,010140,BUY,FILLED,,79,executed at opening reference plus adverse slippage
+RISK:2023-02-27:000240:STOP,2023-02-27,000240,SELL,FILLED,,33,executed with sell costs and adverse slippage
+RISK:2023-02-27:039130:STOP,2023-02-27,039130,SELL,FILLED,,7,executed with sell costs and adverse slippage
+TIME:2023-02-28:000660,2023-02-28,000660,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-27:000240,2023-02-28,000240,BUY,FILLED,,34,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-27:000660,2023-02-28,000660,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-02-27:003240,2023-02-28,003240,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+RISK:2023-03-03:010140:STOP,2023-03-03,010140,SELL,FILLED,,79,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-03-07:010140,2023-03-08,010140,BUY,FILLED,,85,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-03-07:000240,2023-03-08,000240,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-03-07:000660,2023-03-08,000660,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2023-03-08:000660:STOP,2023-03-08,000660,SELL,FILLED,,4,executed with sell costs and adverse slippage
+RISK:2023-03-13:010140:STOP,2023-03-13,010140,SELL,FILLED,,85,executed with sell costs and adverse slippage
+RISK:2023-03-14:000240:STOP,2023-03-14,000240,SELL,FILLED,,34,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-03-14:010140,2023-03-15,010140,BUY,FILLED,,88,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-03-14:003240,2023-03-15,003240,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D6:B2_TOP30_META_RANK:2023-03-14:023530,2023-03-15,023530,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-03-21:272210,2023-03-22,272210,BUY,FILLED,,36,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-03-21:005490,2023-03-22,005490,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-03-21:003240,2023-03-22,003240,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+RISK:2023-03-24:272210:STOP,2023-03-24,272210,SELL,FILLED,,36,executed with sell costs and adverse slippage
+TIME:2023-03-29:010140,2023-03-29,010140,SELL,FILLED,,88,executed with sell costs and adverse slippage
+TIME:2023-03-29:023530,2023-03-29,023530,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-03-28:003240,2023-03-29,003240,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D6:B2_TOP30_META_RANK:2023-03-28:005490,2023-03-29,005490,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-03-28:000240,2023-03-29,000240,BUY,FILLED,,37,executed at opening reference plus adverse slippage
+RISK:2023-03-31:005490:TARGET,2023-03-31,005490,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-04:004020,2023-04-05,004020,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-04:000150,2023-04-05,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-04:003240,2023-04-05,003240,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+RISK:2023-04-07:000150:STOP,2023-04-07,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2023-04-12:000240,2023-04-12,000240,SELL,FILLED,,37,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-11:000150,2023-04-12,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-11:272210,2023-04-12,272210,BUY,FILLED,,30,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-11:361610,2023-04-12,361610,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+RISK:2023-04-13:361610:STOP,2023-04-13,361610,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2023-04-19:004020,2023-04-19,004020,SELL,FILLED,,12,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-18:361610,2023-04-19,361610,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-18:004020,2023-04-19,004020,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-18:001740,2023-04-19,001740,BUY,FILLED,,91,executed at opening reference plus adverse slippage
+RISK:2023-04-25:361610:STOP,2023-04-25,361610,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2023-04-26:000150,2023-04-26,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2023-04-26:272210,2023-04-26,272210,SELL,FILLED,,30,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-25:012450,2023-04-26,012450,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-25:034220,2023-04-26,034220,BUY,FILLED,,27,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-04-25:272210,2023-04-26,272210,BUY,FILLED,,29,executed at opening reference plus adverse slippage
+RISK:2023-04-26:004020:STOP,2023-04-26,004020,SELL,FILLED,,11,executed with sell costs and adverse slippage
+RISK:2023-04-26:012450:STOP,2023-04-26,012450,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2023-04-26:272210:STOP,2023-04-26,272210,SELL,FILLED,,29,executed with sell costs and adverse slippage
+RISK:2023-04-27:001740:STOP,2023-04-27,001740,SELL,FILLED,,91,executed with sell costs and adverse slippage
+RISK:2023-04-27:034220:STOP,2023-04-27,034220,SELL,FILLED,,27,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-03:004020,2023-05-04,004020,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-03:361610,2023-05-04,361610,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-03:000150,2023-05-04,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-11:361610,2023-05-12,361610,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-05-11:272210,2023-05-12,272210,BUY,FILLED,,30,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-11:000150,2023-05-12,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2023-05-15:361610:STOP_GAP,2023-05-15,361610,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2023-05-19:000150,2023-05-19,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2023-05-19:004020,2023-05-19,004020,SELL,FILLED,,12,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-18:361610,2023-05-19,361610,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-18:011210,2023-05-19,011210,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-18:272210,2023-05-19,272210,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2023-05-26:272210,2023-05-26,272210,SELL,FILLED,,30,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-25:361610,2023-05-26,361610,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-05-25:011790,2023-05-26,011790,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-05-25:011210,2023-05-26,011210,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2023-06-02:361610:TARGET,2023-06-02,361610,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2023-06-05:011210,2023-06-05,011210,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-02:005490,2023-06-05,005490,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-02:272210,2023-06-05,272210,BUY,FILLED,,30,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-02:005250,2023-06-05,005250,BUY,FILLED,,27,executed at opening reference plus adverse slippage
+RISK:2023-06-07:011790:TARGET,2023-06-07,011790,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-12:005490,2023-06-13,005490,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-06-12:096770,2023-06-13,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-12:001680,2023-06-13,001680,BUY,FILLED,,22,executed at opening reference plus adverse slippage
+RISK:2023-06-15:096770:STOP,2023-06-15,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+RISK:2023-06-16:005250:STOP,2023-06-16,005250,SELL,FILLED,,27,executed with sell costs and adverse slippage
+TIME:2023-06-20:005490,2023-06-20,005490,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2023-06-20:272210,2023-06-20,272210,SELL,FILLED,,30,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-19:005490,2023-06-20,005490,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-19:004490,2023-06-20,004490,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-19:096770,2023-06-20,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2023-06-22:001680:STOP,2023-06-22,001680,SELL,FILLED,,22,executed with sell costs and adverse slippage
+RISK:2023-06-26:096770:STOP_GAP,2023-06-26,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-26:005490,2023-06-27,005490,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-06-26:272210,2023-06-27,272210,BUY,FILLED,,30,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-06-26:004490,2023-06-27,004490,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2023-07-04:004490,2023-07-04,004490,SELL,FILLED,,9,executed with sell costs and adverse slippage
+TIME:2023-07-04:005490,2023-07-04,005490,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-03:004490,2023-07-04,004490,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-03:272210,2023-07-04,272210,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-07-03:001680,2023-07-04,001680,BUY,FILLED,,24,executed at opening reference plus adverse slippage
+RISK:2023-07-06:001680:STOP,2023-07-06,001680,SELL,FILLED,,24,executed with sell costs and adverse slippage
+TIME:2023-07-11:272210,2023-07-11,272210,SELL,FILLED,,30,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-10:097950,2023-07-11,097950,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-10:003550,2023-07-11,003550,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-10:001680,2023-07-11,001680,BUY,FILLED,,26,executed at opening reference plus adverse slippage
+TIME:2023-07-18:004490,2023-07-18,004490,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-17:004490,2023-07-18,004490,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-17:097950,2023-07-18,097950,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-07-17:000240,2023-07-18,000240,BUY,FILLED,,36,executed at opening reference plus adverse slippage
+TIME:2023-07-25:001680,2023-07-25,001680,SELL,FILLED,,26,executed with sell costs and adverse slippage
+TIME:2023-07-25:003550,2023-07-25,003550,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2023-07-25:097950,2023-07-25,097950,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-24:004490,2023-07-25,004490,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-07-24:001740,2023-07-25,001740,BUY,FILLED,,71,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-24:001680,2023-07-25,001680,BUY,FILLED,,25,executed at opening reference plus adverse slippage
+RISK:2023-07-25:004490:STOP,2023-07-25,004490,SELL,FILLED,,8,executed with sell costs and adverse slippage
+RISK:2023-07-26:000240:STOP,2023-07-26,000240,SELL,FILLED,,36,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-31:001740,2023-08-01,001740,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-07-31:004490,2023-08-01,004490,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-07-31:004990,2023-08-01,004990,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+TIME:2023-08-08:001680,2023-08-08,001680,SELL,FILLED,,25,executed with sell costs and adverse slippage
+TIME:2023-08-08:001740,2023-08-08,001740,SELL,FILLED,,71,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-07:001740,2023-08-08,001740,BUY,FILLED,,70,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-07:004800,2023-08-08,004800,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-07:096770,2023-08-08,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2023-08-10:001740:TARGET,2023-08-10,001740,SELL,FILLED,,70,executed with sell costs and adverse slippage
+RISK:2023-08-14:096770:STOP,2023-08-14,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2023-08-16:004490,2023-08-16,004490,SELL,FILLED,,9,executed with sell costs and adverse slippage
+TIME:2023-08-16:004990,2023-08-16,004990,SELL,FILLED,,16,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-14:001740,2023-08-16,001740,BUY,FILLED,,69,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-14:272210,2023-08-16,272210,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-14:004800,2023-08-16,004800,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2023-08-16:272210:STOP,2023-08-16,272210,SELL,FILLED,,31,executed with sell costs and adverse slippage
+TIME:2023-08-23:004800,2023-08-23,004800,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-22:096770,2023-08-23,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-22:001740,2023-08-23,001740,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-08-22:009830,2023-08-23,009830,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+RISK:2023-08-24:001740:TARGET,2023-08-24,001740,SELL,FILLED,,69,executed with sell costs and adverse slippage
+RISK:2023-08-25:009830:STOP,2023-08-25,009830,SELL,FILLED,,11,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-29:096770,2023-08-30,096770,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-08-29:272210,2023-08-30,272210,BUY,FILLED,,31,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-08-29:001740,2023-08-30,001740,BUY,FILLED,,60,executed at opening reference plus adverse slippage
+TIME:2023-09-06:096770,2023-09-06,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-05:096770,2023-09-06,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-05:285130,2023-09-06,285130,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-05:000150,2023-09-06,000150,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+RISK:2023-09-07:000150:STOP,2023-09-07,000150,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2023-09-07:001740:STOP,2023-09-07,001740,SELL,FILLED,,60,executed with sell costs and adverse slippage
+RISK:2023-09-07:096770:STOP,2023-09-07,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2023-09-13:272210,2023-09-13,272210,SELL,FILLED,,31,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-12:285130,2023-09-13,285130,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-09-12:096770,2023-09-13,096770,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-12:251270,2023-09-13,251270,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+RISK:2023-09-13:251270:STOP,2023-09-13,251270,SELL,FILLED,,8,executed with sell costs and adverse slippage
+RISK:2023-09-14:096770:STOP,2023-09-14,096770,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2023-09-20:285130,2023-09-20,285130,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-19:285130,2023-09-20,285130,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-19:000240,2023-09-20,000240,BUY,FILLED,,37,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-19:272210,2023-09-20,272210,BUY,FILLED,,33,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-26:010140,2023-09-27,010140,BUY,FILLED,,54,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-09-26:000240,2023-09-27,000240,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-09-26:120110,2023-09-27,120110,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+RISK:2023-10-04:272210:STOP,2023-10-04,272210,SELL,FILLED,,33,executed with sell costs and adverse slippage
+RISK:2023-10-05:000240:STOP,2023-10-05,000240,SELL,FILLED,,37,executed with sell costs and adverse slippage
+RISK:2023-10-05:010140:STOP,2023-10-05,010140,SELL,FILLED,,54,executed with sell costs and adverse slippage
+TIME:2023-10-11:285130,2023-10-11,285130,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-10:000240,2023-10-11,000240,BUY,FILLED,,38,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-10:010140,2023-10-11,010140,BUY,FILLED,,55,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-10:120110,2023-10-11,120110,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2023-10-18:120110,2023-10-18,120110,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-17:001740,2023-10-18,001740,BUY,FILLED,,69,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-17:005250,2023-10-18,005250,BUY,FILLED,,29,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-17:010140,2023-10-18,010140,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2023-10-20:005250:STOP,2023-10-20,005250,SELL,FILLED,,29,executed with sell costs and adverse slippage
+RISK:2023-10-24:001740:STOP,2023-10-24,001740,SELL,FILLED,,69,executed with sell costs and adverse slippage
+TIME:2023-10-25:000240,2023-10-25,000240,SELL,FILLED,,38,executed with sell costs and adverse slippage
+TIME:2023-10-25:010140,2023-10-25,010140,SELL,FILLED,,55,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-24:005250,2023-10-25,005250,BUY,FILLED,,30,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-24:120110,2023-10-25,120110,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-24:000240,2023-10-25,000240,BUY,FILLED,,36,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-31:010140,2023-11-01,010140,BUY,FILLED,,60,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-10-31:005250,2023-11-01,005250,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-10-31:000240,2023-11-01,000240,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2023-11-02:000240:TARGET,2023-11-02,000240,SELL,FILLED,,36,executed with sell costs and adverse slippage
+TIME:2023-11-08:005250,2023-11-08,005250,SELL,FILLED,,30,executed with sell costs and adverse slippage
+TIME:2023-11-08:120110,2023-11-08,120110,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-07:010140,2023-11-08,010140,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-11-07:017670,2023-11-08,017670,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-07:000240,2023-11-08,000240,BUY,FILLED,,29,executed at opening reference plus adverse slippage
+TIME:2023-11-15:010140,2023-11-15,010140,SELL,FILLED,,60,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-14:251270,2023-11-15,251270,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-14:192820,2023-11-15,192820,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-14:001740,2023-11-15,001740,BUY,FILLED,,73,executed at opening reference plus adverse slippage
+RISK:2023-11-17:000240:STOP,2023-11-17,000240,SELL,FILLED,,29,executed with sell costs and adverse slippage
+RISK:2023-11-20:192820:STOP,2023-11-20,192820,SELL,FILLED,,3,executed with sell costs and adverse slippage
+TIME:2023-11-22:017670,2023-11-22,017670,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-21:192820,2023-11-22,192820,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-21:000150,2023-11-22,000150,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-21:004800,2023-11-22,004800,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+RISK:2023-11-22:192820:STOP,2023-11-22,192820,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2023-11-23:251270:TARGET,2023-11-23,251270,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2023-11-29:001740,2023-11-29,001740,SELL,FILLED,,73,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-28:096770,2023-11-29,096770,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-28:010060,2023-11-29,010060,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-11-28:361610,2023-11-29,361610,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+RISK:2023-11-29:000150:TARGET,2023-11-29,000150,SELL,FILLED,,5,executed with sell costs and adverse slippage
+RISK:2023-12-01:096770:STOP,2023-12-01,096770,SELL,FILLED,,3,executed with sell costs and adverse slippage
+RISK:2023-12-04:361610:TARGET,2023-12-04,361610,SELL,FILLED,,6,executed with sell costs and adverse slippage
+TIME:2023-12-06:004800,2023-12-06,004800,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-05:011790,2023-12-06,011790,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-05:000150,2023-12-06,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-05:096770,2023-12-06,096770,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+RISK:2023-12-07:010060:STOP,2023-12-07,010060,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-12:000150,2023-12-13,000150,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-12-12:096770,2023-12-13,096770,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D6:B2_TOP30_META_RANK:2023-12-12:010060,2023-12-13,010060,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+RISK:2023-12-13:011790:STOP,2023-12-13,011790,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2023-12-20:000150,2023-12-20,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2023-12-20:096770,2023-12-20,096770,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-19:096770,2023-12-20,096770,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-19:011790,2023-12-20,011790,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-19:004990,2023-12-20,004990,BUY,FILLED,,15,executed at opening reference plus adverse slippage
+RISK:2023-12-20:010060:TARGET,2023-12-20,010060,SELL,FILLED,,4,executed with sell costs and adverse slippage
+RISK:2023-12-26:011790:STOP,2023-12-26,011790,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-27:000240,2023-12-28,000240,BUY,FILLED,,27,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-27:204320,2023-12-28,204320,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+D6:B2_TOP30_META_RANK:2023-12-27:004990,2023-12-28,004990,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled

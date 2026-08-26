@@ -1,0 +1,23 @@
+{
+  "agent_b2_experiment_id": "EXP-20260826-005",
+  "agent_b2_rows_loaded": 177882,
+  "agent_c3_experiment_id": "EXP-20260826-008",
+  "agent_c3_rows_loaded": 242716,
+  "benchmark_is_official_index": true,
+  "final_oos_accessed": false,
+  "index_code": "1028",
+  "legacy_v1_development_test_partition_accessed": false,
+  "market_files_loaded": 1233,
+  "membership_rows_loaded": 246780,
+  "method_audit": {
+    "C3_B2_RISK_CALIBRATION": {
+      "gap_vetoes": 35,
+      "orders_created": 12285
+    },
+    "C3_ONLY": {
+      "gap_vetoes": 25,
+      "orders_created": 12294
+    }
+  },
+  "v2_consumed_development_2022_2023_loaded": true
+}

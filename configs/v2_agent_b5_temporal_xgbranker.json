@@ -1,0 +1,23 @@
+{
+  "schema_version": "v2-agent-b5-temporal-xgbranker-v1",
+  "experiment_id": "EXP-20260827-001",
+  "factor_panel": "data/processed/v2_kospi200_fundamental_factor_panel/fundamental_factor_panel.csv.gz",
+  "market_root": "data/incoming/v25_kospi_raw/raw/market_stk",
+  "index_file": "data/incoming/v2_kospi200_index_raw/normalized/kospi200_index_ohlcv.csv.gz",
+  "data_start": "2016-03-24",
+  "data_end": "2023-12-28",
+  "target_horizon_sessions": 63,
+  "downside_penalty": 0.5,
+  "dilution_lookback_sessions": 252,
+  "market_cap_universe_size": 200,
+  "report_top_size": 30,
+  "minimum_train_months": 24,
+  "validation_years": [2019, 2020, 2021, 2022, 2023],
+  "purge_sessions": 63,
+  "embargo_sessions": 63,
+  "model": {"objective": "rank:ndcg", "ndcg_exp_gain": false, "n_estimators": 180, "max_depth": 3, "learning_rate": 0.03, "min_child_weight": 10, "subsample": 0.8, "colsample_bytree": 0.8, "reg_lambda": 10.0, "reg_alpha": 0.1, "tree_method": "hist", "n_jobs": 1},
+  "seed": 20260827,
+  "portfolio_backtest": false,
+  "final_oos_access": false,
+  "legacy_fundamental_panel": false
+}

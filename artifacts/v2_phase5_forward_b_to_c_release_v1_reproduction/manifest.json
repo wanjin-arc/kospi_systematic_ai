@@ -1,0 +1,20 @@
+{
+  "experiment_id": "EXP-20260826-012",
+  "final_oos_accessed": false,
+  "historical_portfolio_backtest_run": false,
+  "input_sha256": {
+    "config": "cf67fb0aed63b1465aaf3fa1c6e54444ba2e4366ce8435f9a5d720903997730f",
+    "factor_panel": "0ba2cb148b7e076d221a62b8b323ff18063518700b1dd597c5005ac46a0ab857",
+    "membership_tree": "27de71f1ceafcaae7c7d5bd578da5a688c11300bb4746b69efc5eb6a077877af",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b",
+    "technical_market_tree": "b32ae39dc42b0e214411dada944a37a873434ddd5f1d0d49cc4dea160334dae9"
+  },
+  "output_sha256": {
+    "agent_b_model.json": "a23ed596039386358c9203838cd6433ada6fcd6a6d1453a6830352e2e99992db",
+    "agent_c_model.json": "a1cca2f4e9ede08b48ba86f0c51b9191d7d89d11b4394a1ab3a1f549bf539a83",
+    "data_audit.json": "3cd635933025fa12bc1f341446e5311de6f608b4c7a9b87ec95bde5aef307d97",
+    "latest_forward_candidates.csv": "96bb2c4ca632e5e6bbe8c36301bb82e31ab8a045aa2d938c06efbe291254a5f6"
+  },
+  "schema_version": "kospi200-forward-b-to-c-release-v1",
+  "status": "FROZEN_FORWARD_ONLY_NO_HISTORICAL_PERFORMANCE_CLAIM"
+}

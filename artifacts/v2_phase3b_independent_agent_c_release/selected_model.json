@@ -1,0 +1,25 @@
+{
+  "deterministic_refit_from_config_required": true,
+  "features": [
+    "return_1",
+    "return_5",
+    "return_20",
+    "return_60",
+    "volatility_5",
+    "volatility_20",
+    "downside_volatility_20",
+    "close_to_ma20",
+    "close_to_ma60",
+    "drawdown_20",
+    "drawdown_60",
+    "intraday_range",
+    "volume_ratio_20",
+    "gap_1"
+  ],
+  "fit_max_signal_date": "2023-12-06",
+  "fit_rows": 58514,
+  "model": "hist_event_dual",
+  "risk_penalty_weight": 0.5,
+  "stop_loss_rate": 0.05,
+  "take_profit_rate": 0.1
+}

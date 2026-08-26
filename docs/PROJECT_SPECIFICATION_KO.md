@@ -1,8 +1,14 @@
-# KOSPI 100 Technical Systematic AI 프로젝트 명세
+# KOSPI 200 Fundamental+Technical Systematic AI 프로젝트 명세
+
+## v2 명세 우선 조항
+
+기존 본문은 KOSPI 100 Technical v1의 재현 명세다. 새 연구선은 동시점 KOSPI 200, 접수일 기준 PIT 재무제표, 분리된 Fundamental/Technical ranker와 사전등록 meta 결합을 사용한다. 상세 계약은 `docs/V2_FUNDAMENTAL_TECHNICAL_ARCHITECTURE_KO.md`와 `configs/fundamental_factor_contract_v1.json`에 있다.
+
+2004~2023은 이미 결과를 관찰한 개발 전용 기간으로 분류한다. 기존 실패 결과와 registry는 삭제하지 않으며, 독립 Validation/OOS로 재사용하지 않는다. 2024~2025 v1 봉인자료는 v2에서 접근하지 않는다. v2 독립 평가는 동결 이후 forward 자료로 수행한다.
 
 **기준일:** 2026-08-22
 **근거:** 저장소 파일, 실행 가능한 테스트, Phase 1 v24 감사, Phase 2·3 산출물, Phase 4 물리 입력 재검증
-**상태:** Phase 0~4 완료, Phase 5·5B·5C·5D·5E·5F 연구 후보 모두 성과 실패, 거래 후보 없음
+**상태:** v1 KOSPI 100 연구 후보 전부 기각·legacy 보존, v2 KOSPI 200 데이터 수집/감사 준비 완료, 실제 수집·모델 미실행
 
 ## 1. 목적과 역할 분담
 

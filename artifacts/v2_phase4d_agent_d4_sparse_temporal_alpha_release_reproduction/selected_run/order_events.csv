@@ -1,0 +1,156 @@
+order_id,session,security_id,side,status,requested_quantity,filled_quantity,reason
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-04-16:023530,2019-04-17,023530,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+TIME:2019-05-02:023530,2019-05-02,023530,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-04-30:115390,2019-05-02,115390,BUY,FILLED,,29,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-05-09:115390,2019-05-10,115390,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2019-05-17:115390,2019-05-17,115390,SELL,FILLED,,29,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-05-23:033920,2019-05-24,033920,BUY,FILLED,,44,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-05-30:028260,2019-05-31,028260,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+TIME:2019-06-10:033920,2019-06-10,033920,SELL,FILLED,,44,executed with sell costs and adverse slippage
+TIME:2019-06-17:028260,2019-06-17,028260,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-07-05:251270,2019-07-08,251270,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+TIME:2019-07-22:251270,2019-07-22,251270,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-08-09:020000,2019-08-12,020000,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-08-09:004020,2019-08-12,004020,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-08-09:128940,2019-08-12,128940,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-08-09:008930,2019-08-12,008930,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+TIME:2019-08-27:004020,2019-08-27,004020,SELL,FILLED,,13,executed with sell costs and adverse slippage
+TIME:2019-08-27:008930,2019-08-27,008930,SELL,FILLED,,11,executed with sell costs and adverse slippage
+TIME:2019-08-27:020000,2019-08-27,020000,SELL,FILLED,,16,executed with sell costs and adverse slippage
+TIME:2019-08-27:128940,2019-08-27,128940,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-08-26:023530,2019-08-27,023530,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-08-26:093050,2019-08-27,093050,BUY,FILLED,,24,executed at opening reference plus adverse slippage
+TIME:2019-09-10:023530,2019-09-10,023530,SELL,FILLED,,3,executed with sell costs and adverse slippage
+TIME:2019-09-10:093050,2019-09-10,093050,SELL,FILLED,,24,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-09-09:000670,2019-09-10,000670,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-09-18:001040,2019-09-19,001040,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-09-25:000150,2019-09-26,000150,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+TIME:2019-10-04:001040,2019-10-04,001040,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2019-10-14:000150,2019-10-14,000150,SELL,UNFILLED_NOT_TRADABLE,,0,security not tradable
+TIME:2019-10-15:000150,2019-10-15,000150,SELL,UNFILLED_NOT_TRADABLE,,0,security not tradable
+TIME:2019-10-16:000150,2019-10-16,000150,SELL,UNFILLED_NOT_TRADABLE,,0,security not tradable
+TIME:2019-10-17:000150,2019-10-17,000150,SELL,UNFILLED_NOT_TRADABLE,,0,security not tradable
+TIME:2019-10-18:000150,2019-10-18,000150,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2019-11-15:004020,2019-11-18,004020,BUY,FILLED,,14,executed at opening reference plus adverse slippage
+TIME:2019-12-02:004020,2019-12-02,004020,SELL,FILLED,,14,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-01-08:026960,2020-01-09,026960,BUY,FILLED,,29,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-01-08:096770,2020-01-09,096770,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-01-15:170900,2020-01-16,170900,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-01-15:096770,2020-01-16,096770,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2020-01-23:026960,2020-01-23,026960,SELL,FILLED,,29,executed with sell costs and adverse slippage
+TIME:2020-01-23:096770,2020-01-23,096770,SELL,FILLED,,3,executed with sell costs and adverse slippage
+TIME:2020-02-03:170900,2020-02-03,170900,SELL,FILLED,,4,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-01-31:011210,2020-02-03,011210,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-01-31:047810,2020-02-03,047810,BUY,FILLED,,16,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-07:001520,2020-02-10,001520,BUY,FILLED,,429,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-07:035420,2020-02-10,035420,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-07:001740,2020-02-10,001740,BUY,FILLED,,98,executed at opening reference plus adverse slippage
+TIME:2020-02-17:011210,2020-02-17,011210,SELL,FILLED,,11,executed with sell costs and adverse slippage
+TIME:2020-02-17:047810,2020-02-17,047810,SELL,FILLED,,16,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-14:030000,2020-02-17,030000,BUY,FILLED,,22,executed at opening reference plus adverse slippage
+TIME:2020-02-24:001520,2020-02-24,001520,SELL,FILLED,,429,executed with sell costs and adverse slippage
+TIME:2020-02-24:001740,2020-02-24,001740,SELL,FILLED,,98,executed with sell costs and adverse slippage
+TIME:2020-02-24:035420,2020-02-24,035420,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2020-03-02:030000,2020-03-02,030000,SELL,FILLED,,22,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-28:003920,2020-03-02,003920,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-28:020000,2020-03-02,020000,BUY,FILLED,,19,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-28:047810,2020-03-02,047810,BUY,FILLED,,18,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-28:018260,2020-03-02,018260,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-02-28:023530,2020-03-02,023530,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-06:069620,2020-03-09,069620,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-06:017670,2020-03-09,017670,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-06:073240,2020-03-09,073240,BUY,FILLED,,126,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-06:018260,2020-03-09,018260,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2020-03-16:003920,2020-03-16,003920,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2020-03-16:018260,2020-03-16,018260,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2020-03-16:020000,2020-03-16,020000,SELL,FILLED,,19,executed with sell costs and adverse slippage
+TIME:2020-03-16:023530,2020-03-16,023530,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2020-03-16:047810,2020-03-16,047810,SELL,FILLED,,18,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-13:000150,2020-03-16,000150,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-13:010140,2020-03-16,010140,BUY,FILLED,,96,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-13:006260,2020-03-16,006260,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-13:018260,2020-03-16,018260,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-13:298040,2020-03-16,298040,BUY,FILLED,,32,executed at opening reference plus adverse slippage
+TIME:2020-03-23:017670,2020-03-23,017670,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2020-03-23:069620,2020-03-23,069620,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2020-03-23:073240,2020-03-23,073240,SELL,FILLED,,126,executed with sell costs and adverse slippage
+TIME:2020-03-30:000150,2020-03-30,000150,SELL,FILLED,,11,executed with sell costs and adverse slippage
+TIME:2020-03-30:006260,2020-03-30,006260,SELL,FILLED,,13,executed with sell costs and adverse slippage
+TIME:2020-03-30:010140,2020-03-30,010140,SELL,FILLED,,96,executed with sell costs and adverse slippage
+TIME:2020-03-30:018260,2020-03-30,018260,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2020-03-30:298040,2020-03-30,298040,SELL,FILLED,,32,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-27:017670,2020-03-30,017670,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-27:006260,2020-03-30,006260,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-27:020000,2020-03-30,020000,BUY,FILLED,,20,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-27:096770,2020-03-30,096770,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-03-27:298040,2020-03-30,298040,BUY,FILLED,,34,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-04-03:006120,2020-04-06,006120,BUY,FILLED,,17,executed at opening reference plus adverse slippage
+TIME:2020-04-13:006260,2020-04-13,006260,SELL,FILLED,,13,executed with sell costs and adverse slippage
+TIME:2020-04-13:017670,2020-04-13,017670,SELL,FILLED,,2,executed with sell costs and adverse slippage
+TIME:2020-04-13:020000,2020-04-13,020000,SELL,FILLED,,20,executed with sell costs and adverse slippage
+TIME:2020-04-13:096770,2020-04-13,096770,SELL,FILLED,,4,executed with sell costs and adverse slippage
+TIME:2020-04-13:298040,2020-04-13,298040,SELL,FILLED,,34,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2020-04-10:035250,2020-04-13,035250,BUY,FILLED,,17,executed at opening reference plus adverse slippage
+TIME:2020-04-21:006120,2020-04-21,006120,SELL,FILLED,,17,executed with sell costs and adverse slippage
+TIME:2020-04-28:035250,2020-04-28,035250,SELL,FILLED,,17,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2021-01-05:115390,2021-01-06,115390,BUY,FILLED,,41,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2021-01-05:004800,2021-01-06,004800,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2021-01-12:115390,2021-01-13,115390,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2021-01-12:004370,2021-01-13,004370,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2021-01-12:004800,2021-01-13,004800,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2021-01-20:004800,2021-01-20,004800,SELL,FILLED,,5,executed with sell costs and adverse slippage
+TIME:2021-01-20:115390,2021-01-20,115390,SELL,FILLED,,41,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2021-01-19:115390,2021-01-20,115390,BUY,FILLED,,38,executed at opening reference plus adverse slippage
+TIME:2021-01-27:004370,2021-01-27,004370,SELL,FILLED,,1,executed with sell costs and adverse slippage
+TIME:2021-02-03:115390,2021-02-03,115390,SELL,FILLED,,38,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2021-06-29:071840,2021-06-30,071840,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+TIME:2021-07-14:071840,2021-07-14,071840,SELL,FILLED,,11,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2021-12-15:003550,2021-12-16,003550,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+TIME:2021-12-30:003550,2021-12-30,003550,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-01-06:000720,2022-01-07,000720,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+TIME:2022-01-21:000720,2022-01-21,000720,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-01-27:018880,2022-01-28,018880,BUY,FILLED,,40,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-01-27:161390,2022-01-28,161390,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-01-27:006400,2022-01-28,006400,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+TIME:2022-02-16:018880,2022-02-16,018880,SELL,FILLED,,40,executed with sell costs and adverse slippage
+TIME:2022-02-16:161390,2022-02-16,161390,SELL,FILLED,,13,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-03-02:161390,2022-03-03,161390,BUY,FILLED,,12,executed at opening reference plus adverse slippage
+TIME:2022-03-18:161390,2022-03-18,161390,SELL,FILLED,,12,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-05-06:375500,2022-05-09,375500,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-05-13:251270,2022-05-16,251270,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+TIME:2022-05-23:375500,2022-05-23,375500,SELL,FILLED,,8,executed with sell costs and adverse slippage
+TIME:2022-05-30:251270,2022-05-30,251270,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-06-14:375500,2022-06-15,375500,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-06-21:375500,2022-06-22,375500,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2022-06-29:375500,2022-06-29,375500,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-09-16:006280,2022-09-19,006280,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-09-23:006280,2022-09-26,006280,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2022-10-04:006280,2022-10-04,006280,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-09-30:361610,2022-10-04,361610,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-09-30:006280,2022-10-04,006280,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-09-30:006360,2022-10-04,006360,BUY,FILLED,,18,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-10-11:006360,2022-10-12,006360,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-10-11:000270,2022-10-12,000270,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+TIME:2022-10-19:006280,2022-10-19,006280,SELL,FILLED,,3,executed with sell costs and adverse slippage
+TIME:2022-10-19:006360,2022-10-19,006360,SELL,FILLED,,18,executed with sell costs and adverse slippage
+TIME:2022-10-19:361610,2022-10-19,361610,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-10-18:006360,2022-10-19,006360,BUY,FILLED,,17,executed at opening reference plus adverse slippage
+TIME:2022-10-26:000270,2022-10-26,000270,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-10-25:006360,2022-10-26,006360,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2022-11-02:006360,2022-11-02,006360,SELL,FILLED,,17,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-11-01:003240,2022-11-02,003240,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-11-08:003240,2022-11-09,003240,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2022-11-15:003240,2022-11-16,003240,BUY,REJECTED_INSUFFICIENT_CASH,,0,no executable whole share
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2023-01-27:017670,2023-01-30,017670,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+TIME:2023-02-13:017670,2023-02-13,017670,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2023-02-10:017670,2023-02-13,017670,BUY,FILLED,,8,executed at opening reference plus adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2023-02-17:017670,2023-02-20,017670,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2023-02-27:017670,2023-02-27,017670,SELL,FILLED,,8,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2023-06-16:139480,2023-06-19,139480,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+TIME:2023-07-03:139480,2023-07-03,139480,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2023-07-07:017670,2023-07-10,017670,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+TIME:2023-07-24:017670,2023-07-24,017670,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2023-10-30:051900,2023-10-31,051900,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+TIME:2023-11-14:051900,2023-11-14,051900,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D4:C4_B2_RISK_CALIBRATION_SPARSE:2023-11-13:013890,2023-11-14,013890,BUY,FILLED,,22,executed at opening reference plus adverse slippage
+TIME:2023-11-28:013890,2023-11-28,013890,SELL,FILLED,,22,executed with sell costs and adverse slippage

@@ -1,0 +1,17 @@
+{
+  "agent_b_accessed": false,
+  "daily_score_rows": 243829,
+  "final_oos_accessed": false,
+  "fundamental_data_accessed": false,
+  "legacy_v1_development_test_partition_accessed": false,
+  "market_files_loaded": 1966,
+  "mechanical_resets": 26,
+  "membership_dates": 1477,
+  "membership_max_daily": 202,
+  "membership_min_daily": 200,
+  "membership_rows_loaded": 295924,
+  "portfolio_backtest_run": false,
+  "sample_rows": 58514,
+  "technical_feature_count": 14,
+  "v2_consumed_development_2022_2023_loaded": true
+}

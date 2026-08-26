@@ -1,0 +1,38 @@
+{
+  "experiment_id": "EXP-20260826-007",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "agent_b2_manifest": "5a442297103146924746d9486b6ccc6c8af18c7880b96aeb75516a07bb597d8b",
+    "agent_b2_scores": "4005a90525b6a8ac32f8203926a0c452e036658f52ac17bda486f7ac29e192d3",
+    "agent_c2_manifest": "bf967e5ac08fd132577098134ad632fddf04f0a2bf69dab44711d630f37f5442",
+    "agent_c2_scores": "d0ee2b41ab78a5c108a11a4f8cac43fba6adbdf88ec7f27e1ad4a9edbc752d2f",
+    "config": "d25726d31f1f3c0ec050d6c1afdc627c2ffa7e84899fbac578feb45d86e59c17",
+    "cost_schedule": "15934ea896bd41c2b16172e11423d57949612c17f49919c35ad5e484a1ac6f93",
+    "engine_config": "52777da0e8f14a28fe8f117501ec4332798b1f5d7c02bfd0d41a867d5cfcb5c1",
+    "market_tree": "b3e0730ff40e6bd407b3c8aeef15bc7ed94cb0748b87c0838183955e60012039",
+    "membership_tree": "325cdc2aa9ba602f65146855d41f9b2f70d5d8ef2706cfdf03093fca8ea39928",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "legacy_v1_development_test_partition_accessed": false,
+  "output_sha256": {
+    "candidate_metrics.csv": "38aadcc3c6243aed553427c947c00cbd037d536418685948fd87efdf3f244f0c",
+    "data_audit.json": "09483dafccc2499f912acfda4f5111f5f2b22c6f8d703a78b8dbb6c98511fcb3",
+    "decision.json": "e6476b3ad448cc4769af58db2ad3dfdc235cae35a1c6b616f622bb2ca4da2eaf"
+  },
+  "schema_version": "kospi200-agent-d2-phase4b-v1",
+  "selected_candidate": "B2_RISK_CALIBRATION",
+  "selected_run_hashes": {
+    "audit_events.csv": "0e8ff4aa65f48a28965e40bb3497880dd04b7cc4c4e4cda7e913be983aca09ed",
+    "cash_ledger.csv": "2392b4dc23de585d0a7a38dd3a194f16012b3bca9a9ec4a8559f2ec9c833b832",
+    "closed_trades.csv": "f42649d80475ba76c6f35697a5f67cd5fa23c3d4d2ea6a9532db2d25f17f502e",
+    "equity_curve.csv": "367d8e9c7c70bcad15b6acabbe82f2002c5337d321bab3f6562f18ffc9e53c5b",
+    "fills.csv": "47f831df9a27292751757b5e24921e120bbd362e07d270b76d0a18ee3c1c5b84",
+    "metrics.json": "0fd3b94169f7c123dc92003baacb28e94972414200e6475e8f5cc65b4167a1fd",
+    "order_events.csv": "d78a77186f5a93f4a27f57591c9d81937275b2350a8928f7c086c41a3c7968c8",
+    "position_ledger.csv": "0928729f2760b0cc6b029f8dbad73bbdd9175b23f33f53800c88f39f733e6c3c",
+    "position_snapshots.csv": "6106dc12e5a9d63fd41ad588f63204855716582c0665e09b3b17db24647ea9f9",
+    "reconciliation.json": "3ddb7152f38e61dad0b62494c4b8608eec851436c02cff5342e797f25531de3a",
+    "run.json": "add958c47011705e7e25ceb20663f5e12a7322e68f8a499bc2aa1f043000dd16"
+  },
+  "status": "REJECT_AGENT_D2"
+}

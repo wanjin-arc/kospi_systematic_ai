@@ -1,0 +1,23 @@
+{
+  "agent_b_accessed": false,
+  "experiment_id": "EXP-20260827-002",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "config": "600012838b3e208f4c46eedffd15eb211a5cb0614c4e31f7a72f88aaf0b5fed9",
+    "market_tree": "b32ae39dc42b0e214411dada944a37a873434ddd5f1d0d49cc4dea160334dae9",
+    "membership_tree": "27de71f1ceafcaae7c7d5bd578da5a688c11300bb4746b69efc5eb6a077877af",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "model_sha256": "a60d73009ef53c8a07adada24a4e7b4597e7b41a25f7c7bfef5d55f67d872ce8",
+  "output_sha256": {
+    "daily_agent_c3_scores.csv.gz": "7fca5778269d16be4c88ee8195610358738f1d16b9c209f6c5f5397d5ca852ff",
+    "data_audit.json": "bf481cd4cc3434f508a9d94d32284421aa6dcb14f0afc9bf3a90bedea67bf5e7",
+    "evaluation.json": "7fc5d72e63f21b58b696861e76010fbf42ad96864ba971dbdfeb49ddec372c3e",
+    "risk_weight_metrics.csv": "f6fdd5013a27d02b8563410bf5078de0561ee74ecbb4637fa40c0d4d75d443d3",
+    "selected_model.json": "a60d73009ef53c8a07adada24a4e7b4597e7b41a25f7c7bfef5d55f67d872ce8"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-c3-lstm-cnn-v1",
+  "selected_risk_weight": 0.5,
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY"
+}

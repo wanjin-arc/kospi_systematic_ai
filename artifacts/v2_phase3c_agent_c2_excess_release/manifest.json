@@ -1,0 +1,21 @@
+{
+  "experiment_id": "EXP-20260826-006",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "config": "01d509d84462c173aee0f7a642db247b73f014289db5599c4e852a0f03e934ac",
+    "market_tree": "b32ae39dc42b0e214411dada944a37a873434ddd5f1d0d49cc4dea160334dae9",
+    "membership_tree": "27de71f1ceafcaae7c7d5bd578da5a688c11300bb4746b69efc5eb6a077877af",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "output_sha256": {
+    "daily_agent_c2_scores.csv.gz": "d0ee2b41ab78a5c108a11a4f8cac43fba6adbdf88ec7f27e1ad4a9edbc752d2f",
+    "data_audit.json": "bc52421629047903ecb1608ca91b0ce93b3fcb9c4d1e1c7bf846465ffda8c20f",
+    "fold_metrics.csv": "bd9c434a2eb020bc26348fd823679f859a113a57e0af0a223aec4ff65353a651",
+    "model_summary.csv": "c2bf03cc0bbfe3bdd450315fddb1594c31851e37e8eb233fb7cd584396345bfa",
+    "selected_model.json": "d79232ffca37c671d1870e134ae6b0ac895029674819def5908230f47a859871"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-c2-excess-v1",
+  "selected_model": "hist_event_dual_v1",
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY"
+}

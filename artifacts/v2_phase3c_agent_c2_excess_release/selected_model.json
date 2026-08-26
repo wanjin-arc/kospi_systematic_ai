@@ -1,0 +1,24 @@
+{
+  "features": [
+    "return_1",
+    "return_5",
+    "return_20",
+    "return_60",
+    "volatility_5",
+    "volatility_20",
+    "downside_volatility_20",
+    "close_to_ma20",
+    "close_to_ma60",
+    "drawdown_20",
+    "drawdown_60",
+    "intraday_range",
+    "volume_ratio_20",
+    "gap_1",
+    "index_return_20",
+    "index_trend_60",
+    "index_volatility_20"
+  ],
+  "fit_policy": "expanding_walk_forward",
+  "model": "hist_event_dual_v1",
+  "target": "official_kospi200_net_excess_10"
+}

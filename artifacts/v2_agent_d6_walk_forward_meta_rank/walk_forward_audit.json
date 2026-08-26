@@ -1,0 +1,44 @@
+{
+  "folds": [
+    {
+      "evaluation_end": "2020-12-30",
+      "evaluation_rows": 34247,
+      "evaluation_start": "2020-01-02",
+      "evaluation_year": 2020,
+      "purge_sessions": 10,
+      "train_end_after_purge": "2019-12-13",
+      "train_rows": 32490,
+      "train_start": "2019-01-02"
+    },
+    {
+      "evaluation_end": "2021-12-30",
+      "evaluation_rows": 34832,
+      "evaluation_start": "2021-01-04",
+      "evaluation_year": 2021,
+      "purge_sessions": 10,
+      "train_end_after_purge": "2020-12-15",
+      "train_rows": 66773,
+      "train_start": "2019-01-02"
+    },
+    {
+      "evaluation_end": "2022-12-29",
+      "evaluation_rows": 35607,
+      "evaluation_start": "2022-01-03",
+      "evaluation_year": 2022,
+      "purge_sessions": 10,
+      "train_end_after_purge": "2021-12-16",
+      "train_rows": 101462,
+      "train_start": "2019-01-02"
+    },
+    {
+      "evaluation_end": "2023-12-28",
+      "evaluation_rows": 37452,
+      "evaluation_start": "2023-01-02",
+      "evaluation_year": 2023,
+      "purge_sessions": 10,
+      "train_end_after_purge": "2022-12-15",
+      "train_rows": 136971,
+      "train_start": "2019-01-02"
+    }
+  ]
+}

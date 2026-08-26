@@ -1,0 +1,7 @@
+{
+  "agent_b_weight": 0.5,
+  "agent_c_weight": 0.5,
+  "entry_probability_high": 0.65,
+  "entry_probability_low": 0.55,
+  "policy_id": "B050_C050"
+}

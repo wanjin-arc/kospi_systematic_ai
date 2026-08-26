@@ -1,0 +1,13 @@
+{
+  "audit_events.csv": "0e8ff4aa65f48a28965e40bb3497880dd04b7cc4c4e4cda7e913be983aca09ed",
+  "cash_ledger.csv": "2392b4dc23de585d0a7a38dd3a194f16012b3bca9a9ec4a8559f2ec9c833b832",
+  "closed_trades.csv": "f42649d80475ba76c6f35697a5f67cd5fa23c3d4d2ea6a9532db2d25f17f502e",
+  "equity_curve.csv": "367d8e9c7c70bcad15b6acabbe82f2002c5337d321bab3f6562f18ffc9e53c5b",
+  "fills.csv": "47f831df9a27292751757b5e24921e120bbd362e07d270b76d0a18ee3c1c5b84",
+  "metrics.json": "0fd3b94169f7c123dc92003baacb28e94972414200e6475e8f5cc65b4167a1fd",
+  "order_events.csv": "d78a77186f5a93f4a27f57591c9d81937275b2350a8928f7c086c41a3c7968c8",
+  "position_ledger.csv": "0928729f2760b0cc6b029f8dbad73bbdd9175b23f33f53800c88f39f733e6c3c",
+  "position_snapshots.csv": "6106dc12e5a9d63fd41ad588f63204855716582c0665e09b3b17db24647ea9f9",
+  "reconciliation.json": "3ddb7152f38e61dad0b62494c4b8608eec851436c02cff5342e797f25531de3a",
+  "run.json": "add958c47011705e7e25ceb20663f5e12a7322e68f8a499bc2aa1f043000dd16"
+}

@@ -1,0 +1,17 @@
+{
+  "consumed_development_diagnostic_only": true,
+  "decision": "REJECT_AGENT_D2",
+  "gates": {
+    "mdd_above_floor": true,
+    "positive_annual_excess_at_least_3_of_5": false,
+    "positive_sharpe": true,
+    "positive_total_net_excess": false,
+    "reconciliation": true
+  },
+  "selected_candidate": "B2_RISK_CALIBRATION",
+  "selection_order": [
+    "net_excess_return",
+    "sharpe",
+    "candidate"
+  ]
+}

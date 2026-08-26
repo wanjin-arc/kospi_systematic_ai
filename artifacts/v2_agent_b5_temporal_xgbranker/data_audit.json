@@ -1,0 +1,13 @@
+{
+  "daily_score_rows": 177882,
+  "factor_max_date": "2023-12-28",
+  "factor_min_date": "2016-03-24",
+  "factor_rows_loaded": 264341,
+  "feature_count": 83,
+  "final_oos_accessed": false,
+  "legacy_fundamental_rows_loaded": 0,
+  "market_files_loaded": 1966,
+  "monthly_label_rows": 12323,
+  "portfolio_backtest_run": false,
+  "v2_consumed_development_2022_2023_loaded": true
+}

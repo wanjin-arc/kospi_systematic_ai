@@ -1,0 +1,34 @@
+{
+  "version": "phase5h-market-interaction-ranking-v1",
+  "experiment_id": "EXP-20260825-003",
+  "phase4c_experiment_id": "EXP-20260825-002",
+  "stock_partition_root": "data/processed/v24/phase4b_train_internal_2018",
+  "reference_partition_root": "data/processed/v25_phase4c_market_reference_2018",
+  "maximum_permitted_date": "2018-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "feature_contract": {
+    "stock_features": "phase4b_frozen_21_in_order",
+    "market_features": "phase4c_frozen_4_in_order",
+    "all_stock_market_interactions": 84,
+    "phase4c_result_based_selection": false,
+    "train_only_market_standardization": true
+  },
+  "models": {
+    "candidate_order": ["equal_weight_rank", "ridge_a1", "ridge_a100", "elastic_a005_l02", "histgb_d2_l200", "histgb_d3_l200", "blend_ridge_histgb"],
+    "contract": "identical_to_phase5b_except_84_fixed_market_interactions"
+  },
+  "portfolio": {
+    "initial_cash_krw": "5000000", "holding_sessions": 10, "maximum_holdings": 10,
+    "target_weight": "0.10", "allow_pyramiding": false, "entry_gap_cap": "0.05",
+    "whole_shares_only": true, "unallocated_cash": "retain", "entry_priority": "daily_score_desc_security_id_asc"
+  },
+  "selection": {
+    "period": "2015_2018_internal_validation_only", "required_nonnegative_annual_excess_folds": 4,
+    "required_connected_net_excess_return": 0.0, "if_no_candidate_passes": "reject_all_and_record_diagnostic_best",
+    "development_test_runs": 0
+  },
+  "costs": {"commission_rate_per_side": "0.0002", "slippage_rate_per_side": "0.0010", "stress_multipliers": [1, 2, 3]},
+  "purge_sessions": 20, "embargo_sessions": 20, "minimum_cross_section": 30, "random_seed": 20260825,
+  "run_command": "PYTHONPATH=src python tools/run_phase5h_market_interaction_ranking.py --config configs/phase5h_market_interaction_ranking.json --output artifacts/phase5h_market_interaction_ranking"
+}

@@ -1,0 +1,24 @@
+{
+  "agent_b2_experiment": "EXP-20260826-005",
+  "agent_c3_experiment": "EXP-20260826-008",
+  "evaluation_rows": 142138,
+  "final_oos_accessed": false,
+  "legacy_v1_final_oos_accessed": false,
+  "market_files_loaded": 1233,
+  "maximum_loaded_date": "2023-12-28",
+  "membership_rows_loaded": 246780,
+  "meta_rows": 176029,
+  "method_audit": {
+    "B2_TOP30_META_RANK": {
+      "gap_vetoes": 6,
+      "orders_created": 588,
+      "scored_rows": 29375
+    },
+    "C3_TOP3_CONTROL": {
+      "gap_vetoes": 1,
+      "orders_created": 593,
+      "scored_rows": 142138
+    }
+  },
+  "v2_2020_2023_consumed_development_loaded": true
+}

@@ -1,0 +1,21 @@
+{
+  "experiment_id": "EXP-20260826-005",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "config": "af8693d3df3f42f5ef485afd9a66b9d564cce5f2363bea0a2efee7422b66e138",
+    "factor_panel": "0ba2cb148b7e076d221a62b8b323ff18063518700b1dd597c5005ac46a0ab857",
+    "market_tree": "f1569410c224887bff8a67b25af959d0fca05419ac1e7c47005a391688b372e6",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "output_sha256": {
+    "daily_agent_b2_scores.csv.gz": "4005a90525b6a8ac32f8203926a0c452e036658f52ac17bda486f7ac29e192d3",
+    "data_audit.json": "dbc52ed6c5b0983a67e64bf39472b216d4881843a3015b1a1005d1f21043daab",
+    "fold_metrics.csv": "386f220b172e921dd388e018c519bcef9ea189c2f72c1817b0ad07779cba5ae3",
+    "model_summary.csv": "663b6e7671756734385ce9ead1c3d5e90e8ccff42e75428954445c30d619584f",
+    "selected_model.json": "810f0f371b347a73d02d6b0948c4921b5052e11f31b92ac5878d71df1b272304"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-b2-quality-v1",
+  "selected_model": "ridge_quality",
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY"
+}

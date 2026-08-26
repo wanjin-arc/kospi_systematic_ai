@@ -1,0 +1,62 @@
+{
+  "schema_version": "v2-phase6-forward-shadow-v1",
+  "experiment_id": "EXP-20260826-013",
+  "status": "design_frozen_training_pending",
+  "mode": "shadow_only",
+  "evaluation_start": "2026-08-27",
+  "historical_development_end": "2023-12-28",
+  "protected_oos_accessed": false,
+  "universe": "KOSPI200_PIT",
+  "agent_b": {
+    "family": "XGBRanker",
+    "objective": "rank:ndcg",
+    "input": "confirmed_quarterly_financial_statements_only",
+    "factor_count": 21,
+    "candidate_pool_by_market_cap": 200,
+    "top_n": 30,
+    "score_update": "next_krx_session_after_receipt",
+    "model_hash": "TRAINING_PENDING"
+  },
+  "agent_c": {
+    "family": "PyTorch_LSTM_CNN",
+    "input": "causal_daily_ohlcv_only",
+    "lookback_sessions": 40,
+    "lstm_target": "forward_10_session_realized_volatility",
+    "cnn_target": "take_10pct_before_stop_5pct_within_10_sessions",
+    "entry_timing": "signal_t_close_order_t_plus_1_open",
+    "model_hash": "TRAINING_PENDING"
+  },
+  "agent_d": {
+    "architecture": "agent_b_top30_then_agent_c_execution",
+    "weight_grid": {
+      "agent_b": [0.0, 0.25, 0.5],
+      "cnn_probability": [0.5, 0.75, 1.0],
+      "inverse_volatility": [0.0, 0.25, 0.5]
+    },
+    "selection_method": "nested_anchored_walk_forward_train_only",
+    "selected_weights": "TRAINING_PENDING",
+    "entry_probability_low": 0.55,
+    "entry_probability_high": 0.65,
+    "target_weight_low": 0.05,
+    "target_weight_high": 0.11,
+    "maximum_positions": 10,
+    "gap_veto": 0.05,
+    "stop_loss": 0.05,
+    "take_profit": 0.1,
+    "maximum_holding_sessions": 10,
+    "same_bar_rule": "STOP_FIRST"
+  },
+  "kis": {
+    "environment": "virtual",
+    "enabled": false,
+    "network_calls": false,
+    "order_submission": false,
+    "secrets_in_config": false
+  },
+  "prohibited_actions": [
+    "historical_result_based_retuning",
+    "real_order",
+    "production_deployment",
+    "protected_oos_access"
+  ]
+}

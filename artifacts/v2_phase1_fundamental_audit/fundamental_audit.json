@@ -1,0 +1,33 @@
+{
+  "api_payload_fs_div_counts": {
+    "MISSING": 2162209
+  },
+  "availability_status_counts": {
+    "RESOLVED_NEXT_KRX_SESSION_CFS_EVIDENCED": 1914447,
+    "RESOLVED_NEXT_KRX_SESSION_OFS_EVIDENCED": 108372,
+    "RESOLVED_OUTSIDE_DEVELOPMENT_SESSIONS_NOT_MODEL_ELIGIBLE": 2424,
+    "UNRESOLVED_NOT_MODEL_ELIGIBLE": 136966
+  },
+  "eligible_rows": 2022819,
+  "eligible_ticker_count": 391,
+  "facts_path": "data\\processed\\v2_kospi200_fundamentals_receipt_corrected\\financial_facts_pit.csv",
+  "facts_sha256": "e67d4050a381442c00039a242f9fab02930eaacc6503229872af335aedaad6cc",
+  "invalid_pit_row_count": 0,
+  "invalid_pit_rows": [],
+  "membership_sessions": {
+    "count": 4945,
+    "max": "2023-12-28",
+    "min": "2004-01-02"
+  },
+  "protected_oos_accessed": false,
+  "raw_modified": false,
+  "receipt_overrides_path": "data\\processed\\v2_kospi200_dart_receipt_overrides\\receipt_overrides.csv",
+  "receipt_overrides_sha256": "d6b0f2dae72ee86b817ab0453d3e8c67f5f65050a2b1c39f33e8da069eb2383f",
+  "rows": 2162209,
+  "schema_version": "kospi200-fundamental-pit-audit-v1",
+  "statement_scope_counts": {
+    "CFS_EVIDENCED": 2050537,
+    "OFS_EVIDENCED": 111672
+  },
+  "status": "PASS_PIT_FACTS_MODEL_NOT_STARTED"
+}

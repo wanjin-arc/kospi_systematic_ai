@@ -3,11 +3,11 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "kospi100-systematic-trading"
-version = "0.3.0"
-description = "Point-in-time KOSPI 100 data, deterministic backtest engine, and daily rule baseline"
+name = "kospi-systematic-research"
+version = "0.4.0"
+description = "Legacy KOSPI 100 research and point-in-time KOSPI 200 fundamental-technical research"
 requires-python = ">=3.11"
-dependencies = ["pandas>=2.0,<3", "scikit-learn==1.9.0"]
+dependencies = ["pandas>=2.0,<3", "scikit-learn==1.9.0", "torch==2.13.0", "xgboost==3.4.1"]
 
 [project.scripts]
 kospi100-phase2-demo = "kospi100_backtest.demo:main"

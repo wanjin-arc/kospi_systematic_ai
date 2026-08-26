@@ -1,4 +1,14 @@
-# Research Protocol — Phase 0
+# Research Protocol — v1 Phase 0 and v2 Amendment
+
+## v2 Amendment — 2026-08-25
+
+- 적용 대상은 날짜별 실제 KOSPI 200 구성종목이다. 아래 KOSPI 100 결정은 v1 재현에만 적용한다.
+- 확정 재무제표 수치 Factor를 허용하되 실제 DART 접수일 다음 거래일부터만 사용할 수 있다. 정정값은 정정 접수일 이전으로 소급하지 않는다.
+- Fundamental, Technical, Meta 모델은 각각 독립 baseline과 사전등록 Experiment ID를 가져야 한다.
+- 2004~2023은 consumed development다. 해당 기간에서 얻은 실패와 아이디어는 기록하되 독립 Validation/OOS 근거로 재사용하지 않는다.
+- 실패 experiment row는 append-only다. 대용량 산출물을 정리할 때도 registry, 요약 metrics, manifest, hash는 보존한다.
+- 기존 2024~2025 v1 Final OOS는 계속 봉인한다. v2 채택 증거는 모델 동결 이후 forward 기간에서 축적한다.
+- v2 데이터 수집·감사 완료 전 XGBRanker, CNN/LSTM, meta model 또는 백테스트를 실행하지 않는다.
 
 **Applies to:** KOSPI 100 daily technical system  
 **Version:** 0.1  
