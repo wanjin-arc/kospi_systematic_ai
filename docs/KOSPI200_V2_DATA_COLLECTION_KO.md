@@ -35,6 +35,27 @@ KRX 수집 완료 후 실행한다.
 
 `--max-requests 0`은 코드 자체 요청 상한만 없앤다. OpenDART의 계정별 일일 호출한도는 그대로 적용되므로 권장하지 않는다. 기존 JSON은 재사용하므로 다음 날 같은 명령으로 이어갈 수 있다.
 
+## 2-1. 특정 주식수 후보만 기업행위 공시 수집
+
+Phase 5 pre-backtest 감사에서는 전체 KOSPI 200 공시를 다시 요청하지 않는다. 다음 옵션은
+`share_reset_candidates.csv`의 `member_both_sessions=True` 37건만 scope로 사용하고, 사건일
+전후 730일 안의 기업행위 공시만 원문 다운로드한다. 이 CSV에 없는 ticker의 공시는 조회하지 않는다.
+
+```powershell
+.\.venv\Scripts\python.exe .\tools\collect_dart_kospi_actions_v25.py `
+  --krx-raw-root "C:\Users\seoji\Downloads\v25_kospi_raw" `
+  --event-csv ".\artifacts\v2_phase5s_share_change_safe_integrity\share_reset_candidates.csv" `
+  --event-window-days 730 `
+  --start-year 2021 `
+  --end-year 2023 `
+  --output-root ".\data\incoming\v25_kospi_dart_audit_raw_37_events"
+```
+
+`--event-csv`를 지정하면 KRX 원시자료 전체 ticker 스캔을 하지 않는다. API 키는 기존과 같이
+대화형 프롬프트로만 입력하며 파일·manifest에는 저장하지 않는다. 수집 결과는 여전히 후보 증거일
+뿐이고, 원문·PIT identity·효력 세션·권리조건·KRX 교차검증을 모두 통과하기 전에는 회계나
+백테스트 입력으로 승격하지 않는다.
+
 ## 3. 정규화
 
 수집 ZIP/폴더를 저장소의 `data/incoming/` 아래로 옮긴 뒤 실행하거나 절대경로를 직접 지정한다.

@@ -19,7 +19,7 @@ import time
 import urllib.parse
 import urllib.request
 import zipfile
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from getpass import getpass
 from pathlib import Path
 from xml.etree import ElementTree
@@ -96,6 +96,52 @@ def load_krx_tickers(raw_root: Path) -> set[str]:
     return tickers
 
 
+def load_event_scope(path: Path) -> dict[str, list[date]]:
+    """Load a small, explicit event scope without scanning the KRX universe."""
+    if not path.exists():
+        raise FileNotFoundError(f"기업행위 후보 CSV가 없습니다: {path}")
+    required = {"ticker", "effective_date_candidate"}
+    scoped: dict[str, list[date]] = {}
+    with path.open("r", encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        fields = set(reader.fieldnames or ())
+        if not required.issubset(fields):
+            raise ValueError("--event-csv에는 ticker와 effective_date_candidate 열이 필요합니다.")
+        for row in reader:
+            # Phase 5S's share-reset ledger contains broader candidates; only
+            # events observed on both adjacent PIT member sessions are in scope.
+            if "member_both_sessions" in fields and (row.get("member_both_sessions") or "").strip().lower() not in {"true", "1"}:
+                continue
+            ticker = (row.get("ticker") or "").strip()
+            event_text = (row.get("effective_date_candidate") or "").strip()
+            if not ticker.isdigit() or len(ticker) > 6 or not event_text:
+                continue
+            try:
+                event_date = datetime.strptime(event_text[:10], "%Y-%m-%d").date()
+            except ValueError as exc:
+                raise ValueError(f"기업행위 후보일 형식 오류: {event_text}") from exc
+            scoped.setdefault(ticker.zfill(6), []).append(event_date)
+    if not scoped:
+        raise ValueError("--event-csv에서 유효한 ticker/사건일을 찾지 못했습니다.")
+    return scoped
+
+
+def filing_in_event_scope(item: dict, event_dates: dict[str, list[date]], window_days: int) -> bool:
+    """Keep filings close to one of the explicit observed event dates."""
+    if not event_dates:
+        return True
+    filing_text = str(item.get("rcept_dt", ""))[:8]
+    try:
+        filing_date = datetime.strptime(filing_text, "%Y%m%d").date()
+    except ValueError:
+        return False
+    return any(
+        abs((filing_date - event_date).days) <= window_days
+        for dates in event_dates.values()
+        for event_date in dates
+    )
+
+
 def download_corp_codes(key: str, output_root: Path) -> dict[str, dict[str, str]]:
     target = output_root / "corp_codes.xml.zip"
     if not target.exists():
@@ -170,11 +216,24 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--start-year", type=int, default=2011)
     parser.add_argument("--end-year", type=int, default=2025)
     parser.add_argument("--output-root", type=Path, default=Path("data/incoming/v25_kospi_dart_audit_raw"))
+    parser.add_argument(
+        "--event-csv",
+        type=Path,
+        help="명시한 기업행위 후보 CSV만 조회한다 (ticker, effective_date_candidate 필수).",
+    )
+    parser.add_argument(
+        "--event-window-days",
+        type=int,
+        default=730,
+        help="--event-csv 사건일과 공시 접수일 사이 허용 일수 (기본 730일).",
+    )
     parser.add_argument("--structured", action="store_true", help="후보 법인·연도에 대해 OpenDART 구조화 주요사항 API 응답도 보존")
     parser.add_argument("--delay", type=float, default=0.15)
     args = parser.parse_args(argv)
     if args.start_year > args.end_year:
         raise SystemExit("--start-year는 --end-year보다 클 수 없습니다.")
+    if args.event_window_days < 0:
+        raise SystemExit("--event-window-days는 0 이상이어야 합니다.")
 
     key = getpass("OpenDART API key (입력은 저장·출력되지 않음): ").strip()
     if len(key) != 40:
@@ -182,7 +241,10 @@ def main(argv: list[str] | None = None) -> int:
     root = args.output_root
     root.mkdir(parents=True, exist_ok=True)
     print("[1/4] 기존 KRX 원시자료 확인 중...", flush=True)
-    tickers = load_krx_tickers(args.krx_raw_root)
+    event_dates = load_event_scope(args.event_csv) if args.event_csv else {}
+    tickers = set(event_dates) if event_dates else load_krx_tickers(args.krx_raw_root)
+    if event_dates:
+        print(f"[이벤트 범위] 후보 {sum(len(v) for v in event_dates.values())}건, ticker {len(tickers)}개", flush=True)
     print("[2/4] DART 법인코드 확인 중...", flush=True)
     corp_codes = download_corp_codes(key, root)
     mapping_rows = []
@@ -209,7 +271,12 @@ def main(argv: list[str] | None = None) -> int:
                 write_json(disclosure_path, {"ticker": row["ticker"], "corp_code": row["corp_code"], "year": year, "list": listing})
             for item in listing:
                 receipt_no = str(item.get("rcept_no", "")).strip()
-                if not receipt_no or not is_action_candidate(item) or (row["ticker"], receipt_no) in seen:
+                if (
+                    not receipt_no
+                    or not is_action_candidate(item)
+                    or not filing_in_event_scope(item, event_dates, args.event_window_days)
+                    or (row["ticker"], receipt_no) in seen
+                ):
                     continue
                 seen.add((row["ticker"], receipt_no))
                 document_path, document_status, document_error_path = save_document(key, receipt_no, root)
@@ -234,7 +301,7 @@ def main(argv: list[str] | None = None) -> int:
         writer = csv.DictWriter(handle, fieldnames=columns); writer.writeheader(); writer.writerows(sorted(candidates, key=lambda x: (x["rcept_dt"], x["ticker"], x["rcept_no"])))
     print("[4/4] manifest 작성 중...", flush=True)
     files = [{"path": str(path.relative_to(root)).replace("\\", "/"), "sha256": sha256_file(path), "bytes": path.stat().st_size} for path in sorted(root.rglob("*")) if path.is_file()]
-    write_json(root / "manifest.json", {"schema_version": "dart-kospi-actions-audit-v25-draft", "generated_at_utc": datetime.now(timezone.utc).isoformat(), "coverage": [args.start_year, args.end_year], "krx_raw_root": str(args.krx_raw_root), "unique_krx_tickers": len(tickers), "mapped_current_dart_codes": sum(bool(row.get("corp_code")) for row in mapping_rows), "candidate_rows": len(candidates), "purpose": "audit_only_not_factor", "limitations": ["DART stock_code mapping is current-code metadata, not point-in-time identity proof.", "Original documents and structured responses require human/mechanical audit before any adjustment."], "files": files})
+    write_json(root / "manifest.json", {"schema_version": "dart-kospi-actions-audit-v25-draft", "generated_at_utc": datetime.now(timezone.utc).isoformat(), "coverage": [args.start_year, args.end_year], "krx_raw_root": str(args.krx_raw_root), "event_csv": str(args.event_csv) if args.event_csv else None, "event_window_days": args.event_window_days if args.event_csv else None, "event_scope_tickers": len(event_dates), "event_scope_rows": sum(len(v) for v in event_dates.values()), "unique_krx_tickers": len(tickers), "mapped_current_dart_codes": sum(bool(row.get("corp_code")) for row in mapping_rows), "candidate_rows": len(candidates), "purpose": "audit_only_not_factor", "limitations": ["DART stock_code mapping is current-code metadata, not point-in-time identity proof.", "Original documents and structured responses require human/mechanical audit before any adjustment."], "files": files})
     print(f"완료: {root.resolve()} candidates={len(candidates)}")
     return 0
 
