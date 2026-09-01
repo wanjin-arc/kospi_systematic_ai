@@ -56,6 +56,17 @@ Phase 5 pre-backtest 감사에서는 전체 KOSPI 200 공시를 다시 요청하
 뿐이고, 원문·PIT identity·효력 세션·권리조건·KRX 교차검증을 모두 통과하기 전에는 회계나
 백테스트 입력으로 승격하지 않는다.
 
+수집 직후 다음 명령으로 37개 사건과 확보한 공시를 연결한 검토 대기열을 만든다. 이 대기열은
+`DIRECT_TERMS_CANDIDATE_REVIEW` 등을 표시할 뿐, 어떤 사건도 자동 승인하지 않는다.
+
+```powershell
+.\.venv\Scripts\python.exe .\tools\build_phase5_prebacktest_review_queue.py `
+  --event-csv ".\artifacts\v2_phase5s_share_change_safe_integrity\share_reset_candidates.csv" `
+  --filing-csv ".\data\incoming\v25_kospi_dart_audit_raw_37_events\corporate_action_candidates.csv" `
+  --identity-csv ".\data\processed\v2_kospi200_identity_frozen\identity_spells.csv" `
+  --output-csv ".\data\processed\v2_phase5t_prebacktest_contract\review_queue.csv"
+```
+
 ## 3. 정규화
 
 수집 ZIP/폴더를 저장소의 `data/incoming/` 아래로 옮긴 뒤 실행하거나 절대경로를 직접 지정한다.
