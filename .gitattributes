@@ -3,3 +3,17 @@
 *.json text eol=lf
 *.md text eol=lf
 *.py text eol=lf
+
+# 재현 산출물의 manifest SHA가 checkout 후에도 그대로 유지되도록 bytes를 보존한다.
+artifacts/v2_phase4e_ai_model/** -text -diff
+artifacts/v2_phase4e_ai_model_reproduction/** -text -diff
+artifacts/v2_phase4f_share_change_safe_model/** -text -diff
+artifacts/v2_phase4f_share_change_safe_model_reproduction/** -text -diff
+artifacts/v2_phase5r_integrity_soft_fusion/** -text -diff
+artifacts/v2_phase5r_integrity_soft_fusion_reproduction/** -text -diff
+artifacts/v2_phase5s_share_change_safe_integrity/** -text -diff
+artifacts/v2_phase5s_share_change_safe_integrity_reproduction/** -text -diff
+
+# 기존 동결 code hash bytes를 보존하면서 해당 역사 파일의 EOF 공백만 허용한다.
+src/kospi200_phase5r/portfolio.py whitespace=-blank-at-eof
+tests/test_kospi200_phase5r_portfolio.py whitespace=-blank-at-eof

@@ -1,0 +1,53 @@
+{
+  "agent_b_features": [
+    "roe__phase4e_percentile",
+    "roa__phase4e_percentile",
+    "operating_margin__phase4e_percentile",
+    "net_margin__phase4e_percentile",
+    "cfo_to_assets__phase4e_percentile",
+    "earnings_yield__phase4e_percentile",
+    "book_to_market__phase4e_percentile",
+    "sales_to_market_cap__phase4e_percentile",
+    "cfo_yield__phase4e_percentile",
+    "free_cash_flow_yield__phase4e_percentile",
+    "debt_to_equity__phase4e_percentile",
+    "liabilities_to_assets__phase4e_percentile",
+    "current_ratio__phase4e_percentile",
+    "cash_to_assets__phase4e_percentile",
+    "equity_ratio__phase4e_percentile",
+    "revenue_growth_yoy__phase4e_percentile",
+    "operating_income_growth_yoy__phase4e_percentile",
+    "net_income_growth_yoy__phase4e_percentile",
+    "assets_growth_yoy__phase4e_percentile",
+    "equity_growth_yoy__phase4e_percentile"
+  ],
+  "agent_c_features": [
+    "return_1",
+    "return_5",
+    "return_20",
+    "return_60",
+    "volatility_5",
+    "volatility_20",
+    "downside_volatility_20",
+    "close_to_ma20",
+    "close_to_ma60",
+    "drawdown_20",
+    "drawdown_60",
+    "intraday_range",
+    "volume_ratio_20",
+    "gap_1",
+    "index_return_20",
+    "index_trend_60",
+    "index_volatility_20"
+  ],
+  "agent_d_features": [
+    "agent_b_percentile",
+    "agent_c_percentile",
+    "fundamental_available"
+  ],
+  "excluded_tickers": [
+    "000660",
+    "005930"
+  ],
+  "fundamental_percentile_scope": "FINAL_ELIGIBLE_U_T"
+}

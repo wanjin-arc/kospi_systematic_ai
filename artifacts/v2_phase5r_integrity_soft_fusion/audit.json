@@ -1,0 +1,444 @@
+{
+  "evaluation_score_rows": 143323,
+  "ex2_sensitivity": {
+    "ambiguous_event_count": 37,
+    "ambiguous_event_dates": 37,
+    "canonical_ex2_return_evaluable": false,
+    "identity_contract": "TICKER_DERIVED_NOT_HISTORICALLY_RESOLVED",
+    "issuer_cap_value_sensitivity_self_financing": false,
+    "maximum_daily_ambiguous_prior_weight": 0.03722067470667447,
+    "price_unit_sensitivity_self_financing": false,
+    "resolved_action_contract_complete": false,
+    "schema_version": "ex2-share-reset-sensitivity-v1",
+    "sensitivities_are_return_bounds": false,
+    "share_reset_threshold": 0.2,
+    "stable_identity_contract_complete": false
+  },
+  "excluded_score_rows": 0,
+  "executable_corporate_actions_created": 0,
+  "external_orders_submitted": 0,
+  "final_oos_accessed": false,
+  "fit_allowed": false,
+  "fit_calls": 0,
+  "identity": {
+    "canonical_raw_ticker_contract_complete": false,
+    "evaluation_start": "2021-01-04",
+    "identity_contract": "TICKER_DERIVED_NOT_HISTORICALLY_RESOLVED",
+    "member_ticker_normalization_collision_count": 0,
+    "member_ticker_normalization_collisions": [],
+    "noncanonical_examples": [
+      "00088K",
+      "00104K",
+      "00279K",
+      "00499K",
+      "00680K",
+      "00781K",
+      "00806K",
+      "02826K",
+      "03473K",
+      "18064K",
+      "26490K",
+      "28513K",
+      "33626K",
+      "33626L",
+      "33637K",
+      "33637L",
+      "35320K",
+      "36328K",
+      "37550K",
+      "37550L"
+    ],
+    "noncanonical_ticker_row_count": 15490,
+    "opened_files": {
+      "market": 739,
+      "membership": 739
+    },
+    "position_accounting_allowed": false,
+    "raw_exact_ticker_share_reset_candidate_count": 223,
+    "raw_share_reset_semantics": "CANDIDATE_ONLY_NOT_EXECUTABLE_ACTION",
+    "raw_ticker_normalization_collision_count": 4,
+    "raw_ticker_normalization_collisions": [
+      {
+        "normalized_ticker": "000680",
+        "raw_values": [
+          "000680",
+          "00680K"
+        ]
+      },
+      {
+        "normalized_ticker": "033626",
+        "raw_values": [
+          "33626K",
+          "33626L"
+        ]
+      },
+      {
+        "normalized_ticker": "033637",
+        "raw_values": [
+          "33637K",
+          "33637L"
+        ]
+      },
+      {
+        "normalized_ticker": "037550",
+        "raw_values": [
+          "37550K",
+          "37550L"
+        ]
+      }
+    ],
+    "schema_version": "phase5r-raw-ticker-identity-audit-v1",
+    "security_id_construction": "KRX_COMMON_PREFIX_PLUS_NORMALIZED_TICKER",
+    "source_noncanonical_ticker_rows": {
+      "market": 15490,
+      "membership": 0
+    },
+    "source_rows": {
+      "market": 694201,
+      "membership": 147911
+    },
+    "stable_identity_contract_complete": false
+  },
+  "input": {
+    "corporate_action_blocked_market_rows": 0,
+    "corporate_action_candidate_event_type_counts": {
+      "BONUS_ISSUE": 367,
+      "CAPITAL_REDUCTION": 733,
+      "COMPANY_SPLIT": 591,
+      "COMPANY_SPLIT_MERGER": 257,
+      "MERGER": 3545,
+      "OTHER_CANDIDATE": 621,
+      "PAID_ISSUE": 7470,
+      "SHARE_EXCHANGE_TRANSFER": 212,
+      "STOCK_SPLIT_OR_REVERSE_SPLIT": 202
+    },
+    "corporate_action_candidate_rows_at_or_before_data_end": 13998,
+    "corporate_action_candidate_unique_ids_at_or_before_data_end": 13998,
+    "corporate_action_forced_exit_rows": 0,
+    "corporate_action_member_on_filing_date_ignored": true,
+    "corporate_action_policy": "UNRESOLVED_FILING_CANDIDATE_EVIDENCE_NOT_TIMING_BOUNDARY",
+    "corporate_action_reset_boundaries_emitted": 0,
+    "corporate_action_semantics": "UNRESOLVED_FILING_CANDIDATE_EVIDENCE_NOT_TIMING_BOUNDARY",
+    "corporate_action_source": "data\\processed\\v25_corporate_actions_normalized\\corporate_actions_v25_unresolved.csv",
+    "corporate_action_source_rows": 16151,
+    "corporate_action_source_sha256": "d514764a65cf754d21a7ecaeffb6dadb16aa7eb7eccd631635e904b79bd5cf51",
+    "corporate_action_timing_boundaries_emitted": 0,
+    "excluded_rows_returned": 0,
+    "final_oos_accessed": false,
+    "fundamental_max_date": "2023-12-28",
+    "fundamental_min_date": "2016-03-24",
+    "fundamental_rows": 260651,
+    "index_max_date": "2023-12-28",
+    "index_min_date": "2004-01-02",
+    "index_rows": 4945,
+    "input_tree_sha256": {
+      "corporate_action": "d9d599bb1ca9a2cecc24138682e845d9cbfa0e153d1985218d66e89342c968a1",
+      "fundamental": "b21ce0b42a9bb78d023c019de5f586fbcc8888355b598e0f42e70aff18a225d5",
+      "index": "eb03ab89fe31dc6e3d395dc1439d10fd1384710fc7af0d181f5d8fece9f0fed1",
+      "market": "722926189a688994f4060268963531754160160d707ddebbf7fcb978e3d0decc",
+      "membership": "b82d3e6cad7826bbb0d43779559fbc2064a56d245294241b94a9bdde9a9eda37"
+    },
+    "market_max_date": "2023-12-28",
+    "market_min_date": "2004-01-02",
+    "market_rows": 1725556,
+    "market_sessions": 4945,
+    "maximum_permitted_date": "2023-12-28",
+    "membership_max_date": "2023-12-28",
+    "membership_min_date": "2004-01-02",
+    "membership_rows": 979678,
+    "opened_year_directories": [
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+    ],
+    "unresolved_action_true_rows": 0
+  },
+  "member_both_session_share_reset_candidate_count": 37,
+  "neutral_orders": 1800,
+  "order": {
+    "core_audit": [
+      {
+        "core_count": 50,
+        "execute_date": "2021-01-05",
+        "score_count": 186,
+        "signal_date": "2021-01-04",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-02-02",
+        "score_count": 188,
+        "signal_date": "2021-02-01",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-03-05",
+        "score_count": 188,
+        "signal_date": "2021-03-04",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-04-02",
+        "score_count": 197,
+        "signal_date": "2021-04-01",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-04-30",
+        "score_count": 194,
+        "signal_date": "2021-04-29",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-06-01",
+        "score_count": 196,
+        "signal_date": "2021-05-31",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-06-29",
+        "score_count": 188,
+        "signal_date": "2021-06-28",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-07-27",
+        "score_count": 190,
+        "signal_date": "2021-07-26",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-08-25",
+        "score_count": 191,
+        "signal_date": "2021-08-24",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-09-27",
+        "score_count": 195,
+        "signal_date": "2021-09-24",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-10-27",
+        "score_count": 194,
+        "signal_date": "2021-10-26",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-11-24",
+        "score_count": 194,
+        "signal_date": "2021-11-23",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2021-12-22",
+        "score_count": 191,
+        "signal_date": "2021-12-21",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-01-20",
+        "score_count": 191,
+        "signal_date": "2022-01-19",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-02-22",
+        "score_count": 191,
+        "signal_date": "2022-02-21",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-03-24",
+        "score_count": 197,
+        "signal_date": "2022-03-23",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-04-21",
+        "score_count": 196,
+        "signal_date": "2022-04-20",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-05-20",
+        "score_count": 196,
+        "signal_date": "2022-05-19",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-06-21",
+        "score_count": 190,
+        "signal_date": "2022-06-20",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-07-19",
+        "score_count": 191,
+        "signal_date": "2022-07-18",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-08-17",
+        "score_count": 191,
+        "signal_date": "2022-08-16",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-09-16",
+        "score_count": 198,
+        "signal_date": "2022-09-15",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-10-18",
+        "score_count": 198,
+        "signal_date": "2022-10-17",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-11-15",
+        "score_count": 198,
+        "signal_date": "2022-11-14",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2022-12-13",
+        "score_count": 196,
+        "signal_date": "2022-12-12",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-01-11",
+        "score_count": 196,
+        "signal_date": "2023-01-10",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-02-10",
+        "score_count": 195,
+        "signal_date": "2023-02-09",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-03-13",
+        "score_count": 195,
+        "signal_date": "2023-03-10",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-04-10",
+        "score_count": 195,
+        "signal_date": "2023-04-07",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-05-10",
+        "score_count": 194,
+        "signal_date": "2023-05-09",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-06-09",
+        "score_count": 194,
+        "signal_date": "2023-06-08",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-07-07",
+        "score_count": 193,
+        "signal_date": "2023-07-06",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-08-04",
+        "score_count": 194,
+        "signal_date": "2023-08-03",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-09-04",
+        "score_count": 197,
+        "signal_date": "2023-09-01",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-10-06",
+        "score_count": 198,
+        "signal_date": "2023-10-05",
+        "signal_market_rows": 50
+      },
+      {
+        "core_count": 50,
+        "execute_date": "2023-11-06",
+        "score_count": 198,
+        "signal_date": "2023-11-03",
+        "signal_market_rows": 50
+      }
+    ],
+    "forced_action_exit_orders_neutral": 0,
+    "forced_action_exit_orders_primary": 0,
+    "rebalance_count": 36
+  },
+  "order_intent_rows": 3600,
+  "performance_metrics_observed": false,
+  "portfolio_accounting_evaluable": false,
+  "portfolio_engine_called": false,
+  "predicted_rows": 143323,
+  "primary_agent": "C_ONLY",
+  "run_mode": "PREDICT_AND_PRE_EXECUTION_INTEGRITY_AUDIT",
+  "score_panel_rows": 944330,
+  "share_reset_candidate_count": 86,
+  "strategy_orders": 1800
+}

@@ -1,0 +1,50 @@
+{
+  "decision": "REJECT_PHASE5R_UNRESOLVED_CA_AND_IDENTITY_CONTRACT",
+  "experiment_id": "EXP-20260901-002",
+  "external_orders_submitted": 0,
+  "final_oos_accessed": false,
+  "fit_calls": 0,
+  "input_hashes": {
+    "code_hash": "f2b7c5ea54a48fdc6d1b423bc341148a916369fe07e6d52944c064c612344216",
+    "config_hash": "c2a5a3720c139a96cc491667ebce4711cdd14fe0dc705b609c0149802fb08f2b",
+    "cost_schedule_sha256": "15934ea896bd41c2b16172e11423d57949612c17f49919c35ad5e484a1ac6f93",
+    "data_version": "cf5f7ad088b74aa2a98160c3dbe3fe4e59ef1af2798d975b707d1f242ca5c288",
+    "engine_config_sha256": "52777da0e8f14a28fe8f117501ec4332798b1f5d7c02bfd0d41a867d5cfcb5c1",
+    "experiment_id": "EXP-20260901-002",
+    "final_oos_accessed": false,
+    "maximum_loaded_date": "2023-12-28",
+    "phase4e_artifact_tree_sha256": "2cb97749c42406bd36d088b8504226a6b86296230ef51a316000156343a813e1",
+    "phase4e_bundle_sha256": "da9b8111c3c9c59126746075bc019a5218d33c0259a1c22d0eea00ea3cd3c550",
+    "phase4e_decision": "FREEZE_MODEL_FOR_PHASE5R_CONSUMED_DIAGNOSTIC",
+    "phase4e_manifest_sha256": "08bb74b3319a77af8ecc2f1426cb8cde07bc2f68ef44d1f860dde7e83716f6dc",
+    "phase4e_model_gate_pass": true,
+    "phase4e_model_hash": "034142db1930c0ec9d9f201bc2e58b68026b897100066d88c0d27c24391cf78a",
+    "phase4e_primary_agent": "C_ONLY",
+    "runtime_versions": {
+      "numpy": "2.5.2",
+      "pandas": "2.3.3",
+      "python": "3.14.7",
+      "scikit_learn": "1.9.0",
+      "scipy": "1.18.1"
+    }
+  },
+  "output_sha256": {
+    "audit.json": "86604eca2943c36aec617f22a690db6adb3b0b9d464770cc5cbf7d8e04c4ab2a",
+    "decision.json": "efdca452263d7640c684b9d9f4492b59dfd4c80b6256896be18555225c6ea512",
+    "ex2_issuer_cap_value_sensitivity.csv": "3b2e9193d878363bbb182849d1f6511690c60c37298ac2b8d91fea42ec519d08",
+    "ex2_price_unit_sensitivity.csv": "9ba2751aeb57ade414040c43fee3649fa3a1858ea1b1917daf288754b5791757",
+    "ex2_share_reset_events.csv": "33c899b5a7018f948067203b86243b5e85e74b47d7ba499e457e8b1f04761ccc",
+    "official_krx1028_reference.csv": "56dcd9bcabdd1ead83ddc2d37168d00db71c531f5a76575af30a068a4d03066e",
+    "order_intents_blocked.csv": "da38c6715ae966622ab91a1a06c8533d5880e6ac7fce33662cc961e6fc9a704e",
+    "scores.csv.gz": "b41e2b12c01b12576fddcee4ca5046c8de2072dabe1be99f8efb70b508f1d125",
+    "share_reset_candidates.csv": "06725a3899aff478507fbe4eacd9cd1aecc27fe8414963e160d403331786e9ad"
+  },
+  "performance_metrics_observed": false,
+  "phase4e_artifact_tree_sha256": "2cb97749c42406bd36d088b8504226a6b86296230ef51a316000156343a813e1",
+  "phase4e_bundle_sha256": "da9b8111c3c9c59126746075bc019a5218d33c0259a1c22d0eea00ea3cd3c550",
+  "phase4e_manifest_sha256": "08bb74b3319a77af8ecc2f1426cb8cde07bc2f68ef44d1f860dde7e83716f6dc",
+  "phase4e_model_hash": "034142db1930c0ec9d9f201bc2e58b68026b897100066d88c0d27c24391cf78a",
+  "portfolio_engine_called": false,
+  "primary_agent": "C_ONLY",
+  "schema_version": "v2-phase5r-integrity-block-release-v1"
+}

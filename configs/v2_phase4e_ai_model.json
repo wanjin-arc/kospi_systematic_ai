@@ -1,0 +1,92 @@
+{
+  "schema_version": "v2-phase4e-ai-model-freeze-v1",
+  "experiment_id": "EXP-20260901-001",
+  "data_release_id": "V2-P4E-INTEGRITY-20260901-002",
+  "membership_root": "data/incoming/v2_kospi200_membership_raw/normalized/membership_daily",
+  "market_roots": [
+    "data/incoming/v25_zip_import/krx_v25_technical_raw/raw/market_all",
+    "data/incoming/v25_kospi_raw/raw/market_stk"
+  ],
+  "fundamental_panel": "data/processed/v2_phase4e_ai_model_2004_2020_v2/fundamental_factor_panel.csv.gz",
+  "index_file": "data/processed/v2_phase4e_ai_model_2004_2020_v2/kospi200_index_ohlcv.csv.gz",
+  "corporate_action_file": "data/processed/v2_phase4e_ai_model_2004_2020_v2/corporate_action_candidates.csv.gz",
+  "data_release_manifest": "data/processed/v2_phase4e_ai_model_2004_2020_v2/manifest.json",
+  "engine_config": "configs/phase2_engine.json",
+  "cost_schedule": "configs/kospi_sell_cost_schedule.csv",
+  "materialization_sources": {
+    "fundamental_panel": "data/processed/v2_kospi200_fundamental_factor_panel/fundamental_factor_panel.csv.gz",
+    "fundamental_manifest": "data/processed/v2_kospi200_fundamental_factor_panel/manifest.json",
+    "index_file": "data/incoming/v2_kospi200_index_raw/normalized/kospi200_index_ohlcv.csv.gz",
+    "corporate_action_file": "data/processed/v25_corporate_actions_normalized/corporate_actions_v25_unresolved.csv",
+    "corporate_action_manifest": "data/processed/v25_corporate_actions_normalized/manifest.json"
+  },
+  "data_start": "2004-01-02",
+  "label_and_model_start": "2011-01-03",
+  "fundamental_start": "2016-03-24",
+  "training_end": "2020-12-30",
+  "data_end": "2020-12-30",
+  "oof_years": [2017, 2018, 2019, 2020],
+  "selection_years": [2019, 2020],
+  "target_horizon_sessions": 20,
+  "sample_every_sessions": 20,
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "downside_penalty": 0.5,
+  "excluded_securities": [
+    {"security_id": "KRX_COMMON:005930", "ticker": "005930", "audit_name": "삼성전자"},
+    {"security_id": "KRX_COMMON:000660", "ticker": "000660", "audit_name": "SK하이닉스"}
+  ],
+  "agent_b": {
+    "model": "RIDGE_FIXED",
+    "alpha": 10.0,
+    "imputer_strategy": "median",
+    "keep_empty_features": true,
+    "all_missing_fold_policy": "KEEP_FEATURE_ZERO_AFTER_IMPUTE",
+    "missing_score_percentile": 0.5,
+    "features": [
+      "roe", "roa", "operating_margin", "net_margin", "cfo_to_assets",
+      "earnings_yield", "book_to_market", "sales_to_market_cap", "cfo_yield", "free_cash_flow_yield",
+      "debt_to_equity", "liabilities_to_assets", "current_ratio", "cash_to_assets", "equity_ratio",
+      "revenue_growth_yoy", "operating_income_growth_yoy", "net_income_growth_yoy", "assets_growth_yoy",
+      "equity_growth_yoy"
+    ],
+    "feature_suffix": "__phase4e_percentile"
+  },
+  "agent_c": {
+    "model": "HIST_GRADIENT_BOOSTING_FIXED",
+    "learning_rate": 0.05,
+    "max_depth": 3,
+    "max_iter": 100,
+    "min_samples_leaf": 100,
+    "l2_regularization": 10.0,
+    "features": [
+      "return_1", "return_5", "return_20", "return_60", "volatility_5", "volatility_20",
+      "downside_volatility_20", "close_to_ma20", "close_to_ma60", "drawdown_20", "drawdown_60",
+      "intraday_range", "volume_ratio_20", "gap_1", "index_return_20", "index_trend_60",
+      "index_volatility_20"
+    ]
+  },
+  "agent_d": {
+    "model": "POSITIVE_RIDGE_OOF",
+    "alpha": 10.0,
+    "hard_fundamental_gate": false
+  },
+  "selection": {
+    "metric_order": ["mean_rank_ic", "nonnegative_years", "mean_top10_target_quality", "simplicity"],
+    "minimum_mean_rank_ic": 0.0,
+    "minimum_nonnegative_selection_years": 1,
+    "required_evaluated_selection_years": 2,
+    "d_requires_strict_improvement_vs_best_single_mean_rank_ic": true,
+    "d_requires_noninferior_to_best_single_top10_quality": true,
+    "d_requires_no_fewer_nonnegative_years_than_best_single": true,
+    "simplicity_order": ["C_ONLY", "B_ONLY", "D_SOFT_FUSION"]
+  },
+  "base_commission_rate": 0.0002,
+  "base_slippage_rate": 0.001,
+  "seed": 20260901,
+  "model_training_approved": true,
+  "portfolio_backtest_approved": false,
+  "external_portfolio_execution_approved": false,
+  "network_order_submission": false,
+  "final_oos_access": false
+}

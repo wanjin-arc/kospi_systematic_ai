@@ -1,0 +1,4 @@
+agent,mean_rank_ic,nonnegative_years,evaluated_years,mean_top10_target_quality
+B_ONLY,-0.00306457643218,0,2,-0.0626840292573
+C_ONLY,0.0275446866526,2,2,-0.0576169689911
+D_SOFT_FUSION,0.0265506977259,2,2,-0.0554548459758

@@ -40,6 +40,21 @@
 ## 현재 단계
 
 - Phase 0~4: 완료.
+- v2 Phase 4E: `EXP-20260901-001`은 당시 `C_ONLY`를 선택했지만 DEC-105 후속 감사에서
+  2019~2020 유효 선택 라벨 10행이 미해결 20% 이상 주식수 변화 경계를 통과한 사실을
+  확인했다. 최종 fit 유효 라벨에서도 83행이 같은 누락 경계를 통과해
+  `SUPERSEDED_PHASE4E_LABEL_INTEGRITY`로 철회했다. 기존 bundle·metric은 역사 기록이며 후속
+  모델·성과 입력으로 사용하지 않는다.
+- v2 Phase 5R: `EXP-20260901-002`는 corporate-action 승인 terms와 역사적 stable identity
+  계약이 불완전해 `REJECT_PHASE5R_UNRESOLVED_CA_AND_IDENTITY_CONTRACT`로 종료한다.
+  DEC-103의 관측 price/share 역관계 기반 `READY` action은 DEC-104가 유효 성과·경제 산출 전에
+  supersede했다.
+  canonical 포트폴리오·EX2 성과와 모든 경제 gate는 `NOT_EVALUATED`이며, 두 EX2 sensitivity는
+  비자기금융 진단일 뿐 return·bound·gate가 아니다.
+  동결 C_ONLY 점수 143,323행·차단 주문 의도 3,600건·원천 share-reset 후보 223건을 감사했고,
+  engine·성과 metric·실행 action·외부 주문은 0건이다. primary/reproduction 10개 파일은
+  byte-identical하다. 다만 원천 Phase 4E 오류 때문에 점수·주문 의도도
+  `SUPERSEDED_PHASE5R_INVALID_PHASE4E_SOURCE`이며 새 모델로 재실행해야 한다.
 - Phase 3 기준선: 재현 기준선으로 채택, 거래 후보로는 탈락.
 - Phase 4: 2021년 이하 물리 입력 경계 재검증과 독립 재실행을 완료했다. 기존 단변량 결과와 `reversal_5` 후보 판정은 불변이며, 이는 Phase 5 입력 후보일 뿐 모델·거래 후보가 아니다.
 - Phase 5: Train/Validation Selection 완료. `tree_d3_l002`를 Development Test 단일 공개 후보로 동결했으나, Development Test는 미승인이며 Phase 5 최종 채택·완료 상태가 아니다. Validation 연도별 순초과수익률 gate는 0/3 통과다.

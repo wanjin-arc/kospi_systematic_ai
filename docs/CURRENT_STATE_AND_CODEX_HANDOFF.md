@@ -1,7 +1,57 @@
 # 현재 상태 및 Codex 인계
 
-**갱신일:** 2026-08-24
+**갱신일:** 2026-09-01
 **목적:** 검증 완료 범위와 다음 승인 경계를 추측 없이 이어받기 위한 문서
+
+## 최신 결론 — v2 Phase 4E·Phase 5R
+
+`EXP-20260901-001` Phase 4E는 2020-12-30 이하 물리 입력에서 AI 모델을 먼저 만드는
+model-only 단계로 실행됐으나 DEC-105 후속 감사로 동결 판정을 철회했다. 당시
+`C_ONLY` HistGradientBoosting이 평균 Rank IC 0.027545,
+2019년 0.014653, 2020년 0.040437로 선택됐다. D soft fusion의 평균 IC 0.026551은 C를
+엄격히 개선하지 못했다. fit 23,567행, Selection OOF 4,876행이며 primary/reproduction
+필수 파일 11/11이 byte-identical이다. bundle SHA-256은
+`da9b8111c3c9c59126746075bc019a5218d33c0259a1c22d0eea00ea3cd3c550`다.
+포트폴리오·주문·2021년 이후 fit·protected OOS 접근은 모두 0이다.
+추가 2004~2020 원천 감사에서 membership 841,657행의 비정규 ticker는 0행이었고, 시장 원천의
+전역 normalization collision 4개 중 Phase 4E membership과 교차한 것은 0개였다. 따라서 이
+특정 정규화 충돌이 C_ONLY에 유입됐다는 증거는 없다.
+
+그러나 별도 라벨 경계 감사에서 전체 거래소 원천 exact ticker 후보 4,391건 중 로더의
+ever-member·두 종목 제외 모집단 554건, 전일·당일 실제 구성종목 후보 247건을 찾았다.
+두 종목 제외 전 양일 구성 후보는 248건이며 차이는 삼성전자 2018-05-04 액면분할 1건이다.
+기존 OOF 4,876행 중 11행의 20세션 창이 후보를
+가로질렀고, 그중 기존 유효 라벨 10행은 모두 비기계적 후보이자 2019~2020 선택 표본이었다.
+최종 fit 유효 23,567행 중에는 75개 고유 비기계적 후보를 가로지른 행이 83개였다.
+따라서 기존 Phase 4E는 `SUPERSEDED_PHASE4E_LABEL_INTEGRITY`, 이를 입력으로 쓴 Phase 5R은
+`SUPERSEDED_PHASE5R_INVALID_PHASE4E_SOURCE`다. 기존 bundle·점수·주문 의도는 재사용하지 않는다.
+
+후속 `EXP-20260901-002` Phase 5R은 2021~2023 predict-only 성과 평가 전에 데이터 회계
+무결성에서 중단됐다. 첫 시도는 카카오 `035720`, 두 번째 시도는 아시아나항공 `020560`의
+share-reset/EX2 계약에서 멈췄으며, 결과 파일에 기록된 포트폴리오 성과·경제 gate는 없다.
+관측 상장주식 수와 가격의 역관계만으로 `READY` action을 만든 DEC-103은 권위 raw audit의
+네 증거 요건과 충돌하므로 DEC-104가 유효 성과·경제 산출 전에 supersede한다.
+
+현재 결정은 `REJECT_PHASE5R_UNRESOLVED_CA_AND_IDENTITY_CONTRACT`다. stable identity와
+승인 corporate-action terms가 없으므로 canonical 포트폴리오·EX2 return, neutral core alpha,
+공식 KRX1028 대비 방어력, MDD와 비용 stress를 모두 `NOT_EVALUATED`로 기록한다.
+`EX2_PRICE_UNIT_SENSITIVITY`와 `EX2_ISSUER_CAP_VALUE_SENSITIVITY`는 비자기금융 진단이며
+canonical return·상하한·경제 gate로 사용하지 않는다.
+
+최종 무결성 감사는 C_ONLY 점수 143,323행과 차단 주문 의도 3,600건을 생성했다. 원천
+share-reset 후보 223건 중 전일·당일 실제 구성종목 사건은 37건이며 ticker normalization
+collision은 전역 4개, 실제 membership 교차 0개다. engine·성과 metric·실행 action·외부
+주문은 0건이고 primary/reproduction 10개 파일은 byte-identical하다.
+
+다음 허용 작업은 먼저 새 Experiment ID에서 DEC-105 candidate-only 라벨 경계와 기술 Feature
+reset으로 Phase 4 모델을 전체 재학습·재선택하는 것이다. 그 다음 PIT issuer·share class·
+successor stable identity map과 원문 권리비율·효력 거래세션·KRX 동일배율 교차검증을 갖춘
+action terms ledger를 설계한다. 새 데이터 버전과 Experiment를 사전등록하기 전에는 Phase 5
+backtest engine·원장·경제 gate를 실행하지 않는다. superseded Phase 4E bundle은 재사용하지
+않고, 70/20/10 비중·비용·gate는 2021~2023 결과에 맞춰 바꾸지 않으며 protected OOS는 봉인한다.
+
+상세 근거는 `docs/stages/v2_phase_4e_report.md`, `docs/stages/v2_phase_5r_report.md`,
+`docs/DECISION_LOG.md`의 DEC-104·DEC-105를 따른다. 아래 내용은 이전 연구선의 역사 기록으로 보존한다.
 
 ## 결론
 
