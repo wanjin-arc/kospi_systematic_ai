@@ -1,0 +1,10 @@
+{
+  "calculation_time": "official_close_t",
+  "development_test_accessed": false,
+  "minimum_holdings": 0,
+  "minute_data_used": false,
+  "order_time": "next_session_open_or_later",
+  "stock_entry": "daily_zscore_at_least_1_0_and_regime_rank_capacity",
+  "stock_exit": "daily_zscore_below_0_or_regime_rank_capacity_loss_or_risk_off",
+  "unallocated_cash": "retained_without_gate_penalty"
+}

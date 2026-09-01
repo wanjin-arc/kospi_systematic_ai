@@ -1,0 +1,3 @@
+model,mean_quality_rank_ic,mean_ndcg_at_80,folds,simplicity
+ridge_quality,0.0328378216646,0.656544204399,5,0
+hist_quality,0.0198234689102,0.652073944215,5,1

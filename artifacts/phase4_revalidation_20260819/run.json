@@ -1,0 +1,20 @@
+{
+  "accepted_phase5_candidates": [
+    "reversal_5"
+  ],
+  "command": "PYTHONPATH=src python -m kospi100_features.cli run --config configs/phase4_revalidation_20260819.json --output artifacts/phase4_revalidation_20260819",
+  "config_hash": "71199d3c36e6d63775cfe5aaad4c8a59c3030f56f6a772130b3be12da0c75317",
+  "contract_hash": "4728adbdd7b48077a6e96714c920d541d19cae0e1f73aaaf9c98ebaee6c0aa2d",
+  "cross_sectional_features": 21,
+  "data_hash": "69590204b3c35e686267dac81fe1347c0e3639005586da2d2db32e35c76b840f",
+  "development_test_accessed_for_selection": false,
+  "experiment_id": "P4-REVALIDATION-20260819-001",
+  "final_oos_accessed": false,
+  "label_column": "forward_excess_log_return_10",
+  "model_trained": false,
+  "portfolio_backtest_run": false,
+  "random_seed": 20260818,
+  "regime_features": 5,
+  "research_config_hash": "2b65169985cf800c05863191e4f19bcb190865a92bd31b325f5be3f299cd7091",
+  "source_hash": "868457ef97de3c180bbd5d4edfd5ebe581569241fd4e16df21945577dc003844"
+}

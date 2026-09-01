@@ -1,0 +1,10 @@
+{
+  "max_loaded_date": "2023-12-28",
+  "output_sha256": "c5f3f22b08ae4ad66132e71e6fbe8263fecc26c0961c112914871429e85696b8",
+  "post_2023_files_loaded": false,
+  "role": "reference_only_not_universe",
+  "rows": 3202,
+  "schema_version": "phase1b-market-reference-v1",
+  "source_root": "data\\incoming\\v25_kospi_raw",
+  "source_root_manifest_sha256": "82e4356dec4c7dafef1931d626f7826a6189f55dd8055530f60c72d138dacbc0"
+}

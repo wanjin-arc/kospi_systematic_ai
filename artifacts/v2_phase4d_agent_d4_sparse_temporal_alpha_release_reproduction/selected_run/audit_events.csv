@@ -1,0 +1,14 @@
+session,severity,code,security_id,reference_id,detail
+2019-09-27,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-09-30,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-01,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-02,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-04,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-07,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-08,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-10,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-11,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-14,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-15,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-16,WARNING,STALE_MARK,000150,,last valid close carried forward
+2019-10-17,WARNING,STALE_MARK,000150,,last valid close carried forward

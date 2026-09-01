@@ -1,0 +1,20 @@
+{
+  "decision": "FREEZE_MODEL_FOR_PHASE5R_CONSUMED_DIAGNOSTIC",
+  "evidence_status": "CONSUMED_DEVELOPMENT_MODEL_ONLY",
+  "experiment_id": "EXP-20260901-001",
+  "gates": {
+    "all_candidates_both_years_evaluated": true,
+    "all_pass": true,
+    "both_selection_years_evaluated": true,
+    "d_coefficients_nonnegative": true,
+    "d_inner_oof_lineage": true,
+    "eligible_universe_scored_before_label_filter": true,
+    "finite_top10_quality": true,
+    "nonnegative_selection_year_at_least_one": true,
+    "portfolio_metrics_used_for_selection": false,
+    "positive_mean_rank_ic": true
+  },
+  "phase4e_model_gate_pass": true,
+  "phase5r_predict_only_diagnostic_allowed": true,
+  "primary_agent": "C_ONLY"
+}

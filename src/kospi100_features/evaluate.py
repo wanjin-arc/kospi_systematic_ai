@@ -27,6 +27,29 @@ def _purged_period_dates(index: pd.DataFrame, start: object, end: object, purge:
     return set(dates[:-purge])
 
 
+def _forward_embargo_dates(
+    index: pd.DataFrame,
+    end: object,
+    embargo: int,
+    *,
+    later_training_exists: bool,
+) -> set[pd.Timestamp]:
+    """Return dates forbidden from re-entering a later training block.
+
+    Phase 4 has a single forward Train -> Validation screen and no later training
+    block, so the effective set is empty. Keeping this explicit makes the frozen
+    20-session embargo auditable and prevents it from silently becoming a no-op in
+    a future workflow that does have a later fit.
+    """
+
+    if embargo < 0:
+        raise ValueError("embargo는 음수일 수 없습니다")
+    if not later_training_exists or embargo == 0:
+        return set()
+    dates = index.loc[index["date"].gt(pd.Timestamp(end)), "date"].sort_values().head(embargo)
+    return set(dates)
+
+
 def _daily_rank_ic(frame: pd.DataFrame, feature: str, minimum_cross_section: int) -> pd.Series:
     pair = frame[["date", feature, LABEL_COLUMN]].dropna().copy()
     if pair.empty:
@@ -44,10 +67,9 @@ def _daily_rank_ic(frame: pd.DataFrame, feature: str, minimum_cross_section: int
     pair["xy"] = pair["x"] * pair["y"]
     stats["sxy"] = grouped["xy"].sum()
     numerator = stats["sxy"] - stats["sx"] * stats["sy"] / stats["n"]
-    denominator = np.sqrt(
-        (stats["sxx"] - stats["sx"] ** 2 / stats["n"])
-        * (stats["syy"] - stats["sy"] ** 2 / stats["n"])
-    )
+    variance_x = (stats["sxx"] - stats["sx"] ** 2 / stats["n"]).clip(lower=0.0)
+    variance_y = (stats["syy"] - stats["sy"] ** 2 / stats["n"]).clip(lower=0.0)
+    denominator = np.sqrt(variance_x * variance_y)
     result = numerator / denominator.where(denominator > 0)
     result = result.where(stats["n"] >= minimum_cross_section).dropna()
     result.name = feature
@@ -120,6 +142,12 @@ def evaluate_features(
         dates = _purged_period_dates(index, period.start, period.end, config.purge_sessions)
         partition_dates[name] = dates
         frame.loc[frame["date"].isin(dates), "period"] = name
+    embargo_dates = _forward_embargo_dates(
+        index,
+        config.periods["validation"].end,
+        config.embargo_sessions,
+        later_training_exists=False,
+    )
     if frame.loc[frame["period"].ne(""), "date"].max() > pd.Timestamp("2021-12-31"):
         raise PermissionError("Phase 4 평가가 검증 구간을 초과했습니다")
 
@@ -202,15 +230,21 @@ def evaluate_features(
             decisions_by_id[feature]["reason"] = f"더 강한 채택 변수와 Train 횡단면 순위상관 절댓값이 {config.redundancy_threshold:.2f} 이상"
             decisions_by_id[feature]["redundant_with"] = redundant_with
     decisions = pd.DataFrame(decision_rows)
+    evaluated = frame.loc[frame["period"].ne("") & frame["phase4_eligible"] & frame[LABEL_COLUMN].notna()]
     audit = {
         "train_dates_after_purge": len(partition_dates["train"]),
         "validation_dates_after_purge": len(partition_dates["validation"]),
         "purge_sessions": config.purge_sessions,
         "embargo_sessions": config.embargo_sessions,
+        "embargo_later_training_exists": False,
+        "embargoed_dates": len(embargo_dates),
         "development_test_accessed": False,
         "final_oos_accessed": False,
         "model_trained": False,
         "portfolio_backtest_run": False,
         "accepted_features": accepted,
+        "minimum_evaluated_signal_date": evaluated["date"].min().date().isoformat() if not evaluated.empty else None,
+        "maximum_evaluated_signal_date": evaluated["date"].max().date().isoformat() if not evaluated.empty else None,
+        "evaluated_signal_rows": int(len(evaluated)),
     }
     return EvaluationResult(metrics_frame, daily_frame, redundancy, decisions, audit)

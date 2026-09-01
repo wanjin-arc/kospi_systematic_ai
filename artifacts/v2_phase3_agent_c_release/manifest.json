@@ -1,0 +1,26 @@
+{
+  "daily_candidate_rows": 1819,
+  "experiment_id": "EXP-20260826-002",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "agent_b_candidates": "e9e96532fcb9dbb5926cd9f3164d8ddcf5f5eeb240efcf7e043c159bd3caa23a",
+    "agent_b_manifest": "0fa4f535e24721ddbe55ac67301bdd55622ef73309d859264157aef391efb993",
+    "config": "c40ce1285ecfe362e2c19523bdc514346a509836adba55e9eed05045dd8a6ff4",
+    "market_tree": "86691d4349cfbbf2cf58fbebea93fac783af189b84ff2b6b7dd8f428992ab03b"
+  },
+  "legacy_v1_development_test_partition_accessed": false,
+  "output_sha256": {
+    "daily_agent_c_candidates.csv.gz": "f4b716e7a29db4effd8549dc9ad51dbacd3cef5ef6ad9464863fb551fc98e2ab",
+    "daily_candidate_counts.csv": "4a3027738518f316da6fe933436b0327d3d1194e8de3e4ff2846897fc2ef635e",
+    "data_audit.json": "d4b6d762625c3129aadd9b77844f4db633fe1f28ae9e9a48dad56c71b5ad8df7",
+    "fold_metrics.csv": "c36691b86ea2a7c1c69c0d14babcfc7d9490a2a34c888d811ca1428cc175980b",
+    "model_summary.csv": "63ec0ae02dfaad8928ba441f795815656f0b3eeede5c34c660605ce0e7f835c5",
+    "selected_model.json": "e88414a42dd8de7844a38d5895ea3d55d791be55720233609733cd22d22efed3"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-c-phase3-v1",
+  "scored_dates": 1233,
+  "selected_model": "hist_dual",
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "v2_consumed_development_2022_2023_loaded": true
+}

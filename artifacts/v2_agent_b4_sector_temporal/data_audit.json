@@ -1,0 +1,15 @@
+{
+  "consumed_development_2022_2023_loaded": true,
+  "factor_max_date": "2023-12-28",
+  "factor_min_date": "2016-03-24",
+  "factor_rows_loaded": 264341,
+  "feature_count": 121,
+  "final_oos_accessed": false,
+  "index_code": "1028",
+  "labeled_rows": 12323,
+  "market_files_loaded": 1966,
+  "monthly_rows": 12993,
+  "portfolio_backtest_run": false,
+  "sector_count": 22,
+  "sector_missing_rows": 0
+}

@@ -1,0 +1,11 @@
+{
+  "decision": "REJECT_AGENT_D",
+  "gates": {
+    "mdd_above_floor": false,
+    "positive_annual_excess_at_least_3_of_5": false,
+    "positive_sharpe": true,
+    "positive_total_net_excess": false,
+    "reconciliation": true
+  },
+  "selected_candidate": "C100"
+}

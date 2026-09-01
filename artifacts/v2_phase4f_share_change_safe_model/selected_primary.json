@@ -1,0 +1,30 @@
+{
+  "experiment_id": "EXP-20260901-003",
+  "model_state_hash": "b558ecbfba2fd5022cb12f10c5df2499559642e4f5b4f1e9f781c223e7a41e4f",
+  "phase4f_model_gate_pass": true,
+  "phase5s_predict_only_diagnostic_allowed": true,
+  "primary_agent": "C_ONLY",
+  "selection_metrics": [
+    {
+      "agent": "B_ONLY",
+      "evaluated_years": 2,
+      "mean_rank_ic": -0.004486975571221706,
+      "mean_top10_target_quality": -0.06558948703046791,
+      "nonnegative_years": 1
+    },
+    {
+      "agent": "C_ONLY",
+      "evaluated_years": 2,
+      "mean_rank_ic": 0.017809603577600558,
+      "mean_top10_target_quality": -0.05252634909445219,
+      "nonnegative_years": 1
+    },
+    {
+      "agent": "D_SOFT_FUSION",
+      "evaluated_years": 2,
+      "mean_rank_ic": 0.01718705798684535,
+      "mean_top10_target_quality": -0.05253694772940146,
+      "nonnegative_years": 1
+    }
+  ]
+}

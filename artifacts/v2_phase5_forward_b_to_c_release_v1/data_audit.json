@@ -1,0 +1,29 @@
+{
+  "agent_b": {
+    "factor_max_date": "2023-12-28",
+    "factor_min_date": "2016-03-24",
+    "factor_rows_loaded": 264341,
+    "fit_max_signal_date": "2023-08-31",
+    "labeled_monthly_rows": 12323,
+    "latest_score_date": "2023-12-28",
+    "latest_top80_count": 80,
+    "market_files_loaded": 1966
+  },
+  "agent_c": {
+    "fit_max_signal_date": "2023-12-07",
+    "fit_min_signal_date": "2004-04-01",
+    "fit_sequence_rows": 95510,
+    "latest_score_date": "2023-12-28",
+    "latest_scored_tickers": 192,
+    "market_files_loaded": 4945,
+    "membership_rows_loaded": 989568,
+    "train_sequence_rows": 95702
+  },
+  "all_2019_2023_reclassified_as_training": true,
+  "final_oos_accessed": false,
+  "fusion": "AGENT_B_TOP80_THEN_AGENT_C_RANK",
+  "historical_portfolio_backtest_run": false,
+  "latest_candidate_rows": 30,
+  "legacy_v1_development_test_partition_accessed": false,
+  "training_policy": "ALL_2004_2023_CONSUMED_NO_HISTORICAL_SELECTION"
+}

@@ -1,0 +1,16 @@
+{
+  "daily_score_rows": 177882,
+  "factor_max_date": "2023-12-28",
+  "factor_min_date": "2016-03-24",
+  "factor_rows_loaded": 264341,
+  "final_oos_accessed": false,
+  "index_code": "1028",
+  "index_max_date": "2023-12-28",
+  "index_min_date": "2004-01-02",
+  "index_rows_loaded": 4945,
+  "legacy_v1_development_test_partition_accessed": false,
+  "market_files_loaded": 1966,
+  "monthly_label_rows": 12323,
+  "portfolio_backtest_run": false,
+  "v2_consumed_development_2022_2023_loaded": true
+}

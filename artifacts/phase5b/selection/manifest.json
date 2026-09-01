@@ -1,0 +1,12 @@
+{
+  "candidate_portfolio_metrics.csv": "481c5f877361be9598aeba2243aca498fb9ef53bc7e6fdac5e5042676c46e7c9",
+  "candidate_selection.json": "fdd0545fde24138ed3f15a5a31c3cf423031f0e8af66debe1f92ce06996789b9",
+  "data_audit.json": "18787304d3dd0e2b8b3073460a3ebe66d8cc33c6244a5ec0025d83f2da992a74",
+  "feature_relationships.csv": "1f628486c3d07b8e6b53880de9f3fd1a53098a6703e115108eb2cfa306d88f8d",
+  "fold_audit.csv": "ea9c3c9d9fbd32ee6fd2a8dd704920a9d182bc05a53b887d42224dc0411b1070",
+  "fold_rank_metrics.csv": "c5df893223232681a7c26554bce5cb8baea055853f3fe8164a47cf35ecb88762",
+  "run.json": "b0e685b341958a50db7ffcda9a5712c8d03a3d7d244a8ef45b6e79a8cc2b2fcb",
+  "score_contract.json": "5471bf3e38c62c2d245e8c42cc030a21b5d8290368781663b2ad80bf0f1c8140",
+  "selected_model.json": "9110c89e1aa87faf2a846d8a3dd897591cc88f540a85ae4af2f3d979f7f2dc0e",
+  "selected_model.pkl": "b360f447733fae7369814c33b6a202b95dda23787f4c92d03214a6881e4d215b"
+}

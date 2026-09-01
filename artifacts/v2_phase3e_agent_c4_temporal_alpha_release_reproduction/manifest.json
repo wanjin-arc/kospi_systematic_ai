@@ -1,0 +1,22 @@
+{
+  "agent_b_accessed": false,
+  "experiment_id": "EXP-20260826-010",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "config": "1db511698cb3ddb322838b892dce41a81d19955025eaac451571dacfd4fa3f4d",
+    "market_tree": "b32ae39dc42b0e214411dada944a37a873434ddd5f1d0d49cc4dea160334dae9",
+    "membership_tree": "27de71f1ceafcaae7c7d5bd578da5a688c11300bb4746b69efc5eb6a077877af",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "model_sha256": "f0868078c52742f4a8cd09a4310a21699807d8bb9bed61775432238f3aa298c0",
+  "output_sha256": {
+    "calibration_evaluation.json": "55f206a21990683ba32093015b63d69e43d175df0b42034acad7d84dfe611a5b",
+    "daily_agent_c4_scores.csv.gz": "1aefd1683e71efa43a33ad557150342539ace2c2e673b26c7dceb9b8e88f19fe",
+    "data_audit.json": "b59c21cc903318eb378e9958fda24c94099946973ccab50538bc3ef15732b169",
+    "evaluation.json": "03c429b475af910721bcd669174b566dcfac37191d9633a452c84efa0e59a12a",
+    "selected_model.json": "f0868078c52742f4a8cd09a4310a21699807d8bb9bed61775432238f3aa298c0"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-c4-temporal-alpha-v1",
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY"
+}

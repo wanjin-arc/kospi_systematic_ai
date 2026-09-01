@@ -1,0 +1,53 @@
+{
+  "daily_rank_eligible_count": {
+    "max": 167,
+    "median": 140.0,
+    "min": 1
+  },
+  "daily_ticker_count": {
+    "max": 167,
+    "median": 140.0,
+    "min": 1
+  },
+  "dates_total": 1912,
+  "dates_with_at_least_30_tickers": 1907,
+  "factor_coverage": {
+    "assets_growth_yoy": 0.8449502725646041,
+    "book_to_market": 0.9857835144756205,
+    "cash_to_assets": 0.9859386171649498,
+    "cfo_to_assets": 0.7309119659833322,
+    "cfo_yield": 0.7324932568160066,
+    "current_ratio": 0.9959673300774379,
+    "debt_to_equity": 0.9857835144756205,
+    "earnings_yield": 0.7415535236682921,
+    "equity_growth_yoy": 0.8366239062423158,
+    "equity_ratio": 0.9850306989835099,
+    "free_cash_flow_yield": 0.5671235260515773,
+    "liabilities_to_assets": 0.9951388547368739,
+    "net_income_growth_yoy": 0.5913384605490635,
+    "net_margin": 0.7272159823863873,
+    "operating_income_growth_yoy": 0.6148232775089751,
+    "operating_margin": 0.7454689208257516,
+    "revenue_growth_yoy": 0.6120806080025422,
+    "roa": 0.7403694470399976,
+    "roe": 0.7308514381045694,
+    "sales_to_market_cap": 0.7554522378291676
+  },
+  "failures": {
+    "duplicate_date_ticker_rows": 0,
+    "identity_violations": 0,
+    "manifest_row_mismatch": 0,
+    "missing_columns": [],
+    "post_2023_rows": 0
+  },
+  "identity_sha256": "d9abe7647f7eb36670cc93c4ebae3490979f3fb022fabe3fba11b100886b25eb",
+  "max_date": "2023-12-28",
+  "min_date": "2016-03-24",
+  "model_started": false,
+  "panel_sha256": "0ba2cb148b7e076d221a62b8b323ff18063518700b1dd597c5005ac46a0ab857",
+  "protected_oos_accessed": false,
+  "rows": 264341,
+  "schema_version": "kospi200-fundamental-factor-panel-audit-v1",
+  "status": "PASS_FACTOR_PANEL_MODEL_NOT_STARTED",
+  "tickers": 248
+}

@@ -1,0 +1,10 @@
+{
+  "calculation_time": "official_close_t",
+  "development_test_accessed": false,
+  "entry_priority": "score_desc_security_id_asc_top10_then_fallback_to_rank20",
+  "exit": "next_open_when_rank_below_top20_or_20_session_safety_limit",
+  "minute_data_used": false,
+  "order_time": "next_session_open_or_later",
+  "persistent_score": "causal_ema5_then_daily_cross_sectional_rerank",
+  "raw_score": "fold_train_only_elastic_a005_l02_prediction_daily_percentile_rank"
+}

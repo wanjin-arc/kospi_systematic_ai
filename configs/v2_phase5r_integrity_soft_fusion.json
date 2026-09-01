@@ -1,0 +1,105 @@
+{
+  "schema_version": "v2-phase5r-frozen-model-portfolio-v2",
+  "experiment_id": "EXP-20260901-002",
+  "phase4e_experiment_id": "EXP-20260901-001",
+  "phase4e_bundle": "artifacts/v2_phase4e_ai_model/frozen_model_bundle.pkl",
+  "phase4e_manifest": "artifacts/v2_phase4e_ai_model/manifest.json",
+  "phase4e_manifest_sha256": "08bb74b3319a77af8ecc2f1426cb8cde07bc2f68ef44d1f860dde7e83716f6dc",
+  "phase4e_artifact_tree_sha256": "2cb97749c42406bd36d088b8504226a6b86296230ef51a316000156343a813e1",
+  "phase4e_bundle_sha256": "da9b8111c3c9c59126746075bc019a5218d33c0259a1c22d0eea00ea3cd3c550",
+  "phase4e_model_hash": "034142db1930c0ec9d9f201bc2e58b68026b897100066d88c0d27c24391cf78a",
+  "membership_root": "data/incoming/v2_kospi200_membership_raw/normalized/membership_daily",
+  "market_roots": [
+    "data/incoming/v25_zip_import/krx_v25_technical_raw/raw/market_all",
+    "data/incoming/v25_kospi_raw/raw/market_stk"
+  ],
+  "fundamental_panel": "data/processed/v2_kospi200_fundamental_factor_panel/fundamental_factor_panel.csv.gz",
+  "index_file": "data/incoming/v2_kospi200_index_raw/normalized/kospi200_index_ohlcv.csv.gz",
+  "corporate_action_file": "data/processed/v25_corporate_actions_normalized/corporate_actions_v25_unresolved.csv",
+  "engine_config": "configs/phase2_engine.json",
+  "cost_schedule": "configs/kospi_sell_cost_schedule.csv",
+  "data_start": "2004-01-02",
+  "evaluation_start": "2021-01-04",
+  "fundamental_start": "2016-03-24",
+  "data_end": "2023-12-28",
+  "target_horizon_sessions": 20,
+  "sample_every_sessions": 20,
+  "excluded_securities": [
+    {"security_id": "KRX_COMMON:005930", "ticker": "005930", "audit_name": "삼성전자"},
+    {"security_id": "KRX_COMMON:000660", "ticker": "000660", "audit_name": "SK하이닉스"}
+  ],
+  "agent_b": {
+    "features": [
+      "roe", "roa", "operating_margin", "net_margin", "cfo_to_assets",
+      "earnings_yield", "book_to_market", "sales_to_market_cap", "cfo_yield", "free_cash_flow_yield",
+      "debt_to_equity", "liabilities_to_assets", "current_ratio", "cash_to_assets", "equity_ratio",
+      "revenue_growth_yoy", "operating_income_growth_yoy", "net_income_growth_yoy", "assets_growth_yoy",
+      "equity_growth_yoy"
+    ],
+    "feature_suffix": "__phase4e_percentile"
+  },
+  "agent_c": {
+    "features": [
+      "return_1", "return_5", "return_20", "return_60", "volatility_5", "volatility_20",
+      "downside_volatility_20", "close_to_ma20", "close_to_ma60", "drawdown_20", "drawdown_60",
+      "intraday_range", "volume_ratio_20", "gap_1", "index_return_20", "index_trend_60",
+      "index_volatility_20"
+    ]
+  },
+  "phase4e_candidate_controls": ["B_ONLY", "C_ONLY", "D_SOFT_FUSION"],
+  "phase5_execute_selected_primary_only": true,
+  "portfolio": {
+    "initial_cash_krw": "100000000",
+    "rebalance_sessions": 20,
+    "liquidity_lookback_sessions": 20,
+    "liquidity_core_size": 50,
+    "core_total_weight": 0.70,
+    "core_name_weight": 0.014,
+    "alpha_size": 10,
+    "alpha_total_weight": 0.20,
+    "alpha_increment_weight": 0.02,
+    "cash_weight": 0.10,
+    "maximum_name_weight": 0.034,
+    "gap_buy_limit_rate": 0.05,
+    "maximum_holding_sessions": 20,
+    "stop_loss_rate": null,
+    "take_profit_rate": null,
+    "pyramiding": false,
+    "leverage": false,
+    "shorting": false
+  },
+  "benchmarks": [
+    "OFFICIAL_KRX_KOSPI200_1028",
+    "EX2_PIT_MARKET_CAP_PROXY",
+    "NEUTRAL_LIQUIDITY_TOP50_EQUAL_WEIGHT_90",
+    "EXPOSURE_MATCHED_KRX1028"
+  ],
+  "base_commission_rate": 0.0002,
+  "base_slippage_rate": 0.001,
+  "cost_stress_multipliers": [1.0, 2.0],
+  "development_gate": {
+    "minimum_nonnegative_years": 2,
+    "minimum_net_excess_vs_neutral_core": 0.0,
+    "minimum_worst_rolling_12m_vs_neutral_core": -0.10,
+    "minimum_mdd": -0.25,
+    "maximum_mdd_shortfall_vs_neutral_core": 0.05,
+    "minimum_annualized_excess_vs_ex2_cap": -0.01,
+    "maximum_downside_capture_vs_ex2_cap": 0.90,
+    "minimum_worst_calendar_year_vs_official": -0.15,
+    "minimum_worst_rolling_12m_vs_official": -0.20,
+    "minimum_average_equity_exposure": 0.80,
+    "minimum_closed_trades": 30
+  },
+  "forward_gate": {
+    "provisional_minimum_sessions": 126,
+    "final_minimum_sessions": 252,
+    "minimum_closed_trades": 30
+  },
+  "seed": 20260901,
+  "evidence_status": "PREREGISTERED_CONSUMED_DEVELOPMENT_PREDICT_ONLY",
+  "fit_allowed": false,
+  "development_backtest_approved": true,
+  "external_portfolio_execution_approved": false,
+  "network_order_submission": false,
+  "final_oos_access": false
+}

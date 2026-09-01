@@ -1,0 +1,18 @@
+{
+  "agent_b_accessed": false,
+  "calibration_sequence_rows": 9576,
+  "embargo_sessions": 10,
+  "final_oos_accessed": false,
+  "fit_cutoff": "2016-12-01",
+  "fit_sequence_rows": 61382,
+  "index_code": "1028",
+  "index_rows_loaded": 4945,
+  "legacy_v1_development_test_partition_accessed": false,
+  "market_files_loaded": 4945,
+  "membership_rows_loaded": 989568,
+  "portfolio_backtest_run": false,
+  "purge_sessions": 10,
+  "score_sequence_rows": 242716,
+  "train_sequence_rows": 71491,
+  "v2_consumed_development_2022_2023_loaded": true
+}

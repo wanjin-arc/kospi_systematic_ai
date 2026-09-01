@@ -1,0 +1,28 @@
+{
+  "daily_top30_rows": 44310,
+  "data_max_date": "2023-12-28",
+  "data_min_date": "2016-03-24",
+  "development_test_accessed": false,
+  "experiment_id": "EXP-20260826-001",
+  "final_oos_accessed": false,
+  "input_hashes": {
+    "config": "23c42d5b1175bda80eda2279547aaab245524495cc3c4a6a7d5eb1c343d3d16a",
+    "factor_panel": "0ba2cb148b7e076d221a62b8b323ff18063518700b1dd597c5005ac46a0ab857"
+  },
+  "loaded_market_files": 1966,
+  "market_input_tree_sha256": "86691d4349cfbbf2cf58fbebea93fac783af189b84ff2b6b7dd8f428992ab03b",
+  "monthly_label_rows": 12323,
+  "output_sha256": {
+    "daily_top30.csv.gz": "e9e96532fcb9dbb5926cd9f3164d8ddcf5f5eeb240efcf7e043c159bd3caa23a",
+    "data_audit.json": "f65cf98c1b1b7eb174cc67a016b0aa2395484baae685f7b0eedff00011e14d32",
+    "fold_metrics.csv": "3068c7336f07d8218508ddad617a3ad1979d61b269e2b887a78006de8c0c6eba",
+    "model_summary.csv": "699f27d9c875d4c17706af6236627ade7cfdde036c79e4526bd59158ceec9957",
+    "selected_model.json": "abd79d106a9b96ed3c42bc8f53db03863c9b847caa88d5e063080dbcc7c92754"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-b-phase2-v1",
+  "selected_model": "ridge_a10",
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "top30_max_date": "2023-12-28",
+  "top30_min_date": "2018-01-02"
+}

@@ -1,0 +1,46 @@
+{
+  "evidence_status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "experiment_id": "EXP-20260826-017",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "agent_b2_manifest": "5a442297103146924746d9486b6ccc6c8af18c7880b96aeb75516a07bb597d8b",
+    "agent_b2_scores": "4005a90525b6a8ac32f8203926a0c452e036658f52ac17bda486f7ac29e192d3",
+    "agent_c3_manifest": "f9955dbb105b7c7f7bb63ee6335677a1b785036b069765c0429b84c70b362587",
+    "agent_c3_scores": "7fca5778269d16be4c88ee8195610358738f1d16b9c209f6c5f5397d5ca852ff",
+    "config": "ec94397db7d3835b7e884d5481f4e80995207411d954af0d449a02f44a13cb14",
+    "cost_schedule": "15934ea896bd41c2b16172e11423d57949612c17f49919c35ad5e484a1ac6f93",
+    "engine_config": "52777da0e8f14a28fe8f117501ec4332798b1f5d7c02bfd0d41a867d5cfcb5c1",
+    "market_tree": "b3e0730ff40e6bd407b3c8aeef15bc7ed94cb0748b87c0838183955e60012039",
+    "membership_tree": "325cdc2aa9ba602f65146855d41f9b2f70d5d8ef2706cfdf03093fca8ea39928",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "model_sha256": {
+    "meta_rank_2020.pkl": "f4d7b20a2a44c9e3cff2c6b4d2911275b062e95117650c09049814e867c659a2",
+    "meta_rank_2021.pkl": "d8fbfc1824d4cec70e1d7d77bea5d0d79517c426713cbbe3f95dfe1cd52cce1b",
+    "meta_rank_2022.pkl": "aa51be3ec044e64ff6f5277fd877f1bb080c624037b028672cbb9ea60894c41b",
+    "meta_rank_2023.pkl": "8cb2b99e1c0c4f72e09fb7be7422b40ee78b1349e837d62d511aebd8f85f64a1"
+  },
+  "output_sha256": {
+    "candidate_metrics.csv": "21e924373bbd5c7eaccbd66513b7dc904a32ad58749753863572e1da8028319f",
+    "daily_agent_d6_scores.csv.gz": "a53cb934967fe5501c13be706dfc84df34287dbf8f74c7cb1570ee04ffd133fa",
+    "data_audit.json": "9d03747618599c4b5bcad94d2b9bee67a0821e665b7f341518e6c63b2a84b688",
+    "decision.json": "3172b6003a4e6aacdab1e7f9c863e0b63f016253d49c113a87d161d55d96ec94",
+    "walk_forward_audit.json": "db1c60457a1ba45ee438936d4ce0f04a669083ff9fb92e2d00c1551cfd4aec07"
+  },
+  "schema_version": "kospi200-agent-d6-walk-forward-meta-rank-v1",
+  "selected_for_audit": "B2_TOP30_META_RANK",
+  "selected_run_hashes": {
+    "audit_events.csv": "0e8ff4aa65f48a28965e40bb3497880dd04b7cc4c4e4cda7e913be983aca09ed",
+    "cash_ledger.csv": "e6088dd2bce47c51fe7586b3146ed90816407e50ea61ccda5632fa90ec8b670f",
+    "closed_trades.csv": "97b718d815037fe08d51613bd154e63766e3acba408b628a1c6462c3ce69d72c",
+    "equity_curve.csv": "913262f2a10a37a3d463adbb70160518f1129b65edea6fbd7bed3a3bab98b4c4",
+    "fills.csv": "f230dce95146be4cb9e6e6b018de2c5dc431e210bf6268bc53ce447a404a85de",
+    "metrics.json": "4bec59879abe73f8a27aa244a534b5572c8ee865dda789ece6a7a834eb3467e5",
+    "order_events.csv": "012bb16a64c48b2685e3112e82aff9499efd104f491343f8919904df0895d4f4",
+    "position_ledger.csv": "968d4820fe2b804192aefd537e05224d5b655a2f55745d147b8639eec80afb0d",
+    "position_snapshots.csv": "5c3f54c6cfbc9d74f6aec8c2469baa27bac39feb15dfb0b4bcf80b677ab3a8cb",
+    "reconciliation.json": "b6029548a6a09b7eb014a804196e3ca12ec6d458b74dbba0b2c240a4b11c1369",
+    "run.json": "a6a9e0c5a4d976c07edb8d24f66462b76a1b1be2d4dc4721b8155430dfd201a8"
+  },
+  "status": "REJECT_D6_FOR_TRADING"
+}

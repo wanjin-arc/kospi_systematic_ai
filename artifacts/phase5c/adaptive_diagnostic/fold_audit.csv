@@ -1,0 +1,5 @@
+candidate,fold,train_min_date,train_max_date,train_rows,validation_min_date,validation_max_date,validation_rows,input_columns,purge_sessions,embargo_sessions,preprocessing_fit_used_validation,model_fit_used_validation,other_phase5b_candidates_evaluated
+elastic_a005_l02,I2015,2011-01-03,2014-12-01,88936,2015-01-30,2015-12-01,18713,32,20,20,False,False,False
+elastic_a005_l02,I2016,2011-01-03,2015-12-01,111231,2016-02-01,2016-12-01,18487,32,20,20,False,False,False
+elastic_a005_l02,I2017,2011-01-03,2016-12-01,133341,2017-02-01,2017-11-29,18090,32,20,20,False,False,False
+elastic_a005_l02,I2018,2011-01-03,2017-11-29,155004,2018-01-30,2018-11-29,18352,32,20,20,False,False,False

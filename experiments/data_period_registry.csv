@@ -1,0 +1,5 @@
+dataset_line,period_start,period_end,evidence_status,allowed_use,prohibited_use,reason
+v1_kospi100_technical,2004-01-02,2023-12-31,consumed,training_and_diagnostic_only,independent_validation_or_oos,"기존 Phase 3~5I 결과를 이미 관찰함"
+v1_final_oos,2024-01-01,2025-12-31,sealed,phase8_frozen_v1_release_only,v2_development_or_collection,"기존 KOSPI 100 v1 봉인 자료"
+v2_kospi200_fundamental_technical,2015-01-01,2023-12-31,consumed_audited_build,training_and_internal_diagnostic_only,independent_validation_or_oos,"PIT identity·taxonomy·20 Factor 패널 감사를 완료했으나 과거 시장 결과가 이미 알려진 기간임"
+v2_forward_shadow,2026-08-26,,unobserved_future,paper_shadow_after_model_freeze,retrospective_tuning,"v2 독립 증거는 동결 이후 미래 데이터로 축적"

@@ -1,0 +1,25 @@
+{
+  "version": "phase4c-market-reference-audit-v1",
+  "experiment_id": "EXP-20260825-002",
+  "stock_partition_root": "data/processed/v24/phase4b_train_internal_2018",
+  "reference_partition_root": "data/processed/v25_phase4c_market_reference_2018",
+  "maximum_permitted_date": "2018-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "reference_features": ["all_kospi_advance_ratio", "all_kospi_median_return_1d", "all_kospi_return_dispersion_1d", "all_kospi_log_trading_value_relative_20"],
+  "stock_features": "phase4b_frozen_21_in_order",
+  "interaction_formula": "(daily_percentile_rank(stock_feature)-0.5)*train_standardized(reference_feature)",
+  "internal_folds": [
+    {"fold": "I2015", "train": ["2011-01-01", "2014-12-31"], "validation": ["2015-01-01", "2015-12-31"]},
+    {"fold": "I2016", "train": ["2011-01-01", "2015-12-31"], "validation": ["2016-01-01", "2016-12-31"]},
+    {"fold": "I2017", "train": ["2011-01-01", "2016-12-31"], "validation": ["2017-01-01", "2017-12-31"]},
+    {"fold": "I2018", "train": ["2011-01-01", "2017-12-31"], "validation": ["2018-01-01", "2018-12-31"]}
+  ],
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "minimum_feature_coverage": 0.95,
+  "hac_lag_sessions": 10,
+  "promotion": "NO_PROMOTION_IN_PHASE4C_AUDIT_ONLY",
+  "run_command": "PYTHONPATH=src python tools/run_phase4c_market_reference_audit.py --config configs/phase4c_market_reference_audit.json --output artifacts/phase4c_market_reference_audit"
+}

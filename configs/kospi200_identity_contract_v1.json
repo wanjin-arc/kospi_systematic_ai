@@ -1,0 +1,26 @@
+{
+  "schema_version": "kospi200-historical-identity-contract-v1",
+  "universe": "KOSPI_200_POINT_IN_TIME",
+  "membership_coverage": ["2004-01-02", "2023-12-31"],
+  "fundamental_coverage": ["2015", "2023"],
+  "confirmation_evidence": [
+    "unique_ticker_to_corp_code_in_collected_dart_raw",
+    "normalized_exact_match_between_pit_membership_name_and_dart_corp_name"
+  ],
+  "name_normalization": [
+    "unicode_nfkc",
+    "casefold",
+    "remove_whitespace_and_ascii_korean_punctuation",
+    "remove_corporate_designators"
+  ],
+  "corporate_designators": ["주식회사", "(주)", "㈜", "co.,ltd.", "coltd", "inc."],
+  "fail_closed_statuses": [
+    "UNRESOLVED_NAME_MISMATCH_NOT_MODEL_ELIGIBLE",
+    "AMBIGUOUS_TICKER_CORP_NOT_MODEL_ELIGIBLE",
+    "NO_DART_CORP_MAPPING_NOT_MODEL_ELIGIBLE"
+  ],
+  "manual_aliases": {},
+  "manual_alias_policy": "EMPTY_IN_V1; FUTURE_ADDITIONS_REQUIRE_SOURCE_EVIDENCE_AND_NEW_CONTRACT_VERSION",
+  "raw_mutation_allowed": false,
+  "protected_oos_access_allowed": false
+}

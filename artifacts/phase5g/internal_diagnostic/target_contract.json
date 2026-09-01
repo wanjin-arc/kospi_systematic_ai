@@ -1,0 +1,27 @@
+{
+  "costs": {
+    "commission_rate_per_side": "0.0002",
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [
+      1,
+      2,
+      3
+    ]
+  },
+  "cross_sectional_target_rank_used": false,
+  "development_test_accessed": false,
+  "entry_time": "open_t_plus_1",
+  "exit_times": {
+    "10": "open_t_plus_11",
+    "20": "open_t_plus_21",
+    "5": "open_t_plus_6"
+  },
+  "minute_data_used": false,
+  "signal_time": "official_close_t",
+  "targets": [
+    "forward_cost_adjusted_excess_log_return_5",
+    "forward_cost_adjusted_excess_log_return_10",
+    "forward_cost_adjusted_excess_log_return_20"
+  ]
+}

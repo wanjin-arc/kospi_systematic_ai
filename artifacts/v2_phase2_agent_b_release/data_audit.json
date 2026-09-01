@@ -1,0 +1,21 @@
+{
+  "comparison_values_backdated_to_2014": false,
+  "dilution_coverage_eligible": 0.9698211695007064,
+  "factor_panel_max_date": "2023-12-28",
+  "factor_panel_min_date": "2016-03-24",
+  "factor_panel_rows_loaded": 264341,
+  "final_oos_accessed": false,
+  "independent_2014_filing_loaded": false,
+  "legacy_v1_development_test_partition_accessed": false,
+  "market_cap_rank_max_in_output": 160.0,
+  "market_files_loaded": 1966,
+  "market_max_date": "2023-12-28",
+  "market_min_date": "2016-01-04",
+  "mechanical_share_resets": 124,
+  "minimum_statement_business_year": 2015,
+  "top30_dates": 1477,
+  "top30_duplicate_date_ticker": 0,
+  "top30_max_count": 30,
+  "top30_min_count": 30,
+  "v2_consumed_development_2022_2023_loaded": true
+}

@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "cash_nonnegative": true,
+    "cash_sum": true,
+    "fill_cash_decomposition": true,
+    "final_equity_identity": true,
+    "initial_capital_recorded_once": true,
+    "positions_from_ledger": true,
+    "positions_long_only": true
+  },
+  "detail": {
+    "cash_sum": "9108.993019000",
+    "final_cash": "9108.993019000",
+    "final_market_value": "4176920",
+    "final_positions": "{\"004020\": 12, \"017670\": 9, \"023530\": 6, \"029780\": 12, \"034730\": 2, \"055550\": 11, \"138930\": 65, \"175330\": 23, \"285130\": 7, \"316140\": 35}",
+    "ledger_positions": "{\"004020\": 12, \"017670\": 9, \"023530\": 6, \"029780\": 12, \"034730\": 2, \"055550\": 11, \"138930\": 65, \"175330\": 23, \"285130\": 7, \"316140\": 35}"
+  },
+  "passed": true
+}

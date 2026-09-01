@@ -1,0 +1,11 @@
+{
+  "agent_b5_experiment": "EXP-20260827-001",
+  "agent_c6_experiment": "EXP-20260827-002",
+  "combined_rows": 176029,
+  "diagnostic_rows": 107891,
+  "final_oos_accessed": false,
+  "market_files_loaded": 1233,
+  "membership_rows_loaded": 246780,
+  "selection_rows": 68138,
+  "v2_2021_2023_consumed_development_loaded": true
+}

@@ -1,0 +1,44 @@
+{
+  "decision": "REJECT_PHASE5S_UNRESOLVED_CA_AND_IDENTITY_CONTRACT",
+  "evidence_status": "CONSUMED_DEVELOPMENT_NOT_OOS",
+  "ex2_gate_status": "NOT_EVALUABLE_UNRESOLVED_ACTION_AND_IDENTITY_CONTRACT",
+  "ex2_sensitivity_audit": {
+    "ambiguous_event_count": 37,
+    "ambiguous_event_dates": 37,
+    "canonical_ex2_return_evaluable": false,
+    "identity_contract": "TICKER_DERIVED_NOT_HISTORICALLY_RESOLVED",
+    "issuer_cap_value_sensitivity_self_financing": false,
+    "maximum_daily_ambiguous_prior_weight": 0.03722067470667447,
+    "price_unit_sensitivity_self_financing": false,
+    "resolved_action_contract_complete": false,
+    "schema_version": "ex2-share-reset-sensitivity-v1",
+    "sensitivities_are_return_bounds": false,
+    "share_reset_gross_ratio_threshold": 1.2,
+    "stable_identity_contract_complete": false
+  },
+  "experiment_id": "EXP-20260901-004",
+  "integrity_gates": {
+    "canonical_ex2_return_evaluable": false,
+    "corporate_action_terms_complete": false,
+    "phase4f_model_gate": true,
+    "stable_identity_contract_complete": false
+  },
+  "performance_gates": {
+    "maximum_downside_capture_vs_ex2_cap": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "maximum_mdd_shortfall_vs_neutral_core": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_annualized_excess_vs_ex2_cap": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_average_equity_exposure": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_closed_trades": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_mdd": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_net_excess_vs_neutral_core": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_nonnegative_years": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_worst_calendar_year_vs_official": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_worst_rolling_12m_vs_neutral_core": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK",
+    "minimum_worst_rolling_12m_vs_official": "NOT_EVALUATED_PRE_EXECUTION_INTEGRITY_BLOCK"
+  },
+  "performance_metrics_observed": false,
+  "phase5_gate_pass": false,
+  "portfolio_engine_called": false,
+  "primary_agent": "C_ONLY",
+  "sensitivity_interpretation": "NON_SELF_FINANCING_DIAGNOSTIC_NOT_RETURN_BOUND"
+}

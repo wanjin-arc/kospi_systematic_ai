@@ -1,0 +1,11 @@
+{
+  "data_audit.json": "6aaa86ac14f81a956b3cf31396f992be3709eed0a1efb1285a94d19b023132be",
+  "diagnostic_decision.json": "fb90c16932560e20a7073f5800f998f0e1407c85f117440d8a030ab6d6417af4",
+  "fold_audit.csv": "c8fab47c0f8ae3f0d2454d4b0b170a804471c13d7109886facf813dd2cbe53a4",
+  "model_metrics.csv": "7f5dd64f882a6f797a0b81cda156c4e53b3456a5bf3024d33fb8213bee2e3ae0",
+  "no_trade_audit.json": "54b5381a3b26262b9bcdc00449d747976557c10cf0a76d82272e645e190894a6",
+  "portfolio_metrics.csv": "218795d7685b9ddaa5f18e2e53a919b5471c60dba2a2c18b6f654a6adb651c49",
+  "run.json": "701a11e7655a6e26d647fc10fa8e89893a57eebac43b3f718ca4c316ca040c0f",
+  "signal_activity.csv": "85c5fa20a5045a826718d58d0d68613e6564d05796ea3985cb85e3962c2f84fe",
+  "target_contract.json": "f2600e67cd73fd24c62092bf15108290103cd67c5fdd97fc187ea4d57197abd0"
+}

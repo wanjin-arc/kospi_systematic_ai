@@ -17,6 +17,17 @@
 - [ ] Cash-dividend total-return adjustments are not being used as technical signal inputs.
 - [ ] Halts, delistings, code changes, and non-tradable sessions are represented explicitly.
 
+### v2 Fundamental·KOSPI 200 추가 점검
+
+- [ ] 매 신호일의 Universe는 실제 KOSPI 200 구성종목이며 현재 200종목을 과거로 소급하지 않았다.
+- [ ] 재무값의 공개시점은 결산일이 아니라 DART 접수일이며 다음 KRX 거래일 전에는 사용하지 않는다.
+- [ ] 정정공시의 값은 정정 접수일 이전 Feature를 다시 쓰지 않는다.
+- [ ] 연결재무제표 우선·별도재무제표 fallback과 중복 제거가 기록돼 있다.
+- [ ] 종목코드·법인코드·security ID의 역사적 변경이 검증됐다.
+- [ ] 시가총액 기반 Factor는 신호일 당시 가격·상장주식 수만 사용한다.
+- [ ] 금융업과 일반기업의 다른 계정 taxonomy를 억지로 동일 값으로 채우지 않는다.
+- [ ] 분기 결측을 미래 분기, 전체기간 평균 또는 현재 조회값으로 보간하지 않는다.
+
 ## 2. Signal and Feature Timing (Critical)
 
 - [ ] Every feature lists its input fields, lookback, and latest permitted timestamp.
@@ -59,6 +70,7 @@
 - [ ] Gross and net results are both reported; selection is based on net results.
 - [ ] Annual/fold/regime results, turnover, concentration, cash, drawdown duration, and stress costs are reported.
 - [ ] Failed experiments and failed tests remain in the registry.
+- [ ] 이미 관찰한 2004~2023 기간은 consumed로 표시돼 새 Validation/OOS로 재사용되지 않는다.
 - [ ] No result claims use missing data, unrun code, another project's performance, or unverified broker fills.
 
 ## 6. Pre-Promotion Sign-off

@@ -1,0 +1,15 @@
+{
+  "agent_b2_experiment": "EXP-20260826-005",
+  "agent_c3_experiment": "EXP-20260826-008",
+  "diagnostic_rows": 106581,
+  "final_fit_rows": 65446,
+  "final_oos_accessed": false,
+  "legacy_dart_reason": "NUMERIC_ACCOUNT_AND_IDENTITY_AUDIT_NOT_COMPLETED",
+  "legacy_dart_rows_used": 0,
+  "market_files_loaded": 1233,
+  "membership_rows_loaded": 246780,
+  "relationship_rows": 176029,
+  "selection_fit_rows": 31257,
+  "selection_validation_rows": 32579,
+  "v2_2021_2023_consumed_development_loaded": true
+}

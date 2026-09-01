@@ -1,0 +1,1 @@
+fill_id,order_id,session,security_id,side,quantity,reference_price,fill_price,gross_notional,commission,transaction_tax,rural_special_tax,slippage_cost,cash_delta,reason

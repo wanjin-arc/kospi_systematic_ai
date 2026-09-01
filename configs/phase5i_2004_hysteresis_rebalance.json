@@ -1,0 +1,68 @@
+{
+  "version": "phase5i-2004-hysteresis-rebalance-v1",
+  "experiment_id": "EXP-20260825-004",
+  "data_root": "data/processed/v25_phase5i_train_internal_2004_2018",
+  "required_partition_role": "phase5i_train_internal_2004_2018",
+  "maximum_permitted_date": "2018-12-31",
+  "development_test_access": false,
+  "final_oos_access": "DENIED_UNTIL_PHASE_8",
+  "research_period": ["2004-01-02", "2018-12-31"],
+  "internal_folds": [
+    {"fold": "I2011", "train": ["2004-01-02", "2010-12-31"], "validation": ["2011-01-01", "2011-12-31"]},
+    {"fold": "I2012", "train": ["2004-01-02", "2011-12-31"], "validation": ["2012-01-01", "2012-12-31"]},
+    {"fold": "I2013", "train": ["2004-01-02", "2012-12-31"], "validation": ["2013-01-01", "2013-12-31"]},
+    {"fold": "I2014", "train": ["2004-01-02", "2013-12-31"], "validation": ["2014-01-01", "2014-12-31"]},
+    {"fold": "I2015", "train": ["2004-01-02", "2014-12-31"], "validation": ["2015-01-01", "2015-12-31"]},
+    {"fold": "I2016", "train": ["2004-01-02", "2015-12-31"], "validation": ["2016-01-01", "2016-12-31"]},
+    {"fold": "I2017", "train": ["2004-01-02", "2016-12-31"], "validation": ["2017-01-01", "2017-12-31"]},
+    {"fold": "I2018", "train": ["2004-01-02", "2017-12-31"], "validation": ["2018-01-01", "2018-12-31"]}
+  ],
+  "target": {
+    "id": "forward_10_session_excess_open_to_open_rank",
+    "entry_offset_sessions": 1,
+    "exit_offset_sessions": 11,
+    "cross_sectional_transform": "percentile_rank_average"
+  },
+  "model": {
+    "candidate": "elastic_a005_l02",
+    "stock_features": "phase4b_frozen_21_in_order",
+    "regime_features": "phase4b_frozen_5_in_order",
+    "interactions": "phase4b_frozen_6_in_order",
+    "fit_policy": "anchored_fold_train_only_purge20_embargo20"
+  },
+  "policy": {
+    "daily_score": true,
+    "score_smoothing": "causal_ema",
+    "ema_span_sessions": 5,
+    "entry_top_rank": 10,
+    "entry_persistence_sessions": 3,
+    "exit_below_rank": 20,
+    "exit_persistence_sessions": 3,
+    "rebalance_every_sessions": 5,
+    "maximum_holding_sessions": 20,
+    "maximum_holdings": 10,
+    "minimum_holdings": 0,
+    "target_weight": "0.10",
+    "allow_pyramiding": false,
+    "entry_gap_cap": "0.05"
+  },
+  "costs": {
+    "initial_cash_krw": "5000000",
+    "commission_rate_per_side": "0.0002",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [1, 2, 3],
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv"
+  },
+  "diagnostic_gate": {
+    "connected_base_cost_net_excess_strictly_positive": true,
+    "connected_2x_cost_net_excess_nonnegative": true,
+    "annual_positive_ratio_is_diagnostic": true,
+    "result_is_confirmatory": false,
+    "development_test_runs": 0
+  },
+  "purge_sessions": 20,
+  "embargo_sessions": 20,
+  "minimum_cross_section": 30,
+  "random_seed": 20260825,
+  "run_command": "PYTHONPATH=src python -m kospi100_phase5i.cli run --config configs/phase5i_2004_hysteresis_rebalance.json --output artifacts/phase5i_2004_hysteresis_rebalance"
+}

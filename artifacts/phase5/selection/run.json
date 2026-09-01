@@ -1,0 +1,68 @@
+{
+  "config_hash": "e3ea32fa995e3302539b8a28ed7193c7e7ccb1cc2af7dea76d6dc3ba6ef1fb21",
+  "costs": {
+    "commission_rate_per_side": "0.0002",
+    "sell_tax_schedule": "configs/kospi_sell_cost_schedule.csv",
+    "slippage_rate_per_side": "0.0010",
+    "stress_multipliers": [
+      1,
+      2,
+      3
+    ],
+    "tax_removed_in_stress": false
+  },
+  "data_hash": "d4b817519bc7b9956b26bbc8e099356a0b1b3cb4e402674b59e93a1525162417",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.0"
+  },
+  "dependency_hash": "2e343fa4ec97652567f2231f4878c130d33f357ca2509f257ac4c87e6cde9b83",
+  "development_test_accessed": false,
+  "embargo_sessions": 20,
+  "experiment_id": "EXP-20260822-001",
+  "final_oos_accessed": false,
+  "folds": [
+    {
+      "fold": "F2019",
+      "train": [
+        "2011-01-01",
+        "2018-12-31"
+      ],
+      "validation": [
+        "2019-01-01",
+        "2019-12-31"
+      ]
+    },
+    {
+      "fold": "F2020",
+      "train": [
+        "2011-01-01",
+        "2019-12-31"
+      ],
+      "validation": [
+        "2020-01-01",
+        "2020-12-31"
+      ]
+    },
+    {
+      "fold": "F2021",
+      "train": [
+        "2011-01-01",
+        "2020-12-31"
+      ],
+      "validation": [
+        "2021-01-01",
+        "2021-12-31"
+      ]
+    }
+  ],
+  "purge_sessions": 20,
+  "random_seed": 20260822,
+  "run_command": "PYTHONPATH=src python -m kospi100_ranking.cli select --config configs/phase5_ranking.json --output artifacts/phase5/selection",
+  "selected_candidate": "tree_d3_l002",
+  "selected_model_hash": "822ebea85b8c9745e3bfa5718d48ba0a383b5017298542a91184cc2e0bf54923",
+  "source_hash": "1600bcd361ce90e0a7f56500fd1d74393e8123ca851f002f438f7a60e158c240",
+  "status": "SELECTION_COMPLETED_DEVELOPMENT_TEST_PENDING_APPROVAL"
+}

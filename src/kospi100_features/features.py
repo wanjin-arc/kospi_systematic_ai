@@ -62,6 +62,8 @@ def _rolling(frame: pd.DataFrame, column: str, sessions: int, operation: str) ->
         result = grouped.transform(lambda values: values.rolling(sessions, min_periods=sessions).std(ddof=1))
     elif operation == "max":
         result = grouped.transform(lambda values: values.rolling(sessions, min_periods=sessions).max())
+    elif operation == "count":
+        result = grouped.transform(lambda values: values.rolling(sessions, min_periods=sessions).count())
     else:
         raise ValueError(operation)
     first_index = frame.groupby(keys, sort=False)["session_index"].shift(sessions - 1)
@@ -101,13 +103,14 @@ def build_feature_matrix(panel: pd.DataFrame, index: pd.DataFrame, actions: pd.D
     work.loc[~np.isfinite(work["adjusted_trading_value"]) | work["adjusted_trading_value"].lt(0), "adjusted_trading_value"] = np.nan
 
     keys = _group_keys(work)
-    work["feature_close"] = work.groupby(keys, sort=False)["adjusted_close"].ffill()
+    work["feature_close"] = work["adjusted_close"]
     lag1 = _lag(work, "feature_close", 1)
     work["log_return1"] = np.log(work["feature_close"] / lag1)
     returns: dict[int, pd.Series] = {}
     for horizon in (5, 20, 63, 126, 252):
         lagged = _lag(work, "feature_close", horizon)
-        returns[horizon] = work["feature_close"] / lagged - 1.0
+        complete_window = _rolling(work, "feature_close", horizon + 1, "count").eq(horizon + 1)
+        returns[horizon] = (work["feature_close"] / lagged - 1.0).where(complete_window)
         work[f"return_{horizon}"] = returns[horizon]
 
     for horizon in (20, 60, 200):

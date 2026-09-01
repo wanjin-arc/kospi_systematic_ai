@@ -1,0 +1,13 @@
+{
+  "agent_b_rows_loaded": 44310,
+  "agent_c_rows_loaded": 243829,
+  "benchmark": "PIT_KOSPI200_CAP_WEIGHTED_PROXY",
+  "benchmark_is_official_index": false,
+  "final_oos_accessed": false,
+  "gap_vetoes_all_candidates": 246,
+  "legacy_v1_development_test_partition_accessed": false,
+  "market_files_loaded": 1233,
+  "mechanical_actions": 15,
+  "membership_rows_loaded": 246780,
+  "v2_consumed_development_2022_2023_loaded": true
+}

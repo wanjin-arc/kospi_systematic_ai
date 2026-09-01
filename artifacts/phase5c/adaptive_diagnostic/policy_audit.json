@@ -1,0 +1,65 @@
+{
+  "desired_entry_rank": 10,
+  "development_test_accessed": false,
+  "ema_span_sessions": 5,
+  "fallback_max_rank": 20,
+  "final_oos_accessed": false,
+  "maximum_holding_sessions": 20,
+  "order_audit": {
+    "I2015_cost_1x": {
+      "desired_entry_orders": 2080,
+      "fallback_entry_orders": 2080,
+      "orders": 7060,
+      "rank_loss_exit_orders": 2900
+    },
+    "I2016_cost_1x": {
+      "desired_entry_orders": 2060,
+      "fallback_entry_orders": 2060,
+      "orders": 7454,
+      "rank_loss_exit_orders": 3334
+    },
+    "I2017_cost_1x": {
+      "desired_entry_orders": 2030,
+      "fallback_entry_orders": 2030,
+      "orders": 6339,
+      "rank_loss_exit_orders": 2279
+    },
+    "I2018_cost_1x": {
+      "desired_entry_orders": 2040,
+      "fallback_entry_orders": 2040,
+      "orders": 6871,
+      "rank_loss_exit_orders": 2791
+    },
+    "connected_cost_1x": {
+      "desired_entry_orders": 8210,
+      "fallback_entry_orders": 8210,
+      "orders": 27724,
+      "rank_loss_exit_orders": 11304
+    },
+    "connected_cost_2x": {
+      "desired_entry_orders": 8210,
+      "fallback_entry_orders": 8210,
+      "orders": 27724,
+      "rank_loss_exit_orders": 11304
+    },
+    "connected_cost_3x": {
+      "desired_entry_orders": 8210,
+      "fallback_entry_orders": 8210,
+      "orders": 27724,
+      "rank_loss_exit_orders": 11304
+    }
+  },
+  "phase5b_handoff": {
+    "inherited_candidate": "elastic_a005_l02",
+    "path": "artifacts/phase5b/selection/candidate_selection.json",
+    "phase5b_candidate_was_trading_candidate": false,
+    "sha256": "fdd0545fde24138ed3f15a5a31c3cf423031f0e8af66debe1f92ce06996789b9"
+  },
+  "rank_loss_exit_below_rank": 20,
+  "reset_boundaries": [
+    "fold",
+    "membership_spell_id",
+    "nonconsecutive_exchange_session"
+  ],
+  "score_smoothing": "causal_ema"
+}

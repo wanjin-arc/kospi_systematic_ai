@@ -1,0 +1,18 @@
+{
+  "schema_version": "kospi200-fundamental-factor-contract-v1",
+  "universe": "KOSPI_200_POINT_IN_TIME",
+  "availability_rule": "DART_RECEIPT_DATE_NEXT_KRX_SESSION",
+  "statement_preference": ["CFS", "OFS"],
+  "minimum_standard_year": 2015,
+  "factor_ids": [
+    "roe", "roa", "operating_margin", "net_margin", "cfo_to_assets",
+    "earnings_yield", "book_to_market", "sales_to_market_cap", "cfo_yield", "free_cash_flow_yield",
+    "debt_to_equity", "liabilities_to_assets", "current_ratio", "cash_to_assets", "equity_ratio",
+    "revenue_growth_yoy", "operating_income_growth_yoy", "net_income_growth_yoy",
+    "assets_growth_yoy", "equity_growth_yoy"
+  ],
+  "cross_sectional_transforms": ["percentile", "robust_z_clip_5"],
+  "sector_minimum_count": 5,
+  "missing_value_policy": "NO_FORWARD_OR_CROSS_PERIOD_IMPUTATION",
+  "not_allowed": ["guidance", "news", "analyst_target", "filing_text_embedding", "future_revision"]
+}

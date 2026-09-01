@@ -1,0 +1,21 @@
+{
+  "experiment_id": "EXP-20260826-014",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "config": "2ce47a10aab00a517a66ca0f7ed3cd2dbe89bb38e1cff7573141407f1410d632",
+    "factor_panel": "0ba2cb148b7e076d221a62b8b323ff18063518700b1dd597c5005ac46a0ab857",
+    "market_tree": "f1569410c224887bff8a67b25af959d0fca05419ac1e7c47005a391688b372e6",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "model_family": "XGBRanker",
+  "objective": "rank:ndcg",
+  "output_sha256": {
+    "daily_agent_b3_scores.csv.gz": "d8987ba1e3fb974f690e29d60a3ced65088c8b78a5e8ad21dd84a6bafb5fbdf5",
+    "data_audit.json": "8153efb418a8aac6a744967c1e50d0e39eb2bfeba1a944859de19d340b74cf73",
+    "fold_metrics.csv": "e221d911da6e7c04a62aac5a4fbbddf678f1b8160dce5de46a7e698a37d701b4",
+    "selected_model.json": "ef9cec94cf64694d8a19f37ae59f1489c7b106945b92bc5099e209d17c660c20"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-agent-b3-xgbranker-v1",
+  "status": "CONSUMED_DEVELOPMENT_TRAINING_ONLY"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "kospi200-fundamental-account-taxonomy-v1",
+  "policy": "STANDARD_XBRL_ACCOUNT_IDS_ONLY_NO_NAME_FALLBACK",
+  "duplicate_policy": "TOP_LEVEL_ACCOUNT_DETAIL_THEN_ACCOUNT_ID_PRIORITY_ELSE_FAIL_CLOSED",
+  "accounts": {
+    "assets": {"statement_div": ["BS"], "account_ids": ["ifrs-full_Assets", "ifrs_Assets"]},
+    "liabilities": {"statement_div": ["BS"], "account_ids": ["ifrs-full_Liabilities", "ifrs_Liabilities"]},
+    "equity": {"statement_div": ["BS"], "account_ids": ["ifrs-full_Equity", "ifrs_Equity"]},
+    "current_assets": {"statement_div": ["BS"], "account_ids": ["ifrs-full_CurrentAssets", "ifrs_CurrentAssets"]},
+    "current_liabilities": {"statement_div": ["BS"], "account_ids": ["ifrs-full_CurrentLiabilities", "ifrs_CurrentLiabilities"]},
+    "cash_and_equivalents": {"statement_div": ["BS"], "account_ids": ["ifrs-full_CashAndCashEquivalents", "ifrs_CashAndCashEquivalents"]},
+    "revenue": {"statement_div": ["IS", "CIS"], "account_ids": ["ifrs-full_Revenue", "ifrs_Revenue"]},
+    "operating_income": {"statement_div": ["IS", "CIS"], "account_ids": ["dart_OperatingIncomeLoss"]},
+    "net_income": {"statement_div": ["IS", "CIS"], "account_ids": ["ifrs-full_ProfitLoss", "ifrs_ProfitLoss"]},
+    "operating_cash_flow": {"statement_div": ["CF"], "account_ids": ["ifrs-full_CashFlowsFromUsedInOperatingActivities", "ifrs_CashFlowsFromUsedInOperatingActivities"]},
+    "capital_expenditure": {"statement_div": ["CF"], "account_ids": ["ifrs-full_PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities", "ifrs_PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities"]}
+  },
+  "market_cap_source": "PIT_KRX_DAILY_MARKET_STK",
+  "factor_contract": "configs/fundamental_factor_contract_v1.json",
+  "manual_account_name_fallbacks": {},
+  "raw_mutation_allowed": false,
+  "protected_oos_access_allowed": false
+}

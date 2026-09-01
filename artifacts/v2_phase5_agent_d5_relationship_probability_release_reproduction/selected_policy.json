@@ -1,0 +1,8 @@
+{
+  "agent_b_weight": 0.0,
+  "agent_c_weight": 1.0,
+  "policy_id": "B000_P050_Q090",
+  "probability_threshold": 0.5,
+  "score_percentile_threshold": 0.9,
+  "selection_auc": 0.5904003609708137
+}

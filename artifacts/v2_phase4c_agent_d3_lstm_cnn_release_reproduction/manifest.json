@@ -1,0 +1,37 @@
+{
+  "experiment_id": "EXP-20260826-009",
+  "final_oos_accessed": false,
+  "input_sha256": {
+    "agent_b2_manifest": "5a442297103146924746d9486b6ccc6c8af18c7880b96aeb75516a07bb597d8b",
+    "agent_b2_scores": "4005a90525b6a8ac32f8203926a0c452e036658f52ac17bda486f7ac29e192d3",
+    "agent_c3_manifest": "f9955dbb105b7c7f7bb63ee6335677a1b785036b069765c0429b84c70b362587",
+    "agent_c3_scores": "7fca5778269d16be4c88ee8195610358738f1d16b9c209f6c5f5397d5ca852ff",
+    "config": "e9e7c61ce13370306f4ba1f83faa7cb8e8f3a31819b5927f856f60a182d7c262",
+    "cost_schedule": "15934ea896bd41c2b16172e11423d57949612c17f49919c35ad5e484a1ac6f93",
+    "engine_config": "52777da0e8f14a28fe8f117501ec4332798b1f5d7c02bfd0d41a867d5cfcb5c1",
+    "market_tree": "b3e0730ff40e6bd407b3c8aeef15bc7ed94cb0748b87c0838183955e60012039",
+    "membership_tree": "325cdc2aa9ba602f65146855d41f9b2f70d5d8ef2706cfdf03093fca8ea39928",
+    "official_index": "64a078ffc087bcb669f253800ac1e7c98521fe2654132d9cbb706726b1a8623b"
+  },
+  "output_sha256": {
+    "candidate_metrics.csv": "50a10185cd423abb1c9c745c1844d2934d9c1746bf174c50a0311e90f1f8a7da",
+    "data_audit.json": "0da7a6f379ef1c96f076dd4951cfe3ef2514ac91c79d9817c9644b8e338b438b",
+    "decision.json": "525f3c829c25b6c00bdb34c1c7a4e9d4de7c42b535faee908b8867ee407b8986"
+  },
+  "schema_version": "kospi200-agent-d3-lstm-cnn-phase4c-v1",
+  "selected_candidate": "C3_B2_RISK_CALIBRATION",
+  "selected_run_hashes": {
+    "audit_events.csv": "da3fb2c9a8a78ce8881563bf6af9eda292982e4d8c8ea46777ced85b7cf83eea",
+    "cash_ledger.csv": "6140a110ada0993ab9600f8d75fc690d0420e2d0d7d84a805d1e202fec75b5b9",
+    "closed_trades.csv": "f4109fbc326699b4cfa3d4a3a0fb5c1d180a520ac61bc35ec06e70c530dc5757",
+    "equity_curve.csv": "a147f5160df32b8b25c9648e6d88a06517eaf9e5e8ad4e4ffeff64b0ffaa3383",
+    "fills.csv": "26d44078b49a16f418abd55b2d73f49f44d4505787fa18fa32c76d4abf517d98",
+    "metrics.json": "713961d38d0ca1854352945da56c92386e7d43c1c5c3a4f17c3a9f420f4ff7c0",
+    "order_events.csv": "906b3c43dfaa0cc232392445d45c610b9e8420f35f40ebfe1ee1aa13a5698aee",
+    "position_ledger.csv": "448c6c8a0960cf255a351b241246e43bee60e6e539ae64c6ddeb7f9844cef50b",
+    "position_snapshots.csv": "8eccf71428da19e9cce468c9d049ede1e00422555c96dd759dcb6d347ac643d1",
+    "reconciliation.json": "2f8f8b379a3a96ca244627f1df50af62dc720dd4fa0d0f1fee9fc5c6424f9647",
+    "run.json": "cc746416fc55e3729dda24afe20da6ee4b60b9a691ff825c7aed05319089cafa"
+  },
+  "status": "REJECT_AGENT_D3"
+}

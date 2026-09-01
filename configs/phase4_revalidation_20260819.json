@@ -1,0 +1,10 @@
+{
+  "version": "phase4-revalidation-v1",
+  "experiment_id": "P4-REVALIDATION-20260819-001",
+  "revalidates_experiment_id": "P4-FEATURES-20260818-001",
+  "base_config": "configs/phase4_features.json",
+  "base_config_sha256": "2b65169985cf800c05863191e4f19bcb190865a92bd31b325f5be3f299cd7091",
+  "data_root": "data/processed/v24/phase4_train_validation_2021",
+  "required_partition_role": "phase4_train_validation",
+  "maximum_permitted_date": "2021-12-31"
+}

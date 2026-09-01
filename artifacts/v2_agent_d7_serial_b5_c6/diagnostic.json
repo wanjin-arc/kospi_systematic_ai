@@ -1,0 +1,26 @@
+{
+  "decision": "RETAIN_D7_FOR_FORWARD_SHADOW_ONLY",
+  "evidence_status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY",
+  "gates": {
+    "mdd_above_minus_30pct": true,
+    "positive_excess_years_at_least_2_of_3": true,
+    "positive_net_excess": true,
+    "positive_sharpe": true,
+    "reconciliation": true
+  },
+  "metrics": {
+    "annual_excess_json": "{\"2021\":0.017455937276634192,\"2022\":0.25921691374748435,\"2023\":-0.22978357952593598}",
+    "average_cash_weight": 0.9930456625338414,
+    "benchmark_return": -0.10475642692807842,
+    "closed_trades": 24,
+    "gap_vetoes": 0,
+    "mdd": -0.03308313083178852,
+    "net_excess_return": 0.10566893542407842,
+    "orders_created": 53,
+    "positive_annual_excess_years": 2,
+    "reconciliation": "PASS",
+    "sharpe": 0.026486745353935668,
+    "total_return": 0.000912508496,
+    "turnover": 3.8143744131043804
+  }
+}

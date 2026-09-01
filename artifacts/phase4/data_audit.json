@@ -1,0 +1,62 @@
+{
+  "contract_hash": "4728adbdd7b48077a6e96714c920d541d19cae0e1f73aaaf9c98ebaee6c0aa2d",
+  "contract_path": "data/contracts/feature_data_contract_v24.json",
+  "corporate_action_rows": 88,
+  "data_hash": "b27027d8c4b4271ef9d80058890894791c339891a276d7c0bf747fead697da7f",
+  "development_test_accessed_for_selection": false,
+  "development_test_rows_calculated": 0,
+  "development_test_rows_evaluated": 0,
+  "evaluation_audit": {
+    "accepted_features": [
+      "reversal_5"
+    ],
+    "development_test_accessed": false,
+    "embargo_later_training_exists": false,
+    "embargo_sessions": 20,
+    "embargoed_dates": 0,
+    "evaluated_signal_rows": 241582,
+    "final_oos_accessed": false,
+    "maximum_evaluated_signal_date": "2021-12-02",
+    "minimum_evaluated_signal_date": "2011-01-03",
+    "model_trained": false,
+    "portfolio_backtest_run": false,
+    "purge_sessions": 20,
+    "train_dates_after_purge": 1949,
+    "validation_dates_after_purge": 722
+  },
+  "evaluation_maximum_permitted_date": "2021-12-31",
+  "feature_audit": {
+    "ca_blocked_rows": 25393,
+    "eligible_dates": 2962,
+    "eligible_rows": 270559,
+    "future_bar_used": false,
+    "late_notice_actions_protected": 1,
+    "maximum_date": "2021-12-30",
+    "mechanical_actions": 34,
+    "raw_ohlcv_overwritten": false,
+    "regime_rows": 2962,
+    "reset_actions": 44,
+    "rows": 333301
+  },
+  "feature_rows": 384245,
+  "final_oos_accessed": false,
+  "full_history_rows": 555949,
+  "index_rows": 3453,
+  "label_audit": {
+    "complete_label_rows": 269213,
+    "eligible_signal_rows": 270559,
+    "entry_is_after_signal": true,
+    "exit_is_after_entry": true,
+    "label_name": "forward_excess_log_return_10",
+    "reset_crossing_rows_excluded": 994,
+    "same_day_execution": false
+  },
+  "manifest_files_verified": 6,
+  "manifest_hash": "c52f88697d20aa118bdf45242e4ce37e5bec85d6a8298066c21c910097433685",
+  "maximum_calculation_input_date": "2021-12-31",
+  "maximum_evaluated_signal_date": "2021-12-02",
+  "maximum_loaded_date": "2023-12-28",
+  "partition_hash": "2e8249e2c169cf86a82d17b6f339d731ba87b61d619e4e9ab16aac9481432025",
+  "partition_max_date": "2023-12-31",
+  "partition_role": "development"
+}

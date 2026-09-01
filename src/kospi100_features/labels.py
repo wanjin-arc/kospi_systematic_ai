@@ -68,8 +68,8 @@ def attach_forward_label(
     )
     valid = (
         signals["phase4_eligible"]
-        & signals["entry_tradable"].fillna(False)
-        & signals["exit_tradable"].fillna(False)
+        & signals["entry_tradable"].astype("boolean").fillna(False)
+        & signals["exit_tradable"].astype("boolean").fillna(False)
         & same_segment
         & signals[["entry_open", "exit_open", "index_entry_open", "index_exit_open"]].notna().all(axis=1)
     )

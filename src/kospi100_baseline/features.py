@@ -62,6 +62,17 @@ def _feature_segments(panel: pd.DataFrame, actions: pd.DataFrame) -> pd.Series:
 
 def _corporate_action_blackout(panel: pd.DataFrame, actions: pd.DataFrame) -> tuple[pd.Series, int]:
     resets = actions.loc[actions["feature_handling"].astype(str).str.startswith("RESET_")].copy()
+    status = resets.get("phase1_data_status", pd.Series("", index=resets.index, dtype=object))
+    boundary_only = status.astype(str).eq("FEATURE_RESET_ONLY")
+    if boundary_only.any():
+        permitted = (
+            resets.loc[boundary_only, "primary_source"].astype(str).eq("KRX_RAW")
+            & pd.to_datetime(resets.loc[boundary_only, "feature_boundary_date"], errors="coerce").lt("2011-01-01")
+            & resets.loc[boundary_only, "portfolio_terms_status"].astype(str).eq("NOT_USED_BEFORE_2011_VALIDATION")
+        )
+        if not permitted.all():
+            raise ValueError("FEATURE_RESET_ONLY 경계는 KRX 원천의 2010년 이전 학습 연속성 분할에만 허용됩니다")
+        resets = resets.loc[~boundary_only].copy()
     blocked = pd.Series(False, index=panel.index, dtype=bool)
     permanent_windows: dict[str, list[tuple[pd.Timestamp, pd.Timestamp]]] = {}
     for action in resets.sort_values(["security_id", "feature_boundary_date", "canonical_event_id"]).itertuples(index=False):

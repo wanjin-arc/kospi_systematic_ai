@@ -1,0 +1,16 @@
+{
+  "agent_b_accessed": false,
+  "calibration_sequence_rows": 9557,
+  "consumed_development_2022_2023_loaded": true,
+  "final_oos_accessed": false,
+  "fit_cutoff": "2016-12-01",
+  "fit_sequence_rows": 61306,
+  "fundamental_data_accessed": false,
+  "index_code": "1028",
+  "market_files_loaded": 4945,
+  "membership_rows_loaded": 989568,
+  "portfolio_backtest_run": false,
+  "score_sequence_rows": 242172,
+  "sequence_feature_count": 10,
+  "train_sequence_rows": 71258
+}

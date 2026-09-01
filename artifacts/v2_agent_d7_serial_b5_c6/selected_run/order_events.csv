@@ -1,0 +1,78 @@
+order_id,session,security_id,side,status,requested_quantity,filled_quantity,reason
+D7:B050_C050:2021-01-04:069620,2021-01-05,069620,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+RISK:2021-01-05:069620:STOP_FIRST_SAME_BAR,2021-01-05,069620,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D7:B050_C050:2021-01-05:069620,2021-01-06,069620,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-01-06:069620,2021-01-07,069620,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-01-07:069620,2021-01-08,069620,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-01-08:069620:STOP,2021-01-08,069620,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D7:B050_C050:2021-02-03:023530,2021-02-04,023530,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-02-04:023530,2021-02-05,023530,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-02-05:023530,2021-02-08,023530,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-02-09:023530:TARGET,2021-02-09,023530,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D7:B050_C050:2021-02-15:000100,2021-02-16,000100,BUY,FILLED,,3,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-02-16:001040,2021-02-17,001040,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+RISK:2021-02-22:000100:STOP,2021-02-22,000100,SELL,FILLED,,3,executed with sell costs and adverse slippage
+D7:B050_C050:2021-02-22:251270,2021-02-23,251270,BUY,FILLED,,1,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-02-23:001040,2021-02-24,001040,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-02-24:251270,2021-02-25,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-02-26:001040:STOP_GAP,2021-02-26,001040,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D7:B050_C050:2021-02-26:251270,2021-03-02,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-03:251270,2021-03-04,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-04:251270,2021-03-05,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-03-05:251270:STOP,2021-03-05,251270,SELL,FILLED,,1,executed with sell costs and adverse slippage
+D7:B050_C050:2021-03-08:251270,2021-03-09,251270,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-03-09:251270,2021-03-10,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-10:251270,2021-03-11,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-11:251270,2021-03-12,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-12:251270,2021-03-15,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-15:251270,2021-03-16,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-16:251270,2021-03-17,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-17:251270,2021-03-18,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-18:251270,2021-03-19,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-19:251270,2021-03-22,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-03-19:006390,2021-03-22,006390,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+TIME:2021-03-23:251270,2021-03-23,251270,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D7:B050_C050:2021-03-22:251270,2021-03-23,251270,BUY,FILLED,,2,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-03-23:251270,2021-03-24,251270,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-03-30:006390:TARGET,2021-03-30,006390,SELL,FILLED,,6,executed with sell costs and adverse slippage
+TIME:2021-04-06:251270,2021-04-06,251270,SELL,FILLED,,2,executed with sell costs and adverse slippage
+D7:B050_C050:2021-04-16:006390,2021-04-19,006390,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-04-19:006390,2021-04-20,006390,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-04-21:006390,2021-04-22,006390,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-04-22:006390,2021-04-23,006390,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-04-23:006390,2021-04-26,006390,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+D7:B050_C050:2021-04-26:006390,2021-04-27,006390,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+TIME:2021-05-03:006390,2021-05-03,006390,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D7:B050_C050:2021-05-13:052690,2021-05-14,052690,BUY,FILLED,,13,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-05-14:052690,2021-05-17,052690,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-05-18:052690:TARGET,2021-05-18,052690,SELL,FILLED,,13,executed with sell costs and adverse slippage
+D7:B050_C050:2021-05-18:052690,2021-05-20,052690,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+RISK:2021-05-20:052690:TARGET,2021-05-20,052690,SELL,FILLED,,11,executed with sell costs and adverse slippage
+D7:B050_C050:2021-05-20:052690,2021-05-21,052690,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+RISK:2021-05-21:052690:STOP,2021-05-21,052690,SELL,FILLED,,10,executed with sell costs and adverse slippage
+D7:B050_C050:2021-05-21:052690,2021-05-24,052690,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+RISK:2021-05-24:052690:STOP,2021-05-24,052690,SELL,FILLED,,10,executed with sell costs and adverse slippage
+D7:B050_C050:2021-05-24:052690,2021-05-25,052690,BUY,FILLED,,11,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-05-25:052690,2021-05-26,052690,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-05-26:052690:TARGET,2021-05-26,052690,SELL,FILLED,,11,executed with sell costs and adverse slippage
+D7:B050_C050:2021-05-26:052690,2021-05-27,052690,BUY,FILLED,,10,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-05-27:052690,2021-05-28,052690,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-05-28:052690:TARGET,2021-05-28,052690,SELL,FILLED,,10,executed with sell costs and adverse slippage
+D7:B050_C050:2021-05-28:052690,2021-05-31,052690,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+RISK:2021-06-01:052690:STOP,2021-06-01,052690,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D7:B050_C050:2021-06-02:052690,2021-06-03,052690,BUY,FILLED,,9,executed at opening reference plus adverse slippage
+RISK:2021-06-10:052690:STOP,2021-06-10,052690,SELL,FILLED,,9,executed with sell costs and adverse slippage
+D7:B050_C050:2021-11-24:052690,2021-11-25,052690,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+RISK:2021-11-29:052690:STOP_GAP,2021-11-29,052690,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D7:B050_C050:2021-11-29:052690,2021-11-30,052690,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+RISK:2021-11-30:052690:STOP,2021-11-30,052690,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D7:B050_C050:2021-12-01:052690,2021-12-02,052690,BUY,FILLED,,5,executed at opening reference plus adverse slippage
+RISK:2021-12-02:052690:STOP,2021-12-02,052690,SELL,FILLED,,5,executed with sell costs and adverse slippage
+D7:B050_C050:2021-12-03:052690,2021-12-06,052690,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-12-07:052690,2021-12-08,052690,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-12-13:052690:STOP,2021-12-13,052690,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D7:B050_C050:2021-12-14:052690,2021-12-15,052690,BUY,FILLED,,6,executed at opening reference plus adverse slippage
+D7:B050_C050:2021-12-15:052690,2021-12-16,052690,BUY,REJECTED_EXISTING_POSITION,,0,pyramiding disabled
+RISK:2021-12-20:052690:TARGET,2021-12-20,052690,SELL,FILLED,,6,executed with sell costs and adverse slippage
+D7:B050_C050:2021-12-23:192080,2021-12-24,192080,BUY,FILLED,,4,executed at opening reference plus adverse slippage
+TIME:2022-01-10:192080,2022-01-10,192080,SELL,FILLED,,4,executed with sell costs and adverse slippage

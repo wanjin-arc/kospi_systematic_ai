@@ -1,0 +1,8 @@
+{
+  "experiment_id": "EXP-20260825-001",
+  "phase": "1B",
+  "target_universe": "KOSPI100_PIT_v24",
+  "reference_universe": "KOSPI_ALL_KRX_v25",
+  "maximum_loaded_date": "2023-12-31",
+  "forbidden": ["DART_AS_FACTOR", "DEVELOPMENT_TEST", "FINAL_OOS", "POST_2023_RAW"]
+}

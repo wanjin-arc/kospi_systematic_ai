@@ -1,0 +1,20 @@
+{
+  "config_hash": "6d27185309682407ce67ee9458f5da34a5c2d0ac34c387e402bd9a6f8ed51717",
+  "data_hash": "5191493236aa5613f72700f7ac3a24403989ce80d8b2cc4ecd0b3ab913742f35",
+  "dependencies": {
+    "numpy": "2.5.2",
+    "pandas": "2.3.3",
+    "python": "3.14.7",
+    "scikit_learn": "1.9.0"
+  },
+  "dependency_hash": "2e343fa4ec97652567f2231f4878c130d33f357ca2509f257ac4c87e6cde9b83",
+  "development_test_accessed": false,
+  "experiment_id": "EXP-20260823-001",
+  "final_oos_accessed": false,
+  "interaction_count": 6,
+  "regime_feature_count": 5,
+  "run_command": "PYTHONPATH=src python -m kospi100_multifactor.cli analyze --config configs/phase4b_multifactor.json --output artifacts/phase4b_multifactor",
+  "source_hash": "71708ec32b6b801043d3d34dd00a61ddfd8c88669f769d18bc8a5d70076e3969",
+  "status": "ANALYSIS_COMPLETED_TRAIN_INTERNAL_ONLY",
+  "stock_feature_count": 21
+}

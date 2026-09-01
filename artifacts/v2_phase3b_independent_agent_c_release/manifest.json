@@ -1,0 +1,23 @@
+{
+  "agent_b_accessed": false,
+  "daily_score_rows": 243829,
+  "experiment_id": "EXP-20260826-003",
+  "final_oos_accessed": false,
+  "fundamental_data_accessed": false,
+  "input_sha256": {
+    "config": "efe148d4c2c9f02f6c27db3dd74bbb0a99c58da4dfd0ef62ed15f41d049a1279",
+    "market_tree": "f1569410c224887bff8a67b25af959d0fca05419ac1e7c47005a391688b372e6",
+    "membership_tree": "f5ff7ba2d17c02ad3ccf30ffa03c79d78e3e5de0e83f2375715073bbe7eb5eb0"
+  },
+  "output_sha256": {
+    "daily_independent_agent_c_scores.csv.gz": "4a691558545bac52c645e08499cafb1081117a00f1c9d865536d5667d074195e",
+    "data_audit.json": "dc3d1ff35cddc47d88831a8cc69717ba083e39c8da29d47dd3d81d9de04c4afb",
+    "fold_metrics.csv": "e9b55ccd9ffa593b4571539b6b8004ee94ad09a543349b86de13a540ce4789a1",
+    "model_summary.csv": "2351eec95bc53f1aa229b12a55deb32888e3fb95e0afcb93cafa0f86393e5c65",
+    "selected_model.json": "4eba9ba9a41903386b0417cd254211ba367a49a13b65ea161acdfa6583c56002"
+  },
+  "portfolio_backtest_run": false,
+  "schema_version": "kospi200-independent-agent-c-phase3b-v1",
+  "selected_model": "hist_event_dual",
+  "status": "CONSUMED_DEVELOPMENT_DIAGNOSTIC_ONLY"
+}
