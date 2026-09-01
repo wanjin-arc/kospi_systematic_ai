@@ -3,7 +3,41 @@
 **갱신일:** 2026-09-01
 **목적:** 검증 완료 범위와 다음 승인 경계를 추측 없이 이어받기 위한 문서
 
-## 최신 결론 — v2 Phase 4E·Phase 5R
+## 최신 결론 — v2 Phase 4F·Phase 5S
+
+`EXP-20260901-003` Phase 4F는 DEC-105에 따라 기존 Phase 4E를 덮어쓰지 않고 새 코드·config·
+artifact로 재실행했다. 같은 exact raw 6자리 ticker의 연속 거래소 세션에서
+`abs(log(current listed_shares / prior listed_shares)) >= log(1.20)`인 사건 554건을 가격과
+무관한 candidate로 표시했다. 결측·무한·0·음수 상장주식수는 별도 observation gap으로
+fail-closed하도록 구현했으며 실제 2020년 이하 모델 모집단의 gap은 0건이었다. candidate/gap은
+기술 Feature segment를 끊고 signal~exit 라벨을 무효화한다. 유효 라벨 중 경계 통과 행은 0이다.
+
+모델 전용 OOF 재학습에서 `C_ONLY`가 선택됐다. 평균 Rank IC는 0.017810, 2019년 -0.011576,
+2020년 0.047196으로 2년 중 1년만 비음수다. 사전등록 model gate는 통과했지만 매년 안정적이지
+않으므로 독립 OOS·거래 승격 근거가 아니다. score panel 789,876행, sampled signal 23,722행,
+최종 fit 23,190행이다. model-state hash는
+`b558ecbfba2fd5022cb12f10c5df2499559642e4f5b4f1e9f781c223e7a41e4f`, bundle hash는
+`47f10289d6c25ab7dbcb73d6429dbef0208b872d6ca0d12f770827cb23fa9792`이며
+primary/reproduction 11개 파일이 byte-identical하다. 포트폴리오·주문·2021+ fit·OOS 접근은 0이다.
+
+`EXP-20260901-004` Phase 5S는 이 bundle의 `C_ONLY`만 `include_controls=false`로 2021~2023
+소비 개발자료에 predict했다. 점수 141,782행, strategy/neutral 각 1,800건을 합한 차단 주문
+의도 3,600건을 생성했다. 로더 후보는 86건, 전일·당일 실제 member 후보는 37건, 원천 exact
+ticker 후보는 223건이었다. stable identity, 승인 corporate-action terms와 canonical EX2가
+불완전해 결정은 `REJECT_PHASE5S_UNRESOLVED_CA_AND_IDENTITY_CONTRACT`다. fit·engine·성과
+metric·executable action·외부 주문·OOS 접근은 모두 0이며 10개 산출물이 재현본과
+byte-identical하다. 따라서 70/20/10은 차단된 주문 의도 구조일 뿐 성과가 아니다.
+
+다음 허용 작업은 역사적 issuer·share class·successor identity와 원문 권리조건·효력 거래세션·
+KRX 동일배율 검증을 갖춘 승인 action terms ledger를 새 데이터 버전과 Experiment로
+사전등록하는 것이다. 그 전에는 Phase 5 backtest engine·원장·경제 gate를 실행하거나 2021~2023
+결과를 보고 비중·threshold·비용을 조정하지 않는다. 독립 성과 증거는 동결 뒤 새 forward
+shadow에서만 쌓고 protected OOS는 계속 봉인한다.
+
+상세 근거는 `docs/stages/v2_phase_4f_report.md`, `docs/stages/v2_phase_5s_report.md`,
+`docs/DECISION_LOG.md`의 DEC-105·DEC-106을 따른다.
+
+## 철회 이력 — v2 Phase 4E·Phase 5R
 
 `EXP-20260901-001` Phase 4E는 2020-12-30 이하 물리 입력에서 AI 모델을 먼저 만드는
 model-only 단계로 실행됐으나 DEC-105 후속 감사로 동결 판정을 철회했다. 당시

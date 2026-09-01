@@ -40,6 +40,18 @@
 ## 현재 단계
 
 - Phase 0~4: 완료.
+- v2 Phase 4F: `EXP-20260901-003`에서 DEC-105의 가격 독립 상장주식수 gross ratio 1.20
+  candidate와 별도 observation gap을 라벨·기술 경계로 적용해 2020년 이하 자료로 B/C/D를
+  재학습했다. `C_ONLY`가 평균 Rank IC 0.01781, 연도 1/2 비음수로 사전등록 model gate를
+  통과했다. fit 23,190행이며 candidate/gap을 가로지른 유효 fit·selection 행은 0이다.
+  model hash는 `b558ecbfba2fd5022cb12f10c5df2499559642e4f5b4f1e9f781c223e7a41e4f`이고
+  primary/reproduction 11개 파일은 byte-identical이다. 이는 소비 개발 모델이며 독립 OOS·
+  거래 승격 근거가 아니다.
+- v2 Phase 5S: `EXP-20260901-004`에서 Phase 4F `C_ONLY`를 fit 없이 2021~2023에 적용해
+  점수 141,782행과 차단 주문 의도 3,600건을 만들었다. stable identity·승인 corporate-action
+  terms·canonical EX2 계약이 불완전해
+  `REJECT_PHASE5S_UNRESOLVED_CA_AND_IDENTITY_CONTRACT`로 종료했다. engine·성과 metric·
+  executable action·외부 주문은 0건이며 primary/reproduction 10개 파일은 byte-identical이다.
 - v2 Phase 4E: `EXP-20260901-001`은 당시 `C_ONLY`를 선택했지만 DEC-105 후속 감사에서
   2019~2020 유효 선택 라벨 10행이 미해결 20% 이상 주식수 변화 경계를 통과한 사실을
   확인했다. 최종 fit 유효 라벨에서도 83행이 같은 누락 경계를 통과해

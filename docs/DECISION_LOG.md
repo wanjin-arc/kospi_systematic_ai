@@ -485,3 +485,34 @@ query group과 정수 relevance를 사용하고 XGBoost 3.4.1, `ndcg_exp_gain=fa
   재학습·재선택한다. 검증된 새 bundle만 별도 Phase 5 predict-only 감사에 사용할 수 있다.
 - Final OOS 영향: 없음. 감사와 재실행은 2020년 이하 소비 개발자료로 제한하고 protected OOS는
   계속 봉인한다.
+
+## DEC-106 — Phase 4F 주식수 경계 안전 재학습과 Phase 5S predict-only 순차 실행 (2026-09-01)
+
+- 상태: Confirmed
+- 결정 주체: 사용자의 규칙 변경 일괄 승인 및 Phase 4 모델 선행·Phase 5 후속 실행 지시
+- 관련 Experiment: `EXP-20260901-003`, `EXP-20260901-004`
+- 분리 원칙: 폐기된 `EXP-20260901-001/002`의 코드·config·산출물·hash는 역사 재현용으로
+  보존한다. 정정 구현은 새 `kospi200_phase4f`·`kospi200_phase5s` 패키지와 별도 artifact에만
+  기록한다.
+- 정확한 경계: 동일한 exact raw 6자리 ticker의 연속 거래소 세션에서 현재·직전
+  `listed_shares`가 모두 양의 유한값이고 `abs(log(current/prior)) >= log(1.20)`이면
+  가격과 무관하게 unresolved share-change candidate로 표시한다. 상승 1.20과 하락 1/1.20을
+  모두 포함하며 이는 일반적인 단순 증감률 20%라는 뜻이 아니다.
+- 관측 공백: 현재 또는 연속 직전 `listed_shares`가 결측·무한·0·음수이면 candidate로
+  추정하지 않고 별도 `listed_shares_observation_gap`으로 fail-closed한다. candidate와 gap은
+  기술 Feature segment를 끊고 signal부터 exit까지의 라벨을 무효화한다.
+- identity: membership ticker는 원천 exact 6자리만 허용한다. market의 비정규 raw ticker가
+  현재 PIT member로 정규화 충돌하면 모델 fit 전에 중단한다. ticker-derived security ID는
+  포지션 회계를 승인하는 역사적 stable identity로 해석하지 않는다.
+- 기업행위: candidate와 가격 역배율 진단 subset은 CorporateAction 종류·효력일·권리·배율·
+  보유수량 조정을 확정하지 않는다. executable action 생성은 0건으로 유지한다.
+- Phase 4F: 2020-12-30 이하 소비 개발자료에서만 B/C/D OOF 선택과 최종 모델 적합을 수행한다.
+  삼성전자·SK하이닉스는 score·순위·fit에서 제외하며 포트폴리오·주문·성과는 만들지 않는다.
+- Phase 5S: 검증된 Phase 4F bundle의 선택 primary만 2021~2023 소비 개발자료에서 predict한다.
+  fit은 0회다. 70/20/10은 체결 전 주문 의도 생성 규칙일 뿐, stable identity와 승인 action
+  terms가 불완전한 동안 backtest engine·원장·성과 metric·성과 gate를 호출하지 않는다.
+- Phase 5 기준: 모델 gate, stable identity, 승인 corporate-action terms, canonical EX2가 모두
+  완성된 새 실험에서만 성과 기준을 평가한다. 현재 Phase 5S는 그 전에 무결성 차단 여부를
+  판정하는 단계이며 지수를 매년 이겨야 한다는 조건을 적용하거나 결과를 보고 규칙을 조정하지
+  않는다.
+- Final OOS 영향: 없음. `data/sealed/final_oos_v24/`는 열기·스캔·집계·입력 사용을 계속 금지한다.
